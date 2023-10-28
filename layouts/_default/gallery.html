@@ -17,9 +17,9 @@
     <div class="card-group p-4">
         <div class="row justify-content-center">
             {{ range .Params.images }}
-            <div class="col-md-4 p-0 m-0">
+            <div class="col-md-4 p-2 m-0 rounded-lg">
                 <div class="card p-0 m-0 border-0">
-                    <img class="w-100" src="{{ .src }}">
+                    <img class="img-fluid rounded" src="{{ .src }}" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
                 </div>
             </div>
             {{ end }}

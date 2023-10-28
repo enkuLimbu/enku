@@ -117,7 +117,7 @@ params:
   hero:
     enable: true
     intro: "Hi, my name is"
-    title: "Enku Limbu."
+    title: "Enku Limbu"
     subtitle: "Chronicles of a Receptionist-in-Training"
     content: "Follow my professional journey as I strive to excel in the role of a receptionist, sharing insights and experiences along the way."
     image: /images/enku.jpg
@@ -134,8 +134,8 @@ params:
       fontAwesomeIcons:
         - icon: fab fa-github
           url: https://github.com/enkuLimbu
-        - icon: fab fa-facebook
-          url: https://t.me/enkulimbu
+        - icon: fab fa-youtube
+          url: https://www.youtube.com/@wellashi/
         - icon: fab fa-telegram
           url: https://t.me/enkulimbu
 
@@ -165,7 +165,7 @@ params:
     # title: "Custom Name"
     items:
       - job: "Cashier"
-        company: "Bangesh Dai ko Cafe"
+        company: "SuEn Cafe and Restro"
         companyUrl: "https://t.me/enkulimbu"
         date: "Jan 2022 -  Feb 2023"
         featuredLink:
@@ -173,7 +173,7 @@ params:
           url: "https://t.me/enkulimbu"
         info:
           enable: true
-          content: Worked as a cashier at Bangesh Dai ko bua ko cafe for a year.
+          content: Worked as a cashier at SuEn Cafe and Restro for a year.
         content: |
           Providing efficient payment processing and exceptional customer service in a busy dining environment.
 
@@ -197,11 +197,11 @@ params:
           - Resolved customer issues and complaints
       - job: "Supervisory"
         company: "Saudi Arabia"
-        companyUrl: "https://en.wikipedia.org/wiki/Saudi_Arabia"
+        companyUrl: "https://www.kfu.edu.sa/en/Pages/AboutKKFU.aspx"
         date: "June 2017 - Feb 2021"
         featuredLink:
           enable: true
-          url: "https://en.wikipedia.org/wiki/Saudi_Arabia"
+          url: "https://www.kfu.edu.sa/en/Pages/AboutKKFU.aspx"
         content: |
           - **Task Coordinator:** Coordinate and assign chores and responsibilities to family members, ensuring a fair distribution of tasks and that everyone is contributing to the smooth running of the household
           - **Problem Solver:** Act as a mediator and problem solver in case of disputes or issues related to colleagues and responsibilities.
@@ -257,11 +257,10 @@ params:
         content: Mastered stress management for unwavering calm amidst a busy workload.
         url: /certificates/suhesh.jpg
         image: /certificates/suhesh.jpg
-      - title: Inter School Dance Competition Winner
+      - title: Inter School Dance Competition Winner 💃
         content: Emerged as the victorious team in the Inter-School Dance Competition.
-      - title: Girlfriend of the Year 2023
-        content: Learned new positions and tried the forbidden lollipop.
-        url: https://www.youtube.com/shorts/dZR0I9JFyow
+      - title: Inter School Basketball Runner-ups 🏀
+        content: Secured second place through exceptional teamwork in interscholastic basketball.
 
   # projects
   projects:
@@ -279,7 +278,7 @@ params:
           - "Leadership"
         links:
           - icon: fab fa-linkedin
-            url: 
+            url: https://www.linkedin.com/in/enkulimbu
 
       - title: Stress Management
         content: Stress management as an organizational skill entails creating a work environment and processes that mitigate stress, enhance employee well-being, and optimize productivity.
@@ -291,7 +290,7 @@ params:
           - "Organizational skill"
         links:
           - icon: fab fa-linkedin
-            url: 
+            url: https://www.linkedin.com/in/enkulimbu
 
       - title: Ultimate Time Management
         content: Time management skill is the ability to prioritize tasks, allocate resources efficiently, and maximize productivity within set timeframes.
@@ -303,7 +302,7 @@ params:
           - "Time Management"
         links:
           - icon: fab fa-linkedin
-            url: 
+            url: https://www.linkedin.com/in/enkulimbu/
   #Contact
   contact:
     enable: true
@@ -326,10 +325,10 @@ params:
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/enkuLimbu
-      linkedin: https://linkedin.com/enkulimbu
-      twitter: https://twitter.com/enkulimbu
-      instagram: https://instagram.com/enkswelalimbu
-      facebook: https://facebook.com/enkswelalimbu
+      linkedin: https://www.linkedin.com/in/enkulimbu
+      twitter: https://twitter.com/enkuLimbu
+      instagram: https://www.instagram.com/enkulimbu/
+      facebook: https://www.facebook.com/sanuenku
 
   # List pages like blogs and posts
   listPages:
