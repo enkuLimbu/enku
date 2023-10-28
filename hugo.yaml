@@ -247,16 +247,16 @@ params:
     items:
       - title: Winning with Communication certificate 
         content: Achieved communication excellence for success.
-        url: /certificates/suhesh.jpg
-        image: /certificates/suhesh.jpg
+        url: /certificates/unfinished/unfinishedcert.png
+        image: /certificates/unfinished/working.png
       - title: Time Management certificate 
         content: Acquired essential time management skills for peak productivity.
-        url: /CV/Enku.pdf
-        image: /certificates/suhesh.jpg
+        url: /certificates/unfinished/unfinishedcert.png
+        image: /certificates/unfinished/nearlydone.png
       - title: Stress Management certificate 
         content: Mastered stress management for unwavering calm amidst a busy workload.
-        url: /certificates/suhesh.jpg
-        image: /certificates/suhesh.jpg
+        url: /certificates/unfinished/unfinishedcert.png
+        image: /certificates/unfinished/inprogress.png
       - title: Inter School Dance Competition Winner 💃
         content: Emerged as the victorious team in the Inter-School Dance Competition.
       - title: Inter School Basketball Runner-ups 🏀
