@@ -13,7 +13,7 @@ outputs:
 
 Paginate: 3
 enableRobotsTXT: true
-# disqusShortname: your-disqus-shortname
+disqusShortname: enku-pages-dev
 # googleAnalytics: G-MEASUREMENT_ID
 
 markup:
