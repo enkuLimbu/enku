@@ -165,15 +165,16 @@ params:
     # title: "Custom Name"
     items:
       - job: "Cashier"
-        company: "SuEn Cafe and Restro"
-        companyUrl: "https://t.me/enkulimbu"
-        date: "Jan 2022 -  Feb 2023"
+        company: "Central Cafe"
+        companyUrl: "https://www.google.com/search?q=central+cafe+newroad&rlz=1C1GCEA_enNP1059NP1060&oq=central+cafe+newroad&gs_lcrp=EgZjaHJvbWUyCwgAEEUYChg5GKABMgkIARAhGAoYoAEyCQgCECEYChigAdIBCDQzODRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#rlimm=6977463105882457710"
+        date: "Jan 2022 - Feb 2023"
         featuredLink:
           enable: true
-          url: "https://t.me/enkulimbu"
+          name: "Blogs about the experience"
+          url: "https://indulimbu.com.np/tags/cashier/"
         info:
           enable: true
-          content: Worked as a cashier at SuEn Cafe and Restro for a year.
+          content: Worked as a cashier at Central Cafe for a year.
         content: |
           Providing efficient payment processing and exceptional customer service in a busy dining environment.
 
@@ -182,12 +183,14 @@ params:
 
       - job: "Waitress"
         company: "Central Cafe"
+        companyUrl: "https://www.google.com/search?q=central+cafe+newroad&rlz=1C1GCEA_enNP1059NP1060&oq=central+cafe+newroad&gs_lcrp=EgZjaHJvbWUyCwgAEEUYChg5GKABMgkIARAhGAoYoAEyCQgCECEYChigAdIBCDQzODRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#rlimm=6977463105882457710"
         date: "August 2021 - Jan 2022"
         info:
           enable: false
         featuredLink:
-          enable: false
-          url: "https://example.com"
+          enable: true
+          name: "Blogs about the experience"
+          url: "https://indulimbu.com.np/tags/waitress/"
         content: |
           Dedicated to delivering a memorable dining experience through attentive service and hospitality.
 
@@ -196,12 +199,16 @@ params:
           - Quickly re arranged tables for the next guests
           - Resolved customer issues and complaints
       - job: "Supervisory"
-        company: "Saudi Arabia"
+        company: "King Faisal University"
+        info:
+          enable: true
+          content: King Faisal University is a university in Kingdom of Saudi Arabia
         companyUrl: "https://www.kfu.edu.sa/en/Pages/AboutKKFU.aspx"
         date: "June 2017 - Feb 2021"
         featuredLink:
           enable: true
-          url: "https://www.kfu.edu.sa/en/Pages/AboutKKFU.aspx"
+          name: "Blog about the experience"
+          url: "https://indulimbu.com.np/tags/supervisor/"
         content: |
           - **Task Coordinator:** Coordinate and assign chores and responsibilities to family members, ensuring a fair distribution of tasks and that everyone is contributing to the smooth running of the household
           - **Problem Solver:** Act as a mediator and problem solver in case of disputes or issues related to colleagues and responsibilities.
