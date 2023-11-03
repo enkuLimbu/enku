@@ -195,9 +195,10 @@ params:
           Dedicated to delivering a memorable dining experience through attentive service and hospitality.
 
           - Greeted new customers, discussed specials, and took drink orders
-          - A Stayed composed during busy shifts and when dealing with difficult customers
+          - Stayed composed during busy shifts and when dealing with difficult customers
           - Quickly re arranged tables for the next guests
           - Resolved customer issues and complaints
+
       - job: "Supervisory"
         company: "King Faisal University"
         info:
@@ -207,10 +208,10 @@ params:
         date: "June 2017 - Feb 2021"
         featuredLink:
           enable: true
-          name: "Blog about the experience"
+          name: "Blogs about the experience"
           url: "https://indulimbu.com.np/tags/supervisor/"
         content: |
-          - **Task Coordinator:** Coordinate and assign chores and responsibilities to family members, ensuring a fair distribution of tasks and that everyone is contributing to the smooth running of the household
+          - **Task Coordinator:** Coordinate and assign chores and responsibilities to colleagues, ensuring a fair distribution of tasks and that everyone is contributing to the smooth running of the operations.
           - **Problem Solver:** Act as a mediator and problem solver in case of disputes or issues related to colleagues and responsibilities.
           - **Time and Schedule Organizer:** Create and maintain a work balance, scheduling events, appointments, and coordinating staff members' schedules.
 
