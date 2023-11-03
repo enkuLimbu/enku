@@ -53,7 +53,7 @@ Menus:
 
 params:
   title: "Enku Limbu"
-  description: This is my personal portfolio website. You are Welcome Here.
+  description: This is Enku's personal portfolio website. You are Welcome Here.
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
 
@@ -118,8 +118,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Enku Limbu"
-    subtitle: "Chronicles of a Receptionist-in-Training"
-    content: "Follow my professional journey as I strive to excel in the role of a receptionist, sharing insights and experiences along the way."
+    subtitle: "Exploring a World of Professional Growth"
+    content: "Join me on my journey as I navigate the professional landscape, sharing valuable insights and experiences along the way."
     image: /images/enku.jpg
     bottomImage:
       enable: true
@@ -145,9 +145,9 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      Hello, I am a dedicated learner on a mission to master the art of providing exceptional service and maintaining impeccable organization. Join me as I navigate the world of hospitality, sharing my journey in pursuit of creating welcoming and efficient front-of-house experiences. 
+      Hello stranger, I am a dedicated learner on a mission to master the art of providing exceptional service and maintaining impeccable organization. Join me as I navigate the world of professional development, growth, and learning, sharing my journey in pursuit of creating welcoming and efficient front-of-house experiences in various aspects of my career.
 
-      Welcome to my chronicles of professional development!
+      Welcome to the chronicles of my professional development!
     skills:
       enable: true
       title: "I am in the verge of improving these skills:"
