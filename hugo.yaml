@@ -132,8 +132,8 @@ params:
       newPage: false
     socialLinks:
       fontAwesomeIcons:
-        - icon: fab fa-github
-          url: https://github.com/enkuLimbu
+        - icon: fa fa-envelope
+          url: mailto:limbuenks@gmail.com
         - icon: fab fa-youtube
           url: https://www.youtube.com/@wellashi/
         - icon: fab fa-telegram
@@ -245,72 +245,81 @@ params:
         date: "2071"
         content: |-
           Extracurricular Activities
-            - Participated in Inter School Dance Competition 
+            - Inter School Dance Competition Winner 💃
+            - Inter School Basketball Runner-ups 🏀
             - Anchored in Annual Parents day
         
   # Achievements
   achievements:
     enable: true
-    # title: "Custom Name"
+    title: "Courses"
     items:
-      - title: Winning with Communication certificate 
-        content: Achieved communication excellence for success.
-        url: /certificates/unfinished/unfinishedcert.png
-        image: /certificates/unfinished/working.png
-      - title: Time Management certificate 
-        content: Acquired essential time management skills for peak productivity.
-        url: /certificates/unfinished/unfinishedcert.png
-        image: /certificates/unfinished/nearlydone.png
-      - title: Stress Management certificate 
-        content: Mastered stress management for unwavering calm amidst a busy workload.
-        url: /certificates/unfinished/unfinishedcert.png
-        image: /certificates/unfinished/inprogress.png
-      - title: Inter School Dance Competition Winner 💃
-        content: Emerged as the victorious team in the Inter-School Dance Competition.
-      - title: Inter School Basketball Runner-ups 🏀
-        content: Secured second place through exceptional teamwork in interscholastic basketball.
+      - title: Women Leaders Executive Programme 
+        content: Women's Leadership, Skills, Management Styles, Fem-Management, Situational leadership, Work-life balance
+        url: https://www.udemy.com/course/womens-leadership/
+        image: /images/projects/womenleader.png
+      - title: Customer Research and Data-Driven Decision Making
+        content: Learning about customers, understanding statistics and applying scientific methods to testing
+        url: https://www.udemy.com/course/customer-research-data-driven-decision-making
+        image: /images/projects/customerresearch.png
+      - title: Sales management - streams, frameworks and processes
+        content: Learning how to train, develop and improve your sales team with this sales management masterclass
+        url: https://www.udemy.com/course/sales-management-streams-frameworks-and-processes/
+        image: /images/projects/salesmanagement.png
 
   # projects
   projects:
     enable: true
-    title: "Courses"
+    title: "Acheivements"
     items:
-      - title: Winning With Communication
-        content: Effective communication skill is the art of conveying information clearly and persuasively, fostering understanding and building strong relationship.
-        image: /images/projects/winningwithcommunication.jpg
+      - title: Winning With Communication Certificate
+        content: Achieved communication excellence for conveying information clearly and persuasively, fostering understanding and building strong relationship.
+        image: /certificates/InduCommunicationSkills.jpg
         featured:
-          name: Course
-          link: https://www.udemy.com/course/communication-skills-class-course-training/
+          name: Certificate
+          link: /certificates/InduCommunicationSkills.jpg
         badges:
           - "Communication"
           - "Leadership"
         links:
+          - icon: fab fa-facebook
+            url: https://www.linkedin.com/in/enkulimbu
+          - icon: fab fa-twitter
+            url: https://www.linkedin.com/in/enkulimbu
           - icon: fab fa-linkedin
             url: https://www.linkedin.com/in/enkulimbu
 
       - title: Stress Management
-        content: Stress management as an organizational skill entails creating a work environment and processes that mitigate stress, enhance employee well-being, and optimize productivity.
-        image: /images/projects/stressmanagement.jpg
+        content: Mastered stress management for unwavering calm amidst a busy workload to mitigate stress, enhance employee well-being, and optimize productivity.
+        image: /certificates/InduStressManagementCert.jpg
         featured:
-          name: Course
-          link: https://www.udemy.com/share/101LE63@81rBDxnd2mLSanjI0ur-6i0aVwqOk-LnyuKORpTvm4lLLnFSBs8JkZ6QNgXpq-YsOQ==/
+          name: Certificate
+          link: /certificates/InduStressManagementCert.jpg
         badges:
           - "Organizational skill"
         links:
+          - icon: fab fa-facebook
+            url: https://www.linkedin.com/in/enkulimbu
+          - icon: fab fa-twitter
+            url: https://www.linkedin.com/in/enkulimbu
           - icon: fab fa-linkedin
             url: https://www.linkedin.com/in/enkulimbu
 
       - title: Ultimate Time Management
-        content: Time management skill is the ability to prioritize tasks, allocate resources efficiently, and maximize productivity within set timeframes.
-        image: /images/projects/ultimatetimemanagement.jpg
+        content: Acquired essential time management skills for peak productivity while prioritizing tasks, allocating resources efficiently, and maximizing  productivity within set timeframes.
+        image: /certificates/InduTimeManagementCert.jpg
         featured:
-          name: Course 
-          link: https://www.udemy.com/share/101zIy3@SaZPf3cKAkSRxAsAmlcgosxj-bV891CmaOnUaywrC8xIWOdt3gCvvFSFf0yThMt1Vg==/
+          name: Certificate
+          link: /certificates/InduTimeManagementCert.jpg
         badges:
           - "Time Management"
         links:
+          - icon: fab fa-facebook
+            url: https://www.linkedin.com/in/enkulimbu
+          - icon: fab fa-twitter
+            url: https://www.linkedin.com/in/enkulimbu
           - icon: fab fa-linkedin
-            url: https://www.linkedin.com/in/enkulimbu/
+            url: https://www.linkedin.com/in/enkulimbu
   #Contact
   contact:
     enable: true
@@ -318,11 +327,11 @@ params:
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
     email: limbuenks@gmail.com
     btnName: Mail me
-    # formspree:
-    #   enable: true # `contact.email` value will be ignored
-    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
-    #   emailCaption: "Enter your email address"
-    #   messageCaption: "Enter your message here"
+    formspree:
+      enable: true # `contact.email` value will be ignored
+      formId: https://formspree.io/f/meqbwjjr # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+      emailCaption: "Please provide your email address"
+      messageCaption: "Enter your message here"
 
   footer:
     recentPosts:
