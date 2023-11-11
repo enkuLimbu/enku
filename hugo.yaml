@@ -283,11 +283,11 @@ params:
           - "Leadership"
         links:
           - icon: fab fa-facebook
-            url: https://www.linkedin.com/in/enkulimbu
+            url: https://www.facebook.com/sanuenku
           - icon: fab fa-twitter
-            url: https://www.linkedin.com/in/enkulimbu
+            url: https://twitter.com/enkuLimbu
           - icon: fab fa-linkedin
-            url: https://www.linkedin.com/in/enkulimbu
+            url: https://www.linkedin.com/posts/enkulimbu_im-happy-to-share-that-ive-obtained-a-new-activity-7128945560547426304-Ynu0?utm_source=share&utm_medium=member_desktop
 
       - title: Stress Management
         content: Mastered stress management for unwavering calm amidst a busy workload to mitigate stress, enhance employee well-being, and optimize productivity.
@@ -299,11 +299,11 @@ params:
           - "Organizational skill"
         links:
           - icon: fab fa-facebook
-            url: https://www.linkedin.com/in/enkulimbu
+            url: https://www.facebook.com/sanuenku
           - icon: fab fa-twitter
-            url: https://www.linkedin.com/in/enkulimbu
+            url: https://twitter.com/enkuLimbu
           - icon: fab fa-linkedin
-            url: https://www.linkedin.com/in/enkulimbu
+            url: https://www.linkedin.com/posts/enkulimbu_im-happy-to-share-that-ive-obtained-a-new-activity-7128944558595330048-R6g1?utm_source=share&utm_medium=member_desktop
 
       - title: Ultimate Time Management
         content: Acquired essential time management skills for peak productivity while prioritizing tasks, allocating resources efficiently, and maximizing  productivity within set timeframes.
@@ -315,11 +315,11 @@ params:
           - "Time Management"
         links:
           - icon: fab fa-facebook
-            url: https://www.linkedin.com/in/enkulimbu
+            url: https://www.facebook.com/sanuenku
           - icon: fab fa-twitter
-            url: https://www.linkedin.com/in/enkulimbu
+            url: https://twitter.com/enkuLimbu
           - icon: fab fa-linkedin
-            url: https://www.linkedin.com/in/enkulimbu
+            url: https://www.linkedin.com/posts/enkulimbu_im-happy-to-share-that-ive-obtained-a-new-activity-7128942396289024000-bhvl?utm_source=share&utm_medium=member_desktop
   #Contact
   contact:
     enable: true
