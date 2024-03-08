@@ -1,9 +1,6 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description }}">
 <link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
-  {{ if .Params.quiz }}
-    <script src="{{ .Site.Params.staticPath }}/js/wordguess.js"></script>
-  {{ end }}
 <!-- fontawesome -->
 <script defer src="{{.Site.Params.staticPath}}/fontawesome-5/all-5.15.4.js"></script>
 {{ end }}
@@ -54,15 +51,22 @@
       <div class="col-sm-12 col-md-12 col-lg-3">
   
  <div id="stickySideBar" class="sticky-sidebar">
-  {{ with .Params.quiz }}
-              <aside class="toc">
-              <div class="toc-content">
-              <div id="hugo-frontmatter" style="display: none;">{{ . | jsonify }}</div>
-                 {{ partial "wordguess.html" . }}
-              </div>
-          </aside>
+{{ with .Params.quiz }}
+<div class="row">
+    <aside class="toc">
+        <div class="toc-content">
+            <script>
+                var questions = {{ . | jsonify }};
+            </script>
+        </div>
+         <div id="hugo-frontmatter" style="display: none;">{ "quiz": true, "questions": [ { "correctAnswer": "あ", "options": ["あ", "い", "う", "え"], "question": "What is the first hiragana character in the 'a' column?" }, { "correctAnswer": "か", "options": ["か", "き", "く", "け"], "question": "Which hiragana character is equivalent to the English letter 'ka'?" }, { "correctAnswer": "s", "options": ["a", "i", "u", "s"], "question": "In the hiragana syllabary, which column does 'さ' belong to?" } ] }</div> 
 
-    {{ end }}
+            {{ partial "wordguess.html" . }}
+            <script src="{{ "js/wordguess.js" | relURL }}"></script>
+        </div>
+    </aside>
+</div>
+{{ end }}
           {{ if .Params.toc | default true}}
           <aside class="toc">
               <h5>
@@ -129,9 +133,7 @@
 </div>
 <Script src="{{.Site.Params.staticPath}}/js/scrollProgressBar.js"></script>
 
-
 {{ end }}
-
 <script>
   var topScroll = document.getElementById("topScroll");
   window.onscroll = function() {scrollFunction()};
