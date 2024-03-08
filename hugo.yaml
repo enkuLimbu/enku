@@ -1,0 +1,436 @@
+baseURL: "https://indulimbu.com.np/"
+languageCode: "en-us"
+title: "Enku Limbu"
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+disqusShortname: enku-pages-dev
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+    - identifier: gallery
+      name: Gallery
+      title: Blog posts
+      url: /gallery
+      weight: 2
+    # Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Enku Limbu"
+  description: This is Enku's personal portfolio website. You are Welcome Here.
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "WELLASHI" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    # searchPlaceholder: "Search"
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Enku Limbu"
+    subtitle: "Exploring a World of Professional Growth"
+    content: "Join me on my journey as I navigate the professional landscape, sharing valuable insights and experiences along the way."
+    image: /images/enku.jpg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "/CV/EnkuLimbuCV.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fa fa-envelope
+          url: mailto:limbuenks@gmail.com
+        - icon: fab fa-youtube
+          url: https://www.youtube.com/@wellashi/
+        - icon: fab fa-telegram
+          url: https://t.me/enkulimbu
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.png"
+    content: |-
+      Hello stranger, I am a dedicated learner on a mission to master the art of providing exceptional service and maintaining impeccable organization. Join me as I navigate the world of professional development, growth, and learning, sharing my journey in pursuit of creating welcoming and efficient front-of-house experiences in various aspects of my career.
+
+      Welcome to the chronicles of my professional development!
+    skills:
+      enable: true
+      title: "I am in the verge of improving these skills:"
+      items:
+        - "Communication"
+        - "Leadership"
+        - "Reading Books"
+        - "Time Management"
+        - "Office Suite Proficiency"
+        - "Organizational Skills"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Receptionist"
+        company: "Suva Consultancy"
+        companyUrl: "https://www.facebook.com/SuvaCareer/"
+        date: "Nov 2023 - Dec 2023"
+        featuredLink:
+          enable: true
+          name: "Blogs about the experience"
+          url: "https://indulimbu.com.np/tags/suva/"
+        info:
+          enable: true
+          content: I worked at Suva for only a month because the employer was very abusive and never satisfied.
+        
+        content: |
+          Offering a welcoming atmosphere and effective administrative support in a dynamic consulting setting.
+
+          - **Front Desk Coordinator** responsible for greeting visitors, respond to phone calls and emails, providing information or redirecting inquiries.
+          - **Streamlining Administrative Operations**, ensuring a positive client experience with proper appointment scheduling and organizing mailroom operations.
+
+      - job: "Cashier"
+        company: "Central Cafe"
+        companyUrl: "https://www.google.com/search?q=central+cafe+newroad&rlz=1C1GCEA_enNP1059NP1060&oq=central+cafe+newroad&gs_lcrp=EgZjaHJvbWUyCwgAEEUYChg5GKABMgkIARAhGAoYoAEyCQgCECEYChigAdIBCDQzODRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#rlimm=6977463105882457710"
+        date: "Jan 2022 - Feb 2023"
+        featuredLink:
+          enable: true
+          name: "Blogs about the experience"
+          url: "https://indulimbu.com.np/tags/cashier/"
+        info:
+          enable: true
+          content: Central Cafe is now closed due to demise of owner.
+        content: |
+          Providing efficient payment processing and exceptional customer service in a busy dining environment.
+
+          - **Customer Transactions Manager** responsible for processing payments and providing excellent service.
+          - **Ensuring Smooth Financial Operations** at a bustling restaurant, enhancing the dining experience for patrons.
+
+      - job: "Waitress"
+        company: "Central Cafe"
+        companyUrl: "https://www.google.com/search?q=central+cafe+newroad&rlz=1C1GCEA_enNP1059NP1060&oq=central+cafe+newroad&gs_lcrp=EgZjaHJvbWUyCwgAEEUYChg5GKABMgkIARAhGAoYoAEyCQgCECEYChigAdIBCDQzODRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#rlimm=6977463105882457710"
+        date: "August 2021 - Jan 2022"
+        info:
+          enable: true
+          content: Central Cafe is now closed due to demise of owner.
+        featuredLink:
+          enable: true
+          name: "Blogs about the experience"
+          url: "https://indulimbu.com.np/tags/waitress/"
+        content: |
+          Dedicated to delivering a memorable dining experience through attentive service and hospitality.
+
+          - Greeted new customers, discussed specials, and took drink orders
+          - Stayed composed during busy shifts and when dealing with difficult customers
+          - Quickly re arranged tables for the next guests
+          - Resolved customer issues and complaints
+
+      - job: "Supervisory"
+        company: "King Faisal University"
+        info:
+          enable: true
+          content: King Faisal University is a university in Kingdom of Saudi Arabia
+        companyUrl: "https://www.kfu.edu.sa/en/Pages/AboutKKFU.aspx"
+        date: "June 2017 - Feb 2021"
+        featuredLink:
+          enable: true
+          name: "Blogs about the experience"
+          url: "https://indulimbu.com.np/tags/supervisor/"
+        content: |
+          - **Task Coordinator:** Coordinate and assign chores and responsibilities to colleagues, ensuring a fair distribution of tasks and that everyone is contributing to the smooth running of the operations.
+          - **Problem Solver:** Act as a mediator and problem solver in case of disputes or issues related to colleagues and responsibilities.
+          - **Time and Schedule Organizer:** Create and maintain a work balance, scheduling events, appointments, and coordinating staff members' schedules.
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Higher Secondary Education"
+        school:
+          name: "Gyanodaya Secondary School"
+          url: "http://gyanodayanepal.edu.np/"
+        date: "2071 - 2073"
+        content: |-
+          Customer Service Enhancement Project
+          - Analyze guest feedback and reviews to identify common issues and areas for improvement
+          - Improve the overall guest experience and customer satisfaction within a hotel.
+
+          Extracurricular Activities
+            - Performed a traditional dance for annual function 
+        featuredLink:
+          enable: true
+          name: "My Curriculam Vitae"
+          url: "/CV/Enku.pdf"
+
+      - title: "School Leaving Certificate"
+        school:
+          name: "Gyanodaya Secondary School"
+          url: "http://gyanodayanepal.edu.np/"
+        date: "2071"
+        content: |-
+          Extracurricular Activities
+            - Inter School Dance Competition Winner 💃
+            - Inter School Basketball Runner-ups 🏀
+            - Anchored in Annual Parents day
+       
+ # Learning
+  learning:
+    enable: true
+    #title: "Self Learning"
+    index: true
+    items:
+      - title: "Japanese Language"
+        school:
+          name: "Texas Consultancy"
+          url: "https://texaseduacademy.com.np/"
+        date: "2081 - ongoing"
+        content: |-
+          Learning from Texas Consultancy and my experience:
+          - The teachers are great and teach very well.
+          - seminar and online exam facilities are available
+
+          About my notes and references 
+            - You can refer to my Blogs to learn Japanese or press the Download button in respective topic and download relevant study materials.
+              Send a message to me from the contact form below to let me know that I was able to help you.
+        featuredLink:
+          enable: true
+          name: "My Blogs and Notes"
+          url: "/tags/japanese/"
+
+      - title: "Web Development"
+        school:
+          name: "Suhesh Kasti - Friend"
+          url: "https://suhesh.com.np/"
+        date: "2079 - ongoing"
+        content: |-
+          Learning from Suhesh and my experience
+          - He doesn't know anything himself but just keeps scolding. Won't recommend.
+
+          About my notes and references 
+            - You can refer to my Blogs to learn Web-Development or press the Download button in respective topic and download relevant study materials.
+              Send a message to me from the contact form below to let me know that I was able to help you.
+        featuredLink:
+          enable: true
+          name: "My Blogs and Notes"
+          url: "/tags/web-development/"
+
+  # Achievements
+  achievements:
+    enable: true
+    title: "Courses"
+    items:
+      - title: Women Leaders Executive Programme 
+        content: Women's Leadership, Skills, Management Styles, Fem-Management, Situational leadership, Work-life balance
+        url: https://www.udemy.com/course/womens-leadership/
+        image: /images/projects/womenleader.png
+      - title: Customer Research and Data-Driven Decision Making
+        content: Learning about customers, understanding statistics and applying scientific methods to testing
+        url: https://www.udemy.com/course/customer-research-data-driven-decision-making
+        image: /images/projects/customerresearch.png
+      - title: Sales management - streams, frameworks and processes
+        content: Learning how to train, develop and improve your sales team with this sales management masterclass
+        url: https://www.udemy.com/course/sales-management-streams-frameworks-and-processes/
+        image: /images/projects/salesmanagement.png
+
+  # projects
+  projects:
+    enable: true
+    title: "Acheivements"
+    items:
+      - title: Winning With Communication Certificate
+        content: Achieved communication excellence for conveying information clearly and persuasively, fostering understanding and building strong relationship.
+        image: /certificates/InduCommunicationSkills.jpg
+        featured:
+          name: Certificate
+          link: /certificates/InduCommunicationSkills.jpg
+        badges:
+          - "Communication"
+          - "Leadership"
+        links:
+          - icon: fab fa-facebook
+            url: https://www.facebook.com/sanuenku
+          - icon: fab fa-twitter
+            url: https://twitter.com/enkuLimbu
+          - icon: fab fa-linkedin
+            url: https://www.linkedin.com/posts/enkulimbu_im-happy-to-share-that-ive-obtained-a-new-activity-7128945560547426304-Ynu0?utm_source=share&utm_medium=member_desktop
+
+      - title: Stress Management
+        content: Mastered stress management for unwavering calm amidst a busy workload to mitigate stress, enhance employee well-being, and optimize productivity.
+        image: /certificates/InduStressManagementCert.jpg
+        featured:
+          name: Certificate
+          link: /certificates/InduStressManagementCert.jpg
+        badges:
+          - "Organizational skill"
+        links:
+          - icon: fab fa-facebook
+            url: https://www.facebook.com/sanuenku
+          - icon: fab fa-twitter
+            url: https://twitter.com/enkuLimbu
+          - icon: fab fa-linkedin
+            url: https://www.linkedin.com/posts/enkulimbu_im-happy-to-share-that-ive-obtained-a-new-activity-7128944558595330048-R6g1?utm_source=share&utm_medium=member_desktop
+
+      - title: Ultimate Time Management
+        content: Acquired essential time management skills for peak productivity while prioritizing tasks, allocating resources efficiently, and maximizing  productivity within set timeframes.
+        image: /certificates/InduTimeManagementCert.jpg
+        featured:
+          name: Certificate
+          link: /certificates/InduTimeManagementCert.jpg
+        badges:
+          - "Time Management"
+        links:
+          - icon: fab fa-facebook
+            url: https://www.facebook.com/sanuenku
+          - icon: fab fa-twitter
+            url: https://twitter.com/enkuLimbu
+          - icon: fab fa-linkedin
+            url: https://www.linkedin.com/posts/enkulimbu_im-happy-to-share-that-ive-obtained-a-new-activity-7128942396289024000-bhvl?utm_source=share&utm_medium=member_desktop
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    email: limbuenks@gmail.com
+    btnName: Say Hello!
+    formspree:
+      enable: true # `contact.email` value will be ignored
+      formId: meqbwjjr # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+      emailCaption: "Please provide your email address"
+      messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/enkuLimbu
+      linkedin: https://www.linkedin.com/in/enkulimbu
+      twitter: https://twitter.com/enkuLimbu
+      instagram: https://www.instagram.com/enkulimbu/
+      facebook: https://www.facebook.com/sanuenku
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
