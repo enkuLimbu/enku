@@ -15,7 +15,31 @@ tags:
 image: /images/blog/hiragana-class.jpg
 description: ""
 toc: 
+quiz: true
+questions:
+  - question: "What is the first hiragana character in the 'a' column?"
+    options:
+      - "あ"
+      - "い"
+      - "う"
+      - "え"
+    correctAnswer: "あ"
+  - question: "Which hiragana character is equivalent to the English letter 'ka'?"
+    options:
+      - "か"
+      - "き"
+      - "く"
+      - "け"
+    correctAnswer: "か"
+  - question: "In the hiragana syllabary, which column does 'さ' belong to?"
+    options:
+      - "a"
+      - "i"
+      - "u"
+      - "s"
+    correctAnswer: "s"
 ---
+
 
 
 Hello Friends Chai Pilo.😂😂

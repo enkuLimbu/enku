@@ -1,7 +1,12 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description }}">
 <link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
-
+  {{ if .Params.quiz }}
+    <meta name="description" content="{{ .Params.description }}">
+    <link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
+    <script defer src="{{.Site.Params.staticPath}}/fontawesome-5/all-5.15.4.js"></script>
+    <script src="{{ .Site.Params.staticPath }}/js/wordguess.js"></script>
+  {{ end }}
 <!-- fontawesome -->
 <script defer src="{{.Site.Params.staticPath}}/fontawesome-5/all-5.15.4.js"></script>
 {{ end }}
@@ -44,6 +49,12 @@
               <a href="{{ absURL .url }}" class="p-2 px-4 my-2 btn btn-primary btn-sm">{{ .label }}</a> <br>
               {{ end }}
             </div>
+
+  {{ with .Params.quiz }}
+      <div id="hugo-frontmatter" style="display: none;">{{ . | jsonify }}</div>
+      {{ partial "wordguess.html" . }}
+    {{ end }}
+
             {{ end }}
           </article>
         </div>
@@ -116,6 +127,8 @@
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <Script src="{{.Site.Params.staticPath}}/js/scrollProgressBar.js"></script>
+
+
 {{ end }}
 
 <script>
