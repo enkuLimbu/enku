@@ -40,8 +40,6 @@ questions:
     correctAnswer: "s"
 ---
 
-
-
 Hello Friends Chai Pilo.😂😂
 If you want to learn Hiragana let's learn together. Here I'll be having my own Hiragana class and teaching Hiragana in a way that'll be easy for you to understand. This will be a series so if you like the way I teach make sure you get subscribed by bookmarking this site. Enough talk let's start.
 

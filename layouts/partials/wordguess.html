@@ -1,17 +1,122 @@
 <div id="game-area">
-    <h2>Let's Practice</h2>
+    <h3>Let's Practice</h3>
     <p id="score">Correct - <span id="correct-count">0</span> | Wrong - <span id="wrong-count">0</span></p>
-    <p id="question-text"></p>
+    <p id="question-text">What is the first hiragana character in the 'a' column?</p>
 
     <div id="options">
-        <button id="option-1" class="option btn-primary">Option 1</button>
-        <button id="option-2" class="option btn-primary">Option 2</button>
-        <button id="option-3" class="option btn-primary">Option 3</button>
-        <button id="option-4" class="option btn-primary">Option 4</button>
+        <button id="option-1" class="option p-2 px-4 my-2 btn btn-outline-primary btn-sm">Option 1</button>
+        <button id="option-2" class="option p-2 px-4 my-2 btn btn-outline-primary btn-sm">Option 2</button>
+        <button id="option-3" class="option p-2 px-4 my-2 btn btn-outline-primary btn-sm">Option 3</button>
+        <button id="option-4" class="option p-2 px-4 my-2 btn btn-outline-primary btn-sm">Option 4</button>
     </div>
 
     <p id="feedback-message"></p>
-    <button id="try-again-button" onclick="resetGame()">Try Again</button>
+    <button id="try-again-button" class="p-2 px-4 my-2 btn btn-primary btn-sm" onclick="resetGame()">Try Again</button>
 </div>
 
-<script src="/js/word-guess-game.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let questions = [];
+    let currentQuestionIndex = 0;
+    let correctAnswers = 0;
+    let wrongAnswers = 0;
+    let shuffledOptions = [];
+
+    // Fetch questions from the current Hugo page's frontmatter
+    const frontmatter = JSON.parse(document.getElementById("hugo-frontmatter").innerText);
+    if (frontmatter && frontmatter.quiz === true && frontmatter.questions) {
+        questions = frontmatter.questions;
+        console.log("Questions:", questions); // Log questions to console
+        // Randomize the order of questions
+        questions = shuffleArray(questions);
+        // Start the game with the first question
+        displayQuestion();
+    }
+
+    // Function to display the current question
+    function displayQuestion() {
+        if (currentQuestionIndex < questions.length) {
+            const currentQuestion = questions[currentQuestionIndex];
+            const questionText = currentQuestion.question;
+            const options = currentQuestion.options;
+
+            // Display question text
+            document.getElementById("question-text").innerText = questionText;
+
+            // Randomize the order of options
+            shuffledOptions = shuffleArray(options);
+
+            // Display options
+            for (let i = 1; i <= 4; i++) {
+                const optionButton = document.getElementById(`option-${i}`);
+                optionButton.innerText = shuffledOptions[i - 1];
+
+                // Add click event listener to each option
+                optionButton.addEventListener("click", function () {
+                    checkAnswer(shuffledOptions[i - 1]);
+                });
+            }
+        } else {
+            // Display final score and "Try Again" button
+            document.getElementById("question-text").innerText = "Game Over! Your Score:";
+            document.getElementById("options").style.display = "none";
+            document.getElementById("try-again-button").style.display = "block";
+            document.getElementById("feedback-message").innerText = `Correct: ${correctAnswers} | Wrong: ${wrongAnswers}`;
+
+            // Add click event listener to "Try Again" button
+            document.getElementById("try-again-button").addEventListener("click", resetGame);
+        }
+    }
+
+    // Function to check the user's answer
+    function checkAnswer(userAnswer) {
+        const currentQuestion = questions[currentQuestionIndex];
+        const correctAnswer = currentQuestion.correctAnswer;
+
+        if (userAnswer === correctAnswer) {
+            // Correct answer
+            document.getElementById(`option-${shuffledOptions.indexOf(correctAnswer) + 1}`).style.backgroundColor = "green";
+            correctAnswers++;
+        } else {
+            // Incorrect answer
+            document.getElementById(`option-${shuffledOptions.indexOf(userAnswer) + 1}`).style.backgroundColor = "red";
+            wrongAnswers++;
+        }
+
+        // Move to the next question
+        currentQuestionIndex++;
+        // Delay for a moment to display feedback before moving to the next question
+        setTimeout(() => {
+            // Reset button colors
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`option-${i}`).style.backgroundColor = "";
+            }
+            // Display the next question
+            displayQuestion();
+        }, 1000);
+    }
+
+    // Function to reset the game
+    function resetGame() {
+        currentQuestionIndex = 0;
+        correctAnswers = 0;
+        wrongAnswers = 0;
+        document.getElementById("options").style.display = "block";
+        document.getElementById("try-again-button").style.display = "none";
+        document.getElementById("correct-count").innerText = "0";
+        document.getElementById("wrong-count").innerText = "0";
+        questions = shuffleArray(questions);
+        displayQuestion();
+    }
+
+    // Function to shuffle an array (Fisher-Yates algorithm)
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+});
+
+</script>

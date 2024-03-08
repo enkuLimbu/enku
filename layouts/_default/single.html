@@ -2,9 +2,6 @@
 <meta name="description" content="{{ .Params.description }}">
 <link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
   {{ if .Params.quiz }}
-    <meta name="description" content="{{ .Params.description }}">
-    <link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
-    <script defer src="{{.Site.Params.staticPath}}/fontawesome-5/all-5.15.4.js"></script>
     <script src="{{ .Site.Params.staticPath }}/js/wordguess.js"></script>
   {{ end }}
 <!-- fontawesome -->
@@ -50,11 +47,6 @@
               {{ end }}
             </div>
 
-  {{ with .Params.quiz }}
-      <div id="hugo-frontmatter" style="display: none;">{{ . | jsonify }}</div>
-      {{ partial "wordguess.html" . }}
-    {{ end }}
-
             {{ end }}
           </article>
         </div>
@@ -62,6 +54,15 @@
       <div class="col-sm-12 col-md-12 col-lg-3">
   
  <div id="stickySideBar" class="sticky-sidebar">
+  {{ with .Params.quiz }}
+              <aside class="toc">
+              <div class="toc-content">
+              <div id="hugo-frontmatter" style="display: none;">{{ . | jsonify }}</div>
+                 {{ partial "wordguess.html" . }}
+              </div>
+          </aside>
+
+    {{ end }}
           {{ if .Params.toc | default true}}
           <aside class="toc">
               <h5>
@@ -108,7 +109,7 @@
             </div>
           </aside>
           {{ end }}
-        </div>
+          </div>
       </div>
     </div>
     <div class="row">

@@ -80,17 +80,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Function to reset the game
-function resetGame() {
-    currentQuestionIndex = 0;
-    correctAnswers = 0;
-    wrongAnswers = 0;
-    document.getElementById("options").style.display = "block";
-    document.getElementById("try-again-button").style.display = "none";
-    document.getElementById("correct-count").innerText = "0";
-    document.getElementById("wrong-count").innerText = "0";
-    questions = shuffleArray(questions);
-    displayQuestion();
-}
+    function resetGame() {
+        currentQuestionIndex = 0;
+        correctAnswers = 0;
+        wrongAnswers = 0;
+        document.getElementById("options").style.display = "block";
+        document.getElementById("try-again-button").style.display = "none";
+        document.getElementById("correct-count").innerText = "0";
+        document.getElementById("wrong-count").innerText = "0";
+        questions = shuffleArray(questions);
+        displayQuestion();
+    }
 
     // Function to shuffle an array (Fisher-Yates algorithm)
     function shuffleArray(array) {
