@@ -16,7 +16,9 @@ tags:
   - Teaching
 image: /images/blog/khanji-class.jpg
 description: ""
-toc: 
+toc:
+quiz:
+  code: j03
 ---
 
 Hello Friends Once Again.😂😂

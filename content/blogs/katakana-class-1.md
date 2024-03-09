@@ -14,7 +14,9 @@ tags:
   - Teaching
 image: /images/blog/katakana-class.jpg
 description: ""
-toc: 
+toc:
+quiz:
+  code: k02
 ---
 
 Hello Friends Chai Pilo.😂😂

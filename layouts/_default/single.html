@@ -1,12 +1,12 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description }}">
-<link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/single.css">
 <!-- fontawesome -->
-<script defer src="{{.Site.Params.staticPath}}/fontawesome-5/all-5.15.4.js"></script>
+<script defer src="{{ .Site.Params.staticPath }}/fontawesome-5/all-5.15.4.js"></script>
 {{ end }}
 
 {{ define "title" }}
-{{.Title }} | {{ .Site.Title }}
+{{ .Title }} | {{ .Site.Title }}
 {{ end }}
 
 {{ define "main" }}
@@ -50,23 +50,20 @@
       </div>
       <div class="col-sm-12 col-md-12 col-lg-3">
   
- <div id="stickySideBar" class="sticky-sidebar">
-{{ with .Params.quiz }}
+        <div id="stickySideBar" class="sticky-sidebar">
+         {{ if .Params.quiz }}
 <div class="row">
-    <aside class="toc">
-        <div class="toc-content">
-            <script>
-                var questions = {{ . | jsonify }};
-            </script>
-        </div>
-         <div id="hugo-frontmatter" style="display: none;">{ "quiz": true, "questions": [ { "correctAnswer": "あ", "options": ["あ", "い", "う", "え"], "question": "What is the first hiragana character in the 'a' column?" }, { "correctAnswer": "か", "options": ["か", "き", "く", "け"], "question": "Which hiragana character is equivalent to the English letter 'ka'?" }, { "correctAnswer": "s", "options": ["a", "i", "u", "s"], "question": "In the hiragana syllabary, which column does 'さ' belong to?" } ] }</div> 
-
-            {{ partial "wordguess.html" . }}
-            <script src="{{ "js/wordguess.js" | relURL }}"></script>
-        </div>
-    </aside>
+  <aside class="toc">
+    <div class="toc-content">
+      {{ partial "wordguess.html" . }}
+      <script>
+        var quizCode = "{{ with .Params.quiz }}{{ .code }}{{ end }}";
+      </script>
+    </div>
+ <script src="{{ "js/wordguess.js" | relURL }}?code={{ .Params.quiz.code }}"></script>
+  </aside>
 </div>
-{{ end }}
+{{ end }} 
           {{ if .Params.toc | default true}}
           <aside class="toc">
               <h5>
@@ -115,8 +112,7 @@
           {{ end }}
           </div>
       </div>
-    </div>
-    <div class="row">
+    </div>    <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-9 p-4">
         {{ template "_internal/disqus.html" . }}
       </div>
@@ -131,7 +127,7 @@
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="{{.Site.Params.staticPath}}/js/scrollProgressBar.js"></script>
+<Script src="{{ .Site.Params.staticPath }}/js/scrollProgressBar.js"></script>
 
 {{ end }}
 <script>
@@ -153,7 +149,7 @@
 </script>
 
 {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
-<script src="{{.Site.Params.staticPath}}/js/readingTime.js"></script>
+<script src="{{ .Site.Params.staticPath }}/js/readingTime.js"></script>
 {{end}}
 
 {{ end }}

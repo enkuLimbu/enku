@@ -14,6 +14,8 @@ tags:
 image: /images/blog/remote-work-dream.jpg
 description: ""
 toc:
+quiz:
+  code: w04
 ---
 
 # A Web Dev Odyssey in Nepal: The Comedy of Freelancing Follies 🤣
