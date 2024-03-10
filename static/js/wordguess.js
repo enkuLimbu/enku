@@ -1,394 +1,609 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Define these variables at the top of your script
-  var questionTextElement = document.getElementById("question-text");
-  var optionsElements = document.querySelectorAll(".option");
-  var feedbackMessageElement = document.getElementById("feedback-message");
-  var correctCountElement = document.getElementById("correct-count");
-  var wrongCountElement = document.getElementById("wrong-count");
-  var tryAgainButton = document.getElementById("try-again-button");
+// Get the required HTML elements
+const questionTextElement = document.getElementById('question-text');
+const optionsContainer = document.getElementById('options');
+const feedbackMessageElement = document.getElementById('feedback-message');
+const correctCountElement = document.getElementById('correct-count');
+const wrongCountElement = document.getElementById('wrong-count');
+const tryAgainButton = document.getElementById('try-again-button');
 
-  // Get the code from the query parameter or the window.quizCode variable
-  var urlParams = new URLSearchParams(window.location.search);
-  var codeFromUrl = urlParams.get('code');
-  var quizCode = codeFromUrl || window.quizCode || "h01"; // Use code from URL, window.quizCode variable, or default to "h01"
+// Get the code from the query parameter or the window.quizCode variable
+var urlParams = new URLSearchParams(window.location.search);
+var codeFromUrl = urlParams.get('code');
+var quizCode = codeFromUrl || window.quizCode || "h01"; // Use code from URL, window.quizCode variable, or default to "h01"
 
-  console.log(quizCode); // This should now log the correct value
+// Game state variables
+let score = 0;
+let currentQuestionIndex = 0;
+let currentCategory = quizCode;
 
-  var score = 0;
-  var currentQuestionIndex = 0;
-  var currentCategory = "h01"; // Default category
-
-
-var questionSets = {
+  // Define question sets
+  var questionSets = {
 "h01": [
-    { "correctAnswer": "あ", "options": ["あ", "い", "う", "え"], "question": "What is the first hiragana character in the 'a' column?" },
-    { "correctAnswer": "か", "options": ["か", "き", "く", "け"], "question": "Which hiragana character is equivalent to the English letter 'ka'?" },
-    { "correctAnswer": "さ", "options": ["さ", "し", "す", "せ"], "question": "What is the pronunciation of 'さ' in hiragana?" },
-    { "correctAnswer": "た", "options": ["た", "ち", "つ", "て"], "question": "In the hiragana syllabary, which character comes after 'さ'?" },
-    { "correctAnswer": "な", "options": ["な", "に", "ぬ", "ね"], "question": "Which hiragana character is equivalent to the English letter 'na'?" },
-    { "correctAnswer": "ま", "options": ["ま", "み", "む", "め"], "question": "What is the pronunciation of 'ま' in hiragana?" },
-    { "correctAnswer": "や", "options": ["や", "ゆ", "よ", "い"], "question": "In hiragana, which character is a part of the 'ya' series?" },
-    { "correctAnswer": "ら", "options": ["ら", "り", "る", "れ"], "question": "Which hiragana character is equivalent to the English letter 'ra'?" },
-    { "correctAnswer": "わ", "options": ["わ", "を", "ん", "れ"], "question": "In the hiragana syllabary, which character is used as a particle?" },
-    { "correctAnswer": "ほ", "options": ["ほ", "へ", "は", "ひ"], "question": "Which hiragana character is equivalent to the English letter 'ho'?" },
-    { "correctAnswer": "ぎ", "options": ["ぎ", "ぐ", "げ", "ご"], "question": "What is the pronunciation of 'ぎ' in hiragana?" },
-    { "correctAnswer": "ぞ", "options": ["ぞ", "ぢ", "づ", "ぜ"], "question": "Which hiragana character is equivalent to the English letter 'zo'?" },
-    { "correctAnswer": "ぶ", "options": ["ぶ", "べ", "ぼ", "ぱ"], "question": "In hiragana, which character is equivalent to the English letter 'bu'?" },
-    { "correctAnswer": "ね", "options": ["ね", "ぬ", "ひ", "は"], "question": "Which hiragana character is equivalent to the English letter 'ne'?" },
-    { "correctAnswer": "ゆ", "options": ["ゆ", "よ", "わ", "れ"], "question": "What is the pronunciation of 'ゆ' in hiragana?" },
-    { "correctAnswer": "け", "options": ["け", "き", "く", "こ"], "question": "In hiragana, which character is equivalent to the English letter 'ke'?" },
-    { "correctAnswer": "い", "options": ["い", "お", "え", "う"], "question": "Which hiragana character represents the vowel sound 'i'?" },
-    { "correctAnswer": "と", "options": ["と", "た", "ち", "つ"], "question": "What is the pronunciation of 'と' in hiragana?" },
-    { "correctAnswer": "ぬ", "options": ["ぬ", "ね", "の", "な"], "question": "In hiragana, which character is equivalent to the English letter 'nu'?" },
-    { "correctAnswer": "め", "options": ["め", "み", "も", "ま"], "question": "Which hiragana character is equivalent to the English letter 'me'?" },
-    { "correctAnswer": "る", "options": ["る", "れ", "ろ", "ら"], "question": "What is the pronunciation of 'る' in hiragana?" },
-    { "correctAnswer": "を", "options": ["を", "わ", "ね", "ろ"], "question": "In the hiragana syllabary, which character is a particle used as an object marker?" },
-    { "correctAnswer": "ひ", "options": ["ひ", "は", "ほ", "へ"], "question": "Which hiragana character is equivalent to the English letter 'hi'?" },
-    { "correctAnswer": "ふ", "options": ["ふ", "ひ", "ほ", "へ"], "question": "What is the pronunciation of 'ふ' in hiragana?" },
-    { "correctAnswer": "よ", "options": ["よ", "ゆ", "や", "い"], "question": "In hiragana, which character is a part of the 'yo' series?" },
-    { "correctAnswer": "べ", "options": ["べ", "び", "ぼ", "ば"], "question": "Which hiragana character is equivalent to the English letter 'be'?" },
-    { "correctAnswer": "だ", "options": ["だ", "で", "ど", "ど"], "question": "What is the pronunciation of 'だ' in hiragana?" },
-    { "correctAnswer": "ぱ", "options": ["ぱ", "ぴ", "ぽ", "ぺ"], "question": "In hiragana, which character is equivalent to the English letter 'pa'?" },
-    { "correctAnswer": "ぽ", "options": ["ぽ", "ぷ", "ぺ", "ぱ"], "question": "Which hiragana character is equivalent to the English letter 'po'?" },
-    { "correctAnswer": "き", "options": ["き", "く", "か", "け"], "question": "What is the pronunciation of 'き' in hiragana?" },
-    { "correctAnswer": "じ", "options": ["じ", "ず", "ぢ", "ぞ"], "question": "In hiragana, which character is equivalent to the English letter 'ji'?" },
-    { "correctAnswer": "ざ", "options": ["ざ", "ず", "ぜ", "ぞ"], "question": "What is the pronunciation of 'ざ' in hiragana?" },
-    { "correctAnswer": "げ", "options": ["げ", "ぎ", "ご", "が"], "question": "In hiragana, which character is equivalent to the English letter 'ge'?" },
-    { "correctAnswer": "ず", "options": ["ず", "づ", "ぜ", "ぞ"], "question": "Which hiragana character is equivalent to the English letter 'zu'?" },
-    { "correctAnswer": "む", "options": ["む", "め", "も", "ま"], "question": "What is the pronunciation of 'む' in hiragana?" },
-    { "correctAnswer": "や", "options": ["や", "ゆ", "よ", "い"], "question": "In hiragana, which character is a part of the 'ya' series?" },
-    { "correctAnswer": "ろ", "options": ["ろ", "れ", "る", "ら"], "question": "Which hiragana character is equivalent to the English letter 'ro'?" },
-    { "correctAnswer": "じ", "options": ["じ", "ず", "ぢ", "ぞ"], "question": "What is the pronunciation of 'じ' in hiragana?" },
-    { "correctAnswer": "ち", "options": ["ち", "つ", "て", "と"], "question": "In hiragana, which character comes after 'さ'?" },
-    { "correctAnswer": "ふ", "options": ["ふ", "ひ", "ほ", "へ"], "question": "What is the pronunciation of 'ふ' in hiragana?" },
-    { "correctAnswer": "ゆ", "options": ["ゆ", "よ", "わ", "れ"], "question": "In hiragana, which character is a part of the 'yu' series?" },
-    { "correctAnswer": "へ", "options": ["へ", "ほ", "は", "ひ"], "question": "Which hiragana character is equivalent to the English letter 'he'?" },
-    { "correctAnswer": "ん", "options": ["ん", "わ", "を", "ね"], "question": "In the hiragana syllabary, which character represents the nasal sound 'n'?" },
-    { "correctAnswer": "き", "options": ["き", "く", "か", "け"], "question": "What is the pronunciation of 'き' in hiragana?" },
-    { "correctAnswer": "ぎ", "options": ["ぎ", "ぐ", "げ", "ご"], "question": "In hiragana, which character is equivalent to the English letter 'gi'?" },
-    { "correctAnswer": "と", "options": ["と", "た", "ち", "つ"], "question": "What is the pronunciation of 'と' in hiragana?" },
-    { "correctAnswer": "で", "options": ["で", "ど", "だ", "ど"], "question": "Which hiragana character is equivalent to the English letter 'de'?" },
-    { "correctAnswer": "ぬ", "options": ["ぬ", "ね", "の", "な"], "question": "What is the pronunciation of 'ぬ' in hiragana?" },
-    { "correctAnswer": "ほ", "options": ["ほ", "へ", "は", "ひ"], "question": "Which hiragana character is equivalent to the English letter 'ho'?" },
-    { "correctAnswer": "ゆ", "options": ["ゆ", "よ", "わ", "れ"], "question": "What is the pronunciation of 'ゆ' in hiragana?" },
-    { "correctAnswer": "び", "options": ["び", "ぶ", "べ", "ば"], "question": "Which hiragana character is equivalent to the English letter 'bi'?" },
-    { "correctAnswer": "ふ", "options": ["ふ", "ひ", "ほ", "へ"], "question": "What is the pronunciation of 'ふ' in hiragana?" },
-    { "correctAnswer": "よ", "options": ["よ", "ゆ", "や", "い"], "question": "In hiragana, which character is a part of the 'yo' series?" },
-    { "correctAnswer": "ば", "options": ["ば", "び", "ぶ", "べ"], "question": "Which hiragana character is equivalent to the English letter 'ba'?" },
-    { "correctAnswer": "ず", "options": ["ず", "づ", "ぜ", "ぞ"], "question": "What is the pronunciation of 'ず' in hiragana?" },
-    { "correctAnswer": "む", "options": ["む", "め", "も", "ま"], "question": "In hiragana, which character is equivalent to the English letter 'mu'?" },
-    { "correctAnswer": "え", "options": ["え", "お", "い", "う"], "question": "What is the pronunciation of 'え' in hiragana?" },
-    { "correctAnswer": "き", "options": ["き", "く", "か", "け"], "question": "In hiragana, which character is equivalent to the English letter 'ki'?" },
-    { "correctAnswer": "ね", "options": ["ね", "ぬ", "ひ", "は"], "question": "What is the pronunciation of 'ね' in hiragana?" },
-    { "correctAnswer": "り", "options": ["り", "れ", "る", "ろ"], "question": "Which hiragana character is equivalent to the English letter 'ri'?" },
-    { "correctAnswer": "ゆ", "options": ["ゆ", "よ", "わ", "れ"], "question": "What is the pronunciation of 'ゆ' in hiragana?" },
-    { "correctAnswer": "ほ", "options": ["ほ", "へ", "は", "ひ"], "question": "In hiragana, which character is equivalent to the English letter 'ho'?" },
-    { "correctAnswer": "ろ", "options": ["ろ", "れ", "る", "ら"], "question": "What is the pronunciation of 'ろ' in hiragana?" },
-    { "correctAnswer": "い", "options": ["い", "お", "え", "う"], "question": "Which hiragana character represents the vowel sound 'i'?" },
-    { "correctAnswer": "ひ", "options": ["ひ", "は", "ほ", "へ"], "question": "What is the pronunciation of 'ひ' in hiragana?" },
-    { "correctAnswer": "た", "options": ["た", "ち", "つ", "て"], "question": "In hiragana, which character comes after 'さ'?" },
-    { "correctAnswer": "て", "options": ["て", "と", "た", "ち"], "question": "Which hiragana character is equivalent to the English letter 'te'?" },
-    { "correctAnswer": "む", "options": ["む", "め", "も", "ま"], "question": "What is the pronunciation of 'む' in hiragana?" },
-    { "correctAnswer": "ろ", "options": ["ろ", "れ", "る", "ら"], "question": "Which hiragana character is equivalent to the English letter 'ro'?" },
-    { "correctAnswer": "う", "options": ["う", "え", "お", "い"], "question": "What is the pronunciation of 'う' in hiragana?" },
-    { "correctAnswer": "の", "options": ["の", "ね", "な", "に"], "question": "In hiragana, which character is equivalent to the English letter 'no'?" },
-    { "correctAnswer": "ね", "options": ["ね", "ぬ", "ひ", "は"], "question": "What is the pronunciation of 'ね' in hiragana?" },
-    { "correctAnswer": "ほ", "options": ["ほ", "へ", "は", "ひ"], "question": "In hiragana, which character is equivalent to the English letter 'ho'?" },
-    { "correctAnswer": "わ", "options": ["わ", "を", "ん", "れ"], "question": "What is the pronunciation of 'わ' in hiragana?" },
-    { "correctAnswer": "ひ", "options": ["ひ", "は", "ほ", "へ"], "question": "In hiragana, which character is equivalent to the English letter 'hi'?" },
-    { "correctAnswer": "る", "options": ["る", "れ", "ろ", "ら"], "question": "What is the pronunciation of 'る' in hiragana?" },
-    { "correctAnswer": "や", "options": ["や", "ゆ", "よ", "い"], "question": "In hiragana, which character is a part of the 'ya' series?" },
-    { "correctAnswer": "ち", "options": ["ち", "つ", "て", "と"], "question": "Which hiragana character comes after 'し'?" },
-    { "correctAnswer": "と", "options": ["と", "た", "ち", "つ"], "question": "What is the pronunciation of 'と' in hiragana?" },
-    { "correctAnswer": "わ", "options": ["わ", "を", "ん", "れ"], "question": "In the hiragana syllabary, which character is used as a particle?" },
-    { "correctAnswer": "に", "options": ["に", "ね", "の", "な"], "question": "Which hiragana character is equivalent to the English letter 'ni'?" },
-    { "correctAnswer": "ろ", "options": ["ろ", "れ", "る", "ら"], "question": "What is the pronunciation of 'ろ' in hiragana?" },
-    { "correctAnswer": "ひ", "options": ["ひ", "は", "ほ", "へ"], "question": "In hiragana, which character is equivalent to the English letter 'hi'?" },
-    { "correctAnswer": "ぷ", "options": ["ぷ", "ぺ", "ほ", "は"], "question": "Which hiragana character is equivalent to the English letter 'pu'?" },
-    { "correctAnswer": "せ", "options": ["せ", "そ", "さ", "す"], "question": "What is the pronunciation of 'せ' in hiragana?" },
-    { "correctAnswer": "ひ", "options": ["ひ", "は", "ほ", "へ"], "question": "In hiragana, which character is equivalent to the English letter 'hi'?" },
-    { "correctAnswer": "く", "options": ["く", "き", "か", "け"], "question": "Which hiragana character represents the sound 'ku'?" },
-    { "correctAnswer": "き", "options": ["き", "く", "か", "け"], "question": "What is the pronunciation of 'き' in hiragana?" },
-    { "correctAnswer": "ね", "options": ["ね", "ぬ", "ひ", "は"], "question": "In hiragana, which character is equivalent to the English letter 'ne'?" },
-    { "correctAnswer": "も", "options": ["も", "め", "む", "ま"], "question": "What is the pronunciation of 'も' in hiragana?" },
-    { "correctAnswer": "し", "options": ["し", "す", "せ", "そ"], "question": "Which hiragana character is equivalent to the English letter 'shi'?" },
-    { "correctAnswer": "に", "options": ["に", "ね", "の", "な"], "question": "What is the pronunciation of 'に' in hiragana?" },
-    { "correctAnswer": "さ", "options": ["さ", "し", "す", "せ"], "question": "In hiragana, which character is equivalent to the English letter 'sa'?" },
-    { "correctAnswer": "ふ", "options": ["ふ", "ひ", "ほ", "へ"], "question": "What is the pronunciation of 'ふ' in hiragana?" },
-    { "correctAnswer": "け", "options": ["け", "き", "く", "こ"], "question": "In hiragana, which character is equivalent to the English letter 'ke'?" },
-    { "correctAnswer": "る", "options": ["る", "れ", "ろ", "ら"], "question": "What is the pronunciation of 'る' in hiragana?" },
-    { "correctAnswer": "き", "options": ["き", "く", "か", "け"], "question": "Which hiragana character represents the sound 'ki'?" },
-    { "correctAnswer": "せ", "options": ["せ", "そ", "さ", "す"], "question": "What is the pronunciation of 'せ' in hiragana?" },
-    { "correctAnswer": "ち", "options": ["ち", "つ", "て", "と"], "question": "In hiragana, which character comes after 'し'?" },
-    { "correctAnswer": "の", "options": ["の", "ね", "な", "に"], "question": "Which hiragana character is equivalent to the English letter 'no'?" },
-    { "correctAnswer": "び", "options": ["び", "ぶ", "べ", "ば"], "question": "What is the pronunciation of 'び' in hiragana?" },
-    { "correctAnswer": "し", "options": ["し", "す", "せ", "そ"], "question": "In hiragana, which character is equivalent to the English letter 'shi'?" },
-    { "correctAnswer": "ぬ", "options": ["ぬ", "ね", "の", "な"], "question": "What is the pronunciation of 'ぬ' in hiragana?" },
-    { "correctAnswer": "と", "options": ["と", "た", "ち", "つ"], "question": "Which hiragana character is equivalent to the English letter 'to'?" },
-    { "correctAnswer": "ぬ", "options": ["ぬ", "ね", "の", "な"], "question": "What is the pronunciation of 'ぬ' in hiragana?" },
-    { "correctAnswer": "ぬ", "options": ["ぬ", "ね", "の", "な"], "question": "In hiragana, which character is equivalent to the English letter 'nu'?" },
-    { "correctAnswer": "る", "options": ["る", "れ", "ろ", "ら"], "question": "What is the pronunciation of 'る' in hiragana?" },
-    { "correctAnswer": "し", "options": ["し", "す", "せ", "そ"], "question": "In hiragana, which character is equivalent to the English letter 'shi'?" },
-    { "correctAnswer": "そ", "options": ["そ", "さ", "し", "す"], "question": "What is the pronunciation of 'そ' in hiragana?" },
-    { "correctAnswer": "も", "options": ["も", "め", "む", "ま"], "question": "In the hiragana syllabary, which character is equivalent to the English letter 'mo'?" }
-    { "correctAnswer": "ふ", "options": ["ふ", "ひ", "ほ", "へ"], "question": "What is the pronunciation of 'ふ' in hiragana?" },
-    { "correctAnswer": "に", "options": ["に", "ね", "の", "な"], "question": "In hiragana, which character is equivalent to the English letter 'ni'?" },
-    { "correctAnswer": "す", "options": ["す", "せ", "そ", "さ"], "question": "Which hiragana character is equivalent to the English letter 'su'?" },
-    { "correctAnswer": "ほ", "options": ["ほ", "へ", "は", "ひ"], "question": "What is the pronunciation of 'ほ' in hiragana?" },
-    { "correctAnswer": "れ", "options": ["れ", "る", "ろ", "ら"], "question": "In hiragana, which character is equivalent to the English letter 're'?" },
-    { "correctAnswer": "し", "options": ["し", "す", "せ", "そ"], "question": "What is the pronunciation of 'し' in hiragana?" },
-    { "correctAnswer": "わ", "options": ["わ", "を", "ん", "れ"], "question": "In the hiragana syllabary, which character is used as a particle?" },
-    { "correctAnswer": "つ", "options": ["つ", "て", "と", "た"], "question": "Which hiragana character is equivalent to the English letter 'tsu'?" },
-    { "correctAnswer": "て", "options": ["て", "と", "た", "ち"], "question": "What is the pronunciation of 'て' in hiragana?" },
-    { "correctAnswer": "り", "options": ["り", "れ", "る", "ろ"], "question": "In hiragana, which character is equivalent to the English letter 'ri'?" },
-    { "correctAnswer": "む", "options": ["む", "め", "も", "ま"], "question": "What is the pronunciation of 'む' in hiragana?" },
-    { "correctAnswer": "や", "options": ["や", "ゆ", "よ", "い"], "question": "In hiragana, which character is a part of the 'ya' series?" },
-    { "correctAnswer": "ら", "options": ["ら", "り", "る", "れ"], "question": "Which hiragana character is equivalent to the English letter 'ra'?" },
-    { "correctAnswer": "も", "options": ["も", "め", "む", "ま"], "question": "What is the pronunciation of 'も' in hiragana?" },
-    { "correctAnswer": "い", "options": ["い", "お", "え", "う"], "question": "Which hiragana character represents the vowel sound 'i'?" },
-    { "correctAnswer": "つ", "options": ["つ", "て", "と", "た"], "question": "In hiragana, which character is equivalent to the English letter 'tsu'?" },
-    { "correctAnswer": "ふ", "options": ["ふ", "ひ", "ほ", "へ"], "question": "What is the pronunciation of 'ふ' in hiragana?" },
-    { "correctAnswer": "け", "options": ["け", "き", "く", "こ"], "question": "In hiragana, which character is equivalent to the English letter 'ke'?" },
-    { "correctAnswer": "り", "options": ["り", "れ", "る", "ろ"], "question": "Which hiragana character is equivalent to the English letter 'ri'?" },
-    { "correctAnswer": "え", "options": ["え", "お", "い", "う"], "question": "What is the pronunciation of 'え' in hiragana?" },
-    { "correctAnswer": "け", "options": ["け", "き", "く", "こ"], "question": "Which hiragana character represents the sound 'ke'?" },
-    { "correctAnswer": "れ", "options": ["れ", "る", "ろ", "ら"], "question": "What is the pronunciation of 'れ' in hiragana?" },
-    { "correctAnswer": "い", "options": ["い", "お", "え", "う"], "question": "Which hiragana character represents the vowel sound 'i'?" },
-    { "correctAnswer": "け", "options": ["け", "き", "く", "こ"], "question": "What is the pronunciation of 'け' in hiragana?" },
-    { "correctAnswer": "ろ", "options": ["ろ", "れ", "る", "ら"], "question": "In hiragana, which character is equivalent to the English letter 'ro'?" },
-    { "correctAnswer": "ち", "options": ["ち", "つ", "て", "と"], "question": "Which hiragana character comes after 'し'?" },
-    { "correctAnswer": "つ", "options": ["つ", "て", "と", "た"], "question": "What is the pronunciation of 'つ' in hiragana?" },
-    { "correctAnswer": "の", "options": ["の", "ね", "な", "に"], "question": "In hiragana, which character is equivalent to the English letter 'no'?" },
-    { "correctAnswer": "や", "options": ["や", "ゆ", "よ", "い"], "question": "What is the pronunciation of 'や' in hiragana?" },
-    { "correctAnswer": "ら", "options": ["ら", "り", "る", "れ"], "question": "Which hiragana character is equivalent to the English letter 'ra'?" },
-    { "correctAnswer": "と", "options": ["と", "た", "ち", "つ"], "question": "In hiragana, which character is equivalent to the English letter 'to'?" },
-    { "correctAnswer": "ん", "options": ["ん", "わ", "を", "ね"], "question": "What is the pronunciation of 'ん' in hiragana?" },
-    { "correctAnswer": "り", "options": ["り", "れ", "る", "ろ"], "question": "What is the pronunciation of 'り' in hiragana?" },
-    { "correctAnswer": "ふ", "options": ["ふ", "ひ", "ほ", "へ"], "question": "In hiragana, which character is equivalent to the English letter 'fu'?" },
-    { "correctAnswer": "す", "options": ["す", "せ", "そ", "さ"], "question": "What is the pronunciation of 'す' in hiragana?" },
-    { "correctAnswer": "え", "options": ["え", "お", "い", "う"], "question": "Which hiragana character represents the vowel sound 'e'?" },
-    { "correctAnswer": "い", "options": ["い", "お", "え", "う"], "question": "What is the pronunciation of 'い' in hiragana?" },
-    { "correctAnswer": "の", "options": ["の", "ね", "な", "に"], "question": "In hiragana, which character is equivalent to the English letter 'no'?" },
-    { "correctAnswer": "む", "options": ["む", "め", "も", "ま"], "question": "What is the pronunciation of 'む' in hiragana?" },
-    { "correctAnswer": "え", "options": ["え", "お", "い", "う"], "question": "In hiragana, which character represents the vowel sound 'e'?" },
-    { "correctAnswer": "つ", "options": ["つ", "て", "と", "た"], "question": "Which hiragana character is equivalent to the English letter 'tsu'?" },
-    { "correctAnswer": "れ", "options": ["れ", "る", "ろ", "ら"], "question": "What is the pronunciation of 'れ' in hiragana?" },
-    { "correctAnswer": "の", "options": ["の", "ね", "な", "に"], "question": "In hiragana, which character is equivalent to the English letter 'no'?" },
-    { "correctAnswer": "ろ", "options": ["ろ", "れ", "る", "ら"], "question": "What is the pronunciation of 'ろ' in hiragana?" },
-    { "correctAnswer": "ぬ", "options": ["ぬ", "ね", "の", "な"], "question": "In hiragana, which character is equivalent to the English letter 'nu'?" },
-    { "correctAnswer": "や", "options": ["や", "ゆ", "よ", "い"], "question": "What is the pronunciation of 'や' in hiragana?" },
-    { "correctAnswer": "つ", "options": ["つ", "て", "と", "た"], "question": "Which hiragana character is equivalent to the English letter 'tsu'?" },
-    { "correctAnswer": "ね", "options": ["ね", "ぬ", "ひ", "は"], "question": "In hiragana, which character is equivalent to the English letter 'ne'?" },
-    { "correctAnswer": "さ", "options": ["さ", "し", "す", "せ"], "question": "What is the pronunciation of 'さ' in hiragana?" },
-    { "correctAnswer": "す", "options": ["す", "せ", "そ", "さ"], "question": "In hiragana, which character is equivalent to the English letter 'su'?" },
-    { "correctAnswer": "て", "options": ["て", "と", "た", "ち"], "question": "What is the pronunciation of 'て' in hiragana?" },
-    { "correctAnswer": "よ", "options": ["よ", "ゆ", "や", "い"], "question": "In hiragana, which character is a part of the 'yo' series?" },
-    { "correctAnswer": "へ", "options": ["へ", "ほ", "は", "ひ"], "question": "What is the pronunciation of 'へ' in hiragana?" },
-    { "correctAnswer": "や", "options": ["や", "ゆ", "よ", "い"], "question": "In hiragana, which character is a part of the 'ya' series?" },
-    { "correctAnswer": "う", "options": ["う", "え", "お", "い"], "question": "What is the pronunciation of 'う' in hiragana?" },
-    { "correctAnswer": "か", "options": ["か", "き", "く", "け"], "question": "In hiragana, which character is equivalent to the English letter 'ka'?" },
-    { "correctAnswer": "ま", "options": ["ま", "み", "む", "め"], "question": "What is the pronunciation of 'ま' in hiragana?" },
-    { "correctAnswer": "む", "options": ["む", "め", "も", "ま"], "question": "In the hiragana syllabary, which character is equivalent to the English letter 'mu'?" }
-    { "correctAnswer": "ね", "options": ["ね", "ぬ", "ひ", "は"], "question": "What is the pronunciation of 'ね' in hiragana?" },
-    { "correctAnswer": "の", "options": ["の", "ね", "な", "に"], "question": "In hiragana, which character is equivalent to the English letter 'no'?" },
-    { "correctAnswer": "さ", "options": ["さ", "し", "す", "せ"], "question": "What is the pronunciation of 'さ' in hiragana?" },
-    { "correctAnswer": "れ", "options": ["れ", "る", "ろ", "ら"], "question": "In hiragana, which character is equivalent to the English letter 're'?" },
-    { "correctAnswer": "む", "options": ["む", "め", "も", "ま"], "question": "What is the pronunciation of 'む' in hiragana?" },
-    { "correctAnswer": "お", "options": ["お", "お", "え", "い"], "question": "Which hiragana character represents the vowel sound 'o'?" },
-    { "correctAnswer": "ふ", "options": ["ふ", "ひ", "ほ", "へ"], "question": "What is the pronunciation of 'ふ' in hiragana?" },
-    { "correctAnswer": "の", "options": ["の", "ね", "な, "に"], "question": "In hiragana, which character is equivalent to the English letter 'no'?" },
-    { "correctAnswer": "さ", "options": ["さ", "し", "す", "せ"], "question": "What is the pronunciation of 'さ' in hiragana?" },
-    { "correctAnswer": "し", "options": ["し", "す", "せ", "そ"], "question": "In hiragana, which character is equivalent to the English letter 'shi'?" },
-    { "correctAnswer": "え", "options": ["え", "お", "い", "う"], "question": "Which hiragana character represents the vowel sound 'e'?" },
-    { "correctAnswer": "の", "options": ["の", "ね", "な", "に"], "question": "What is the pronunciation of 'の' in hiragana?" },
-    { "correctAnswer": "く", "options": ["く", "き", "か", "け"], "question": "In hiragana, which character is equivalent to the English letter 'ku'?" },
-    { "correctAnswer": "た", "options": ["た", "ち", "つ", "て"], "question": "What is the pronunciation of 'た' in hiragana?" },
-    { "correctAnswer": "に", "options": ["に", "ね", "の", "な"], "question": "In hiragana, which character is equivalent to the English letter 'ni'?" },
-    { "correctAnswer": "や", "options": ["や", "ゆ", "よ", "い"], "question": "What is the pronunciation of 'や' in hiragana?" },
-    { "correctAnswer": "え", "options": ["え", "お", "い", "う"], "question": "What is the pronunciation of 'え' in hiragana?" },
-    { "correctAnswer": "お", "options": ["お", "お", "え", "い"], "question": "Which hiragana character represents the vowel sound 'o'?" },
-    { "correctAnswer": "す", "options": ["す", "せ", "そ", "さ"], "question": "In hiragana, which character is equivalent to the English letter 'su'?" },
-    { "correctAnswer": "る", "options": ["る", "れ", "ろ", "ら"], "question": "What is the pronunciation of 'る' in hiragana?" },
-    { "correctAnswer": "う", "options": ["う", "え", "お", "い"], "question": "In hiragana, which character represents the vowel sound 'u'?" },
-    { "correctAnswer": "は", "options": ["は", "ひ", "ほ", "へ"], "question": "What is the pronunciation of 'は' in hiragana?" },
-    { "correctAnswer": "に", "options": ["に", "ね", "の", "な"], "question": "What is the pronunciation of 'に' in hiragana?" },
-    { "correctAnswer": "つ", "options": ["つ", "て", "と", "た"], "question": "Which hiragana character is equivalent to the English letter 'tsu'?" },
-    { "correctAnswer": "え", "options": ["え", "お", "い", "う"], "question": "What is the pronunciation of 'え' in hiragana?" },
-    { "correctAnswer": "み", "options": ["み", "む", "め", "も"], "question": "In hiragana, which character is equivalent to the English letter 'mi'?" },
-   
-  ],
+{"correctAnswer": "あ", "options": ["あ", "い", "う", "え"], "question": "What is the pronunciation of this hiragana character: aa"},
+{"correctAnswer": "い", "options": ["い", "う", "え", "お"], "question": "What is the pronunciation of this hiragana character: ee"},
+{"correctAnswer": "う", "options": ["う", "え", "お", "あ"], "question": "What is the pronunciation of this hiragana character: oo"},
+{"correctAnswer": "え", "options": ["え", "お", "あ", "い"], "question": "What is the pronunciation of this hiragana character: eh"},
+{"correctAnswer": "お", "options": ["お", "あ", "い", "う"], "question": "What is the pronunciation of this hiragana character: oh"},
+{"correctAnswer": "か", "options": ["か", "き", "く", "け"], "question": "What is the pronunciation of this hiragana character: ka"},
+{"correctAnswer": "き", "options": ["き", "く", "け", "こ"], "question": "What is the pronunciation of this hiragana character: ki"},
+{"correctAnswer": "く", "options": ["く", "け", "こ", "さ"], "question": "What is the pronunciation of this hiragana character: ku"},
+{"correctAnswer": "け", "options": ["け", "こ", "さ", "し"], "question": "What is the pronunciation of this hiragana character: ke"},
+{"correctAnswer": "こ", "options": ["こ", "さ", "し", "す"], "question": "What is the pronunciation of this hiragana character: ko"},
+{"correctAnswer": "さ", "options": ["さ", "し", "す", "せ"], "question": "What is the pronunciation of this hiragana character: sa"},
+{"correctAnswer": "し", "options": ["し", "す", "せ", "そ"], "question": "What is the pronunciation of this hiragana character: shi"},
+{"correctAnswer": "す", "options": ["す", "せ", "そ", "た"], "question": "What is the pronunciation of this hiragana character: su"},
+{"correctAnswer": "せ", "options": ["せ", "そ", "た", "ち"], "question": "What is the pronunciation of this hiragana character: se"},
+{"correctAnswer": "そ", "options": ["そ", "た", "ち", "つ"], "question": "What is the pronunciation of this hiragana character: so"},
+{"correctAnswer": "た", "options": ["た", "ち", "つ", "て"], "question": "What is the pronunciation of this hiragana character: ta"},
+{"correctAnswer": "ち", "options": ["ち", "つ", "て", "と"], "question": "What is the pronunciation of this hiragana character: chi"},
+{"correctAnswer": "つ", "options": ["つ", "て", "と", "な"], "question": "What is the pronunciation of this hiragana character: tsu"},
+{"correctAnswer": "て", "options": ["て", "と", "な", "に"], "question": "What is the pronunciation of this hiragana character: te"},
+{"correctAnswer": "と", "options": ["と", "な", "に", "ぬ"], "question": "What is the pronunciation of this hiragana character: to"},
+{"correctAnswer": "な", "options": ["な", "に", "ぬ", "ね"], "question": "What is the pronunciation of this hiragana character: na"},
+{"correctAnswer": "に", "options": ["に", "ぬ", "ね", "の"], "question": "What is the pronunciation of this hiragana character: ni"},
+{"correctAnswer": "ぬ", "options": ["ぬ", "ね", "の", "は"], "question": "What is the pronunciation of this hiragana character: nu"},
+{"correctAnswer": "ね", "options": ["ね", "の", "は", "ひ"], "question": "What is the pronunciation of this hiragana character: ne"},
+{"correctAnswer": "の", "options": ["の", "は", "ひ", "ふ"], "question": "What is the pronunciation of this hiragana character: no"},
+{"correctAnswer": "は", "options": ["は", "ひ", "ふ", "へ"], "question": "What is the pronunciation of this hiragana character: ha"},
+{"correctAnswer": "ひ", "options": ["ひ", "ふ", "へ", "ほ"], "question": "What is the pronunciation of this hiragana character: hi"},
+{"correctAnswer": "ふ", "options": ["ふ", "へ", "ほ", "ま"], "question": "What is the pronunciation of this hiragana character: fu"},
+{"correctAnswer": "へ", "options": ["へ", "ほ", "ま", "み"], "question": "What is the pronunciation of this hiragana character: he"},
+{"correctAnswer": "ほ", "options": ["ほ", "ま", "み", "む"], "question": "What is the pronunciation of this hiragana character: ho"},
+{"correctAnswer": "ま", "options": ["ま", "み", "む", "め"], "question": "What is the pronunciation of this hiragana character: ma"},
+{"correctAnswer": "み", "options": ["み", "む", "め", "も"], "question": "What is the pronunciation of this hiragana character: mi"},
+{"correctAnswer": "む", "options": ["む", "め", "も", "や"], "question": "What is the pronunciation of this hiragana character: mu"},
+{"correctAnswer": "め", "options": ["め", "も", "や", "ゆ"], "question": "What is the pronunciation of this hiragana character: me"},
+{"correctAnswer": "も", "options": ["も", "や", "ゆ", "よ"], "question": "What is the pronunciation of this hiragana character: mo"},
+{"correctAnswer": "や", "options": ["や", "ゆ", "よ", "ら"], "question": "What is the pronunciation of this hiragana character: ya"},
+{"correctAnswer": "ゆ", "options": ["ゆ", "よ", "ら", "り"], "question": "What is the pronunciation of this hiragana character: yu"},
+{"correctAnswer": "よ", "options": ["よ", "ら", "り", "る"], "question": "What is the pronunciation of this hiragana character: yo"},
+{"correctAnswer": "ら", "options": ["ら", "り", "る", "れ"], "question": "What is the pronunciation of this hiragana character: ra"},
+{"correctAnswer": "り", "options": ["り", "る", "れ", "ろ"], "question": "What is the pronunciation of this hiragana character: ri"},
+{"correctAnswer": "る", "options": ["る", "れ", "ろ", "わ"], "question": "What is the pronunciation of this hiragana character: ru"},
+{"correctAnswer": "れ", "options": ["れ", "ろ", "わ", "を"], "question": "What is the pronunciation of this hiragana character: re"},
+{"correctAnswer": "ろ", "options": ["ろ", "わ", "を", "ん"], "question": "What is the pronunciation of this hiragana character: ro"},
+{"correctAnswer": "わ", "options": ["わ", "を", "ん", "が"], "question": "What is the pronunciation of this hiragana character: wa"},
+{"correctAnswer": "を", "options": ["を", "ん", "が", "ぎ"], "question": "What is the pronunciation of this hiragana character: wo"},
+{"correctAnswer": "ん", "options": ["ん", "が", "ぎ", "ぐ"], "question": "What is the pronunciation of this hiragana character: n"},
+{"correctAnswer": "が", "options": ["が", "ぎ", "ぐ", "げ"], "question": "What is the pronunciation of this hiragana character: ga"},
+{"correctAnswer": "ぎ", "options": ["ぎ", "ぐ", "げ", "ご"], "question": "What is the pronunciation of this hiragana character: gi"},
+{"correctAnswer": "ぐ", "options": ["ぐ", "げ", "ご", "ざ"], "question": "What is the pronunciation of this hiragana character: gu"},
+{"correctAnswer": "げ", "options": ["げ", "ご", "ざ", "じ"], "question": "What is the pronunciation of this hiragana character: ge"},
+{"correctAnswer": "ご", "options": ["ご", "ざ", "じ", "ず"], "question": "What is the pronunciation of this hiragana character: go"},
+{"correctAnswer": "ざ", "options": ["ざ", "じ", "ず", "ぜ"], "question": "What is the pronunciation of this hiragana character: za"},
+{"correctAnswer": "じ", "options": ["じ", "ず", "ぜ", "ぞ"], "question": "What is the pronunciation of this hiragana character: ji"},
+{"correctAnswer": "ず", "options": ["ず", "ぜ", "ぞ", "だ"], "question": "What is the pronunciation of this hiragana character: zu"},
+{"correctAnswer": "ぜ", "options": ["ぜ", "ぞ", "だ", "ぢ"], "question": "What is the pronunciation of this hiragana character: ze"},
+{"correctAnswer": "ぞ", "options": ["ぞ", "だ", "ぢ", "づ"], "question": "What is the pronunciation of this hiragana character: zo"},
+{"correctAnswer": "だ", "options": ["だ", "ぢ", "づ", "で"], "question": "What is the pronunciation of this hiragana character: da"},
+{"correctAnswer": "ぢ", "options": ["ぢ", "づ", "で", "ど"], "question": "What is the pronunciation of this hiragana character: ji/di"},
+{"correctAnswer": "づ", "options": ["づ", "で", "ど", "ば"], "question": "What is the pronunciation of this hiragana character: zu/dzu"},
+{"correctAnswer": "で", "options": ["で", "ど", "ば", "び"], "question": "What is the pronunciation of this hiragana character: de"},
+{"correctAnswer": "ど", "options": ["ど", "ば", "び", "ぶ"], "question": "What is the pronunciation of this hiragana character: do"},
+{"correctAnswer": "ば", "options": ["ば", "び", "ぶ", "べ"], "question": "What is the pronunciation of this hiragana character: ba"},
+{"correctAnswer": "び", "options": ["び", "ぶ", "べ", "ぼ"], "question": "What is the pronunciation of this hiragana character: bi"},
+{"correctAnswer": "あ", "options": ["あ", "い", "う", "え"], "question": "What is the pronunciation of this hiragana character: aa"},
+{"correctAnswer": "い", "options": ["い", "う", "え", "お"], "question": "What is the pronunciation of this hiragana character: ee"},
+{"correctAnswer": "う", "options": ["う", "え", "お", "あ"], "question": "What is the pronunciation of this hiragana character: oo"},
+{"correctAnswer": "え", "options": ["え", "お", "あ", "い"], "question": "What is the pronunciation of this hiragana character: eh"},
+{"correctAnswer": "お", "options": ["お", "あ", "い", "う"], "question": "What is the pronunciation of this hiragana character: oh"},
+{"correctAnswer": "か", "options": ["か", "き", "く", "け"], "question": "What is the pronunciation of this hiragana character: ka"},
+{"correctAnswer": "き", "options": ["き", "く", "け", "こ"], "question": "What is the pronunciation of this hiragana character: ki"},
+{"correctAnswer": "く", "options": ["く", "け", "こ", "さ"], "question": "What is the pronunciation of this hiragana character: ku"},
+{"correctAnswer": "け", "options": ["け", "こ", "さ", "し"], "question": "What is the pronunciation of this hiragana character: ke"},
+{"correctAnswer": "こ", "options": ["こ", "さ", "し", "す"], "question": "What is the pronunciation of this hiragana character: ko"},
+{"correctAnswer": "さ", "options": ["さ", "し", "す", "せ"], "question": "What is the pronunciation of this hiragana character: sa"},
+{"correctAnswer": "し", "options": ["し", "す", "せ", "そ"], "question": "What is the pronunciation of this hiragana character: shi"},
+{"correctAnswer": "す", "options": ["す", "せ", "そ", "た"], "question": "What is the pronunciation of this hiragana character: su"},
+{"correctAnswer": "せ", "options": ["せ", "そ", "た", "ち"], "question": "What is the pronunciation of this hiragana character: se"},
+{"correctAnswer": "そ", "options": ["そ", "た", "ち", "つ"], "question": "What is the pronunciation of this hiragana character: so"},
+{"correctAnswer": "た", "options": ["た", "ち", "つ", "て"], "question": "What is the pronunciation of this hiragana character: ta"},
+{"correctAnswer": "ち", "options": ["ち", "つ", "て", "と"], "question": "What is the pronunciation of this hiragana character: chi"},
+{"correctAnswer": "つ", "options": ["つ", "て", "と", "な"], "question": "What is the pronunciation of this hiragana character: tsu"},
+{"correctAnswer": "て", "options": ["て", "と", "な", "に"], "question": "What is the pronunciation of this hiragana character: te"},
+{"correctAnswer": "と", "options": ["と", "な", "に", "ぬ"], "question": "What is the pronunciation of this hiragana character: to"},
+{"correctAnswer": "な", "options": ["な", "に", "ぬ", "ね"], "question": "What is the pronunciation of this hiragana character: na"},
+{"correctAnswer": "に", "options": ["に", "ぬ", "ね", "の"], "question": "What is the pronunciation of this hiragana character: ni"},
+{"correctAnswer": "ぬ", "options": ["ぬ", "ね", "の", "は"], "question": "What is the pronunciation of this hiragana character: nu"},
+{"correctAnswer": "ね", "options": ["ね", "の", "は", "ひ"], "question": "What is the pronunciation of this hiragana character: ne"},
+{"correctAnswer": "の", "options": ["の", "は", "ひ", "ふ"], "question": "What is the pronunciation of this hiragana character: no"},
+{"correctAnswer": "は", "options": ["は", "ひ", "ふ", "へ"], "question": "What is the pronunciation of this hiragana character: ha"},
+{"correctAnswer": "ひ", "options": ["ひ", "ふ", "へ", "ほ"], "question": "What is the pronunciation of this hiragana character: hi"},
+{"correctAnswer": "ふ", "options": ["ふ", "へ", "ほ", "ま"], "question": "What is the pronunciation of this hiragana character: fu"},
+{"correctAnswer": "へ", "options": ["へ", "ほ", "ま", "み"], "question": "What is the pronunciation of this hiragana character: he"},
+{"correctAnswer": "ほ", "options": ["ほ", "ま", "み", "む"], "question": "What is the pronunciation of this hiragana character: ho"},
+{"correctAnswer": "ま", "options": ["ま", "み", "む", "め"], "question": "What is the pronunciation of this hiragana character: ma"},
+{"correctAnswer": "み", "options": ["み", "む", "め", "も"], "question": "What is the pronunciation of this hiragana character: mi"},
+{"correctAnswer": "む", "options": ["む", "め", "も", "や"], "question": "What is the pronunciation of this hiragana character: mu"},
+{"correctAnswer": "め", "options": ["め", "も", "や", "ゆ"], "question": "What is the pronunciation of this hiragana character: me"},
+{"correctAnswer": "も", "options": ["も", "や", "ゆ", "よ"], "question": "What is the pronunciation of this hiragana character: mo"},
+{"correctAnswer": "や", "options": ["や", "ゆ", "よ", "ら"], "question": "What is the pronunciation of this hiragana character: ya"},
+{"correctAnswer": "ゆ", "options": ["ゆ", "よ", "ら", "り"], "question": "What is the pronunciation of this hiragana character: yu"},
+{"correctAnswer": "よ", "options": ["よ", "ら", "り", "る"], "question": "What is the pronunciation of this hiragana character: yo"},
+{"correctAnswer": "ら", "options": ["ら", "り", "る", "れ"], "question": "What is the pronunciation of this hiragana character: ra"},
+{"correctAnswer": "り", "options": ["り", "る", "れ", "ろ"], "question": "What is the pronunciation of this hiragana character: ri"},
+{"correctAnswer": "る", "options": ["る", "れ", "ろ", "わ"], "question": "What is the pronunciation of this hiragana character: ru"},
+{"correctAnswer": "れ", "options": ["れ", "ろ", "わ", "を"], "question": "What is the pronunciation of this hiragana character: re"},
+{"correctAnswer": "ろ", "options": ["ろ", "わ", "を", "ん"], "question": "What is the pronunciation of this hiragana character: ro"},
+{"correctAnswer": "わ", "options": ["わ", "を", "ん", "が"], "question": "What is the pronunciation of this hiragana character: wa"},
+{"correctAnswer": "を", "options": ["を", "ん", "が", "ぎ"], "question": "What is the pronunciation of this hiragana character: wo"},
+{"correctAnswer": "ん", "options": ["ん", "が", "ぎ", "ぐ"], "question": "What is the pronunciation of this hiragana character: n"},
+{"correctAnswer": "が", "options": ["が", "ぎ", "ぐ", "げ"], "question": "What is the pronunciation of this hiragana character: ga"},
+{"correctAnswer": "ぎ", "options": ["ぎ", "ぐ", "げ", "ご"], "question": "What is the pronunciation of this hiragana character: gi"},
+{"correctAnswer": "ぐ", "options": ["ぐ", "げ", "ご", "ざ"], "question": "What is the pronunciation of this hiragana character: gu"},
+{"correctAnswer": "げ", "options": ["げ", "ご", "ざ", "じ"], "question": "What is the pronunciation of this hiragana character: ge"},
+{"correctAnswer": "ご", "options": ["ご", "ざ", "じ", "ず"], "question": "What is the pronunciation of this hiragana character: go"},
+{"correctAnswer": "ざ", "options": ["ざ", "じ", "ず", "ぜ"], "question": "What is the pronunciation of this hiragana character: za"},
+{"correctAnswer": "じ", "options": ["じ", "ず", "ぜ", "ぞ"], "question": "What is the pronunciation of this hiragana character: ji"},
+{"correctAnswer": "ず", "options": ["ず", "ぜ", "ぞ", "だ"], "question": "What is the pronunciation of this hiragana character: zu"},
+{"correctAnswer": "ぜ", "options": ["ぜ", "ぞ", "だ", "ぢ"], "question": "What is the pronunciation of this hiragana character: ze"},
+{"correctAnswer": "ぞ", "options": ["ぞ", "だ", "ぢ", "づ"], "question": "What is the pronunciation of this hiragana character: zo"},
+{"correctAnswer": "だ", "options": ["だ", "ぢ", "づ", "で"], "question": "What is the pronunciation of this hiragana character: da"},
+{"correctAnswer": "ぢ", "options": ["ぢ", "づ", "で", "ど"], "question": "What is the pronunciation of this hiragana character: ji/di"},
+{"correctAnswer": "づ", "options": ["づ", "で", "ど", "ば"], "question": "What is the pronunciation of this hiragana character: zu/dzu"},
+{"correctAnswer": "で", "options": ["で", "ど", "ば", "び"], "question": "What is the pronunciation of this hiragana character: de"},
+{"correctAnswer": "ど", "options": ["ど", "ば", "び", "ぶ"], "question": "What is the pronunciation of this hiragana character: do"},
+{"correctAnswer": "ば", "options": ["ば", "び", "ぶ", "べ"], "question": "What is the pronunciation of this hiragana character: ba"},
+{"correctAnswer": "び", "options": ["び", "ぶ", "べ", "ぼ"], "question": "What is the pronunciation of this hiragana character: bi"},
+{"correctAnswer": "ぶ", "options": ["ぶ", "べ", "ぼ", "ぱ"], "question": "What is the pronunciation of this hiragana character: bu"},
+{"correctAnswer": "べ", "options": ["べ", "ぼ", "ぱ", "ぴ"], "question": "What is the pronunciation of this hiragana character: be"},
+{"correctAnswer": "ぼ", "options": ["ぼ", "ぱ", "ぴ", "ぷ"], "question": "What is the pronunciation of this hiragana character: bo"},
+{"correctAnswer": "ぱ", "options": ["ぱ", "ぴ", "ぷ", "ぺ"], "question": "What is the pronunciation of this hiragana character: pa"},
+{"correctAnswer": "ぴ", "options": ["ぴ", "ぷ", "ぺ", "ぽ"], "question": "What is the pronunciation of this hiragana character: pi"},
+{"correctAnswer": "ぷ", "options": ["ぷ", "ぺ", "ぽ", "へ"], "question": "What is the pronunciation of this hiragana character: pu"},
+{"correctAnswer": "ぺ", "options": ["ぺ", "ぽ", "へ", "ほ"], "question": "What is the pronunciation of this hiragana character: pe"},
+{"correctAnswer": "ぽ", "options": ["ぽ", "へ", "ほ", "ま"], "question": "What is the pronunciation of this hiragana character: po"},
+{"correctAnswer": "ぶ", "options": ["ぶ", "べ", "ぼ", "ぱ"], "question": "What is the pronunciation of this hiragana character: bu"},
+{"correctAnswer": "べ", "options": ["べ", "ぼ", "ぱ", "ぴ"], "question": "What is the pronunciation of this hiragana character: be"},
+{"correctAnswer": "ぼ", "options": ["ぼ", "ぱ", "ぴ", "ぷ"], "question": "What is the pronunciation of this hiragana character: bo"},
+{"correctAnswer": "ぱ", "options": ["ぱ", "ぴ", "ぷ", "ぺ"], "question": "What is the pronunciation of this hiragana character: pa"},
+{"correctAnswer": "ぴ", "options": ["ぴ", "ぷ", "ぺ", "ぽ"], "question": "What is the pronunciation of this hiragana character: pi"},
+{"correctAnswer": "ぷ", "options": ["ぷ", "ぺ", "ぽ", "へ"], "question": "What is the pronunciation of this hiragana character: pu"},
+{"correctAnswer": "ぺ", "options": ["ぺ", "ぽ", "へ", "ほ"], "question": "What is the pronunciation of this hiragana character: pe"},
+{"correctAnswer": "ぽ", "options": ["ぽ", "へ", "ほ", "ま"], "question": "What is the pronunciation of this hiragana character: po"}
+ ],
 
- 
 "k02": [
-    { "correctAnswer": "ア", "options": ["ア", "イ", "ウ", "エ"], "question": "What is the first katakana character in the 'a' column?" },
-    { "correctAnswer": "カ", "options": ["カ", "キ", "ク", "ケ"], "question": "Which katakana character is equivalent to the English letter 'ka'?" },
-    { "correctAnswer": "サ", "options": ["サ", "シ", "ス", "セ"], "question": "In the katakana syllabary, which column does 'サ' belong to?" },
-    { "correctAnswer": "タ", "options": ["タ", "チ", "ツ", "テ"], "question": "What is the pronunciation of 'タ' in katakana?" },
-    { "correctAnswer": "ナ", "options": ["ナ", "ニ", "ヌ", "ネ"], "question": "In the katakana syllabary, which character comes after 'サ'?" },
-    { "correctAnswer": "ハ", "options": ["ハ", "ヒ", "フ", "ヘ"], "question": "Which katakana character is equivalent to the English letter 'ha'?" },
-    { "correctAnswer": "マ", "options": ["マ", "ミ", "ム", "メ"], "question": "What is the pronunciation of 'マ' in katakana?" },
-    { "correctAnswer": "ヤ", "options": ["ヤ", "ユ", "ヨ", "イ"], "question": "In katakana, which character is a part of the 'ya' series?" },
-    { "correctAnswer": "ラ", "options": ["ラ", "リ", "ル", "レ"], "question": "Which katakana character is equivalent to the English letter 'ra'?" },
-    { "correctAnswer": "ワ", "options": ["ワ", "ヲ", "ン", "レ"], "question": "In the katakana syllabary, which character is used as a particle?" },
-    { "correctAnswer": "ホ", "options": ["ホ", "ヘ", "ハ", "ヒ"], "question": "Which katakana character is equivalent to the English letter 'ho'?" },
-    { "correctAnswer": "ギ", "options": ["ギ", "グ", "ゲ", "ゴ"], "question": "What is the pronunciation of 'ギ' in katakana?" },
-    { "correctAnswer": "ゾ", "options": ["ゾ", "ジ", "ズ", "ゼ"], "question": "Which katakana character is equivalent to the English letter 'zo'?" },
-    { "correctAnswer": "ブ", "options": ["ブ", "ベ", "ボ", "パ"], "question": "In katakana, which character is equivalent to the English letter 'bu'?" },
-    { "correctAnswer": "キャ", "options": ["キャ", "キュ", "キョ", "ケィ"], "question": "What katakana combination represents the sound 'kya'?" },
-    { "correctAnswer": "シュ", "options": ["シュ", "ショ", "シャ", "ス"], "question": "In katakana, which combination represents the sound 'shu'?" },
-    { "correctAnswer": "ニョ", "options": ["ニョ", "ニャ", "ニュ", "ノ"], "question": "Which katakana combination represents the sound 'nyo'?" },
-    { "correctAnswer": "メ", "options": ["メ", "ミ", "マ", "モ"], "question": "In katakana, which character is equivalent to the English letter 'me'?" },
-    { "correctAnswer": "レ", "options": ["レ", "リ", "ル", "ロ"], "question": "What is the pronunciation of 'レ' in katakana?" },
-    { "correctAnswer": "キ", "options": ["キ", "ク", "ケ", "コ"], "question": "In katakana, which character is equivalent to the English letter 'ki'?" },
-    { "correctAnswer": "ン", "options": ["ン", "ヌ", "ネ", "ノ"], "question": "What is the pronunciation of 'ン' in katakana?" },
-    { "correctAnswer": "ソ", "options": ["ソ", "サ", "ス", "セ"], "question": "In katakana, which character is equivalent to the English letter 'so'?" },
-    { "correctAnswer": "ヒ", "options": ["ヒ", "フ", "ヘ", "ホ"], "question": "What is the pronunciation of 'ヒ' in katakana?" },
-    { "correctAnswer": "アイ", "options": ["アイ", "アウ", "アエ", "アオ"], "question": "Which katakana combination represents the sound 'ai'?" },
-    { "correctAnswer": "サ", "options": ["サ", "シ", "ス", "セ"], "question": "In katakana, which character is equivalent to the English letter 'sa'?" },
-    { "correctAnswer": "ン", "options": ["ン", "ヌ", "ネ", "ノ"], "question": "In katakana, which character is used as a nasal sound?" },
-    { "correctAnswer": "リョ", "options": ["リョ", "リャ", "リュ", "レィ"], "question": "Which katakana combination represents the sound 'ryo'?" },
-    { "correctAnswer": "ケ", "options": ["ケ", "キ", "コ", "ク"], "question": "What is the pronunciation of 'ケ' in katakana?" },
-    { "correctAnswer": "ウェ", "options": ["ウェ", "ウィ", "ウォ", "ウ"], "question": "Which katakana combination represents the sound 'we'?" },
-    { "correctAnswer": "ゴ", "options": ["ゴ", "ギ", "グ", "ゲ"], "question": "In katakana, which character is equivalent to the English letter 'go'?" },
-    { "correctAnswer": "フィ", "options": ["フィ", "ファ", "フェ", "フォ"], "question": "Which katakana combination represents the sound 'fi'?" },
-    { "correctAnswer": "イェ", "options": ["イェ", "イャ", "イュ", "イ"], "question": "What katakana combination represents the sound 'ye'?" },
-    { "correctAnswer": "メ", "options": ["メ", "ミ", "マ", "モ"], "question": "In katakana, which character is equivalent to the English letter 'me'?" },
-    { "correctAnswer": "ク", "options": ["ク", "ケ", "コ", "キ"], "question": "What is the pronunciation of 'ク' in katakana?" },
-    { "correctAnswer": "シ", "options": ["シ", "ス", "セ", "ソ"], "question": "In katakana, which character is equivalent to the English letter 'shi'?" },
-    { "correctAnswer": "ラ", "options": ["ラ", "リ", "ル", "レ"], "question": "What is the pronunciation of 'ラ' in katakana?" },
-    { "correctAnswer": "ヴァ", "options": ["ヴァ", "ヴィ", "ヴ", "ヴェ"], "question": "Which katakana combination represents the sound 'va'?" },
-    { "correctAnswer": "オ", "options": ["オ", "イ", "ウ", "エ"], "question": "In katakana, which character is equivalent to the English letter 'o'?" },
-    { "correctAnswer": "セ", "options": ["セ", "サ", "ソ", "ス"], "question": "What is the pronunciation of 'セ' in katakana?" },
-    { "correctAnswer": "キョ", "options": ["キョ", "キャ", "キュ", "ケィ"], "question": "Which katakana combination represents the sound 'kyo'?" },
-    { "correctAnswer": "イ", "options": ["イ", "エ", "オ", "ウ"], "question": "In katakana, which character is equivalent to the English letter 'i'?" },
-    { "correctAnswer": "ネ", "options": ["ネ", "ヌ", "ノ", "ナ"], "question": "What is the pronunciation of 'ネ' in katakana?" },
-    { "correctAnswer": "タ", "options": ["タ", "チ", "ツ", "テ"], "question": "In katakana, which character is equivalent to the English letter 'ta'?" },
-    { "correctAnswer": "ミャ", "options": ["ミャ", "ミュ", "ミョ", "メィ"], "question": "Which katakana combination represents the sound 'mya'?" },
-    { "correctAnswer": "ウォ", "options": ["ウォ", "ウィ", "ウェ", "ウ"], "question": "What katakana combination represents the sound 'wo'?" },
-    { "correctAnswer": "キ", "options": ["キ", "ク", "ケ", "コ"], "question": "In katakana, which character is equivalent to the English letter 'ki'?" },
-    { "correctAnswer": "サ", "options": ["サ", "シ", "ス", "セ"], "question": "What is the pronunciation of 'サ' in katakana?" },
-    { "correctAnswer": "トゥ", "options": ["トゥ", "トャ", "トュ", "トョ"], "question": "Which katakana combination represents the sound 'tu'?" },
-    { "correctAnswer": "ソ", "options": ["ソ", "サ", "ス", "セ"], "question": "In katakana, which character is equivalent to the English letter 'so'?" },
-    { "correctAnswer": "ム", "options": ["ム", "メ", "モ", "マ"], "question": "What is the pronunciation of 'ム' in katakana?" },
-    { "correctAnswer": "リ", "options": ["リ", "レ", "ル", "ロ"], "question": "In katakana, which character is equivalent to the English letter 'ri'?" },
-    { "correctAnswer": "ヒョ", "options": ["ヒョ", "ヒャ", "ヒュ", "ヘィ"], "question": "Which katakana combination represents the sound 'hyo'?" },
-    { "correctAnswer": "ト", "options": ["ト", "タ", "チ", "テ"], "question": "What is the pronunciation of 'ト' in katakana?" },
-    { "correctAnswer": "リュ", "options": ["リュ", "リョ", "リャ", "レィ"], "question": "Which katakana combination represents the sound 'ryu'?" },
-    { "correctAnswer": "ヴ", "options": ["ヴ", "ヴァ", "ヴィ", "ヴェ"], "question": "In katakana, which character represents the sound 'vu'?" },
-    { "correctAnswer": "ン", "options": ["ン", "ヌ", "ネ", "ノ"], "question": "What is the pronunciation of 'ン' in katakana?" },
-    { "correctAnswer": "キュ", "options": ["キュ", "キョ", "キャ", "ケィ"], "question": "Which katakana combination represents the sound 'kyu'?" },
-    { "correctAnswer": "フ", "options": ["フ", "ヘ", "ホ", "ハ"], "question": "In katakana, which character is equivalent to the English letter 'fu'?" },
-    { "correctAnswer": "エ", "options": ["エ", "オ", "イ", "ウ"], "question": "What is the pronunciation of 'エ' in katakana?" },
-    { "correctAnswer": "ノ", "options": ["ノ", "ヌ", "ネ", "ナ"], "question": "In katakana, which character is equivalent to the English letter 'no'?" },
-    { "correctAnswer": "ユ", "options": ["ユ", "ヨ", "イ", "ヤ"], "question": "What is the pronunciation of 'ユ' in katakana?" },
-    { "correctAnswer": "ス", "options": ["ス", "セ", "ソ", "サ"], "question": "In katakana, which character is equivalent to the English letter 'su'?" },
-    { "correctAnswer": "ケ", "options": ["ケ", "キ", "コ", "ク"], "question": "What is the pronunciation of 'ケ' in katakana?" },
-    { "correctAnswer": "ヴェ", "options": ["ヴェ", "ヴァ", "ヴィ", "ヴ"], "question": "Which katakana combination represents the sound 've'?" },
-    { "correctAnswer": "キョ", "options": ["キョ", "キャ", "キュ", "ケィ"], "question": "What katakana combination represents the sound 'kyo'?" },
-    { "correctAnswer": "フェ", "options": ["フェ", "ファ", "フィ", "フォ"], "question": "Which katakana combination represents the sound 'fe'?" },
-    { "correctAnswer": "セ", "options": ["セ", "サ", "ソ", "ス"], "question": "In katakana, which character is equivalent to the English letter 'se'?" }
-    // Add more questions for k02
-  ]
+{"correctAnswer": "ア", "options": ["ア", "イ", "ウ", "エ"], "question": "What is the pronunciation of this katakana character: a"},
+{"correctAnswer": "イ", "options": ["イ", "ウ", "エ", "オ"], "question": "What is the pronunciation of this katakana character: i"},
+{"correctAnswer": "ウ", "options": ["ウ", "エ", "オ", "ア"], "question": "What is the pronunciation of this katakana character: u"},
+{"correctAnswer": "エ", "options": ["エ", "オ", "ア", "イ"], "question": "What is the pronunciation of this katakana character: e"},
+{"correctAnswer": "オ", "options": ["オ", "ア", "イ", "ウ"], "question": "What is the pronunciation of this katakana character: o"},
+{"correctAnswer": "カ", "options": ["カ", "キ", "ク", "ケ"], "question": "What is the pronunciation of this katakana character: ka"},
+{"correctAnswer": "キ", "options": ["キ", "ク", "ケ", "コ"], "question": "What is the pronunciation of this katakana character: ki"},
+{"correctAnswer": "ク", "options": ["ク", "ケ", "コ", "サ"], "question": "What is the pronunciation of this katakana character: ku"},
+{"correctAnswer": "ケ", "options": ["ケ", "コ", "サ", "シ"], "question": "What is the pronunciation of this katakana character: ke"},
+{"correctAnswer": "コ", "options": ["コ", "サ", "シ", "ス"], "question": "What is the pronunciation of this katakana character: ko"},
+{"correctAnswer": "サ", "options": ["サ", "シ", "ス", "セ"], "question": "What is the pronunciation of this katakana character: sa"},
+{"correctAnswer": "シ", "options": ["シ", "ス", "セ", "ソ"], "question": "What is the pronunciation of this katakana character: shi"},
+{"correctAnswer": "ス", "options": ["ス", "セ", "ソ", "タ"], "question": "What is the pronunciation of this katakana character: su"},
+{"correctAnswer": "セ", "options": ["セ", "ソ", "タ", "チ"], "question": "What is the pronunciation of this katakana character: se"},
+{"correctAnswer": "ソ", "options": ["ソ", "タ", "チ", "ツ"], "question": "What is the pronunciation of this katakana character: so"},
+{"correctAnswer": "タ", "options": ["タ", "チ", "ツ", "テ"], "question": "What is the pronunciation of this katakana character: ta"},
+{"correctAnswer": "チ", "options": ["チ", "ツ", "テ", "ト"], "question": "What is the pronunciation of this katakana character: chi"},
+{"correctAnswer": "ツ", "options": ["ツ", "テ", "ト", "ナ"], "question": "What is the pronunciation of this katakana character: tsu"},
+{"correctAnswer": "テ", "options": ["テ", "ト", "ナ", "ニ"], "question": "What is the pronunciation of this katakana character: te"},
+{"correctAnswer": "ト", "options": ["ト", "ナ", "ニ", "ヌ"], "question": "What is the pronunciation of this katakana character: to"},
+{"correctAnswer": "ナ", "options": ["ナ", "ニ", "ヌ", "ネ"], "question": "What is the pronunciation of this katakana character: na"},
+{"correctAnswer": "ニ", "options": ["ニ", "ヌ", "ネ", "ノ"], "question": "What is the pronunciation of this katakana character: ni"},
+{"correctAnswer": "ヌ", "options": ["ヌ", "ネ", "ノ", "ハ"], "question": "What is the pronunciation of this katakana character: nu"},
+{"correctAnswer": "ネ", "options": ["ネ", "ノ", "ハ", "ヒ"], "question": "What is the pronunciation of this katakana character: ne"},
+{"correctAnswer": "ノ", "options": ["ノ", "ハ", "ヒ", "フ"], "question": "What is the pronunciation of this katakana character: no"},
+{"correctAnswer": "ハ", "options": ["ハ", "ヒ", "フ", "ヘ"], "question": "What is the pronunciation of this katakana character: ha"},
+{"correctAnswer": "ヒ", "options": ["ヒ", "フ", "ヘ", "ホ"], "question": "What is the pronunciation of this katakana character: hi"},
+{"correctAnswer": "フ", "options": ["フ", "ヘ", "ホ", "マ"], "question": "What is the pronunciation of this katakana character: fu"},
+{"correctAnswer": "ヘ", "options": ["ヘ", "ホ", "マ", "ミ"], "question": "What is the pronunciation of this katakana character: he"},
+{"correctAnswer": "ホ", "options": ["ホ", "マ", "ミ", "ム"], "question": "What is the pronunciation of this katakana character: ho"},
+{"correctAnswer": "マ", "options": ["マ", "ミ", "ム", "メ"], "question": "What is the pronunciation of this katakana character: ma"},
+{"correctAnswer": "ミ", "options": ["ミ", "ム", "メ", "モ"], "question": "What is the pronunciation of this katakana character: mi"},
+{"correctAnswer": "ム", "options": ["ム", "メ", "モ", "ヤ"], "question": "What is the pronunciation of this katakana character: mu"},
+{"correctAnswer": "メ", "options": ["メ", "モ", "ヤ", "ユ"], "question": "What is the pronunciation of this katakana character: me"},
+{"correctAnswer": "モ", "options": ["モ", "ヤ", "ユ", "ヨ"], "question": "What is the pronunciation of this katakana character: mo"},
+{"correctAnswer": "ヤ", "options": ["ヤ", "ユ", "ヨ", "ラ"], "question": "What is the pronunciation of this katakana character: ya"},
+{"correctAnswer": "ユ", "options": ["ユ", "ヨ", "ラ", "リ"], "question": "What is the pronunciation of this katakana character: yu"},
+{"correctAnswer": "ヨ", "options": ["ヨ", "ラ", "リ", "ル"], "question": "What is the pronunciation of this katakana character: yo"},
+{"correctAnswer": "ラ", "options": ["ラ", "リ", "ル", "レ"], "question": "What is the pronunciation of this katakana character: ra"},
+{"correctAnswer": "リ", "options": ["リ", "ル", "レ", "ロ"], "question": "What is the pronunciation of this katakana character: ri"},
+{"correctAnswer": "ル", "options": ["ル", "レ", "ロ", "ワ"], "question": "What is the pronunciation of this katakana character: ru"},
+{"correctAnswer": "レ", "options": ["レ", "ロ", "ワ", "ヲ"], "question": "What is the pronunciation of this katakana character: re"},
+{"correctAnswer": "ロ", "options": ["ロ", "ワ", "ヲ", "ン"], "question": "What is the pronunciation of this katakana character: ro"},
+{"correctAnswer": "ワ", "options": ["ワ", "ヲ", "ン", "ガ"], "question": "What is the pronunciation of this katakana character: wa"},
+{"correctAnswer": "ヲ", "options": ["ヲ", "ン", "ガ", "ギ"], "question": "What is the pronunciation of this katakana character: wo"},
+{"correctAnswer": "ン", "options": ["ン", "ガ", "ギ", "グ"], "question": "What is the pronunciation of this katakana character: n"},
+{"correctAnswer": "ガ", "options": ["ガ", "ギ", "グ", "ゲ"], "question": "What is the pronunciation of this katakana character: ga"},
+{"correctAnswer": "ギ", "options": ["ギ", "グ", "ゲ", "ゴ"], "question": "What is the pronunciation of this katakana character: gi"},
+{"correctAnswer": "グ", "options": ["グ", "ゲ", "ゴ", "ザ"], "question": "What is the pronunciation of this katakana character: gu"},
+{"correctAnswer": "ゲ", "options": ["ゲ", "ゴ", "ザ", "ジ"], "question": "What is the pronunciation of this katakana character: ge"},
+{"correctAnswer": "ゴ", "options": ["ゴ", "ザ", "ジ", "ズ"], "question": "What is the pronunciation of this katakana character: go"},
+{"correctAnswer": "ザ", "options": ["ザ", "ジ", "ズ", "ゼ"], "question": "What is the pronunciation of this katakana character: za"},
+{"correctAnswer": "ジ", "options": ["ジ", "ズ", "ゼ", "ゾ"], "question": "What is the pronunciation of this katakana character: ji"},
+{"correctAnswer": "ズ", "options": ["ズ", "ゼ", "ゾ", "ダ"], "question": "What is the pronunciation of this katakana character: zu"},
+{"correctAnswer": "ゼ", "options": ["ゼ", "ゾ", "ダ", "ヂ"], "question": "What is the pronunciation of this katakana character: ze"},
+{"correctAnswer": "ゾ", "options": ["ゾ", "ダ", "ヂ", "ヅ"], "question": "What is the pronunciation of this katakana character: zo"},
+{"correctAnswer": "ダ", "options": ["ダ", "ヂ", "ヅ", "デ"], "question": "What is the pronunciation of this katakana character: da"},
+{"correctAnswer": "ヂ", "options": ["ヂ", "ヅ", "デ", "ド"], "question": "What is the pronunciation of this katakana character: ji/di"},
+{"correctAnswer": "ヅ", "options": ["ヅ", "デ", "ド", "バ"], "question": "What is the pronunciation of this katakana character: zu/dzu"},
+{"correctAnswer": "デ", "options": ["デ", "ド", "バ", "ビ"], "question": "What is the pronunciation of this katakana character: de"},
+{"correctAnswer": "ド", "options": ["ド", "バ", "ビ", "ブ"], "question": "What is the pronunciation of this katakana character: do"},
+{"correctAnswer": "バ", "options": ["バ", "ビ", "ブ", "ベ"], "question": "What is the pronunciation of this katakana character: ba"},
+{"correctAnswer": "ビ", "options": ["ビ", "ブ", "ベ", "ボ"], "question": "What is the pronunciation of this katakana character: bi"},
+{"correctAnswer": "ブ", "options": ["ブ", "ベ", "ボ", "パ"], "question": "What is the pronunciation of this katakana character: bu"},
+{"correctAnswer": "ベ", "options": ["ベ", "ボ", "パ", "ピ"], "question": "What is the pronunciation of this katakana character: be"},
+{"correctAnswer": "ボ", "options": ["ボ", "パ", "ピ", "プ"], "question": "What is the pronunciation of this katakana character: bo"},
+{"correctAnswer": "パ", "options": ["パ", "ピ", "プ", "ペ"], "question": "What is the pronunciation of this katakana character: pa"},
+{"correctAnswer": "ピ", "options": ["ピ", "プ", "ペ", "ポ"], "question": "What is the pronunciation of this katakana character: pi"},
+{"correctAnswer": "プ", "options": ["プ", "ペ", "ポ", "ヘ"], "question": "What is the pronunciation of this katakana character: pu"},
+{"correctAnswer": "ペ", "options": ["ペ", "ポ", "ヘ", "ホ"], "question": "What is the pronunciation of this katakana character: pe"},
+{"correctAnswer": "ポ", "options": ["ポ", "ヘ", "ホ", "マ"], "question": "What is the pronunciation of this katakana character: po"}
+    ],
 
-  "j03": [
-    { "correctAnswer": "人", "options": ["人", "口", "日", "月"], "question": "What is the meaning of the kanji character '人'?" },
-    { "correctAnswer": "学", "options": ["学", "校", "生", "先"], "question": "Which kanji character means 'study' or 'learning'?" },
-    { "correctAnswer": "食", "options": ["食", "飲", "飛", "飢"], "question": "What is the meaning of the kanji character '食'?" },
-    { "correctAnswer": "先", "options": ["先", "生", "後", "前"], "question": "In the context of time, which kanji character means 'before'?" },
-    { "correctAnswer": "本", "options": ["本", "東", "西", "南"], "question": "Which kanji character means 'book'?" },
-    { "correctAnswer": "大", "options": ["大", "小", "中", "多"], "question": "What is the meaning of the kanji character '大'?" },
-    { "correctAnswer": "国", "options": ["国", "都", "市", "村"], "question": "Which kanji character means 'country' or 'nation'?" },
-    { "correctAnswer": "山", "options": ["山", "川", "田", "森"], "question": "What is the meaning of the kanji character '山'?" },
-    { "correctAnswer": "水", "options": ["水", "火", "土", "風"], "question": "Which kanji character means 'water'?" },
-    { "correctAnswer": "木", "options": ["木", "石", "金", "土"], "question": "What is the meaning of the kanji character '木'?" },
-    { "correctAnswer": "火", "options": ["火", "風", "土", "水"], "question": "Which kanji character means 'fire'?" },
-    { "correctAnswer": "金", "options": ["金", "木", "土", "水"], "question": "What is the meaning of the kanji character '金'?" },
-    { "correctAnswer": "土", "options": ["土", "木", "火", "水"], "question": "Which kanji character means 'earth' or 'soil'?" },
-    { "correctAnswer": "田", "options": ["田", "川", "山", "森"], "question": "What is the meaning of the kanji character '田'?" },
-    { "correctAnswer": "天", "options": ["天", "地", "海", "空"], "question": "Which kanji character means 'heaven' or 'sky'?" },
-    { "correctAnswer": "生", "options": ["生", "死", "亡", "活"], "question": "What is the meaning of the kanji character '生'?" },
-    { "correctAnswer": "月", "options": ["月", "日", "年", "時"], "question": "Which kanji character means 'moon'?" },
-    { "correctAnswer": "火", "options": ["火", "水", "風", "土"], "question": "What is the meaning of the kanji character '火'?" },
-    { "correctAnswer": "女", "options": ["女", "男", "子", "人"], "question": "Which kanji character means 'woman'?" },
-    { "correctAnswer": "男", "options": ["男", "女", "子", "人"], "question": "What is the meaning of the kanji character '男'?" },
-    { "correctAnswer": "子", "options": ["子", "女", "男", "人"], "question": "Which kanji character means 'child'?" },
-    { "correctAnswer": "気", "options": ["気", "水", "火", "風"], "question": "What is the meaning of the kanji character '気'?" },
-    { "correctAnswer": "川", "options": ["川", "田", "山", "森"], "question": "Which kanji character means 'river'?" },
-    { "correctAnswer": "目", "options": ["目", "耳", "口", "手"], "question": "What is the meaning of the kanji character '目'?" },
-    { "correctAnswer": "耳", "options": ["耳", "目", "口", "手"], "question": "Which kanji character means 'ear'?" },
-    { "correctAnswer": "口", "options": ["口", "目", "耳", "手"], "question": "What is the meaning of the kanji character '口'?" },
-    { "correctAnswer": "手", "options": ["手", "口", "目", "耳"], "question": "Which kanji character means 'hand'?" },
-    { "correctAnswer": "足", "options": ["足", "手", "目", "口"], "question": "What is the meaning of the kanji character '足'?" },
-    { "correctAnswer": "木", "options": ["木", "石", "金", "土"], "question": "Which kanji character means 'tree'?" },
-    { "correctAnswer": "石", "options": ["石", "木", "金", "土"], "question": "What is the meaning of the kanji character '石'?" },
-    { "correctAnswer": "金", "options": ["金", "木", "土", "水"], "question": "Which kanji character means 'gold' or 'money'?" },
-    { "correctAnswer": "土", "options": ["土", "木", "火", "水"], "question": "What is the meaning of the kanji character '土'?" },
-    { "correctAnswer": "水", "options": ["水", "火", "風", "土"], "question": "Which kanji character means 'water'?" },
-    { "correctAnswer": "日", "options": ["日", "月", "年", "時"], "question": "What is the meaning of the kanji character '日'?" },
-    { "correctAnswer": "月", "options": ["月", "日", "年", "時"], "question": "Which kanji character means 'moon'?" },
-    { "correctAnswer": "年", "options": ["年", "月", "日", "時"], "question": "What is the meaning of the kanji character '年'?" },
-    { "correctAnswer": "時", "options": ["時", "分", "秒", "日"], "question": "Which kanji character means 'time' or 'hour'?" },
-    { "correctAnswer": "分", "options": ["分", "時", "秒", "日"], "question": "What is the meaning of the kanji character '分'?" },
-    { "correctAnswer": "秒", "options": ["秒", "時", "分", "日"], "question": "Which kanji character means 'second'?" },
-    { "correctAnswer": "火曜日", "options": ["火曜日", "水曜日", "木曜日", "金曜日"], "question": "What is the Japanese word for 'Tuesday'?" },
-    { "correctAnswer": "水曜日", "options": ["水曜日", "火曜日", "木曜日", "金曜日"], "question": "Which Japanese word means 'Wednesday'?" },
-    { "correctAnswer": "木曜日", "options": ["木曜日", "水曜日", "火曜日", "金曜日"], "question": "What is the Japanese word for 'Thursday'?" },
-    { "correctAnswer": "金曜日", "options": ["金曜日", "水曜日", "木曜日", "火曜日"], "question": "Which Japanese word means 'Friday'?" },
-    { "correctAnswer": "土曜日", "options": ["土曜日", "日曜日", "月曜日", "水曜日"], "question": "What is the Japanese word for 'Saturday'?" },
-    { "correctAnswer": "日曜日", "options": ["日曜日", "土曜日", "月曜日", "水曜日"], "question": "Which Japanese word means 'Sunday'?" },
-    { "correctAnswer": "一", "options": ["一", "二", "三", "四"], "question": "What is the meaning of the kanji character '一'?" },
-    { "correctAnswer": "二", "options": ["二", "一", "三", "四"], "question": "Which kanji character means 'two'?" },
-    { "correctAnswer": "三", "options": ["三", "一", "二", "四"], "question": "What is the meaning of the kanji character '三'?" },
-    { "correctAnswer": "四", "options": ["四", "一", "二", "三"], "question": "Which kanji character means 'four'?" },
-    { "correctAnswer": "五", "options": ["五", "一", "二", "三"], "question": "What is the meaning of the kanji character '五'?" },
-    { "correctAnswer": "六", "options": ["六", "一", "二", "三"], "question": "Which kanji character means 'six'?" },
-    { "correctAnswer": "七", "options": ["七", "一", "二", "三"], "question": "What is the meaning of the kanji character '七'?" },
-    { "correctAnswer": "八", "options": ["八", "一", "二", "三"], "question": "Which kanji character means 'eight'?" },
-    { "correctAnswer": "九", "options": ["九", "一", "二", "三"], "question": "What is the meaning of the kanji character '九'?" },
-    { "correctAnswer": "十", "options": ["十", "一", "二", "三"], "question": "Which kanji character means 'ten'?" },
-    { "correctAnswer": "百", "options": ["百", "千", "万", "一"], "question": "What is the meaning of the kanji character '百'?" },
-    { "correctAnswer": "千", "options": ["千", "百", "万", "一"], "question": "Which kanji character means 'thousand'?" },
-    { "correctAnswer": "万", "options": ["万", "千", "百", "一"], "question": "What is the meaning of the kanji character '万'?" },
-    { "correctAnswer": "円", "options": ["円", "ドル", "ユーロ", "ポンド"], "question": "Which kanji character means 'yen'?" },
-    { "correctAnswer": "日本", "options": ["日本", "中国", "韓国", "アメリカ"], "question": "What is the Japanese word for 'Japan'?" },
-    { "correctAnswer": "東京", "options": ["東京", "大阪", "京都", "福岡"], "question": "Which Japanese city is represented by the kanji characters '東京'?" },
-    { "correctAnswer": "学校", "options": ["学校", "学生", "勉強", "教室"], "question": "What does the compound word '学校' mean in English?" },
-    { "correctAnswer": "春", "options": ["春", "夏", "秋", "冬"], "question": "Which kanji character represents the season 'spring'?" },
-    { "correctAnswer": "夏", "options": ["夏", "春", "秋", "冬"], "question": "What is the meaning of the kanji character '夏'?" },
-    { "correctAnswer": "秋", "options": ["秋", "春", "夏", "冬"], "question": "Which kanji character represents the season 'autumn'?" },
-    { "correctAnswer": "冬", "options": ["冬", "春", "夏", "秋"], "question": "What is the meaning of the kanji character '冬'?" },
-    { "correctAnswer": "花", "options": ["花", "木", "草", "葉"], "question": "Which kanji character means 'flower'?" },
-    { "correctAnswer": "鳥", "options": ["鳥", "犬", "猫", "魚"], "question": "What is the meaning of the kanji character '鳥'?" },
-    { "correctAnswer": "雨", "options": ["雨", "雪", "晴", "曇"], "question": "Which kanji character means 'rain'?" },
-    { "correctAnswer": "雪", "options": ["雪", "雨", "晴", "曇"], "question": "What is the meaning of the kanji character '雪'?" },
-    { "correctAnswer": "晴", "options": ["晴", "雨", "雪", "曇"], "question": "Which kanji character means 'clear' or 'fine' weather?" },
-    { "correctAnswer": "曇", "options": ["曇", "雨", "雪", "晴"], "question": "What is the meaning of the kanji character '曇'?" },
-    { "correctAnswer": "海", "options": ["海", "川", "湖", "池"], "question": "Which kanji character means 'sea'?" },
-    { "correctAnswer": "山", "options": ["山", "川", "田", "森"], "question": "What is the meaning of the kanji character '山'?" },
-    { "correctAnswer": "川", "options": ["川", "山", "田", "森"], "question": "Which kanji character means 'river'?" },
-    { "correctAnswer": "森", "options": ["森", "山", "川", "田"], "question": "What is the meaning of the kanji character '森'?" },
-    { "correctAnswer": "道路", "options": ["道路", "鉄道", "空港", "港"], "question": "What does the compound word '道路' mean in English?" },
-    { "correctAnswer": "駅", "options": ["駅", "銀行", "図書館", "病院"], "question": "Which Japanese term refers to a train station?" },
-    { "correctAnswer": "飛行機", "options": ["飛行機", "電車", "自転車", "車"], "question": "What does the compound word '飛行機' mean in English?" },
-    { "correctAnswer": "自動車", "options": ["自動車", "電車", "飛行機", "自転車"], "question": "Which Japanese term refers to a car?" },
-    { "correctAnswer": "靴", "options": ["靴", "帽子", "バッグ", "時計"], "question": "Which kanji character means 'shoes'?" },
-    { "correctAnswer": "帽子", "options": ["帽子", "靴", "バッグ", "時計"], "question": "What is the meaning of the kanji character '帽子'?" },
-    { "correctAnswer": "バッグ", "options": ["バッグ", "靴", "帽子", "時計"], "question": "Which katakana term refers to a bag?" },
-    { "correctAnswer": "時計", "options": ["時計", "靴", "帽子", "バッグ"], "question": "What does the kanji character '時計' mean in English?" },
-    { "correctAnswer": "食べ物", "options": ["食べ物", "飲み物", "本", "新聞"], "question": "What does the compound word '食べ物' mean in English?" },
-    { "correctAnswer": "飲み物", "options": ["飲み物", "食べ物", "本", "新聞"], "question": "Which Japanese term refers to a drink?" },
-    { "correctAnswer": "本", "options": ["本", "新聞", "食べ物", "飲み物"], "question": "What does the kanji character '本' mean in English?" },
-    { "correctAnswer": "新聞", "options": ["新聞", "本", "食べ物", "飲み物"], "question": "Which kanji character means 'newspaper'?" },
-    { "correctAnswer": "電話", "options": ["電話", "テレビ", "ラジオ", "コンピュータ"], "question": "What does the compound word '電話' mean in English?" },
-    { "correctAnswer": "テレビ", "options": ["テレビ", "電話", "ラジオ", "コンピュータ"], "question": "Which katakana term refers to a television?" },
-    { "correctAnswer": "ラジオ", "options": ["ラジオ", "電話", "テレビ", "コンピュータ"], "question": "What does the katakana term 'ラジオ' mean in English?" },
-    { "correctAnswer": "コンピュータ", "options": ["コンピュータ", "電話", "テレビ", "ラジオ"], "question": "Which katakana term refers to a computer?" },
-    { "correctAnswer": "学生", "options": ["学生", "先生", "教室", "校舎"], "question": "What does the compound word '学生' mean in English?" },
-    { "correctAnswer": "先生", "options": ["先生", "学生", "教室", "校舎"], "question": "Which Japanese term refers to a teacher?" },
-    { "correctAnswer": "教室", "options": ["教室", "学生", "先生", "校舎"], "question": "What does the kanji character '教室' mean in English?" },
-    { "correctAnswer": "校舎", "options": ["校舎", "学生", "先生", "教室"], "question": "Which kanji character means 'school building'?" }
-    // Add more questions for j03
-  ]
+"j03": [
+{"correctAnswer": "一", "options": ["一", "二", "三", "四"], "question": "What is the kanji for the number 1?"},
+{"correctAnswer": "二", "options": ["二", "三", "四", "五"], "question": "What is the kanji for the number 2?"},
+{"correctAnswer": "三", "options": ["三", "四", "五", "六"], "question": "What is the kanji for the number 3?"},
+{"correctAnswer": "四", "options": ["四", "五", "六", "七"], "question": "What is the kanji for the number 4?"},
+{"correctAnswer": "五", "options": ["五", "六", "七", "八"], "question": "What is the kanji for the number 5?"},
+{"correctAnswer": "六", "options": ["六", "七", "八", "九"], "question": "What is the kanji for the number 6?"},
+{"correctAnswer": "七", "options": ["七", "八", "九", "十"], "question": "What is the kanji for the number 7?"},
+{"correctAnswer": "八", "options": ["八", "九", "十", "百"], "question": "What is the kanji for the number 8?"},
+{"correctAnswer": "九", "options": ["九", "十", "百", "千"], "question": "What is the kanji for the number 9?"},
+{"correctAnswer": "十", "options": ["十", "百", "千", "万"], "question": "What is the kanji for the number 10?"},
+{"correctAnswer": "百", "options": ["百", "千", "万", "円"], "question": "What is the kanji for the number 100?"},
+{"correctAnswer": "千", "options": ["千", "万", "円", "時"], "question": "What is the kanji for the number 1000?"},
+{"correctAnswer": "万", "options": ["万", "円", "時", "日"], "question": "What is the kanji for the number 10,000?"},
+{"correctAnswer": "円", "options": ["円", "時", "日", "月"], "question": "What is the kanji for the Japanese currency Yen?"},
+{"correctAnswer": "時", "options": ["時", "日", "月", "火"], "question": "What is the kanji for time or hour?"},
+{"correctAnswer": "日", "options": ["日", "月", "火", "水"], "question": "What is the kanji for the sun or day?"},
+{"correctAnswer": "月", "options": ["月", "火", "水", "木"], "question": "What is the kanji for the moon or month?"},
+{"correctAnswer": "火", "options": ["火", "水", "木", "金"], "question": "What is the kanji for fire?"},
+{"correctAnswer": "水", "options": ["水", "木", "金", "土"], "question": "What is the kanji for water?"},
+{"correctAnswer": "木", "options": ["木", "金", "土", "天"], "question": "What is the kanji for tree or wood?"},
+{"correctAnswer": "金", "options": ["金", "土", "天", "地"], "question": "What is the kanji for gold or money?"},
+{"correctAnswer": "土", "options": ["土", "天", "地", "人"], "question": "What is the kanji for earth or soil?"},
+{"correctAnswer": "天", "options": ["天", "地", "人", "父"], "question": "What is the kanji for heaven or sky?"},
+{"correctAnswer": "地", "options": ["地", "人", "父", "母"], "question": "What is the kanji for ground or land?"},
+{"correctAnswer": "人", "options": ["人", "父", "母", "子"], "question": "What is the kanji for person or human?"},
+{"correctAnswer": "父", "options": ["父", "母", "子", "女"], "question": "What is the kanji for father?"},
+{"correctAnswer": "母", "options": ["母", "子", "女", "兄"], "question": "What is the kanji for mother?"},
+{"correctAnswer": "子", "options": ["子", "女", "兄", "姉"], "question": "What is the kanji for child or son/daughter?"},
+{"correctAnswer": "女", "options": ["女", "兄", "姉", "弟"], "question": "What is the kanji for woman or female?"},
+{"correctAnswer": "兄", "options": ["兄", "姉", "弟", "妹"], "question": "What is the kanji for older brother?"},
+{"correctAnswer": "姉", "options": ["姉", "弟", "妹", "叔"], "question": "What is the kanji for older sister?"},
+{"correctAnswer": "弟", "options": ["弟", "妹", "叔", "叔母"], "question": "What is the kanji for younger brother?"},
+{"correctAnswer": "妹", "options": ["妹", "叔", "叔母", "叔父"], "question": "What is the kanji for younger sister?"},
+{"correctAnswer": "叔", "options": ["叔", "叔母", "叔父", "伯"], "question": "What is the kanji for uncle (younger brother of one's parent)?"},
+{"correctAnswer": "叔母", "options": ["叔母", "叔父", "伯", "伯母"], "question": "What is the kanji for aunt (wife of one's uncle)?"},
+{"correctAnswer": "叔父", "options": ["叔父", "伯", "伯母", "従"], "question": "What is the kanji for uncle (older brother of one's parent)?"},
+{"correctAnswer": "伯", "options": ["伯", "伯母", "従", "従姉"], "question": "What is the kanji for eldest brother (respectful term)?"},
+{"correctAnswer": "伯母", "options": ["伯母", "従", "従姉", "従兄"], "question": "What is the kanji for eldest sister (respectful term)?"},
+{"correctAnswer": "従", "options": ["従", "従姉", "従兄", "従妹"], "question": "What is the kanji for following or subordinate?"},
+{"correctAnswer": "従姉", "options": ["従姉", "従兄", "従妹", "従弟"], "question": "What is the kanji for elder cousin sister?"},
+{"correctAnswer": "従兄", "options": ["従兄", "従妹", "従弟", "従妹"], "question": "What is the kanji for elder cousin brother?"},
+{"correctAnswer": "従妹", "options": ["従妹", "従弟", "従妹", "従弟"], "question": "What is the kanji for younger cousin sister?"},
+{"correctAnswer": "従弟", "options": ["従弟", "従妹", "従弟", "友"], "question": "What is the kanji for younger cousin brother?"},
+{"correctAnswer": "友", "options": ["友", "友達", "仕", "仕事"], "question": "What is the kanji for friend?"},
+{"correctAnswer": "友達", "options": ["友達", "仕", "仕事", "仲良し"], "question": "What is the kanji for close friend?"},
+{"correctAnswer": "仕", "options": ["仕", "仕事", "仲良し", "会社"], "question": "What is the kanji for work (v.)?"},
+{"correctAnswer": "仕事", "options": ["仕事", "仲良し", "会社", "勉強"], "question": "What is the kanji for job or work (n.)?"},
+{"correctAnswer": "仲良し", "options": ["仲良し", "会社", "勉強", "学校"], "question": "What is the kanji for close relationship or good friend?"},
+{"correctAnswer": "会社", "options": ["会社", "勉強", "学校", "先生"], "question": "What is the kanji for company or corporation?"},
+{"correctAnswer": "勉強", "options": ["勉強", "学校", "先生", "生徒"], "question": "What is the kanji for study (v.)?"},
+{"correctAnswer": "学校", "options": ["学校", "先生", "生徒", "教育"], "question": "What is the kanji for school?"},
+{"correctAnswer": "先生", "options": ["先生", "生徒", "教育", "試験"], "question": "What is the kanji for teacher?"},
+{"correctAnswer": "生徒", "options": ["生徒", "教育", "試験", "教室"], "question": "What is the kanji for student?"},
+{"correctAnswer": "教育", "options": ["教育", "試験", "教室", "本"], "question": "What is the kanji for education?"},
+{"correctAnswer": "試験", "options": ["試験", "教室", "本", "読"], "question": "What is the kanji for examination or test?"},
+{"correctAnswer": "教室", "options": ["教室", "本", "読", "書"], "question": "What is the kanji for classroom?"},
+{"correctAnswer": "本", "options": ["本", "読", "書", "新聞"], "question": "What is the kanji for book?"},
+{"correctAnswer": "読", "options": ["読", "書", "新聞", "言葉"], "question": "What is the kanji for read (v.)?"},
+{"correctAnswer": "書", "options": ["書", "新聞", "言葉", "手紙"], "question": "What is the kanji for write (v.)?"},
+{"correctAnswer": "新聞", "options": ["新聞", "言葉", "手紙", "雑誌"], "question": "What is the kanji for newspaper?"},
+{"correctAnswer": "言葉", "options": ["言葉", "手紙", "雑誌", "音楽"], "question": "What is the kanji for language or word?"},
+{"correctAnswer": "手紙", "options": ["手紙", "雑誌", "音楽", "写真"], "question": "What is the kanji for letter or mail?"},
+{"correctAnswer": "雑誌", "options": ["雑誌", "音楽", "写真", "映画"], "question": "What is the kanji for magazine?"},
+{"correctAnswer": "音楽", "options": ["音楽", "写真", "映画", "絵"], "question": "What is the kanji for music?"},
+{"correctAnswer": "写真", "options": ["写真", "映画", "絵", "花"], "question": "What is the kanji for photograph?"},
+{"correctAnswer": "映画", "options": ["映画", "絵", "花", "料理"], "question": "What is the kanji for movie?"},
+{"correctAnswer": "絵", "options": ["絵", "花", "料理", "旅行"], "question": "What is the kanji for picture or drawing?"},
+{"correctAnswer": "花", "options": ["花", "料理", "旅行", "車"], "question": "What is the kanji for flower?"},
+{"correctAnswer": "料理", "options": ["料理", "旅行", "車", "飛行機"], "question": "What is the kanji for cooking or cuisine?"},
+{"correctAnswer": "旅行", "options": ["旅行", "車", "飛行機", "海"], "question": "What is the kanji for travel?"},
+{"correctAnswer": "車", "options": ["車", "飛行機", "海", "山"], "question": "What is the kanji for car?"},
+{"correctAnswer": "飛行機", "options": ["飛行機", "海", "山", "川"], "question": "What is the kanji for airplane?"},
+{"correctAnswer": "海", "options": ["海", "山", "川", "湖"], "question": "What is the kanji for sea or ocean?"},
+{"correctAnswer": "山", "options": ["山", "川", "湖", "森"], "question": "What is the kanji for mountain?"},
+{"correctAnswer": "川", "options": ["川", "湖", "森", "町"], "question": "What is the kanji for river?"},
+{"correctAnswer": "湖", "options": ["湖", "森", "町", "国"], "question": "What is the kanji for lake?"},
+{"correctAnswer": "森", "options": ["森", "町", "国", "世界"], "question": "What is the kanji for forest?"},
+{"correctAnswer": "町", "options": ["町", "国", "世界", "家"], "question": "What is the kanji for town?"},
+{"correctAnswer": "国", "options": ["国", "世界", "家", "都市"], "question": "What is the kanji for country or nation?"},
+{"correctAnswer": "世界", "options": ["世界", "家", "都市", "村"], "question": "What is the kanji for world?"},
+{"correctAnswer": "家", "options": ["家", "都市", "村", "工場"], "question": "What is the kanji for house or home?"},
+{"correctAnswer": "都市", "options": ["都市", "村", "工場", "農村"], "question": "What is the kanji for city?"},
+{"correctAnswer": "村", "options": ["村", "工場", "農村", "港"], "question": "What is the kanji for village?"},
+{"correctAnswer": "工場", "options": ["工場", "農村", "港", "商店"], "question": "What is the kanji for factory?"},
+{"correctAnswer": "農村", "options": ["農村", "港", "商店", "空港"], "question": "What is the kanji for rural area?"},
+{"correctAnswer": "港", "options": ["港", "商店", "空港", "駅"], "question": "What is the kanji for harbor or port?"},
+{"correctAnswer": "商店", "options": ["商店", "空港", "駅", "美術館"], "question": "What is the kanji for store or shop?"},
+{"correctAnswer": "空港", "options": ["空港", "駅", "美術館", "公園"], "question": "What is the kanji for airport?"},
+{"correctAnswer": "駅", "options": ["駅", "美術館", "公園", "動物園"], "question": "What is the kanji for station?"},
+{"correctAnswer": "美術館", "options": ["美術館", "公園", "動物園", "博物館"], "question": "What is the kanji for art museum?"},
+{"correctAnswer": "公園", "options": ["公園", "動物園", "博物館", "劇場"], "question": "What is the kanji for park?"},
+{"correctAnswer": "動物園", "options": ["動物園", "博物館", "劇場", "図書館"], "question": "What is the kanji for zoo?"},
+{"correctAnswer": "博物館", "options": ["博物館", "劇場", "図書館", "寺"], "question": "What is the kanji for museum?"},
+{"correctAnswer": "劇場", "options": ["劇場", "図書館", "寺", "神社"], "question": "What is the kanji for theater?"},
+{"correctAnswer": "図書館", "options": ["図書館", "寺", "神社", "城"], "question": "What is the kanji for library?"},
+{"correctAnswer": "寺", "options": ["寺", "神社", "城", "宮"], "question": "What is the kanji for temple?"},
+{"correctAnswer": "神社", "options": ["神社", "城", "宮", "神道"], "question": "What is the kanji for Shinto shrine?"},
+{"correctAnswer": "城", "options": ["城", "宮", "神道", "山脈"], "question": "What is the kanji for castle?"},
+{"correctAnswer": "宮", "options": ["宮", "神道", "山脈", "湖畔"], "question": "What is the kanji for palace or shrine?"},
+{"correctAnswer": "神道", "options": ["神道", "山脈", "湖畔", "滝"], "question": "What is the kanji for Shintoism?"},
+{"correctAnswer": "山脈", "options": ["山脈", "湖畔", "滝", "島"], "question": "What is the kanji for mountain range?"},
+{"correctAnswer": "湖畔", "options": ["湖畔", "滝", "島", "沼"], "question": "What is the kanji for lakeside?"},
+{"correctAnswer": "滝", "options": ["滝", "島", "沼", "海岸"], "question": "What is the kanji for waterfall?"},
+{"correctAnswer": "島", "options": ["島", "沼", "海岸", "渓谷"], "question": "What is the kanji for island?"},
+{"correctAnswer": "沼", "options": ["沼", "海岸", "渓谷", "山道"], "question": "What is the kanji for swamp?"},
+{"correctAnswer": "海岸", "options": ["海岸", "渓谷", "山道", "砂漠"], "question": "What is the kanji for coast?"},
+{"correctAnswer": "渓谷", "options": ["渓谷", "山道", "砂漠", "草原"], "question": "What is the kanji for canyon?"},
+{"correctAnswer": "山道", "options": ["山道", "砂漠", "草原", "森林"], "question": "What is the kanji for mountain path?"},
+{"correctAnswer": "砂漠", "options": ["砂漠", "草原", "森林", "峡谷"], "question": "What is the kanji for desert?"},
+{"correctAnswer": "草原", "options": ["草原", "森林", "峡谷", "荒地"], "question": "What is the kanji for grassland?"},
+{"correctAnswer": "森林", "options": ["森林", "峡谷", "荒地", "滑走路"], "question": "What is the kanji for forest?"},
+{"correctAnswer": "峡谷", "options": ["峡谷", "荒地", "滑走路", "山峡"], "question": "What is the kanji for gorge?"},
+{"correctAnswer": "荒地", "options": ["荒地", "滑走路", "山峡", "火山"], "question": "What is the kanji for wasteland?"},
+{"correctAnswer": "滑走路", "options": ["滑走路", "山峡", "火山", "池"], "question": "What is the kanji for runway?"},
+{"correctAnswer": "山峡", "options": ["山峡", "火山", "池", "峠"], "question": "What is the kanji for mountain pass?"},
+{"correctAnswer": "火山", "options": ["火山", "池", "峠", "丘"], "question": "What is the kanji for volcano?"},
+{"correctAnswer": "池", "options": ["池", "峠", "丘", "谷"], "question": "What is the kanji for pond?"},
+{"correctAnswer": "峠", "options": ["峠", "丘", "谷", "峰"], "question": "What is the kanji for mountain peak?"},
+{"correctAnswer": "丘", "options": ["丘", "谷", "峰", "坂"], "question": "What is the kanji for hill?"},
+{"correctAnswer": "谷", "options": ["谷", "峰", "坂", "巣"], "question": "What is the kanji for valley?"},
+{"correctAnswer": "峰", "options": ["峰", "坂", "巣", "岩"], "question": "What is the kanji for peak or summit?"},
+{"correctAnswer": "坂", "options": ["坂", "巣", "岩", "橋"], "question": "What is the kanji for slope or hillside?"},
+{"correctAnswer": "巣", "options": ["巣", "岩", "橋", "崖"], "question": "What is the kanji for nest?"},
+{"correctAnswer": "岩", "options": ["岩", "橋", "崖", "洞窟"], "question": "What is the kanji for rock?"},
+{"correctAnswer": "橋", "options": ["橋", "崖", "洞窟", "池"], "question": "What is the kanji for bridge?"},
+{"correctAnswer": "崖", "options": ["崖", "洞窟", "池", "森"], "question": "What is the kanji for cliff or precipice?"},
+{"correctAnswer": "洞窟", "options": ["洞窟", "池", "森", "海岸"], "question": "What is the kanji for cave?"},
+{"correctAnswer": "池", "options": ["池", "森", "海岸", "川"], "question": "What is the kanji for pond?"},
+{"correctAnswer": "森", "options": ["森", "海岸", "川", "湖"], "question": "What is the kanji for forest?"},
+{"correctAnswer": "湖", "options": ["湖", "川", "山", "滝"], "question": "What is the kanji for lake?"},
+{"correctAnswer": "川", "options": ["川", "山", "滝", "海"], "question": "What is the kanji for river?"},
+{"correctAnswer": "山", "options": ["山", "滝", "海", "空"], "question": "What is the kanji for mountain?"},
+{"correctAnswer": "滝", "options": ["滝", "海", "空", "雲"], "question": "What is the kanji for waterfall?"},
+{"correctAnswer": "海", "options": ["海", "空", "雲", "星"], "question": "What is the kanji for sea or ocean?"},
+{"correctAnswer": "空", "options": ["空", "雲", "星", "太陽"], "question": "What is the kanji for sky?"},
+{"correctAnswer": "雲", "options": ["雲", "星", "太陽", "月"], "question": "What is the kanji for cloud?"},
+{"correctAnswer": "星", "options": ["星", "太陽", "月", "宇宙"], "question": "What is the kanji for star?"},
+{"correctAnswer": "太陽", "options": ["太陽", "月", "宇宙", "星座"], "question": "What is the kanji for sun?"},
+{"correctAnswer": "月", "options": ["月", "宇宙", "星座", "彗星"], "question": "What is the kanji for moon?"},
+{"correctAnswer": "宇宙", "options": ["宇宙", "星座", "彗星", "惑星"], "question": "What is the kanji for universe?"},
+{"correctAnswer": "星座", "options": ["星座", "彗星", "惑星", "銀河"], "question": "What is the kanji for constellation?"},
+{"correctAnswer": "彗星", "options": ["彗星", "惑星", "銀河", "隕石"], "question": "What is the kanji for comet?"},
+{"correctAnswer": "惑星", "options": ["惑星", "銀河", "隕石", "流星"], "question": "What is the kanji for planet?"},
+{"correctAnswer": "銀河", "options": ["銀河", "隕石", "流星", "夜空"], "question": "What is the kanji for galaxy?"},
+{"correctAnswer": "隕石", "options": ["隕石", "流星", "夜空", "宇宙船"], "question": "What is the kanji for meteorite?"},
+{"correctAnswer": "流星", "options": ["流星", "夜空", "宇宙船", "地球"], "question": "What is the kanji for shooting star?"},
+{"correctAnswer": "夜空", "options": ["夜空", "宇宙船", "地球", "日食"], "question": "What is the kanji for night sky?"},
+{"correctAnswer": "宇宙船", "options": ["宇宙船", "地球", "日食", "太陽系"], "question": "What is the kanji for spaceship?"},
+{"correctAnswer": "地球", "options": ["地球", "日食", "太陽系", "星空"], "question": "What is the kanji for Earth?"},
+{"correctAnswer": "日食", "options": ["日食", "太陽系", "星空", "惑星地球"], "question": "What is the kanji for solar eclipse?"},
+{"correctAnswer": "太陽系", "options": ["太陽系", "星空", "惑星地球", "天文学"], "question": "What is the kanji for solar system?"},
+{"correctAnswer": "星空", "options": ["星空", "惑星地球", "天文学", "宇宙人"], "question": "What is the kanji for starry sky?"},
+{"correctAnswer": "惑星地球", "options": ["惑星地球", "天文学", "宇宙人", "科学"], "question": "What is the kanji for planet Earth?"},
+{"correctAnswer": "天文学", "options": ["天文学", "宇宙人", "科学", "地球儀"], "question": "What is the kanji for astronomy?"},
+{"correctAnswer": "宇宙人", "options": ["宇宙人", "科学", "地球儀", "ロケット"], "question": "What is the kanji for extraterrestrial being or alien?"},
+{"correctAnswer": "科学", "options": ["科学", "地球儀", "ロケット", "実験"], "question": "What is the kanji for science?"},
+{"correctAnswer": "地球儀", "options": ["地球儀", "ロケット", "実験", "化学"], "question": "What is the kanji for globe?"},
+{"correctAnswer": "ロケット", "options": ["ロケット", "実験", "化学", "生物学"], "question": "What is the kanji for rocket?"},
+{"correctAnswer": "実験", "options": ["実験", "化学", "生物学", "物理学"], "question": "What is the kanji for experiment?"},
+{"correctAnswer": "化学", "options": ["化学", "生物学", "物理学", "数学"], "question": "What is the kanji for chemistry?"},
+{"correctAnswer": "生物学", "options": ["生物学", "物理学", "数学", "地理学"], "question": "What is the kanji for biology?"},
+{"correctAnswer": "物理学", "options": ["物理学", "数学", "地理学", "歴史"], "question": "What is the kanji for physics?"},
+{"correctAnswer": "数学", "options": ["数学", "地理学", "歴史", "政治学"], "question": "What is the kanji for mathematics?"},
+{"correctAnswer": "地理学", "options": ["地理学", "歴史", "政治学", "経済学"], "question": "What is the kanji for geography?"},
+{"correctAnswer": "歴史", "options": ["歴史", "政治学", "経済学", "心理学"], "question": "What is the kanji for history?"},
+{"correctAnswer": "政治学", "options": ["政治学", "経済学", "心理学", "社会学"], "question": "What is the kanji for political science?"},
+{"correctAnswer": "経済学", "options": ["経済学", "心理学", "社会学", "言語学"], "question": "What is the kanji for economics?"},
+{"correctAnswer": "心理学", "options": ["心理学", "社会学", "言語学", "教育学"], "question": "What is the kanji for psychology?"},
+{"correctAnswer": "社会学", "options": ["社会学", "言語学", "教育学", "人類学"], "question": "What is the kanji for sociology?"},
+{"correctAnswer": "言語学", "options": ["言語学", "教育学", "人類学", "哲学"], "question": "What is the kanji for linguistics?"},
+{"correctAnswer": "教育学", "options": ["教育学", "人類学", "哲学", "神学"], "question": "What is the kanji for education?"},
+{"correctAnswer": "人類学", "options": ["人類学", "哲学", "神学", "美学"], "question": "What is the kanji for anthropology?"},
+{"correctAnswer": "哲学", "options": ["哲学", "神学", "美学", "倫理学"], "question": "What is the kanji for philosophy?"},
+{"correctAnswer": "神学", "options": ["神学", "美学", "倫理学", "論理学"], "question": "What is the kanji for theology?"},
+{"correctAnswer": "美学", "options": ["美学", "倫理学", "論理学", "数論"], "question": "What is the kanji for aesthetics?"},
+{"correctAnswer": "倫理学", "options": ["倫理学", "論理学", "数論", "幾何学"], "question": "What is the kanji for ethics?"},
+{"correctAnswer": "論理学", "options": ["論理学", "数論", "幾何学", "算数"], "question": "What is the kanji for logic?"},
+{"correctAnswer": "数論", "options": ["数論", "幾何学", "算数", "代数学"], "question": "What is the kanji for number theory?"},
+{"correctAnswer": "幾何学", "options": ["幾何学", "算数", "代数学", "微積分学"], "question": "What is the kanji for geometry?"},
+{"correctAnswer": "算数", "options": ["算数", "代数学", "微積分学", "物理化学"], "question": "What is the kanji for arithmetic?"},
+{"correctAnswer": "代数学", "options": ["代数学", "微積分学", "物理化学", "地球化学"], "question": "What is the kanji for algebra?"},
+{"correctAnswer": "微積分学", "options": ["微積分学", "物理化学", "地球化学", "生化学"], "question": "What is the kanji for calculus?"},
+{"correctAnswer": "物理化学", "options": ["物理化学", "地球化学", "生化学", "有機化学"], "question": "What is the kanji for physical chemistry?"},
+{"correctAnswer": "地球化学", "options": ["地球化学", "生化学", "有機化学", "無機化学"], "question": "What is the kanji for geochemistry?"},
+{"correctAnswer": "生化学", "options": ["生化学", "有機化学", "無機化学", "分子生物学"], "question": "What is the kanji for biochemistry?"},
+{"correctAnswer": "有機化学", "options": ["有機化学", "無機化学", "分子生物学", "遺伝子学"], "question": "What is the kanji for organic chemistry?"},
+{"correctAnswer": "無機化学", "options": ["無機化学", "分子生物学", "遺伝子学", "生物物理学"], "question": "What is the kanji for inorganic chemistry?"},
+{"correctAnswer": "分子生物学", "options": ["分子生物学", "遺伝子学", "生物物理学", "植物学"], "question": "What is the kanji for molecular biology?"},
+{"correctAnswer": "遺伝子学", "options": ["遺伝子学", "生物物理学", "植物学", "動物学"], "question": "What is the kanji for genetics?"},
+{"correctAnswer": "生物物理学", "options": ["生物物理学", "植物学", "動物学", "古生物学"], "question": "What is the kanji for biophysics?"},
+{"correctAnswer": "植物学", "options": ["植物学", "動物学", "古生物学", "微生物学"], "question": "What is the kanji for botany?"},
+{"correctAnswer": "動物学", "options": ["動物学", "古生物学", "微生物学", "海洋学"], "question": "What is the kanji for zoology?"},
+{"correctAnswer": "古生物学", "options": ["古生物学", "微生物学", "海洋学", "気象学"], "question": "What is the kanji for paleontology?"},
+{"correctAnswer": "微生物学", "options": ["微生物学", "海洋学", "気象学", "地質学"], "question": "What is the kanji for microbiology?"},
+{"correctAnswer": "海洋学", "options": ["海洋学", "気象学", "地質学", "鉱物学"], "question": "What is the kanji for oceanography?"},
+{"correctAnswer": "気象学", "options": ["気象学", "地質学", "鉱物学", "生態学"], "question": "What is the kanji for meteorology?"},
+{"correctAnswer": "地質学", "options": ["地質学", "鉱物学", "生態学", "生物学"], "question": "What is the kanji for geology?"},
+{"correctAnswer": "鉱物学", "options": ["鉱物学", "生態学", "生物学", "植物"], "question": "What is the kanji for mineralogy?"},
+{"correctAnswer": "生態学", "options": ["生態学", "生物学", "植物", "動物"], "question": "What is the kanji for ecology?"},
+{"correctAnswer": "生物学", "options": ["生物学", "植物", "動物", "人間学"], "question": "What is the kanji for biology?"},
+{"correctAnswer": "植物", "options": ["植物", "動物", "人間学", "人類"], "question": "What is the kanji for plant?"},
+{"correctAnswer": "動物", "options": ["動物", "人間学", "人類", "進化論"], "question": "What is the kanji for animal?"},
+{"correctAnswer": "人間学", "options": ["人間学", "人類", "進化論", "医学"], "question": "What is the kanji for anthropology?"},
+{"correctAnswer": "人類", "options": ["人類", "進化論", "医学", "歯学"], "question": "What is the kanji for humanity?"},
+{"correctAnswer": "進化論", "options": ["進化論", "医学", "歯学", "看護学"], "question": "What is the kanji for evolution?"},
+{"correctAnswer": "医学", "options": ["医学", "歯学", "看護学", "薬学"], "question": "What is the kanji for medicine?"},
+{"correctAnswer": "歯学", "options": ["歯学", "看護学", "薬学", "心臓"], "question": "What is the kanji for dentistry?"},
+{"correctAnswer": "看護学", "options": ["看護学", "薬学", "心臓", "脳"], "question": "What is the kanji for nursing?"},
+{"correctAnswer": "薬学", "options": ["薬学", "心臓", "脳", "骨"], "question": "What is the kanji for pharmacy?"},
+{"correctAnswer": "心臓", "options": ["心臓", "脳", "骨", "筋肉"], "question": "What is the kanji for heart?"},
+{"correctAnswer": "脳", "options": ["脳", "骨", "筋肉", "皮膚"], "question": "What is the kanji for brain?"},
+{"correctAnswer": "骨", "options": ["骨", "筋肉", "皮膚", "肺"], "question": "What is the kanji for bone?"},
+{"correctAnswer": "筋肉", "options": ["筋肉", "皮膚", "肺", "肝臓"], "question": "What is the kanji for muscle?"},
+{"correctAnswer": "皮膚", "options": ["皮膚", "肺", "肝臓", "腎臓"], "question": "What is the kanji for skin?"},
+{"correctAnswer": "肺", "options": ["肺", "肝臓", "腎臓", "腸"], "question": "What is the kanji for lung?"},
+{"correctAnswer": "肝臓", "options": ["肝臓", "腎臓", "腸", "胃"], "question": "What is the kanji for liver?"},
+{"correctAnswer": "腎臓", "options": ["腎臓", "腸", "胃", "膵臓"], "question": "What is the kanji for kidney?"},
+{"correctAnswer": "腸", "options": ["腸", "胃", "膵臓", "心臓"], "question": "What is the kanji for intestine?"},
+{"correctAnswer": "胃", "options": ["胃", "膵臓", "心臓", "脾臓"], "question": "What is the kanji for stomach?"},
+{"correctAnswer": "膵臓", "options": ["膵臓", "心臓", "脾臓", "臓器"], "question": "What is the kanji for pancreas?"},
+{"correctAnswer": "心臓", "options": ["心臓", "脾臓", "臓器", "骨髄"], "question": "What is the kanji for heart?"},
+{"correctAnswer": "脾臓", "options": ["脾臓", "臓器", "骨髄", "膀胱"], "question": "What is the kanji for spleen?"},
+{"correctAnswer": "臓器", "options": ["臓器", "骨髄", "膀胱", "皮膚"], "question": "What is the kanji for organ?"},
+{"correctAnswer": "骨髄", "options": ["骨髄", "膀胱", "皮膚", "毛髪"], "question": "What is the kanji for bone marrow?"},
+{"correctAnswer": "膀胱", "options": ["膀胱", "皮膚", "毛髪", "爪"], "question": "What is the kanji for bladder?"},
+{"correctAnswer": "皮膚", "options": ["皮膚", "毛髪", "爪", "耳"], "question": "What is the kanji for skin?"},
+{"correctAnswer": "毛髪", "options": ["毛髪", "爪", "耳", "目"], "question": "What is the kanji for hair?"},
+{"correctAnswer": "爪", "options": ["爪", "耳", "目", "歯"], "question": "What is the kanji for nail?"},
+{"correctAnswer": "耳", "options": ["耳", "目", "歯", "鼻"], "question": "What is the kanji for ear?"},
+{"correctAnswer": "目", "options": ["目", "歯", "鼻", "口"], "question": "What is the kanji for eye?"},
+{"correctAnswer": "歯", "options": ["歯", "鼻", "口", "舌"], "question": "What is the kanji for tooth?"},
+{"correctAnswer": "鼻", "options": ["鼻", "口", "舌", "唇"], "question": "What is the kanji for nose?"},
+{"correctAnswer": "口", "options": ["口", "舌", "唇", "歯"], "question": "What is the kanji for mouth?"},
+{"correctAnswer": "舌", "options": ["舌", "唇", "歯", "顎"], "question": "What is the kanji for tongue?"},
+{"correctAnswer": "唇", "options": ["唇", "歯", "顎", "頬"], "question": "What is the kanji for lips?"},
+{"correctAnswer": "歯", "options": ["歯", "顎", "頬", "首"], "question": "What is the kanji for tooth?"},
+{"correctAnswer": "顎", "options": ["顎", "頬", "首", "髭"], "question": "What is the kanji for jaw?"},
+{"correctAnswer": "頬", "options": ["頬", "首", "髭", "目"], "question": "What is the kanji for cheek?"},
+{"correctAnswer": "首", "options": ["首", "髭", "目", "髪"], "question": "What is the kanji for neck?"},
+{"correctAnswer": "髭", "options": ["髭", "目", "髪", "肩"], "question": "What is the kanji for beard?"},
+{"correctAnswer": "目", "options": ["目", "髪", "肩", "胸"], "question": "What is the kanji for eye?"},
+{"correctAnswer": "髪", "options": ["髪", "肩", "胸", "腕"], "question": "What is the kanji for hair?"},
+{"correctAnswer": "肩", "options": ["肩", "胸", "腕", "手"], "question": "What is the kanji for shoulder?"},
+{"correctAnswer": "胸", "options": ["胸", "腕", "手", "指"], "question": "What is the kanji for chest?"},
+{"correctAnswer": "腕", "options": ["腕", "手", "指", "腰"], "question": "What is the kanji for arm?"},
+{"correctAnswer": "手", "options": ["手", "指", "腰", "足"], "question": "What is the kanji for hand?"},
+{"correctAnswer": "指", "options": ["指", "腰", "足", "膝"], "question": "What is the kanji for finger?"},
+{"correctAnswer": "腰", "options": ["腰", "足", "膝", "足首"], "question": "What is the kanji for waist?"},
+{"correctAnswer": "足", "options": ["足", "膝", "足首", "つま先"], "question": "What is the kanji for leg?"},
+{"correctAnswer": "膝", "options": ["膝", "足首", "つま先", "爪先"], "question": "What is the kanji for knee?"},
+{"correctAnswer": "足首", "options": ["足首", "つま先", "爪先", "かかと"], "question": "What is the kanji for ankle?"},
+{"correctAnswer": "つま先", "options": ["つま先", "爪先", "かかと", "足跡"], "question": "What is the kanji for toe?"},
+{"correctAnswer": "爪先", "options": ["爪先", "かかと", "足跡", "踵"], "question": "What is the kanji for toenail?"},
+{"correctAnswer": "かかと", "options": ["かかと", "足跡", "踵", "土踏まず"], "question": "What is the kanji for heel?"},
+{"correctAnswer": "足跡", "options": ["足跡", "踵", "土踏まず", "靴底"], "question": "What is the kanji for footprint?"},
+{"correctAnswer": "踵", "options": ["踵", "土踏まず", "靴底", "草履"], "question": "What is the kanji for heel of foot?"},
+{"correctAnswer": "土踏まず", "options": ["土踏まず", "靴底", "草履", "足袋"], "question": "What is the kanji for arch of the foot?"},
+{"correctAnswer": "靴底", "options": ["靴底", "草履", "足袋", "足りない"], "question": "What is the kanji for sole of the shoe?"},
+{"correctAnswer": "草履", "options": ["草履", "足袋", "足りない", "歩く"], "question": "What is the kanji for traditional Japanese sandals?"},
+{"correctAnswer": "足袋", "options": ["足袋", "足りない", "歩く", "走る"], "question": "What is the kanji for traditional Japanese socks?"},
+{"correctAnswer": "足りない", "options": ["足りない", "歩く", "走る", "跳ぶ"], "question": "What is the kanji for not enough?"},
+{"correctAnswer": "歩く", "options": ["歩く", "走る", "跳ぶ", "止まる"], "question": "What is the kanji for walk?"},
+{"correctAnswer": "走る", "options": ["走る", "跳ぶ", "止まる", "向かう"], "question": "What is the kanji for run?"},
+{"correctAnswer": "跳ぶ", "options": ["跳ぶ", "止まる", "向かう", "回る"], "question": "What is the kanji for jump?"},
+{"correctAnswer": "止まる", "options": ["止まる", "向かう", "回る", "探す"], "question": "What is the kanji for stop?"},
+{"correctAnswer": "向かう", "options": ["向かう", "回る", "探す", "見つける"], "question": "What is the kanji for go towards?"},
+{"correctAnswer": "回る", "options": ["回る", "探す", "見つける", "迷子"], "question": "What is the kanji for turn around?"},
+{"correctAnswer": "探す", "options": ["探す", "見つける", "迷子", "見る"], "question": "What is the kanji for search?"},
+{"correctAnswer": "見つける", "options": ["見つける", "迷子", "見る", "聞く"], "question": "What is the kanji for find?"},
+{"correctAnswer": "迷子", "options": ["迷子", "見る", "聞く", "話す"], "question": "What is the kanji for lost child?"},
+{"correctAnswer": "見る", "options": ["見る", "聞く", "話す", "読む"], "question": "What is the kanji for see?"},
+{"correctAnswer": "聞く", "options": ["聞く", "話す", "読む", "書く"], "question": "What is the kanji for ask?"},
+{"correctAnswer": "話す", "options": ["話す", "読む", "書く", "語る"], "question": "What is the kanji for speak?"},
+{"correctAnswer": "読む", "options": ["読む", "書く", "語る", "書物"], "question": "What is the kanji for read?"},
+{"correctAnswer": "書く", "options": ["書く", "語る", "書物", "言葉"], "question": "What is the kanji for write?"},
+{"correctAnswer": "語る", "options": ["語る", "書物", "言葉", "詩"], "question": "What is the kanji for narrate?"},
+{"correctAnswer": "書物", "options": ["書物", "言葉", "詩", "文章"], "question": "What is the kanji for book?"},
+{"correctAnswer": "言葉", "options": ["言葉", "詩", "文章", "手紙"], "question": "What is the kanji for language?"},
+{"correctAnswer": "詩", "options": ["詩", "文章", "手紙", "小説"], "question": "What is the kanji for poem?"},
+{"correctAnswer": "文章", "options": ["文章", "手紙", "小説", "作文"], "question": "What is the kanji for writing?"},
+{"correctAnswer": "手紙", "options": ["手紙", "小説", "作文", "短編小説"], "question": "What is the kanji for letter?"},
+{"correctAnswer": "小説", "options": ["小説", "作文", "短編小説", "エッセイ"], "question": "What is the kanji for novel?"},
+{"correctAnswer": "作文", "options": ["作文", "短編小説", "エッセイ", "レポート"], "question": "What is the kanji for composition?"},
+{"correctAnswer": "短編小説", "options": ["短編小説", "エッセイ", "レポート", "脚本"], "question": "What is the kanji for short story?"},
+{"correctAnswer": "エッセイ", "options": ["エッセイ", "レポート", "脚本", "映画"], "question": "What is the kanji for essay?"},
+{"correctAnswer": "レポート", "options": ["レポート", "脚本", "映画", "ドラマ"], "question": "What is the kanji for report?"},
+{"correctAnswer": "脚本", "options": ["脚本", "映画", "ドラマ", "テレビ"], "question": "What is the kanji for screenplay?"},
+{"correctAnswer": "映画", "options": ["映画", "ドラマ", "テレビ", "音楽"], "question": "What is the kanji for movie?"},
+{"correctAnswer": "ドラマ", "options": ["ドラマ", "テレビ", "音楽", "舞台"], "question": "What is the kanji for drama?"},
+{"correctAnswer": "テレビ", "options": ["テレビ", "音楽", "舞台", "ラジオ"], "question": "What is the kanji for television?"},
+{"correctAnswer": "音楽", "options": ["音楽", "舞台", "ラジオ", "美術"], "question": "What is the kanji for music?"},
+{"correctAnswer": "舞台", "options": ["舞台", "ラジオ", "美術", "写真"], "question": "What is the kanji for stage?"},
+{"correctAnswer": "ラジオ", "options": ["ラジオ", "美術", "写真", "彫刻"], "question": "What is the kanji for radio?"},
+{"correctAnswer": "美術", "options": ["美術", "写真", "彫刻", "工芸"], "question": "What is the kanji for art?"},
+{"correctAnswer": "写真", "options": ["写真", "彫刻", "工芸", "陶芸"], "question": "What is the kanji for photograph?"},
+{"correctAnswer": "彫刻", "options": ["彫刻", "工芸", "陶芸", "絵画"], "question": "What is the kanji for sculpture?"},
+{"correctAnswer": "工芸", "options": ["工芸", "陶芸", "絵画", "詩"], "question": "What is the kanji for craft?"},
+{"correctAnswer": "陶芸", "options": ["陶芸", "絵画", "詩", "小説"], "question": "What is the kanji for pottery?"},
+{"correctAnswer": "絵画", "options": ["絵画", "詩", "小説", "文章"], "question": "What is the kanji for painting?"},
+{"correctAnswer": "詩", "options": ["詩", "小説", "文章", "手紙"], "question": "What is the kanji for poem?"},
+{"correctAnswer": "小説", "options": ["小説", "文章", "手紙", "エッセイ"], "question": "What is the kanji for novel?"},
+{"correctAnswer": "文章", "options": ["文章", "手紙", "エッセイ", "レポート"], "question": "What is the kanji for writing?"},
+{"correctAnswer": "手紙", "options": ["手紙", "エッセイ", "レポート", "短編小説"], "question": "What is the kanji for letter?"},
+{"correctAnswer": "小説", "options": ["小説", "エッセイ", "レポート", "短編小説"], "question": "What is the kanji for novel?"},
+{"correctAnswer": "エッセイ", "options": ["エッセイ", "レポート", "短編小説", "脚本"], "question": "What is the kanji for essay?"},
+{"correctAnswer": "レポート", "options": ["レポート", "短編小説", "脚本", "映画"], "question": "What is the kanji for report?"},
+{"correctAnswer": "脚本", "options": ["脚本", "映画", "ドラマ", "テレビ"], "question": "What is the kanji for screenplay?"},
+{"correctAnswer": "映画", "options": ["映画", "ドラマ", "テレビ", "音楽"], "question": "What is the kanji for movie?"},
+{"correctAnswer": "ドラマ", "options": ["ドラマ", "テレビ", "音楽", "舞台"], "question": "What is the kanji for drama?"},
+{"correctAnswer": "テレビ", "options": ["テレビ", "音楽", "舞台", "ラジオ"], "question": "What is the kanji for television?"},
+{"correctAnswer": "音楽", "options": ["音楽", "舞台", "ラジオ", "美術"], "question": "What is the kanji for music?"},
+{"correctAnswer": "舞台", "options": ["舞台", "ラジオ", "美術", "写真"], "question": "What is the kanji for stage?"},
+{"correctAnswer": "ラジオ", "options": ["ラジオ", "美術", "写真", "彫刻"], "question": "What is the kanji for radio?"},
+{"correctAnswer": "美術", "options": ["美術", "写真", "彫刻", "工芸"], "question": "What is the kanji for art?"},
+{"correctAnswer": "写真", "options": ["写真", "彫刻", "工芸", "陶芸"], "question": "What is the kanji for photograph?"},
+{"correctAnswer": "彫刻", "options": ["彫刻", "工芸", "陶芸", "絵画"], "question": "What is the kanji for sculpture?"},
+{"correctAnswer": "工芸", "options": ["工芸", "陶芸", "絵画", "詩"], "question": "What is the kanji for craft?"},
+{"correctAnswer": "陶芸", "options": ["陶芸", "絵画", "詩", "小説"], "question": "What is the kanji for pottery?"},
+{"correctAnswer": "絵画", "options": ["絵画", "詩", "小説", "文章"], "question": "What is the kanji for painting?"},
+{"correctAnswer": "詩", "options": ["詩", "小説", "文章", "手紙"], "question": "What is the kanji for poem?"},
+{"correctAnswer": "小説", "options": ["小説", "文章", "手紙", "エッセイ"], "question": "What is the kanji for novel?"},
+{"correctAnswer": "文章", "options": ["文章", "手紙", "エッセイ", "レポート"], "question": "What is the kanji for writing?"},
+{"correctAnswer": "手紙", "options": ["手紙", "エッセイ", "レポート", "短編小説"], "question": "What is the kanji for letter?"},
+{"correctAnswer": "小説", "options": ["小説", "エッセイ", "レポート", "短編小説"], "question": "What is the kanji for novel?"},
+{"correctAnswer": "エッセイ", "options": ["エッセイ", "レポート", "短編小説", "脚本"], "question": "What is the kanji for essay?"},
+{"correctAnswer": "レポート", "options": ["レポート", "短編小説", "脚本", "映画"], "question": "What is the kanji for report?"},
+{"correctAnswer": "脚本", "options": ["脚本", "映画", "ドラマ", "テレビ"], "question": "What is the kanji for screenplay?"},
+{"correctAnswer": "映画", "options": ["映画", "ドラマ", "テレビ", "音楽"], "question": "What is the kanji for movie?"},
+{"correctAnswer": "ドラマ", "options": ["ドラマ", "テレビ", "音楽", "舞台"], "question": "What is the kanji for drama?"},
+{"correctAnswer": "テレビ", "options": ["テレビ", "音楽", "舞台", "ラジオ"], "question": "What is the kanji for television?"},
+{"correctAnswer": "音楽", "options": ["音楽", "舞台", "ラジオ", "美術"], "question": "What is the kanji for music?"},
+{"correctAnswer": "舞台", "options": ["舞台", "ラジオ", "美術", "写真"], "question": "What is the kanji for stage?"},
+{"correctAnswer": "ラジオ", "options": ["ラジオ", "美術", "写真", "彫刻"], "question": "What is the kanji for radio?"},
+{"correctAnswer": "美術", "options": ["美術", "写真", "彫刻", "工芸"], "question": "What is the kanji for art?"},
+{"correctAnswer": "写真", "options": ["写真", "彫刻", "工芸", "陶芸"], "question": "What is the kanji for photograph?"},
+{"correctAnswer": "彫刻", "options": ["彫刻", "工芸", "陶芸", "絵画"], "question": "What is the kanji for sculpture?"},
+{"correctAnswer": "工芸", "options": ["工芸", "陶芸", "絵画", "詩"], "question": "What is the kanji for craft?"},
+{"correctAnswer": "陶芸", "options": ["陶芸", "絵画", "詩", "小説"], "question": "What is the kanji for pottery?"},
+{"correctAnswer": "絵画", "options": ["絵画", "詩", "小説", "文章"], "question": "What is the kanji for painting?"},
+{"correctAnswer": "詩", "options": ["詩", "小説", "文章", "手紙"], "question": "What is the kanji for poem?"},
+{"correctAnswer": "小説", "options": ["小説", "文章", "手紙", "エッセイ"], "question": "What is the kanji for novel?"},
+{"correctAnswer": "文章", "options": ["文章", "手紙", "エッセイ", "レポート"], "question": "What is the kanji for writing?"},
+{"correctAnswer": "手紙", "options": ["手紙", "エッセイ", "レポート", "短編小説"], "question": "What is the kanji for letter?"},
+{"correctAnswer": "小説", "options": ["小説", "エッセイ", "レポート", "短編小説"], "question": "What is the kanji for novel?"},
+{"correctAnswer": "エッセイ", "options": ["エッセイ", "レポート", "短編小説", "脚本"], "question": "What is the kanji for essay?"},
+{"correctAnswer": "レポート", "options": ["レポート", "短編小説", "脚本", "映画"], "question": "What is the kanji for report?"},
+{"correctAnswer": "脚本", "options": ["脚本", "映画", "ドラマ", "テレビ"], "question": "What is the kanji for screenplay?"},
+{"correctAnswer": "映画", "options": ["映画", "ドラマ", "テレビ", "音楽"], "question": "What is the kanji for movie?"},
+{"correctAnswer": "ドラマ", "options": ["ドラマ", "テレビ", "音楽", "舞台"], "question": "What is the kanji for drama?"},
+{"correctAnswer": "テレビ", "options": ["テレビ", "音楽", "舞台", "ラジオ"], "question": "What is the kanji for television?"},
+{"correctAnswer": "音楽", "options": ["音楽", "舞台", "ラジオ", "美術"], "question": "What is the kanji for music?"},
+{"correctAnswer": "舞台", "options": ["舞台", "ラジオ", "美術", "写真"], "question": "What is the kanji for stage?"},
+{"correctAnswer": "ラジオ", "options": ["ラジオ", "美術", "写真", "彫刻"], "question": "What is the kanji for radio?"},
+{"correctAnswer": "美術", "options": ["美術", "写真", "彫刻", "工芸"], "question": "What is the kanji for art?"},
+{"correctAnswer": "写真", "options": ["写真", "彫刻", "工芸", "陶芸"], "question": "What is the kanji for photograph?"},
+{"correctAnswer": "彫刻", "options": ["彫刻", "工芸", "陶芸", "絵画"], "question": "What is the kanji for sculpture?"},
+{"correctAnswer": "工芸", "options": ["工芸", "陶芸", "絵画", "詩"], "question": "What is the kanji for craft?"},
+{"correctAnswer": "陶芸", "options": ["陶芸", "絵画", "詩", "小説"], "question": "What is the kanji for pottery?"},
+{"correctAnswer": "絵画", "options": ["絵画", "詩", "小説", "文章"], "question": "What is the kanji for painting?"},
+{"correctAnswer": "詩", "options": ["詩", "小説", "文章", "手紙"], "question": "What is the kanji for poem?"},
+{"correctAnswer": "小説", "options": ["小説", "文章", "手紙", "エッセイ"], "question": "What is the kanji for novel?"},
+{"correctAnswer": "文章", "options": ["文章", "手紙", "エッセイ", "レポート"], "question": "What is the kanji for writing?"},
+{"correctAnswer": "手紙", "options": ["手紙", "エッセイ", "レポート", "短編小説"], "question": "What is the kanji for letter?"},
+{"correctAnswer": "小説", "options": ["小説", "エッセイ", "レポート", "短編小説"], "question": "What is the kanji for novel?"}
+   ],
   "w04": [
     { "correctAnswer": "HTML", "options": ["HTML", "CSS", "JavaScript", "Python"], "question": "What does 'H' stand for in HTML?" },
     { "correctAnswer": "CSS", "options": ["C#", "C++", "CSS", "Java"], "question": "Which technology is used to style web pages?" },
@@ -405,153 +620,162 @@ var questionSets = {
     { "correctAnswer": "SEO", "options": ["SEO", "Responsive Design", "Dark Mode", "Cookies"], "question": "Which term refers to the practice of optimizing a website to rank higher in search engine results?" }
     // Add more questions for w04
   ]
-};
+  };
 
 
-  // Function to shuffle an array
-  function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
+// Function to shuffle an array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+// Function to display a question
+function displayQuestion(question, callback) {
+  if (!questionTextElement || !optionsContainer) {
+    console.error("Missing HTML elements. Make sure they exist and the script is placed after them.");
+    return;
   }
 
-  // Function to display a question
-  function displayQuestion(question) {
-    if (!questionTextElement || !optionsElements || optionsElements.length === 0) {
-      console.error("Missing HTML elements. Make sure they exist and the script is placed after them.");
-      return;
-    }
+  // Display the question
+  questionTextElement.textContent = question.question;
 
-    // Display the question
-    questionTextElement.textContent = question.question;
+  // Shuffle options for a random order
+  const shuffledOptions = question.options.slice();
+  shuffleArray(shuffledOptions);
 
-    // Shuffle options for a random order
-    var shuffledOptions = question.options.slice();
-    shuffleArray(shuffledOptions);
+  // Clear previous options
+  optionsContainer.innerHTML = '';
 
-    // Display the options
-    for (var i = 0; i < shuffledOptions.length && i < optionsElements.length; i++) {
-      optionsElements[i].textContent = shuffledOptions[i];
-      optionsElements[i].classList.remove("btn-success", "btn-danger"); // Reset button color
-      optionsElements[i].disabled = false; // Enable the option
-    }
-  }
-
-  // Function to reset the game
-  function resetGame() {
-    score = 0;
-    currentQuestionIndex = 0;
-    updateScore();
-    selectCategory(quizCode); // Set default category based on quizCode
-    displayNextQuestion();
-  }
-
-  // Function to update the score display
-  function updateScore() {
-    correctCountElement.textContent = score;
-    wrongCountElement.textContent = currentQuestionIndex - score;
-  }
-
-  // Function to handle user's answer
-  function checkAnswer(answer) {
-    var currentQuestion = getCurrentQuestion();
-
-    if (currentQuestion && answer === currentQuestion.correctAnswer) {
-      feedbackMessageElement.textContent = "Correct!";
-      score++;
-      optionsElements.forEach(function (option) {
-        if (option.textContent === currentQuestion.correctAnswer) {
-          option.classList.add("btn-success");
-        } else {
-          option.classList.add("btn-light"); // Reset other options to default color
-          option.disabled = true; // Disable other options after correct answer
-        }
-      });
-    } else {
-      feedbackMessageElement.textContent = "Wrong! Try again.";
-      optionsElements.forEach(function (option) {
-        if (option.textContent === answer) {
-          option.classList.add("btn-danger");
-          option.disabled = true; // Disable the selected option after wrong answer
-        }
-      });
-    }
-
-    currentQuestionIndex++;
-    updateScore();
-
-    // Check if all questions are answered
-    if (currentQuestionIndex < getCurrentQuestionSet().length) {
-      displayNextQuestion();
-    } else {
-      // All questions answered, display score and try again button
-      displayScore();
-      displayTryAgainButton();
-    }
-  }
-
-  // Function to get the current question based on the category and index
-  function getCurrentQuestion() {
-    var questionSet = questionSets[currentCategory];
-
-    if (currentQuestionIndex < questionSet.length) {
-      return questionSet[currentQuestionIndex];
-    } else {
-      // All questions have been answered, you may want to handle this case
-      return null;
-    }
-  }
-
-  // Function to get the current question set based on the category
-  function getCurrentQuestionSet() {
-    return questionSets[currentCategory];
-  }
-
-  // Function to display the next question
-  function displayNextQuestion() {
-    var currentQuestion = getCurrentQuestion();
-
-    if (currentQuestion) {
-      displayQuestion(currentQuestion);
-    } else {
-      // No more questions, you may want to handle this case
-      console.log("Quiz completed!");
-    }
-  }
-
-  // Function to display the score
-  function displayScore() {
-    questionTextElement.textContent = "Quiz completed! Your score: " + score;
-    feedbackMessageElement.textContent = "";
-  }
-
-  // Function to display the "Try Again" button
-  function displayTryAgainButton() {
-    optionsElements.forEach(function (option) {
-      option.disabled = true;
-    });
-    tryAgainButton.style.display = "block";
-  }
-
-  // Function to select the category
-  function selectCategory(category) {
-    currentCategory = category;
-  }
-
-  // Add event listeners to handle button clicks
-  optionsElements.forEach(function (option, index) {
-    option.addEventListener("click", function () {
-      checkAnswer(option.textContent);
-    });
+  // Display the options
+  shuffledOptions.forEach(function (option) {
+    const optionButton = document.createElement('button');
+    optionButton.textContent = option;
+    optionButton.classList.add('option', 'p-2', 'px-4', 'my-2', 'mx-1', 'btn', 'btn-primary', 'btn-sm');
+    optionsContainer.appendChild(optionButton);
   });
 
-  // Try Again button click event
-  tryAgainButton.addEventListener("click", function () {
-    tryAgainButton.style.display = "none";
-    resetGame();
-  });
+  // Call the callback function after displaying options
+  if (callback && typeof callback === 'function') {
+    callback();
+  }
+}
 
-  // Initial setup
-  resetGame();
+// Function to reset the game
+function resetGame() {
+  score = 0;
+  currentQuestionIndex = 0;
+  updateScore();
+  selectCategory(quizCode); // Set default category based on quizCode
+  displayNextQuestion();
+}
+
+// Function to update the score display
+function updateScore() {
+  correctCountElement.textContent = score;
+  wrongCountElement.textContent = currentQuestionIndex - score;
+}
+
+// Function to handle user's answer
+function checkAnswer(answer) {
+  const currentQuestion = getCurrentQuestion();
+
+  if (currentQuestion && answer === currentQuestion.correctAnswer) {
+    feedbackMessageElement.textContent = "Congratulations!! Correct answer.";
+    score++;
+    optionsContainer.querySelectorAll('.option').forEach(function (option) {
+      if (option.textContent === currentQuestion.correctAnswer) {
+        option.classList.add("btn-success");
+      } else {
+        option.classList.remove("btn-primary");
+        option.classList.add("btn-light"); // Reset other options to default color
+        option.disabled = true; // Disable other options after correct answer
+      }
+    });
+  } else {
+    feedbackMessageElement.textContent = "Wrong Answer! You might want to consider reading again";
+    optionsContainer.querySelectorAll('.option').forEach(function (option) {
+      if (option.textContent === answer) {
+        option.classList.add("btn-danger");
+        option.disabled = true; // Disable the selected option after wrong answer
+      }
+    });
+  }
+
+  currentQuestionIndex++;
+  updateScore();
+
+  // Check if all questions are answered
+  if (currentQuestionIndex < getCurrentQuestionSet().length) {
+    // Pass displayNextQuestion as a callback to displayQuestion
+    displayQuestion(getCurrentQuestion(), displayNextQuestion);
+  } else {
+    // All questions answered, display score and try again button
+    displayScore();
+    displayTryAgainButton();
+  }
+}
+
+// Function to get the current question based on the category and index
+function getCurrentQuestion() {
+  const questionSet = questionSets[currentCategory];
+
+  if (currentQuestionIndex < questionSet.length) {
+    return questionSet[currentQuestionIndex];
+  } else {
+    // All questions have been answered, you may want to handle this case
+    return null;
+  }
+}
+
+// Function to get the current question set based on the category
+function getCurrentQuestionSet() {
+  return questionSets[currentCategory];
+}
+
+// Function to display the next question
+function displayNextQuestion() {
+  const currentQuestion = getCurrentQuestion();
+
+  if (currentQuestion) {
+    displayQuestion(currentQuestion);
+  } else {
+    // No more questions, you may want to handle this case
+    console.log("Quiz completed!");
+  }
+}
+
+// Function to display the score
+function displayScore() {
+  questionTextElement.textContent = "Quiz completed! Your score: " + score;
+  feedbackMessageElement.textContent = "";
+}
+
+// Function to display the "Try Again" button
+function displayTryAgainButton() {
+  optionsContainer.querySelectorAll('.option').forEach(function (option) {
+    option.disabled = true;
+  });
+  tryAgainButton.style.display = "block";
+}
+
+// Function to select the category
+function selectCategory(category) {
+  currentCategory = category;
+}
+
+// Add event listener to handle button clicks using event delegation
+optionsContainer.addEventListener('click', function (event) {
+  if (event.target.classList.contains('option')) {
+    checkAnswer(event.target.textContent);
+  }
+});
+
+// Try Again button click event
+tryAgainButton.addEventListener('click', resetGame);
+
+// Initial setup
+resetGame();
+
 });
