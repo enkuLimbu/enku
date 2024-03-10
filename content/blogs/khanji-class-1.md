@@ -80,15 +80,11 @@ Kanji characters often combine to form new words. For example, combining 木 (ki
 
 ## Tips for Mastering the Kanji Kingdom 🌟
 
-1. **Visual Imagination**: Picture vivid scenes related to each Kanji character.
-  
-2. **Story Weaving**: Craft stories using Kanji characters to reinforce memory.
-
-3. **Radical Revelations**: Explore common radicals; they unlock the secrets of many characters.
-
-4. **Verbal Repetition**: Pronounce characters regularly to enhance oral memory.
-
-5. **Group Quests**: Share your Kanji discoveries with fellow explorers for added joy.
+- **Visual Imagination**: Picture vivid scenes related to each Kanji character.
+- **Story Weaving**: Craft stories using Kanji characters to reinforce memory.
+- **Radical Revelations**: Explore common radicals; they unlock the secrets of many characters.
+- **Verbal Repetition**: Pronounce characters regularly to enhance oral memory.
+- **Group Quests**: Share your Kanji discoveries with fellow explorers for added joy.
 
 ## Kanji Quest Conclusion 🌌
 
