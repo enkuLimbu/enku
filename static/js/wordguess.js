@@ -619,7 +619,201 @@ let currentCategory = quizCode;
     { "correctAnswer": "URL", "options": ["URL", "HTTP", "API", "JSON"], "question": "What does 'U' stand for in URL?" },
     { "correctAnswer": "SEO", "options": ["SEO", "Responsive Design", "Dark Mode", "Cookies"], "question": "Which term refers to the practice of optimizing a website to rank higher in search engine results?" }
     // Add more questions for w04
-  ]
+  ],
+
+"h11": 
+[
+  {"correctAnswer": "o-u", "options": ["a-i", "e-i", "o-u", "u-e"], "question": "What is the extended sound for おう?"},
+  {"correctAnswer": "gan", "options": ["zen", "kan", "gen", "gan"], "question": "How is がん pronounced in English?"},
+  {"correctAnswer": "ha-mu", "options": ["ha-mo", "he-mu", "ho-mu", "ha-mu"], "question": "What is the Hiragana representation for はむ?"},
+  {"correctAnswer": "oil", "options": ["air", "oil", "sun", "moon"], "question": "How is おい pronounced in English?"},
+  {"correctAnswer": "kin-pen-betsu", "options": ["kin-fun-betsu", "kin-pen-betsu", "gin-pen-getsu", "kan-pen-betsu"], "question": "Break down the Hiragana characters for きんぴんべつ."},
+  {"correctAnswer": "sakura no hana ga", "options": ["hana no sakura ga", "ga hana no sakura", "sakura no hana ga", "ga sakura no hana"], "question": "Arrange the Hiragana characters for さくらのはなが."},
+  {"correctAnswer": "neko ga inu o oikakemasu", "options": ["neko o inu ga oikakemasu", "ga inu oikakemasu neko", "neko ga inu o oikakemasu", "oikakemasu inu neko ga"], "question": "Construct the sentence ねこがいぬを おいかけます in English."},
+  {"correctAnswer": "tetsu", "options": ["ta-tsu", "te-tsu", "to-tsu", "tetsu"], "question": "What is the result when you combine て and つ?"},
+  {"correctAnswer": "hamu", "options": ["hi-mu", "he-mu", "ha-mu", "ho-mu"], "question": "What is the result when you combine は and む?"},
+  {"correctAnswer": "oikakemasu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is おいかけます pronounced in English?"},
+  {"correctAnswer": "yo-ru", "options": ["ya-ru", "yu-ru", "yo-ru", "yi-ru"], "question": "How is よる pronounced in English?"},
+  {"correctAnswer": "to-tsu", "options": ["ta-tsu", "te-tsu", "to-tsu", "ti-tsu"], "question": "What is the result when you combine と and つ?"},
+  {"correctAnswer": "oi", "options": ["ai", "oi", "ui", "ei"], "question": "How is おい pronounced in English?"},
+  {"correctAnswer": "sakura", "options": ["hana", "momo", "sakura", "kaze"], "question": "What is the seasonal word for cherry blossoms?"},
+  {"correctAnswer": "tsu", "options": ["ta", "chi", "tsu", "te"], "question": "What is the Hiragana character for つ?"},
+  {"correctAnswer": "tō-kyō", "options": ["tō-kyō", "o-sa-ka", "kyō-to", "fu-ku-o-ka"], "question": "How is とうきょう pronounced in English?"},
+  {"correctAnswer": "kumquat", "options": ["lemon", "kumquat", "apple", "banana"], "question": "How is さくら pronounced in English?"},
+  {"correctAnswer": "yo-ru", "options": ["ya-ru", "yu-ru", "yo-ru", "yi-ru"], "question": "How is よる pronounced in English?"},
+  {"correctAnswer": "nu", "options": ["na", "ni", "nu", "ne"], "question": "What is the Hiragana character for ぬ?"},
+  {"correctAnswer": "oikakemasu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is おいかけます pronounced in English?"},
+  {"correctAnswer": "oikakemashu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is おいかけます pronounced in English?"},
+  {"correctAnswer": "e-i", "options": ["a-i", "e-i", "o-u", "u-e"], "question": "What is the extended sound for えい?"},
+  {"correctAnswer": "shu", "options": ["sa", "shi", "su", "shu"], "question": "What is the Hiragana character for しゅ?"},
+  {"correctAnswer": "hi-mo", "options": ["hi-mu", "he-mo", "ho-mu", "ha-mo"], "question": "What is the result when you combine ひ and も?"},
+  {"correctAnswer": "sakura no hana ga", "options": ["hana no sakura ga", "ga hana no sakura", "sakura no hana ga", "ga sakura no hana"], "question": "Arrange the Hiragana characters for さくらのはなが."},
+  {"correctAnswer": "ni", "options": ["na", "ni", "nu", "ne"], "question": "What is the Hiragana character for に?"},
+  {"correctAnswer": "chi-hi", "options": ["ta-hi", "chi-hi", "tsu-hi", "te-hi"], "question": "What is the result when you combine ち and ひ?"},
+  {"correctAnswer": "oikakemashu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is おいかけます pronounced in English?"},
+  {"correctAnswer": "ki-mo-no", "options": ["ka-mo-no", "ki-mo-no", "ku-mo-no", "ke-mo-no"], "question": "What is the result when you combine き and も?"},
+  {"correctAnswer": "tō-kyō", "options": ["tō-kyō", "o-sa-ka", "kyō-to", "fu-ku-o-ka"], "question": "How is とうきょう pronounced in English?"},
+  {"correctAnswer": "ka-ze", "options": ["ka-ze", "ki-ze", "ku-ze", "ke-ze"], "question": "What is the result when you combine か and ぜ?"},
+  {"correctAnswer": "e-i", "options": ["a-i", "e-i", "o-u", "u-e"], "question": "What is the extended sound for えい?"},
+  {"correctAnswer": "ho-ru", "options": ["ha-ru", "hi-ru", "hu-ru", "ho-ru"], "question": "What is the result when you combine ほ and る?"},
+  {"correctAnswer": "oikakemasu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is おいかけます pronounced in English?"},
+  {"correctAnswer": "u-e", "options": ["a-i", "e-i", "o-u", "u-e"], "question": "What is the extended sound for うえ?"},
+  {"correctAnswer": "hi-ro-i", "options": ["ha-ro-i", "hi-ro-i", "hu-ro-i", "ho-ro-i"], "question": "What is the result when you combine ひ and ろ?"},
+  {"correctAnswer": "oikakemashu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is おいかけます pronounced in English?"},
+  {"correctAnswer": "mo-mo", "options": ["ma-ma", "mi-mi", "mu-mu", "mo-mo"], "question": "What is the result when you combine も and も?"},
+  {"correctAnswer": "yo-ru", "options": ["ya-ru", "yu-ru", "yo-ru", "yi-ru"], "question": "How is よる pronounced in English?"},
+  {"correctAnswer": "nu", "options": ["na", "ni", "nu", "ne"], "question": "What is the Hiragana character for ぬ?"},
+  {"correctAnswer": "oikakemashu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is おいかけます pronounced in English?"},
+  {"correctAnswer": "ku-ki", "options": ["ka-ki", "ki-ki", "ku-ki", "ke-ki"], "question": "What is the result when you combine く and き?"},
+  {"correctAnswer": "tō-kyō", "options": ["tō-kyō", "o-sa-ka", "kyō-to", "fu-ku-o-ka"], "question": "How is とうきょう pronounced in English?"},
+  {"correctAnswer": "ya-ku", "options": ["ya-ka", "yu-ku", "yo-ku", "yi-ku"], "question": "What is the result when you combine や and く?"},
+  {"correctAnswer": "i-e", "options": ["a-i", "e-i", "o-u", "u-e"], "question": "What is the extended sound for いえ?"},
+  {"correctAnswer": "te-le-bi", "options": ["ta-le-bi", "chi-le-bi", "tsu-le-bi", "te-le-bi"], "question": "What is the result when you combine て and れ and び?"},
+  {"correctAnswer": "oikakemashu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is おいかけます pronounced in English?"},
+  {"correctAnswer": "ta-chi", "options": ["ta-chi", "chi-chi", "tsu-chi", "te-chi"], "question": "What is the result when you combine た and ち?"},
+  {"correctAnswer": "ho-ru", "options": ["ha-ru", "hi-ru", "hu-ru", "ho-ru"], "question": "What is the result when you combine ほ and る?"},
+  {"correctAnswer": "oikakemashu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is おいかけます pronounced in English?"}
+],
+"k12":
+[
+  {"correctAnswer": "a-i", "options": ["a-i", "e-i", "o-u", "u-e"], "question": "What is the extended sound for アイ?"},
+  {"correctAnswer": "kan", "options": ["zen", "kan", "gen", "gan"], "question": "How is ガン pronounced in English?"},
+  {"correctAnswer": "ha-mu", "options": ["ha-mo", "he-mu", "ho-mu", "ha-mu"], "question": "What is the Katakana representation for ハム?"},
+  {"correctAnswer": "air", "options": ["air", "oil", "sun", "moon"], "question": "How is エア pronounced in English?"},
+  {"correctAnswer": "kin-pen-betsu", "options": ["kin-fun-betsu", "kin-pen-betsu", "gin-pen-getsu", "kan-pen-betsu"], "question": "Break down the Katakana characters for キンペンベツ."},
+  {"correctAnswer": "sakura no hana ga", "options": ["hana no sakura ga", "ga hana no sakura", "sakura no hana ga", "ga sakura no hana"], "question": "Arrange the Katakana characters for サクラノハナガ."},
+  {"correctAnswer": "neko ga inu o oikakemasu", "options": ["neko o inu ga oikakemasu", "ga inu oikakemasu neko", "neko ga inu o oikakemasu", "oikakemasu inu neko ga"], "question": "Construct the sentence ネコガイヌオオイカケマス in English."},
+  {"correctAnswer": "tetsu", "options": ["ta-tsu", "te-tsu", "to-tsu", "tetsu"], "question": "What is the result when you combine テ and ツ?"},
+  {"correctAnswer": "hamu", "options": ["hi-mu", "he-mu", "ha-mu", "ho-mu"], "question": "What is the result when you combine ハ and ム?"},
+  {"correctAnswer": "oikakemasu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is オイカケマス pronounced in English?"},
+  {"correctAnswer": "yo-ru", "options": ["ya-ru", "yu-ru", "yo-ru", "yi-ru"], "question": "How is ヨル pronounced in English?"},
+  {"correctAnswer": "to-tsu", "options": ["ta-tsu", "te-tsu", "to-tsu", "ti-tsu"], "question": "What is the result when you combine ト and ツ?"},
+  {"correctAnswer": "oi", "options": ["ai", "oi", "ui", "ei"], "question": "How is オイ pronounced in English?"},
+  {"correctAnswer": "sakura", "options": ["hana", "momo", "sakura", "kaze"], "question": "What is the seasonal word for cherry blossoms?"},
+  {"correctAnswer": "tsu", "options": ["ta", "chi", "tsu", "te"], "question": "What is the Katakana character for ツ?"},
+  {"correctAnswer": "tō-kyō", "options": ["tō-kyō", "o-sa-ka", "kyō-to", "fu-ku-o-ka"], "question": "How is トウキョウ pronounced in English?"},
+  {"correctAnswer": "kumquat", "options": ["lemon", "kumquat", "apple", "banana"], "question": "How is サクラ pronounced in English?"},
+  {"correctAnswer": "yo-ru", "options": ["ya-ru", "yu-ru", "yo-ru", "yi-ru"], "question": "How is ヨル pronounced in English?"},
+  {"correctAnswer": "nu", "options": ["na", "ni", "nu", "ne"], "question": "What is the Katakana character for ヌ?"},
+  {"correctAnswer": "oikakemasu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is オイカケマス pronounced in English?"},
+  {"correctAnswer": "oikakemashu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is オイカケマス pronounced in English?"},
+  {"correctAnswer": "e-i", "options": ["a-i", "e-i", "o-u", "u-e"], "question": "What is the extended sound for エイ?"},
+  {"correctAnswer": "shu", "options": ["sa", "shi", "su", "shu"], "question": "What is the Katakana character for シュ?"},
+  {"correctAnswer": "hi-mo", "options": ["hi-mu", "he-mo", "ho-mu", "ha-mo"], "question": "What is the result when you combine ヒ and モ?"},
+  {"correctAnswer": "sakura no hana ga", "options": ["hana no sakura ga", "ga hana no sakura", "sakura no hana ga", "ga sakura no hana"], "question": "Arrange the Katakana characters for サクラノハナガ."},
+  {"correctAnswer": "ni", "options": ["na", "ni", "nu", "ne"], "question": "What is the Katakana character for ニ?"},
+  {"correctAnswer": "chi-hi", "options": ["ta-hi", "chi-hi", "tsu-hi", "te-hi"], "question": "What is the result when you combine チ and ヒ?"},
+  {"correctAnswer": "oikakemashu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is オイカケマス pronounced in English?"},
+  {"correctAnswer": "ki-mo-no", "options": ["ka-mo-no", "ki-mo-no", "ku-mo-no", "ke-mo-no"], "question": "What is the result when you combine キ and モ?"},
+  {"correctAnswer": "tō-kyō", "options": ["tō-kyō", "o-sa-ka", "kyō-to", "fu-ku-o-ka"], "question": "How is トウキョウ pronounced in English?"},
+  {"correctAnswer": "ka-ze", "options": ["ka-ze", "ki-ze", "ku-ze", "ke-ze"], "question": "What is the result when you combine カ and ゼ?"},
+  {"correctAnswer": "e-i", "options": ["a-i", "e-i", "o-u", "u-e"], "question": "What is the extended sound for エイ?"},
+  {"correctAnswer": "ho-ru", "options": ["ha-ru", "hi-ru", "hu-ru", "ho-ru"], "question": "What is the result when you combine ホ and ル?"},
+  {"correctAnswer": "oikakemasu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is オイカケマス pronounced in English?"},
+  {"correctAnswer": "u-e", "options": ["a-i", "e-i", "o-u", "u-e"], "question": "What is the extended sound for ウエ?"},
+  {"correctAnswer": "hi-ro-i", "options": ["ha-ro-i", "hi-ro-i", "hu-ro-i", "ho-ro-i"], "question": "What is the result when you combine ヒ and ロ?"},
+  {"correctAnswer": "oikakemashu", "options": ["oikakemasu", "oikukemasu", "oikokemasu", "oikakemashu"], "question": "How is オイカケマス pronounced in English?"},
+  {"correctAnswer": "ra-men", "options": ["ra-men", "ri-men", "ru-men", "ro-men"], "question": "What is the Katakana representation for ラーメン?"},
+  {"correctAnswer": "ko-hi", "options": ["ka-hi", "ki-hi", "ku-hi", "ko-hi"], "question": "What is the result when you combine コ and ヒ?"},
+  {"correctAnswer": "za-shi", "options": ["za-shi", "zi-shi", "zu-shi", "zo-shi"], "question": "What is the Katakana character for ザシ?"},
+  {"correctAnswer": "hi-ka-ri", "options": ["ha-ka-ri", "hi-ka-ri", "hu-ka-ri", "ho-ka-ri"], "question": "What is the result when you combine ヒ and カリ?"},
+  {"correctAnswer": "o-cha", "options": ["a-cha", "i-cha", "u-cha", "o-cha"], "question": "What is the Katakana representation for お茶?"},
+  {"correctAnswer": "ka-re", "options": ["ka-re", "ki-re", "ku-re", "ko-re"], "question": "What is the Katakana representation for カレー?"},
+  {"correctAnswer": "pi-n-su", "options": ["pi-n-su", "pe-n-su", "pu-n-su", "po-n-su"], "question": "What is the Katakana representation for ピンス?"},
+  {"correctAnswer": "a-me-ri-ka", "options": ["a-me-ri-ka", "i-me-ri-ka", "u-me-ri-ka", "o-me-ri-ka"], "question": "What is the result when you combine アメリカ?"},
+  {"correctAnswer": "o-o-do-re-su", "options": ["a-o-do-re-su", "i-o-do-re-su", "u-o-do-re-su", "o-o-do-re-su"], "question": "What is the Katakana representation for オードレス?"},
+  {"correctAnswer": "ro-bi-n-su", "options": ["ra-bi-n-su", "ri-bi-n-su", "ru-bi-n-su", "ro-bi-n-su"], "question": "What is the result when you combine ロビンス?"},
+  {"correctAnswer": "shi-ya-tsu", "options": ["sha-tsu", "shi-tsu", "shu-tsu", "sho-tsu"], "question": "What is the Katakana representation for シャツ?"},
+  {"correctAnswer": "tsu-n-a-mi", "options": ["ta-n-a-mi", "chi-n-a-mi", "tsu-n-a-mi", "te-n-a-mi"], "question": "What is the result when you combine ツナミ?"},
+  {"correctAnswer": "hi-tsu-ji", "options": ["ha-tsu-ji", "hi-tsu-ji", "hu-tsu-ji", "ho-tsu-ji"], "question": "What is the Katakana representation for ヒツジ?"},
+  {"correctAnswer": "so-ni-", "options": ["sa-ni-", "shi-ni-", "su-ni-", "so-ni-"], "question": "What is the result when you combine ソニー?"},
+  {"correctAnswer": "ka-me-ra", "options": ["ka-me-ra", "ki-me-ra", "ku-me-ra", "ko-me-ra"], "question": "What is the Katakana representation for カメラ?"},
+  {"correctAnswer": "chi-ki-n", "options": ["cha-ki-n", "chi-ki-n", "chu-ki-n", "cho-ki-n"], "question": "What is the result when you combine チキン?"},
+  {"correctAnswer": "ko-n-pyu-ta-", "options": ["ka-n-pyu-ta-", "ki-n-pyu-ta-", "ku-n-pyu-ta-", "ko-n-pyu-ta-"], "question": "What is the Katakana representation for コンピューター?"},
+  {"correctAnswer": "su-pa-i-da-", "options": ["sa-pa-i-da-", "shi-pa-i-da-", "su-pa-i-da-", "so-pa-i-da-"], "question": "What is the result when you combine スパイダー?"},
+  {"correctAnswer": "bi-ru", "options": ["ba-ru", "bi-ru", "bu-ru", "bo-ru"], "question": "What is the Katakana representation for ビール?"},
+  {"correctAnswer": "sho-ko-ra-to", "options": ["sha-ko-ra-to", "shi-ko-ra-to", "shu-ko-ra-to", "sho-ko-ra-to"], "question": "What is the result when you combine ショコラト?"},
+  {"correctAnswer": "ki-n-gu", "options": ["ka-n-gu", "ki-n-gu", "ku-n-gu", "ko-n-gu"], "question": "What is the Katakana representation for キング?"},
+  {"correctAnswer": "mu-ju", "options": ["ma-ju", "mi-ju", "mu-ju", "me-ju"], "question": "What is the result when you combine ムジュ?"},
+  {"correctAnswer": "ku-ri-e-i-ta-", "options": ["ka-ri-e-i-ta-", "ki-ri-e-i-ta-", "ku-ri-e-i-ta-", "ko-ri-e-i-ta-"], "question": "What is the Katakana representation for クリエイター?"},
+  {"correctAnswer": "to-ma-to", "options": ["ta-ma-to", "chi-ma-to", "tsu-ma-to", "to-ma-to"], "question": "What is the result when you combine トマト?"},
+  {"correctAnswer": "bu-ru-su", "options": ["ba-ru-su", "bi-ru-su", "bu-ru-su", "bo-ru-su"], "question": "What is the Katakana representation for ブルース?"},
+  {"correctAnswer": "sa-n-do-i-chi", "options": ["sha-n-do-i-chi", "shi-n-do-i-chi", "su-n-do-i-chi", "so-n-do-i-chi"], "question": "What is the result when you combine サンドイッチ?"},
+  {"correctAnswer": "ri-sa-chi", "options": ["ra-sa-chi", "ri-sa-chi", "ru-sa-chi", "ro-sa-chi"], "question": "What is the Katakana representation for リサチ?"},
+  {"correctAnswer": "hambāgu", "options": ["hambāgu", "himubāgu", "humubāgu", "homubāgu"], "question": "What is the result when you combine ハンバーグ?"},
+  {"correctAnswer": "ji-yo-i", "options": ["ja-yo-i", "ji-yo-i", "ju-yo-i", "jo-yo-i"], "question": "What is the Katakana representation for ジヨイ?"},
+  {"correctAnswer": "a-i-su", "options": ["a-i-su", "i-i-su", "u-i-su", "e-i-su"], "question": "What is the result when you combine アイス?"},
+  {"correctAnswer": "fōku", "options": ["fāku", "fīku", "fūku", "fēku"], "question": "What is the Katakana representation for フォーク?"},
+  {"correctAnswer": "chi-a-i", "options": ["cha-a-i", "chi-a-i", "chu-a-i", "cho-a-i"], "question": "What is the result when you combine チアイ?"},
+  {"correctAnswer": "tēburu", "options": ["tāburu", "tīburu", "tūburu", "tēburu"], "question": "What is the Katakana representation for テーブル?"},
+  {"correctAnswer": "āto", "options": ["āto", "īto", "ūto", "ēto"], "question": "What is the result when you combine アート?"},
+  {"correctAnswer": "sē-tā", "options": ["sētā", "sītā", "sūtā", "sētā"], "question": "What is the Katakana representation for セーター?"},
+  {"correctAnswer": "pūru", "options": ["pāru", "pīru", "pūru", "pēru"], "question": "What is the result when you combine プール?"},
+  {"correctAnswer": "ōbāru", "options": ["ōbāru", "ībāru", "ūbāru", "ēbāru"], "question": "What is the Katakana representation for オーバル?"}
+],
+"j13":
+[
+  {"correctAnswer": "木", "options": ["火", "水", "土", "木"], "question": "What is the Kanji character for 'tree'?"},
+  {"correctAnswer": "日", "options": ["月", "金", "土", "日"], "question": "What is the Kanji character for 'sun'?"},
+  {"correctAnswer": "一", "options": ["二", "三", "四", "一"], "question": "What is the Kanji character for 'one'?"},
+  {"correctAnswer": "人", "options": ["大", "口", "耳", "人"], "question": "What is the Kanji character for 'person'?"},
+  {"correctAnswer": "学", "options": ["書", "食", "音", "学"], "question": "What is the Kanji character for 'study'?"},
+  {"correctAnswer": "雨", "options": ["雲", "雷", "雪", "雨"], "question": "What is the Kanji character for 'rain'?"},
+  {"correctAnswer": "火", "options": ["水", "土", "風", "火"], "question": "What is the Kanji character for 'fire'?"},
+  {"correctAnswer": "山", "options": ["川", "海", "森", "山"], "question": "What is the Kanji character for 'mountain'?"},
+  {"correctAnswer": "川", "options": ["池", "海", "湖", "川"], "question": "What is the Kanji character for 'river'?"},
+  {"correctAnswer": "本", "options": ["手", "口", "目", "本"], "question": "What is the Kanji character for 'book'?"},
+  {"correctAnswer": "月", "options": ["日", "星", "雲", "月"], "question": "What is the Kanji character for 'moon'?"},
+  {"correctAnswer": "食", "options": ["飲", "味", "飽", "食"], "question": "What is the Kanji character for 'eat'?"},
+  {"correctAnswer": "手", "options": ["足", "目", "口", "手"], "question": "What is the Kanji character for 'hand'?"},
+  {"correctAnswer": "足", "options": ["手", "頭", "腕", "足"], "question": "What is the Kanji character for 'leg'?"},
+  {"correctAnswer": "車", "options": ["飛", "走", "船", "車"], "question": "What is the Kanji character for 'car'?"},
+  {"correctAnswer": "電", "options": ["水", "火", "風", "電"], "question": "What is the Kanji character for 'electricity'?"},
+  {"correctAnswer": "魚", "options": ["鳥", "犬", "馬", "魚"], "question": "What is the Kanji character for 'fish'?"},
+  {"correctAnswer": "鳥", "options": ["獣", "虫", "羽", "鳥"], "question": "What is the Kanji character for 'bird'?"},
+  {"correctAnswer": "犬", "options": ["猫", "兎", "馬", "犬"], "question": "What is the Kanji character for 'dog'?"},
+  {"correctAnswer": "猫", "options": ["犬", "兎", "馬", "猫"], "question": "What is the Kanji character for 'cat'?"},
+  {"correctAnswer": "手紙", "options": ["本", "手", "書", "手紙"], "question": "What is the Kanji representation for 'letter' or 'handwriting'?"},
+  {"correctAnswer": "学生", "options": ["先生", "友達", "家族", "学生"], "question": "What is the Kanji representation for 'student'?"},
+  {"correctAnswer": "日本", "options": ["韓国", "中国", "アメリカ", "日本"], "question": "What is the Kanji representation for 'Japan'?"},
+  {"correctAnswer": "先週", "options": ["今週", "来週", "昨日", "先週"], "question": "What is the Kanji representation for 'last week'?"},
+  {"correctAnswer": "明日", "options": ["今日", "昨日", "明日", "今週"], "question": "What is the Kanji representation for 'tomorrow'?"},
+  {"correctAnswer": "昨年", "options": ["今年", "去年", "来年", "昨年"], "question": "What is the Kanji representation for 'last year'?"},
+  {"correctAnswer": "先月", "options": ["今月", "来月", "昨月", "先月"], "question": "What is the Kanji representation for 'last month'?"},
+  {"correctAnswer": "金曜日", "options": ["月曜日", "水曜日", "木曜日", "金曜日"], "question": "What is the Kanji representation for 'Friday'?"},
+  {"correctAnswer": "今晩", "options": ["今朝", "昨晩", "明晩", "今晩"], "question": "What is the Kanji representation for 'tonight'?"},
+  {"correctAnswer": "先生", "options": ["学生", "医者", "芸術家", "先生"], "question": "What is the Kanji representation for 'teacher'?"},
+  {"correctAnswer": "東京", "options": ["大阪", "京都", "神戸", "東京"], "question": "What is the Kanji representation for 'Tokyo'?"},
+  {"correctAnswer": "花火", "options": ["桜", "紅葉", "雪", "花火"], "question": "What is the Kanji representation for 'fireworks'?"},
+  {"correctAnswer": "冬休み", "options": ["春休み", "夏休み", "秋休み", "冬休み"], "question": "What is the Kanji representation for 'winter vacation'?"},
+  {"correctAnswer": "音楽", "options": ["美術", "体育", "数学", "音楽"], "question": "What is the Kanji representation for 'music'?"},
+  {"correctAnswer": "日本語", "options": ["英語", "中国語", "韓国語", "日本語"], "question": "What is the Kanji representation for 'Japanese language'?"},
+  {"correctAnswer": "新聞", "options": ["雑誌", "本", "漫画", "新聞"], "question": "What is the Kanji representation for 'newspaper'?"},
+  {"correctAnswer": "春夏秋冬", "options": ["朝昼晩夜", "東西南北", "一二三四", "春夏秋冬"], "question": "What is the Kanji representation for 'four seasons'?"},
+  {"correctAnswer": "美味しい", "options": ["楽しい", "綺麗な", "高い", "美味しい"], "question": "What is the Kanji representation for 'delicious'?"},
+  {"correctAnswer": "友達", "options": ["家族", "先生", "同僚", "友達"], "question": "What is the Kanji representation for 'friend'?"},
+  {"correctAnswer": "夏祭り", "options": ["花見", "お盆", "クリスマス", "夏祭り"], "question": "What is the Kanji representation for 'summer festival'?"},
+  {"correctAnswer": "昨晩", "options": ["今晩", "今朝", "明晩", "昨晩"], "question": "What is the Kanji representation for 'last night'?"},
+  {"correctAnswer": "一緒に", "options": ["別々に", "早く", "遅く", "一緒に"], "question": "What is the Kanji representation for 'together'?"},
+  {"correctAnswer": "お疲れ様", "options": ["ありがとう", "すみません", "お願いします", "お疲れ様"], "question": "What is the Kanji representation for 'thank you for your hard work'?"},
+  {"correctAnswer": "自転車", "options": ["電車", "車", "飛行機", "自転車"], "question": "What is the Kanji representation for 'bicycle'?"},
+  {"correctAnswer": "一番", "options": ["最後", "最初", "二番", "一番"], "question": "What is the Kanji representation for 'number one' or 'the best'?"},
+  {"correctAnswer": "大好き", "options": ["大嫌い", "少し", "全然", "大好き"], "question": "What is the Kanji representation for 'I love you a lot'?"},
+  {"correctAnswer": "お誕生日おめでとう", "options": ["ありがとう", "ごめんなさい", "お疲れ様", "お誕生日おめでとう"], "question": "What is the Kanji representation for 'Happy Birthday'?"},
+  {"correctAnswer": "一期一会", "options": ["百聞は一見に如かず", "十人十色", "七転び八起き", "一期一会"], "question": "What is the Kanji representation for 'once in a lifetime'?"},
+  {"correctAnswer": "お楽しみください", "options": ["ごちそうさまでした", "お疲れ様でした", "お疲れ様です", "お楽しみください"], "question": "What is the Kanji representation for 'Please enjoy (your meal, event, etc.)'?"},
+  {"correctAnswer": "十五夜", "options": ["七夕", "元日", "節分", "十五夜"], "question": "What is the Kanji representation for 'night of the fifteenth (full moon)'?"},
+  {"correctAnswer": "新学期", "options": ["夏休み", "冬休み", "春休み", "新学期"], "question": "What is the Kanji representation for 'new school term'?"},
+  {"correctAnswer": "忍者", "options": ["武士", "侍", "僧侶", "忍者"], "question": "What is the Kanji representation for 'ninja'?"},
+  {"correctAnswer": "お疲れ様でした", "options": ["ありがとう", "ごめんなさい", "お疲れ様です", "お疲れ様でした"], "question": "What is the Kanji representation for 'Thank you for your hard work'?"},
+  {"correctAnswer": "一石二鳥", "options": ["百聞は一見に如かず", "七転び八起き", "二度あることは三度ある", "一石二鳥"], "question": "What is the Kanji representation for 'kill two birds with one stone'?"},
+  {"correctAnswer": "猿も木から落ちる", "options": ["石の上にも三年", "蛙の子は蛙", "馬の耳に念仏", "猿も木から落ちる"], "question": "What is the Kanji representation for 'even monkeys fall from trees'?"},
+  {"correctAnswer": "七転び八起き", "options": ["百聞は一見に如かず", "七転び八起き", "二度あることは三度ある", "一期一会"], "question": "What is the Kanji representation for 'fall down seven times, get up eight'?"},
+  {"correctAnswer": "桜前線", "options": ["紅葉狩り", "梅雨入り", "台風", "桜前線"], "question": "What is the Kanji representation for 'cherry blossom front'?"},
+  {"correctAnswer": "三日坊主", "options": ["初老", "一陽来復", "自業自得", "三日坊主"], "question": "What is the Kanji representation for 'person who gives up easily' or 'starts something and gives up in three days'?"},
+  {"correctAnswer": "四季折々", "options": ["五里霧中", "六根清浄", "七転び八起き", "四季折々"], "question": "What is the Kanji representation for 'each season' or 'every season has its own charm'?"},
+  {"correctAnswer": "一富士二鷹三茄子", "options": ["二度あることは三度ある", "七転び八起き", "四面楚歌", "一富士二鷹三茄子"], "question": "What is the Kanji representation for 'one Mount Fuji, two hawks, three eggplants'?"}
+]
   };
 
 
@@ -662,14 +856,21 @@ function displayQuestion(question, callback) {
   }
 }
 
-// Function to reset the game
-function resetGame() {
-  score = 0;
-  currentQuestionIndex = 0;
-  updateScore();
-  selectCategory(quizCode); // Set default category based on quizCode
-  displayNextQuestion();
-}
+  // Function to reset the game
+  function resetGame() {
+    score = 0;
+    currentQuestionIndex = 0;
+    updateScore();
+    selectCategory(quizCode); // Set default category based on quizCode
+    displayNextQuestion();
+    tryAgainButton.style.display = "none"; // Hide the "Try Again" button
+    feedbackMessageElement.textContent = ""; // Clear the feedback message
+    optionsContainer.querySelectorAll('.option').forEach(function (option) {
+      option.disabled = false; // Enable all options
+      option.classList.remove("btn-success", "btn-danger", "btn-light"); // Reset option button styles
+      option.classList.add("btn-primary"); // Set the default button style
+    });
+  }
 
 // Function to update the score display
 function updateScore() {
@@ -677,52 +878,50 @@ function updateScore() {
   wrongCountElement.textContent = currentQuestionIndex - score;
 }
 
-// Function to handle user's answer
-function checkAnswer(answer) {
-  const currentQuestion = getCurrentQuestion();
+ // Function to handle user's answer
+  function checkAnswer(answer) {
+    const currentQuestion = getCurrentQuestion();
 
-  console.log("Selected answer:", answer);
-  console.log("Correct answer:", currentQuestion.correctAnswer);
-  
-  if (currentQuestion && answer === currentQuestion.correctAnswer) {
-    feedbackMessageElement.textContent = "Congratulations!! Correct answer.";
-    feedbackMessageElement.style.color = "green"; // Set feedback message color to green for correct answers
-    score++;
-    optionsContainer.querySelectorAll('.option').forEach(function (option) {
-      if (option.textContent === currentQuestion.correctAnswer) {
-        option.classList.add("btn-success");
-      } else {
-        option.classList.remove("btn-primary");
-        option.classList.add("btn-light"); // Reset other options to default color
-        option.disabled = true; // Disable other options after correct answer
-      }
-    });
-  } else {
-    feedbackMessageElement.textContent = "Wrong Answer! The correct answer was: " + currentQuestion.correctAnswer;
-    feedbackMessageElement.style.color = "red"; // Set feedback message color to red for incorrect answers
-    optionsContainer.querySelectorAll('.option').forEach(function (option) {
-      if (option.textContent === answer) {
-        option.classList.add("btn-danger");
-        option.disabled = true; // Disable the selected option after wrong answer
-      }
-    });
-  }
+    console.log("Selected answer:", answer);
+    console.log("Correct answer:", currentQuestion.correctAnswer);
 
-  currentQuestionIndex++;
-  updateScore();
+    if (currentQuestion && answer === currentQuestion.correctAnswer) {
+      feedbackMessageElement.textContent = "Congratulations!! Correct answer.";
+      feedbackMessageElement.style.color = "green"; // Set feedback message color to green for correct answers
+      score++;
+      optionsContainer.querySelectorAll('.option').forEach(function (option) {
+        if (option.textContent === currentQuestion.correctAnswer) {
+          option.classList.add("btn-success");
+        } else {
+          option.classList.remove("btn-primary");
+          option.classList.add("btn-light"); // Reset other options to default color
+          option.disabled = true; // Disable other options after correct answer
+        }
+      });
+    } else {
+      feedbackMessageElement.textContent = "Wrong Answer! The correct answer was: " + currentQuestion.correctAnswer;
+      feedbackMessageElement.style.color = "red"; // Set feedback message color to red for incorrect answers
+      optionsContainer.querySelectorAll('.option').forEach(function (option) {
+        if (option.textContent === answer) {
+          option.classList.add("btn-danger");
+          option.disabled = true; // Disable the selected option after wrong answer
+        }
+      });
+    }
 
-  // Check if all questions are answered
-  if (currentQuestionIndex < getCurrentQuestionSet().length) {
-    // Pass displayNextQuestion as a callback to displayQuestion
-    displayQuestion(getCurrentQuestion(), displayNextQuestion);
-  } else {
-    // All questions answered, display score and try again button
-    displayScore();
-    displayTryAgainButton();
-  }
-}
+    currentQuestionIndex++;
+    updateScore();
 
-// Function to get the current question based on the category and index
+    // Check if all questions are answered
+    if (currentQuestionIndex < getCurrentQuestionSet().length) {
+      // Pass displayNextQuestion as a callback to displayQuestion
+      displayQuestion(getCurrentQuestion(), displayNextQuestion);
+    } else {
+      // All questions answered, display score and try again button
+      displayScore();
+      displayTryAgainButton();
+    }
+  }// Function to get the current question based on the category and index
 function getCurrentQuestion() {
   const questionSet = questionSets[currentCategory];
 
@@ -751,13 +950,16 @@ function displayNextQuestion() {
   }
 }
 
-// Function to display the score
-function displayScore() {
-  questionTextElement.textContent = "Quiz completed! Your score: " + score;
-  feedbackMessageElement.textContent = "";
-}
+ // Function to display the score
+  function displayScore() {
+    questionTextElement.textContent = "Quiz completed! Your score: " + score + " out of " + getCurrentQuestionSet().length;
+    feedbackMessageElement.textContent = "";
+    optionsContainer.querySelectorAll('.option').forEach(function (option) {
+      option.disabled = true; // Disable all options after quiz completion
+    });
 
-// Function to display the "Try Again" button
+
+  }// Function to display the "Try Again" button
 function displayTryAgainButton() {
   optionsContainer.querySelectorAll('.option').forEach(function (option) {
     option.disabled = true;

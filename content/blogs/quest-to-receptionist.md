@@ -8,7 +8,7 @@ tags:
   - A day in life
   - Story
 image: /images/blog/quest-to-receptionist.jpg
-description: ""
+description: "The path I took to become to a receptionist. Spoiler Alert: Its sad"
 toc: 
 ---
 

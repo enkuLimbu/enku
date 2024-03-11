@@ -1,6 +1,6 @@
 ---
 title: "Khanji - Part 1"
-date: 2024-02-28T22:53:33+05:30
+date: 2024-03-05T22:53:33+05:30
 draft: false
 author: "The Local Japanese Girl Enku"
 buttons:
@@ -15,7 +15,7 @@ tags:
   - Khanji
   - Teaching
 image: /images/blog/khanji-class.jpg
-description: ""
+description: "🔍 Dive into the heart of Japanese language mysteries with our beginner's guide, unraveling the secrets of Kanji characters and their significance in communication."
 toc:
 quiz:
   code: j03

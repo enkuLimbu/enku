@@ -1,6 +1,6 @@
 ---
 title: "Katakana - Part 1"
-date: 2024-02-13T22:53:33+05:30
+date: 2024-01-23T22:53:33+05:30
 draft: false
 author: "The Local Japanese Girl Enku"
 buttons:
@@ -13,7 +13,7 @@ tags:
   - Katakana
   - Teaching
 image: /images/blog/katakana-class.jpg
-description: ""
+description: "✨ Delve into the futuristic realm of Katakana, the script that adds flair to foreign words in Japanese. Uncover the keys to mastering this unique writing system and expanding your language skills."
 toc:
 quiz:
   code: k02

@@ -12,7 +12,7 @@ tags:
   - Story
   - Web development
 image: /images/blog/remote-work-dream.jpg
-description: ""
+description: "Do you think I can become a web developer? Let's find out together, shall we?"
 toc:
 quiz:
   code: w04

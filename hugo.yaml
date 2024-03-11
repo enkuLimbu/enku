@@ -11,7 +11,7 @@ outputs:
     - "HTML"
     - "RSS"
 
-Paginate: 3
+Paginate: 9
 enableRobotsTXT: true
 disqusShortname: enku-pages-dev
 # googleAnalytics: G-MEASUREMENT_ID
@@ -26,11 +26,22 @@ Menus:
     - identifier: blog
       name: Blog
       title: Blog posts
-      url: /blogs
       weight: 1
+    - identifier: blogs
+      name: All blogs
+      title: All Blog posts
+      weight: 1
+      parent: blog
+      url: /blogs
+    - identifier: tags
+      name: Tags
+      title: Categorical distribution of Blogs
+      weight: 2
+      parent: blog
+      url: /Tags
     - identifier: gallery
       name: Gallery
-      title: Blog posts
+      title: My gallery
       url: /gallery
       weight: 2
     # Dropdown menu

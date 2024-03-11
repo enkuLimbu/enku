@@ -18,7 +18,7 @@ tags:
   - Japanese
   - Teaching
 image: /images/blog/learning-japanese.jpg
-description: ""
+description: "🔠 Unearth the intricate characters that form the backbone of Japanese writing. Unlock the magic behind each stroke and immerse yourself in the rich history of this captivating script."
 toc: 
 ---
 

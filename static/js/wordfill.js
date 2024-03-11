@@ -62,6 +62,11 @@ var wordCode = codeFromUrl || window.wordCode || "000"; // Use code from URL, wi
   { "correctAnswer": "ん", "question": "What is the following sound in hiragana: n" },
   // ... Add more hiragana questions as needed
   ],
+
+  "h12": [
+  { "correctAnswer": "を", "question": "What is the following sound in hiragana: wo" },
+    ],
+
   "k02": [
   { "correctAnswer": "エ", "question": "What is the following sound in katakana: e" },
   { "correctAnswer": "オ", "question": "What is the following sound in katakana: o" },
@@ -108,6 +113,7 @@ var wordCode = codeFromUrl || window.wordCode || "000"; // Use code from URL, wi
   { "correctAnswer": "ン", "question": "What is the following sound in katakana: n" },
   // ... Add more katakana questions as needed 
 ],
+
   "j03": [
   { "correctAnswer": "一", "question": "Write the following kanji character: one" },
   { "correctAnswer": "二", "question": "Write the following kanji character: two" },
