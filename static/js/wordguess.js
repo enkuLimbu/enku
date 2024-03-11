@@ -681,8 +681,12 @@ function updateScore() {
 function checkAnswer(answer) {
   const currentQuestion = getCurrentQuestion();
 
+  console.log("Selected answer:", answer);
+  console.log("Correct answer:", currentQuestion.correctAnswer);
+  
   if (currentQuestion && answer === currentQuestion.correctAnswer) {
     feedbackMessageElement.textContent = "Congratulations!! Correct answer.";
+    feedbackMessageElement.style.color = "green"; // Set feedback message color to green for correct answers
     score++;
     optionsContainer.querySelectorAll('.option').forEach(function (option) {
       if (option.textContent === currentQuestion.correctAnswer) {
@@ -694,7 +698,8 @@ function checkAnswer(answer) {
       }
     });
   } else {
-    feedbackMessageElement.textContent = "Wrong Answer! You might want to consider reading again";
+    feedbackMessageElement.textContent = "Wrong Answer! The correct answer was: " + currentQuestion.correctAnswer;
+    feedbackMessageElement.style.color = "red"; // Set feedback message color to red for incorrect answers
     optionsContainer.querySelectorAll('.option').forEach(function (option) {
       if (option.textContent === answer) {
         option.classList.add("btn-danger");
@@ -779,3 +784,4 @@ tryAgainButton.addEventListener('click', resetGame);
 resetGame();
 
 });
+
