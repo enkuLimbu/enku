@@ -16,9 +16,9 @@ image: /images/blog/katakana-class.jpg
 description: "✨ Delve into the futuristic realm of Katakana, the script that adds flair to foreign words in Japanese. Uncover the keys to mastering this unique writing system and expanding your language skills."
 toc:
 quiz:
-  code: k02
+  code: kata02
 wordfill:
-  code: k02
+  code: kata02
 ---
 
 

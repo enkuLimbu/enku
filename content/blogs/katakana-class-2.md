@@ -16,9 +16,9 @@ image: /images/blog/katakana-class.jpg
 description: "💡 Level up your Katakana game! Move beyond the basics and embrace the challenge of constructing complex sentences and expressing nuanced ideas using this dynamic script."
 toc:
 quiz:
-  code: k12
+  code: kata12
 wordfill:
-  code: k12
+  code: kata12
 ---
 
 # Unveiling the Depths of Katakana Mastery: Beyond the Basics 🚀

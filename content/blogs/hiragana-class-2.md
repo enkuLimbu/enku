@@ -16,9 +16,9 @@ image: /images/blog/hiragana-class.jpg
 description: "📚 Elevate your Hiragana expertise to the next level! From crafting simple sentences to mastering pronunciation nuances, our advanced guide will turn you into a Hiragana maestro."
 toc:
 quiz:
-  code: h11
+  code: hira11
 wordfill:
-  code: h11
+  code: hira11
 ---
 
 # Unleashing the Power of Hiragana: Elevating Your Language Journey 🌟

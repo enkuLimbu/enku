@@ -18,9 +18,9 @@ image: /images/blog/khanji-class.jpg
 description: "🌐 Embark on an epic journey through the realm of Kanji mastery. Our advanced guide will take you deep into the world of complex characters, cultural nuances, and the art of expressing profound meanings."
 toc:
 quiz:
-  code: j13
+  code: khan13
 wordfill:
-  code: j13
+  code: khan13
 ---
 
 

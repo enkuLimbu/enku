@@ -18,9 +18,9 @@ image: /images/blog/khanji-class.jpg
 description: "🔍 Dive into the heart of Japanese language mysteries with our beginner's guide, unraveling the secrets of Kanji characters and their significance in communication."
 toc:
 quiz:
-  code: j03
+  code: khan03
 wordfill:
-  code: j03
+  code: khan03
 ---
 
 

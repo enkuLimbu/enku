@@ -16,9 +16,9 @@ image: /images/blog/hiragana-class.jpg
 description: "🎨 Discover the artistic beauty of Hiragana, the fundamental script of the Japanese language. Unleash your linguistic creativity and embark on a journey of character exploration."
 toc:
 quiz:
-  code: h01
+  code: hira01
 wordfill:
-  code: h01
+  code: hira01
 ---
 
 # Unlocking the Mysteries of Hiragana
