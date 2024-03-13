@@ -1,6 +1,6 @@
 baseURL: "https://indulimbu.com.np/"
 languageCode: "en-us"
-title: "Enku Limbu"
+title: "Indu Limbu"
 
 outputs:
   home:
@@ -64,7 +64,7 @@ Menus:
 
 params:
   title: "Enku Limbu"
-  description: This is Enku's personal portfolio website. You are Welcome Here.
+  description: This is my personal portfolio website. You are Welcome Here. Here, I share my experiences and try to be useful to others by helping others learn what I have learned by teaching them.
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
 
@@ -128,9 +128,9 @@ params:
   hero:
     enable: true
     intro: "Hi, my name is"
-    title: "Enku Limbu"
+    title: "Indu Limbu"
     subtitle: "Exploring a World of Professional Growth"
-    content: "Join me on my journey as I navigate the professional landscape, sharing valuable insights and experiences along the way."
+    content: "I love to explore and learn new stuffs and share the same amount of love to help anyone in need. <br>Join me on my journey as I navigate the professional landscape, sharing valuable insights and experiences along the way.<br> Currently, I am enrolled in a Japanese language class offered by [Texas Consultancy, Kalimati.](https://texaseduacademy.com.np/)."
     image: /images/enku.jpg
     bottomImage:
       enable: true
@@ -138,7 +138,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "/CV/EnkuLimbuCV.pdf"
+      url: "/CV/InduLimbuCV.pdf"
       download: true
       newPage: false
     socialLinks:
@@ -165,7 +165,7 @@ params:
       items:
         - "Communication"
         - "Leadership"
-        - "Reading Books"
+        - "Self Development"
         - "Time Management"
         - "Office Suite Proficiency"
         - "Organizational Skills"
@@ -266,7 +266,7 @@ params:
         featuredLink:
           enable: true
           name: "My Curriculam Vitae"
-          url: "/CV/Enku.pdf"
+          url: "/CV/InduLimbuCV.pdf"
 
       - title: "School Leaving Certificate"
         school:
