@@ -569,6 +569,59 @@ var wordCode = codeFromUrl || window.wordCode // Use code from URL, window.quizC
 {"question":"Write the kanji for 'poor'.","correctAnswer":"貧しい"},
 {"question":"Write the kanji for 'strong'.","correctAnswer":"強い"},
 {"question":"Write the kanji for 'weak'.","correctAnswer":"弱い"}]
+    ],
+
+"n5I01": [
+  {"correctAnswer": "私は２５歳です。", "question": "How old are you? (年齢は何歳ですか?) Answer: I am 25 years old."},
+  {"correctAnswer": "はい、私は日本語を話すことができます。", "question": "Can you speak Japanese? (日本語を話すことができますか?) Answer: Yes, I can speak Japanese."},
+  {"correctAnswer": "ハッカーです。", "question": "What is your occupation? (職業は何ですか?) Answer: I am a Hacker."},
+  {"correctAnswer": "ネパールから来ました。", "question": "Where are you from? (どこから来ましたか?) Answer: I am from Nepal."},
+  {"correctAnswer": "はい、トリブバン大学で勉強しています。", "question": "Are you currently studying? (現在、勉強していますか?) Answer: Yes, I am currently studying at Tribhuvan University."},
+  {"correctAnswer": "はい、私の名前はインドゥ・リンブです。", "question": "What is your name? (名前は何ですか?) Answer: My name is Indu Limbu."},
+  {"correctAnswer": "ネパールの文化や歴史に興味があります。", "question": "What interests you about Nepal? (ネパールに興味がある理由は何ですか?) Answer: I am interested in the culture and history of Nepal."},
+  {"correctAnswer": "はい、私は日本のビジネス環境に興味があります。", "question": "Why are you interested in working in Japan? (日本で働くことに興味がある理由は何ですか?) Answer: Yes, I am interested in the business environment in Japan."},
+  {"correctAnswer": "はい、私はネパール人です。", "question": "Are you Nepali? (ネパール人ですか?) Answer: Yes, I am Nepali."},
+  {"correctAnswer": "はい、私はハッカーとして働いています", "question": "Are you currently employed? (現在、働いていますか?) Answer: Yes, I am employed as a Hacker."},
+  {"correctAnswer": "はい、私は日本に住んでいます。", "question": "Do you live in Japan? (日本に住んでいますか？) Answer: Yes, I live in Japan."},
+  {"correctAnswer": "私は野球が好きです。", "question": "What is your favorite sport? (好きなスポーツは何ですか？) Answer: I like baseball."},
+  {"correctAnswer": "はい、私はIT企業で働いています。", "question": "Do you work in an IT company? (IT企業で働いていますか？) Answer: Yes, I work in an IT company."},
+  {"correctAnswer": "私はイタリア料理が得意です。", "question": "What cuisine are you good at cooking? (得意な料理は何ですか？) Answer: I am good at cooking Italian food."},
+  {"correctAnswer": "はい、私は大学院生です。", "question": "Are you a graduate student? (大学院生ですか？) Answer: Yes, I am a graduate student."},
+  {"correctAnswer": "私は夏が好きです。", "question": "Which season do you like? (どの季節が好きですか？) Answer: I like summer."},
+  {"correctAnswer": "はい、私は日本のアニメが好きです。", "question": "Do you like Japanese anime? (日本のアニメが好きですか？) Answer: Yes, I like Japanese anime."},
+  {"correctAnswer": "私は週末に友達と遊ぶことが多いです。", "question": "What do you often do on weekends? (週末によく何をしますか？) Answer: I often hang out with friends on weekends."},
+  {"correctAnswer": "はい、私は日本の文化に興味があります。", "question": "Are you interested in Japanese culture? (日本の文化に興味がありますか？) Answer: Yes, I am interested in Japanese culture."},
+  {"correctAnswer": "私の趣味は写真を撮ることです。", "question": "What is your hobby? (趣味は何ですか？) Answer: My hobby is taking photos."},
+  {"correctAnswer": "はい、私は日本語を勉強しています。", "question": "Are you studying Japanese? (日本語を勉強していますか？) Answer: Yes, I am studying Japanese."},
+  {"correctAnswer": "私はサッカーが好きです。", "question": "What is your favorite sport? (好きなスポーツは何ですか？) Answer: I like soccer."},
+  {"correctAnswer": "はい、私は銀行で働いています。", "question": "Do you work at a bank? (銀行で働いていますか？) Answer: Yes, I work at a bank."},
+  {"correctAnswer": "私は寿司が得意です。", "question": "What food are you good at making? (得意な料理は何ですか？) Answer: I am good at making sushi."},
+  {"correctAnswer": "はい、私は専門学校に通っています。", "question": "Are you attending a vocational school? (専門学校に通っていますか？) Answer: Yes, I am attending a vocational school."},
+  {"correctAnswer": "私は冬が好きです。", "question": "Which season do you like? (どの季節が好きですか？) Answer: I like winter."},
+  {"correctAnswer": "はい、私は漫画が好きです。", "question": "Do you like manga? (漫画が好きですか？) Answer: Yes, I like manga."},
+  {"correctAnswer": "私は週末に映画を見ることが好きです。", "question": "What do you like to do on weekends? (週末に何をするのが好きですか？) Answer: I like to watch movies on weekends."},
+  {"correctAnswer": "はい、私は日本の歴史に興味があります。", "question": "Are you interested in Japanese history? (日本の歴史に興味がありますか？) Answer: Yes, I am interested in Japanese history."},
+  {"correctAnswer": "私の趣味は料理をすることです。", "question": "What is your hobby? (趣味は何ですか？) Answer: My hobby is cooking."},
+  {"correctAnswer": "私はテニスが好きです。", "question": "What is your favorite sport? (好きなスポーツは何ですか？) Answer: I like tennis."},
+  {"correctAnswer": "はい、私はIT企業で働いています。", "question": "Do you work in an IT company? (IT企業で働いていますか？) Answer: Yes, I work in an IT company."},
+  {"correctAnswer": "私はラーメンが得意です。", "question": "What food are you good at making? (得意な料理は何ですか？) Answer: I am good at making ramen."},
+  {"correctAnswer": "はい、私は大学生です。", "question": "Are you a university student? (大学生ですか？) Answer: Yes, I am a university student."},
+  {"correctAnswer": "私は春が好きです。", "question": "Which season do you like? (どの季節が好きですか？) Answer: I like spring."},
+  {"correctAnswer": "はい、私はアニメが好きです。", "question": "Do you like anime? (アニメが好きですか？) Answer: Yes, I like anime."},
+  {"correctAnswer": "私は週末に友達と遊ぶことが好きです。", "question": "What do you like to do on weekends? (週末に何をするのが好きですか？) Answer: I like to hang out with friends on weekends."},
+  {"correctAnswer": "はい、私は日本の料理に興味があります。", "question": "Are you interested in Japanese cuisine? (日本の料理に興味がありますか？) Answer: Yes, I am interested in Japanese cuisine."},
+  {"correctAnswer": "私の趣味は旅行することです。", "question": "What is your hobby? (趣味は何ですか？) Answer: My hobby is traveling."},
+  {"correctAnswer": "私はバドミントンが得意です。", "question": "What sport are you good at? (得意なスポーツは何ですか？) Answer: I am good at badminton."},
+  {"correctAnswer": "はい、私は日本に住んでいます。", "question": "Do you live in Japan? (日本に住んでいますか？) Answer: Yes, I live in Japan."},
+  {"correctAnswer": "私は野球が好きです。", "question": "What is your favorite sport? (好きなスポーツは何ですか？) Answer: I like baseball."},
+  {"correctAnswer": "はい、私は銀行で働いています。", "question": "Do you work at a bank? (銀行で働いていますか？) Answer: Yes, I work at a bank."},
+  {"correctAnswer": "私は寿司が得意です。", "question": "What food are you good at making? (得意な料理は何ですか？) Answer: I am good at making sushi."},
+  {"correctAnswer": "はい、私は専門学校に通っています。", "question": "Are you attending a vocational school? (専門学校に通っていますか？) Answer: Yes, I am attending a vocational school."},
+  {"correctAnswer": "私は冬が好きです。", "question": "Which season do you like? (どの季節が好きですか？) Answer: I like winter."},
+  {"correctAnswer": "はい、私は漫画が好きです。", "question": "Do you like manga? (漫画が好きですか？) Answer: Yes, I like manga."},
+  {"correctAnswer": "私は週末に映画を見ることが好きです。", "question": "What do you like to do on weekends? (週末に何をするのが好きですか？) Answer: I like to watch movies on weekends."},
+  {"correctAnswer": "はい、私は日本の歴史に興味があります。", "question": "Are you interested in Japanese history? (日本の歴史に興味がありますか？) Answer: Yes, I am interested in Japanese history."},
+  {"correctAnswer": "私の趣味は料理をすることです。", "question": "What is your hobby? (趣味は何ですか？) Answer: My hobby is cooking."}
     ]
   };
 
@@ -674,7 +727,6 @@ userInputElement.addEventListener('keydown', handleEnterKey);
 
 function displayNextQuestion() {
   const currentQuestionSet = getCurrentQuestionSet();
-console.log(currentQuestionSet)
   if (currentQuestionSet.length === 0) {
     // No questions defined for this category
     feedbackMessageElement.textContent = "There are no questions defined for this category.";
