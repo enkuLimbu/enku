@@ -1,6 +1,6 @@
 ---
 title: "Katakana - Part 3: Advanced Proficiency"
-date: 2024-03-19
+date: 2024-03-18
 draft: false
 author: "The Local Japanese Girl Enku"
 tags:
@@ -9,6 +9,11 @@ tags:
   - Teaching
 image: /images/blog/katakana-class.jpg
 description: "📚 Elevate your Katakana expertise to the next level! Explore advanced concepts, tackle challenging words, and solidify your understanding with our comprehensive guide."
+buttons:
+  - label: "Get Katakana Syllabaries"
+    url: "/notes/japanese/katakana/katakana_english.pdf"
+  - label: "Get my handwritten Katanana Notes"
+    url: "/notes/japanese/katakana/mykatakananotes.pdf"
 toc:
 quiz:
   code: kata22

@@ -1,6 +1,6 @@
 ---
 title: "Hiragana - Part 3: Advanced Mastery"
-date: 2024-03-18
+date: 2024-03-17
 draft: false
 author: "The Local Japanese Girl Enku"
 tags:
