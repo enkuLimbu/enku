@@ -1,6 +1,6 @@
 ---
 title: "Katakana - Part 3: Advanced Proficiency"
-date: 2024-03-18
+date: 2024-03-24
 draft: false
 author: "The Local Japanese Girl Enku"
 tags:
