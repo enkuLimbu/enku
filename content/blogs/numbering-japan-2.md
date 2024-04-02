@@ -9,6 +9,8 @@ tags:
 image: /images/blog/numerical-sensei.jpg
 description: "🏯 Welcome back to the dojo of Japanese numerals! In this part, we'll delve into the art of concatenating numbers, enabling you to seamlessly pronounce even the most complex numerical expressions in Japanese. Let's sharpen our numerical skills and embark on this exhilarating journey!"
 toc:
+quiz:
+  code: num02
 wordfill:
   code: num02
 buttons:
@@ -169,15 +171,93 @@ FINALLY NUMBERS I HOPE WAS MY NET WORTH:
 | 5,678,901,234 | 五十六億七千八百九十万千二百三十四 | gojuu roku oku nana sen happyaku kyuu juu man sen nihyaku san juu yon | (五十六)(億)(七千八百九十万)(千二百三十四) | Fifty-Six + Hundred Million + Seven Thousand + Eight Hundred + Ninety + Ten Thousand + Two Hundred + Thirty-Four |
 | 6,789,012,345 | 六十七億八千九百十二万三千四百五十六 | rokujuu shichi oku hassen kyuu hyaku jyu ni man san sen yon hyaku go juu roku | (六十七)(億)(八千九百十二万)(三千四百五十六) | Sixty-Seven + Hundred Million + Eight Thousand + Nine Hundred + Twelve + Ten Thousand + Three Hundred + Forty-Five + Six |
 
+### **KNOW YOUR KNOWLEDGE LEVEL**
+
+<blockquote> 
+  <p>Exercise: What is the Japanese word for "69"?</p>
+  <details>
+    <summary>Hidden Answer</summary>
+    The Japanese word for "sixty-nine" is "六十九" (rokujū kyū).
+  </details>
+</blockquote>
+
+<blockquote> 
+  <p>Exercise: What is the Japanese word for "420"?</p>
+  <details>
+    <summary>Hidden Answer</summary>
+    The Japanese word for "four hundred twenty" is "四百二十" (yonhyaku nijū).
+  </details>
+</blockquote>
+
+<blockquote> 
+  <p>Exercise: What is the Japanese word for "2739"?</p>
+  <details>
+    <summary>Hidden Answer</summary>
+    The Japanese word for "two thousand seven hundred thirty-nine" is "二千七百三十九" (nisen nanahyaku sanjū kyū).
+  </details>
+</blockquote>
+
+<blockquote> 
+  <p>Exercise: What is the Japanese word for "7777"?</p>
+  <details>
+    <summary>Hidden Answer</summary>
+    The Japanese word for "seven thousand seven hundred seventy-seven" is "七千七百七十七" (nanasen nanahyaku nanajū nana).
+  </details>
+</blockquote>
+
+<blockquote> 
+  <p>Exercise: What is the Japanese word for "53473"?</p>
+  <details>
+    <summary>Hidden Answer</summary>
+    The Japanese word for "fifty-three thousand four hundred seventy-three" is "五万三千四百七十三" (go man sanzen yonhyaku nanajū san).
+  </details>
+</blockquote>
+
+<blockquote> 
+  <p>Exercise: What is the Japanese word for "5355211"?</p>
+  <details>
+    <summary>Hidden Answer</summary>
+    The Japanese word for "five million three hundred fifty-five thousand two hundred eleven" is "五百三十五万二千二百十一" (gohyaku sanjū go man nisen nihyaku jū ichi).
+  </details>
+</blockquote>
+
+<blockquote> 
+  <p>Exercise: What is the Japanese word for "72019374"?</p>
+  <details>
+    <summary>Hidden Answer</summary>
+    The Japanese word for "seventy-two million nineteen thousand three hundred seventy-four" is "七千二百一万九千三百七十四" (nanahyaku nijū ichi man kyu sen sanbyaku nana jū yon).
+  </details>
+</blockquote>
+
+<blockquote> 
+  <p>Exercise: What is the Japanese word for "6173003"?</p>
+  <details>
+    <summary>Hidden Answer</summary>
+    The Japanese word for "six million one hundred seventy-three thousand three" is "六百一十七万三千三" (roppyaku jū nana man sanzen san).
+  </details>
+</blockquote>
+
+<blockquote> 
+  <p>Exercise: What is the Japanese word for "78163901"?</p>
+  <details>
+    <summary>Hidden Answer</summary>
+    The Japanese word for "seventy-eight million one hundred sixty-three thousand nine hundred one" is "七千八百十六万三千九百一" (nanahyaku hachijū roku man sanzen kyu hyaku ichi).
+  </details>
+</blockquote>
+
+<blockquote> 
+  <p>Exercise: What is the Japanese word for "1723981"?</p>
+  <details>
+    <summary>Hidden Answer</summary>
+    The Japanese word for "one million seven hundred twenty-three thousand nine hundred eighty-one" is "百七十二万三千九百八十一" (hyaku nijū san man sanzen kyuu hyaku hachi jū ichi).
+  </details>
+</blockquote>
+
+> Like this kind of question? There are a lot more down below or at the right side of your screen. Practise there and you'll soon be fluent. Happy Learning.
+
 ## **Conclusion: Empowering Numerical Fluency**
 
 Congratulations, diligent learners! You have unlocked the transformative power of numerical concatenation, equipping yourselves with the skills to pronounce and comprehend complex numerical expressions in Japanese. Embrace this newfound knowledge and continue your journey towards numerical fluency with confidence and determination.
 
 > **Note** <br> *Continue to hone your numerical skills with our interactive exercises and resources below. Let the journey of numerical mastery unfold as you delve deeper into the enchanting world of Japanese numerals!*
-
-
-
-
-
-.
 

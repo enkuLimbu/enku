@@ -9,6 +9,8 @@ tags:
 image: /images/blog/numerical-sensei.jpg
 description: "🏯 Welcome to the dojo of Japanese numerals! Join me, the Numerical Sensei, on a journey to master the art of counting in Japanese. From the basics of one and two to the complexities of ten thousand and beyond, let's explore the fascinating world of Japanese numbers."
 toc:
+quiz:
+  code: num01
 wordfill:
   code: num01
 buttons:
@@ -201,6 +203,8 @@ As we traverse the numerical landscape, we encounter the realm of ten thousands,
 
 In the realm of Japanese numerals, the journey does not end with thousands or ten thousands. It extends into the realm of millions, billions, and beyond, where numerical grandeur awaits. Let us envision the limitless possibilities of numerical expression:
 
+### **KNOW YOUR KNOWLEDGE LEVEL**
+
 <blockquote> 
   <p>Exercise: What is the Japanese word for "one million"?</p>
   <details>
@@ -249,6 +253,7 @@ In the realm of Japanese numerals, the journey does not end with thousands or te
   </details>
 </blockquote>
 
+> Like this kind of question? There are a lot more down below or at the right side of your screen. Practise there and you'll soon be fluent. Happy Learning.
 
 ## **Your Numerical Odyssey Continues!**
 
