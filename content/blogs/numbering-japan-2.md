@@ -113,63 +113,64 @@ I have written few more examples for hundred thousands, millions, tens and hundr
 
 HUNDRED THOUSANDS:
 
-|  Numbers |  Japanese |  Pronunciation | How it is made | Other Helpful Way |
-|----|----|----|----|----|
-| 134,987 | 十三万四千九百八十七 | juusan man yonsen kyuuhyaku hachijuu nana | (十三万)(四千)(九百)(八十)(七) | Thirteen (Ten Thousand) + Four Thousand + Nine Hundred + Eighty + Seven |
-| 387,568 | 三十八万七千五百六十八 | sanjyu hachi man nanasen gohyaku rokujuu hachi | (三十八万)(七千)(五百)(六十)(八) | Thirty-Eight (Ten Thousand) + Seven Thousand + Five Hundred + Sixty + Eight |
-| 985,240 | 九十八万五千二百四十 | kyuujuu hachi man gosen nihyaku yonjyu | (九十八万)(五千)(二百)(四十) | Ninety-Eight (Ten Thousand) + Five Thousand + Two Hundred + Forty |
-| 776,591 | 七十七万六千五百九十一 | nanajuu nan man rokusen gohyaku kyuujuu ichi | (七十七万)(六千)(五百)(九十)(一) | Seventy-Seven (Ten Thousand) + Six Thousand + Five Hundred + Ninety + One |
-| 834,609 | 八十三万四千六百九 | hachijuu san man yonsen roppyaku kyuu | (八十三万)(四千)(六百)(九) | Eighty-Three (Ten Thousand) + Four Thousand + Six Hundred + Nine |
-| 404,240 | 四十万四千二百四十 | yonjyu man yonsen nihyaku yonjyu | (四十万)(四千)(二百)(四十) | Forty (Ten Thousand) + Four Thousand + Two Hundred + Forty |
-| 776,776 | 七十七万六千七百七十六 | nanajuu nan man rokusen nanahyaku nanajuu roku | (七十七万)(六千)(七百)(七十)(六) | Seventy-Seven (Ten Thousand) + Six Thousand + Seven Hundred + Seventy-Six |
-| 591,834 | 五十九万千八百三十四 | gojuu kyuu man sen happyaku sanjyu yon | (五十九万)(千)(八百)(三十)(四) | Fifty-Nine (Ten Thousand) + One Thousand + Eight Hundred + Thirty + Four |
-| 609,240 | 六十万九千二百四十 | rokujuu man kyuusen nihyaku yonjyu | (六十万)(九千)(二百)(四十) | Sixty (Ten Thousand) + Nine Thousand + Two Hundred + Forty |
-| 240,404 | 二十四万四百四 | nijuu yon man yonhyaku yon | (二十四万)(四百)(四) | Twenty-Four (Ten Thousand) + Four Hundred + Four |
+| Numbers | Japanese                        | Pronunciation                                         | How it is made                                       | Other Helpful Way                                                          |
+|---------|----------------------------------|--------------------------------------------------------|-------------------------------------------------------|----------------------------------------------------------------------------|
+| 134,987 | 十三万四千九百八十七             | jūsan man yonsen kyūhyaku hachijū nana               | (十三万)(四千)(九百)(八十七)                        | Thirteen (Ten Thousand) + Four Thousand + Nine Hundred + Eighty-Seven     |
+| 387,568 | 三十八万七千五百六十八           | sanjūhachi man nanahyaku gohyaku rokujū hachi         | (三十八万)(七千)(五百)(六十八)                      | Thirty-Eight (Ten Thousand) + Seven Thousand + Five Hundred + Sixty-Eight |
+| 985,240 | 九十八万五千二百四十             | kyūjūhachi man gosen nihyaku yonjū                     | (九十八万)(五千)(二百)(四十)                        | Ninety-Eight (Ten Thousand) + Five Thousand + Two Hundred + Forty         |
+| 776,591 | 七十七万六千五百九十一           | nanajūnana man rokusen gohyaku kyūjūichi              | (七十七万)(六千)(五百)(九十一)                      | Seventy-Seven (Ten Thousand) + Six Thousand + Five Hundred + Ninety-One   |
+| 834,609 | 八十三万四千六百九               | hachijūsan man yonsen roppyaku kyū                    | (八十三万)(四千)(六百)(九)                          | Eighty-Three (Ten Thousand) + Four Thousand + Six Hundred + Nine          |
+| 404,240 | 四十万四千二百四十               | yonjū man yonsen nihyaku yonjū                        | (四十万)(四千)(二百)(四十)                          | Forty (Ten Thousand) + Four Thousand + Two Hundred + Forty                |
+| 776,776 | 七十七万六千七百七十六           | nanajūnana man rokusen nanahyaku nanajūroku           | (七十七万)(六千)(七百)(七十六)                      | Seventy-Seven (Ten Thousand) + Six Thousand + Seven Hundred + Seventy-Six |
+| 591,834 | 五十九万千八百三十四             | gojūkyū man sen happyaku sanjūyon                     | (五十九万)(千)(八百)(三十四)                        | Fifty-Nine (Ten Thousand) + One Thousand + Eight Hundred + Thirty-Four    |
+| 609,240 | 六十万九千二百四十               | rokujū man kyūsen nihyaku yonjū                       | (六十万)(九千)(二百)(四十)                          | Sixty (Ten Thousand) + Nine Thousand + Two Hundred + Forty                |
+| 240,404 | 二十四万四百四                   | nijūyon man yonhyaku yon                              | (二十四万)(四百)(四)                                | Twenty-Four (Ten Thousand) + Four Hundred + Four                           |
 
 MILLION:
 
-|  Numbers |  Japanese |  Pronunciation | How it is made | Other Helpful Way |
-|----|----|----|----|----|
-| 1,000,000 | 百万 | hyaku man | (百)(万) | One Hundred + Ten Thousand |
-| 2,345,678 | 二千三百四十五万六千七百八十八 | nisen sanbyaku yonjyu go man roku sen nana hyaku hachijuu hachi | (二千)(三百)(四十五万)(六千)(七百)(八十)(八) | Two Thousand + Three Hundred + Forty-Five + Ten Thousand + Six Thousand + Seven Hundred + Eighty + Eight |
-| 3,456,789 | 三千四百五十六万七千八百九十九 | sanzen yonhyaku gojuu roku man nanasen happyaku kyuujuu kyuu | (三千)(四百)(五十六万)(七千)(八百)(九十)(九) | Three Thousand + Four Hundred + Fifty-Six + Ten Thousand + Seven Thousand + Eight Hundred + Ninety + Nine |
-| 4,567,890 | 四千五百六十七万八千九百九十 | yonsen gohyaku rokujuu nana man hassen kyuuhyaku kyuujuu | (四千)(五百)(六十七万)(八千)(九百)(九十) | Four Thousand + Five Hundred + Sixty-Seven + Ten Thousand + Eight Thousand + Nine Hundred + Ninety |
-| 5,678,901 | 五千六百七十八万九千百一 | gosen roppyaku nana juu hachi man kyuusen hyaku ichi | (五千)(六百)(七十八万)(九千)(百)(一) | Five Thousand + Six Hundred + Seventy-Eight + Ten Thousand + Nine Thousand + One Hundred + One |
-| 6,789,012 | 六千七百八十九万百十二 | rokusen nanahyaku hachijuu kyuu man hyaku jyu ni | (六千)(七百)(八十九万)(百)(十二) | Six Thousand + Seven Hundred + Eighty-Nine + Ten Thousand + One Hundred + Twelve |
-| 7,890,123 | 七千八百九十万百二十三 | nanasen happyaku kyuujuu man hyaku nijuu san | (七千)(八百)(九十万)(百)(二十三) | Seven Thousand + Eight Hundred + Ninety + Ten Thousand + One Hundred + Twenty-Three |
-| 8,901,234 | 八千九百一万二千三百四十四 | hassen kyuuhyaku ichi man nisen sanbyaku yonjyu yon | (八千)(九百)(一万)(二千)(三百)(四十四) | Eight Thousand + Nine Hundred + One + Ten Thousand + Two Thousand + Three Hundred + Forty-Four |
-| 9,012,345 | 九千百二万三千四百五十五 | kyuusen hyaku nijuu san man sanzen yonhyaku gojuu go | (九千)(百)(二万)(三千)(四百)(五十五) | Nine Thousand + One Hundred + Two + Thirty Thousand + Four Hundred + Fifty-Five |
-| 10,000,000 | 千万 | sen man | (千)(万) | One Thousand + Ten Thousand |
+| Numbers    | Japanese                       | Pronunciation                                                | How it is made                                               | Other Helpful Way                                                                                                                |
+|------------|--------------------------------|--------------------------------------------------------------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| 1,000,000  | 百万                           | hyaku man                                                    | (百)(万)                                                     | One Hundred x Ten Thousand                                                                                                      |
+| 2,345,678  | 二百三十四万五千六百七十八     | nihyaku sanjū yonman gosen roppyaku nanajū hachi            | (二百)(三十四万)(五千)(六百)(七十八)                       | Two Hundred + Thirty-Four Thousand + Five Thousand + Six Hundred + Seventy-Eight                                              |
+| 3,456,789  | 三百四十五万六千七百八十九     | sanbyaku yonjū goman rokusen nanahyaku hachijū kyū          | (三百)(四十五万)(六千)(七百)(八十九)                       | Three Hundred + Forty-Five Thousand + Six Thousand + Seven Hundred + Eighty-Nine                                             |
+| 4,567,890  | 四百五十六万七千八百九十       | yonhyaku gojū rokuman nanahyaku kyūjū                        | (四百)(五十六万)(七千)(八百)(九十)                         | Four Hundred + Fifty-Six Thousand + Seven Thousand + Eight Hundred + Ninety                                                 |
+| 5,678,901  | 五百六十七万八千九百一         | gohyaku rokujū nanamanman hassen kyūhyaku ichi              | (五百)(六十七万)(八千)(九百)(一)                           | Five Hundred + Sixty-Seven Thousand + Eight Thousand + Nine Hundred + One                                                    |
+| 6,789,012  | 六百七十八万九千十二           | roppyaku nanajū hachinman kyūsen jūni                        | (六百)(七十八万)(九千)(十二)                               | Six Hundred + Seventy-Eight Thousand + Nine Thousand + Twelve                                                                |
+| 7,890,123  | 七百八十九万百二十三           | nanahyaku hachijū kyūman hyaku nijūsan                      | (七百)(八十九万)(百)(二十三)                               | Seven Hundred + Eighty-Nine Thousand + One Hundred + Twenty-Three                                                            |
+| 8,901,234  | 八百九十万千二百三十四         | happyaku kyūjūman sen nihyaku sanjūyon                      | (八百)(九十万)(千)(二百)(三十四)                           | Eight Hundred + Ninety Thousand + One Thousand + Two Hundred + Thirty-Four                                                  |
+| 9,012,345  | 九百一万二千三百四十五         | kyūhyaku ichiman nisen sanbyaku yonjūgo                     | (九百)(一万)(二千)(三百)(四十五)                           | Nine Hundred + One Thousand + Two Thousand + Three Hundred + Forty-Five                                                     |
+| 10,000,000 | 千万                           | sen man                                                      | (千)(万)                                                     | One Thousand x Ten Thousand                                                                                                    |
+
 
 TEN MILLION:
 
-|  Numbers |  Japanese |  Pronunciation | How it is made | Other Helpful Way |
-|----|----|----|----|----|
-| 10,000,000 | 千万 | sen man | (千)(万) | One Thousand + Ten Thousand |
-| 21,234,567 | 二千百三十四万五千六百七十八 | nisen hyaku sanjuu yon man gosen roppyaku nanajuu hachi | (二千百三十四万)(五千)(六百)(七十八) | Two Thousand + One Hundred + Thirty-Four + Fifty Thousand + Six Hundred + Seventy-Eight |
-| 35,678,901 | 三千五百六十七万八千九百一 | sanzen gohyaku rokujuu nana man hassen kyuuhyaku ichi | (三千五百六十七万)(八千)(九百)(一) | Three Thousand + Five Hundred + Sixty-Seven + Seventy-Eight + Ten Thousand + Nine Hundred + One |
-| 48,901,234 | 四千八百九十万千二百三十四 | yonsen happyaku kyuujuu man sen nihyaku sanjuu yon | (四千八百九十万)(千)(二百)(三十四) | Four Thousand + Eight Hundred + Ninety + Ten Thousand + One Thousand + Two Hundred + Thirty-Four |
-| 59,012,345 | 五千九百一万二千三百四十五 | gosen kyuuhyaku ichi man nisen sanbyaku yonjyu go | (五千九百一万)(二千)(三百)(四十五) | Five Thousand + Nine Hundred + One + Ten Thousand + Two Thousand + Three Hundred + Forty-Five |
-| 60,123,456 | 六千十二万三千四百五十六 | rokusen juu ni man sanzen yonhyaku gojuu roku | (六千十二万)(三千)(四百)(五十六) | Six Thousand + Twelve + Thirty Thousand + Four Hundred + Fifty-Six |
-| 70,234,567 | 七千二十三万四千五百六十七 | nanasen nijuu san man yonsen gohyaku rokujuu nana | (七千二十三万)(四千)(五百)(六十)(七) | Seven Thousand + Twenty-Three + Forty Thousand + Five Hundred + Sixty + Seven |
-| 84,345,678 | 八千四百三十四万五千六百七十八 | hassen yonhyaku sanjuu yon man gosen roppyaku nanajuu hachi | (八千四百三十四万)(五千)(六百)(七十八) | Eight Thousand + Four Hundred + Thirty-Four + Fifty Thousand + Six Hundred + Seventy-Eight |
-| 97,456,789 | 九千七百四十五万六千七百八十九 | kyuusen nanahyaku yonjuu go man rokusen nanahyaku hachijuu kyuu | (九千七百四十五万)(六千)(七百)(八十)(九) | Nine Thousand + Seven Hundred + Forty-Five + Sixty Thousand + Seven Hundred + Eighty + Nine |
-| 100,000,000 | 一億 | ichi oku | (一)(億) | One + Hundred Million |
+| Numbers    | Japanese                             | Pronunciation                                                    | How it is made                                              | Other Helpful Way                                                                                |
+|------------|--------------------------------------|------------------------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| 10,000,000 | 千万                                 | sen man                                                          | (千)(万)                                                    | One Thousand + Ten Thousand                                                                       |
+| 21,234,567 | 二千百二十三万四千五百六十七         | nisen hyakunijūsan man yonsen gohyaku rokujūnana                | (二千百二十三万)(四千)(五百)(六十七)                      | Two Thousand + One Hundred + Twenty-Three + Forty Thousand + Five Hundred + Sixty-Seven        |
+| 35,678,901 | 三千五百六十七万八千九百一           | sanzen gohyaku rokujūnana man hassen kyūhyaku ichi              | (三千五百六十七万)(八千)(九百)(一)                        | Three Thousand + Five Hundred + Sixty-Seven + Eighty Thousand + Nine Hundred + One              |
+| 48,901,234 | 四千八百九十万千二百三十四           | yonsen happyaku kyūjūman sen nihyaku sanjūyon                   | (四千八百九十万)(千)(二百)(三十四)                        | Four Thousand + Eight Hundred + Ninety + Ten Thousand + One Thousand + Two Hundred + Thirty-Four|
+| 59,012,345 | 五千九百一万二千三百四十五           | gosen kyūhyaku ichi man nisen sanbyaku yonjūgo                  | (五千九百一万)(二千)(三百)(四十五)                        | Five Thousand + Nine Hundred + One + Ten Thousand + Two Thousand + Three Hundred + Forty-Five   |
+| 60,123,456 | 六千十二万三千四百五十六             | rokusen jūni man sanzen yonhyaku gojūroku                       | (六千十二万)(三千)(四百)(五十六)                          | Six Thousand + Twelve + Thirty Thousand + Three Thousand + Four Hundred + Fifty-Six            |
+| 70,234,567 | 七千二十三万四千五百六十七           | nanahyaku nanasen nisen niman yonsen gohyaku rokujūnana         | (七百)(七千)(二十)(三万)(四千)(五百)(六十七)             | Seven Hundred + Seven Thousand + Twenty + Three Ten Thousand + Four Thousand + Five Hundred + Sixty-Seven|
+| 84,345,678 | 八千四百三十四万五千六百七十八       | hassen yonhyaku sanjūyon man gosen roppyaku nanajūhachi         | (八千四百三十四万)(五千)(六百)(七十八)                    | Eight Thousand + Four Hundred + Thirty-Four + Fifty Thousand + Six Hundred + Seventy-Eight     |
+| 97,456,789 | 九千七百四十五万六千七百八十九       | kyūsen nanahyaku yonjūgo man rokusen nanahyaku hachijūkyū       | (九千七百四十五万)(六千)(七百)(八十九)                    | Nine Thousand + Seven Hundred + Forty-Five + Sixty Thousand + Seven Hundred + Eighty-Nine      |
+| 100,000,000| 一億                                 | ichi oku                                                         | (一)(億)                                                    | One + Hundred Million                                                                              |
 
 FINALLY NUMBERS I HOPE WAS MY NET WORTH:
 
-|  Numbers |  Japanese |  Pronunciation | How it is made | Other Helpful Way |
-|----|----|----|----|----|
-| 100,000,000 | 一億 | ichi oku | (一)(億) | One + Hundred Million |
-| 250,000,000 | 二億五千万 | ni oku gosen man | (二)(億)(五千)(万) | Two + Hundred Million + Five Thousand + Ten Thousand |
-| 500,000,000 | 五億 | go oku | (五)(億) | Five + Hundred Million |
-| 750,000,000 | 七億五千万 | nana oku gosen man | (七)(億)(五千)(万) | Seven + Hundred Million + Five Thousand + Ten Thousand |
-| 1,000,000,000 | 十億 | jyu oku | (十)(億) | Ten + Hundred Million |
-| 2,345,678,901 | 二十三億四千五百六十七万八千九百一 | nijuu san oku yon sen go hyaku rokujuu nana man hassen kyuu hyaku ichi | (二十三)(億)(四千五百六十七万)(八千九百一) | Twenty-Three + Hundred Million + Four Thousand + Five Hundred + Sixty-Seven + Seventy-Eight + Ten Thousand + Nine Hundred + One |
-| 3,456,789,012 | 三十四億五千六百七十八万九千十二 | sanjuu shi oku go sen roku hyaku nana juu hachi man kyu sen jyu ni | (三十四)(億)(五千六百七十八万)(九千十二) | Thirty-Four + Hundred Million + Five Thousand + Six Hundred + Seventy-Eight + Ten Thousand + Nine Hundred + Twelve |
-| 4,567,890,123 | 四十五億六千七百八十九万百二十三 | yonjuu go oku roku sen nana hyaku hachi juu kyuu man hyaku ni juu san | (四十五)(億)(六千七百八十九万)(百二十三) | Forty-Five + Hundred Million + Six Thousand + Seven Hundred + Eighty-Nine + Ten Thousand + One Hundred + Twenty-Three |
-| 5,678,901,234 | 五十六億七千八百九十万千二百三十四 | gojuu roku oku nana sen happyaku kyuu juu man sen nihyaku san juu yon | (五十六)(億)(七千八百九十万)(千二百三十四) | Fifty-Six + Hundred Million + Seven Thousand + Eight Hundred + Ninety + Ten Thousand + Two Hundred + Thirty-Four |
-| 6,789,012,345 | 六十七億八千九百十二万三千四百五十六 | rokujuu shichi oku hassen kyuu hyaku jyu ni man san sen yon hyaku go juu roku | (六十七)(億)(八千九百十二万)(三千四百五十六) | Sixty-Seven + Hundred Million + Eight Thousand + Nine Hundred + Twelve + Ten Thousand + Three Hundred + Forty-Five + Six |
+| Numbers     | Japanese                                                                   | Pronunciation                                                                         | How it is made                                                                     | Other Helpful Way                                                                                |
+|--------------|----------------------------------------------------------------------------|----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| 198,648,013 | 十九億八千六百四十八万十三                                                 | jūkyū oku hassen roppyaku yonjūhachi man jūsan                                       | (十九億)(八千)(六百)(四十八万)(十三)                                              | One Hundred Ninety-Eight Million + Six Hundred Forty-Eight Thousand + Thirteen                  |
+| 456,123,789 | 四十五億六千百二十三万七千八百八十九                                     | yonjūgo oku rokusen hyakunijūsan man nanahyaku hachijūkyū                            | (四十五億)(六千)(百二十三万)(七千)(八百)(八十九)                                  | Four Hundred Fifty-Six Million + One Hundred Twenty-Three Thousand + Seven Hundred Eighty-Nine |
+| 789,654,321 | 七十八億九千六百五十四万三千二百二十一                                   | nanajūhachi oku kyūsen roppyaku gojūyon man sanzen nihyaku nijūichi                  | (七十八億)(九千)(六百)(五十四万)(三千)(二百)(二十一)                              | Seven Hundred Eighty-Nine Million + Six Hundred Fifty-Four Thousand + Three Hundred Twenty-One  |
+| 234,567,890 | 二十三億四千五百六十七万八千九百                                         | nijūsan oku yonsen gohyaku rokujūnana man hassen kyūhyaku                            | (二十三億)(四千)(五百)(六十七万)(八千)(九百)                                      | Two Hundred Thirty-Four Million + Five Hundred Sixty-Seven Thousand + Eight Hundred Ninety      |
+| 876,543,210 | 八十七億六千五百四十三万二百十                                           | hachijūnana oku rokusen gohyaku yonjūsan man nihyaku jū                              | (八十七億)(六千)(五百)(四十三万)(二百)(十)                                        | Eight Hundred Seventy-Six Million + Five Hundred Forty-Three Thousand + Two Hundred Ten        |
+| 2,345,678,901 | 二百三十四億五千六百七十八万九千一                                     | nihyakusanjūyon oku gosen roppyaku nanajūhachi man kyūsen ichi                       | (二百三十四億)(五千)(六百)(七十八万)(九千)(一)                                    | Two Hundred Thirty-Four Million + Five Thousand + Six Hundred + Seventy-Eight + Ten Thousand + One |
+| 3,456,789,012 | 三百四十五億六千七百八十九万十二                                       | sanbyaku yonjūgo oku rokusen nanahyaku hachijūkyū man jūni                           | (三百四十五億)(六千)(七百)(八十九万)(十二)                                        | Three Hundred Forty-Five Million + Six Thousand + Seven Hundred + Eighty-Nine + Ten Thousand + Twelve |
+| 4,567,890,123 | 四百五十六億七千八百九十万百二十三                                     | yonhyaku gojūroku oku nanahyaku kyūjūman hyakunijūsan                                | (四百五十六億)(七千)(八百)(九十万)(百)(二十三)                                    | Four Hundred Fifty-Six Million + Seven Thousand + Eight Hundred + Ninety + One Hundred + Twenty-Three |
+| 5,678,901,234 | 五百六十七億八千九百一万二百三十四                                     | gohyaku rokujūnana oku hassen kyūhyaku ichiman nihyaku sanjūyon                      | (五百六十七億)(八千)(九百)(一万)(二百)(三十四)                                    | Five Hundred Sixty-Seven Million + Eight Thousand + Nine Hundred + One + Ten Thousand + Two Hundred + Thirty-Four |
+| 6,789,012,345 | 六百七十八億九千十二万三千四百五十六                                   | roppyaku nanajūhachi oku kyūsen jūniman sanzen yonhyaku gojūroku                     | (六百七十八億)(九千)(十二万)(三千)(四百)(五十六)                                  | Six Hundred Seventy-Eight Million + Nine Thousand + Twelve + Ten Thousand + Three Hundred + Forty-Five + Six |
 
 ### **KNOW YOUR KNOWLEDGE LEVEL**
 

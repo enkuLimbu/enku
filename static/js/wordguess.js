@@ -1139,6 +1139,309 @@ let currentCategory = quizCode;
     {"question": "What is the following number: 千七百九十万八千五百二十七万六千五百一十", "correctAnswer": "17908527610", "options": ["17908527610", "17908527610", "17908527610", "17908527610"]}
     ],
 
+"tns01": [
+{
+"question": "Will eat (Future Tense)",
+"options": ["食べます", "飲みます", "行きます", "読みます"],
+"correctAnswer": "食べます"
+},
+{
+"question": "Will sleep (Future Tense)",
+"options": ["寝ます", "飲みます", "行きます", "読みます"],
+"correctAnswer": "寝ます"
+},
+{
+"question": "Will study (Future Tense)",
+"options": ["勉強します", "飲みます", "行きます", "読みます"],
+"correctAnswer": "勉強します"
+},
+{
+"question": "Will watch (Future Tense)",
+"options": ["見ます", "飲みます", "行きます", "読みます"],
+"correctAnswer": "見ます"
+},
+{
+"question": "Will play (Future Tense)",
+"options": ["遊びます", "飲みます", "行きます", "読みます"],
+"correctAnswer": "遊びます"
+},
+{
+"question": "Will read (Future Tense)",
+"options": ["読みます", "飲みます", "行きます", "寝ます"],
+"correctAnswer": "読みます"
+},
+{
+"question": "Will drink (Future Tense)",
+"options": ["飲みます", "見ます", "行きます", "読みます"],
+"correctAnswer": "飲みます"
+},
+{
+"question": "Will go (Future Tense)",
+"options": ["行きます", "飲みます", "読みます", "寝ます"],
+"correctAnswer": "行きます"
+},
+{
+"question": "Will write (Future Tense)",
+"options": ["書きます", "飲みます", "行きます", "読みます"],
+"correctAnswer": "書きます"
+},
+{
+"question": "Will buy (Future Tense)",
+"options": ["買います", "飲みます", "行きます", "読みます"],
+"correctAnswer": "買います"
+},
+{
+"question": "Will come (Future Tense)",
+"options": ["来ます", "飲みます", "行きます", "読みます"],
+"correctAnswer": "来ます"
+},
+{
+"question": "Will speak (Future Tense)",
+"options": ["話します", "飲みます", "行きます", "読みます"],
+"correctAnswer": "話します"
+},
+{
+"question": "Will run (Future Tense)",
+"options": ["走ります", "飲みます", "行きます", "読みます"],
+"correctAnswer": "走ります"
+},
+{
+"question": "Will swim (Future Tense)",
+"options": ["泳ぎます", "飲みます", "行きます", "読みます"],
+"correctAnswer": "泳ぎます"
+},
+{
+"question": "Will drive (Future Tense)",
+"options": ["運転します", "飲みます", "行きます", "読みます"],
+"correctAnswer": "運転します"
+},
+{
+"question": "Will cook (Future Tense)",
+"options": ["料理します", "飲みます", "行きます", "読みます"],
+"correctAnswer": "料理します"
+},
+{
+"question": "Will wait (Future Tense)",
+"options": ["待ちます", "飲みます", "行きます", "読みます"],
+"correctAnswer": "待ちます"
+},
+{
+"question": "Will work (Future Tense)",
+"options": ["働きます", "飲みます", "行きます", "読みます"],
+"correctAnswer": "働きます"
+},
+{
+"question": "Will call (Future Tense)",
+"options": ["電話します", "飲みます", "行きます", "読みます"],
+"correctAnswer": "電話します"
+},
+{
+"question": "Will meet (Future Tense)",
+"options": ["会います", "飲みます", "行きます", "読みます"],
+"correctAnswer": "会います"
+},
+{
+"question": "Eats (Present Tense)",
+"options": ["食べます", "飲みます", "行きます", "読みます"],
+"correctAnswer": "食べます"
+},
+{
+"question": "Sleeps (Present Tense)",
+"options": ["寝ます", "見ます", "行きます", "読みます"],
+"correctAnswer": "寝ます"
+},
+{
+"question": "Studies (Present Tense)",
+"options": ["勉強します", "飲みます", "行きます", "話します"],
+"correctAnswer": "勉強します"
+},
+{
+"question": "Watches (Present Tense)",
+"options": ["見ます", "飲みます", "行きます", "寝ます"],
+"correctAnswer": "見ます"
+},
+{
+"question": "Plays (Present Tense)",
+"options": ["遊びます", "飲みます", "行きます", "読みます"],
+"correctAnswer": "遊びます"
+},
+{
+"question": "Reads (Present Tense)",
+"options": ["読みます", "飲みます", "行きます", "寝ます"],
+"correctAnswer": "読みます"
+},
+{
+"question": "Drinks (Present Tense)",
+"options": ["飲みます", "見ます", "行きます", "読みます"],
+"correctAnswer": "飲みます"
+},
+{
+"question": "Goes (Present Tense)",
+"options": ["行きます", "食べます", "読みます", "寝ます"],
+"correctAnswer": "行きます"
+},
+{
+"question": "Writes (Present Tense)",
+"options": ["書きます", "食べます", "読みます", "寝ます"],
+"correctAnswer": "書きます"
+},
+{
+"question": "Buys (Present Tense)",
+"options": ["買います", "食べます", "読みます", "寝ます"],
+"correctAnswer": "買います"
+},
+{
+"question": "Comes (Present Tense)",
+"options": ["来ます", "食べます", "読みます", "寝ます"],
+"correctAnswer": "来ます"
+},
+{
+"question": "Speaks (Present Tense)",
+"options": ["話します", "食べます", "読みます", "寝ます"],
+"correctAnswer": "話します"
+},
+{
+"question": "Runs (Present Tense)",
+"options": ["走ります", "食べます", "読みます", "寝ます"],
+"correctAnswer": "走ります"
+},
+{
+"question": "Swims (Present Tense)",
+"options": ["泳ぎます", "食べます", "読みます", "寝ます"],
+"correctAnswer": "泳ぎます"
+},
+{
+"question": "Drives (Present Tense)",
+"options": ["運転します", "食べます", "読みます", "寝ます"],
+"correctAnswer": "運転します"
+},
+{
+"question": "Cooks (Present Tense)",
+"options": ["料理します", "食べます", "読みます", "寝ます"],
+"correctAnswer": "料理します"
+},
+{
+"question": "Waits (Present Tense)",
+"options": ["待ちます", "食べます", "読みます", "寝ます"],
+"correctAnswer": "待ちます"
+},
+{
+"question": "Works (Present Tense)",
+"options": ["働きます", "食べます", "読みます", "寝ます"],
+"correctAnswer": "働きます"
+},
+{
+"question": "Calls (Present Tense)",
+"options": ["電話します", "食べます", "読みます", "寝ます"],
+"correctAnswer": "電話します"
+},
+{
+"question": "Meets (Present Tense)",
+"options": ["会います", "食べます", "読みます", "寝ます"],
+"correctAnswer": "会います"
+},
+{
+"question": "Ate (Past Tense)",
+"options": ["食べました", "飲みました", "行きました", "読みました"],
+"correctAnswer": "食べました"
+},
+{
+"question": "Slept (Past Tense)",
+"options": ["寝ました", "見ました", "行きました", "読みました"],
+"correctAnswer": "寝ました"
+},
+{
+"question": "Studied (Past Tense)",
+"options": ["勉強しました", "飲みました", "行きました", "話しました"],
+"correctAnswer": "勉強しました"
+},
+{
+"question": "Watched (Past Tense)",
+"options": ["見ました", "飲みました", "行きました", "寝ました"],
+"correctAnswer": "見ました"
+},
+{
+"question": "Played (Past Tense)",
+"options": ["遊びました", "飲みました", "行きました", "読みました"],
+"correctAnswer": "遊びました"
+},
+{
+"question": "Read (Past Tense)",
+"options": ["読みました", "飲みました", "行きました", "寝ました"],
+"correctAnswer": "読みました"
+},
+{
+"question": "Drank (Past Tense)",
+"options": ["飲みました", "見ました", "行きました", "読みました"],
+"correctAnswer": "飲みました"
+},
+{
+"question": "Went (Past Tense)",
+"options": ["行きました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "行きました"
+},
+{
+"question": "Wrote (Past Tense)",
+"options": ["書きました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "書きました"
+},
+{
+"question": "Bought (Past Tense)",
+"options": ["買いました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "買いました"
+},
+{
+"question": "Came (Past Tense)",
+"options": ["来ました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "来ました"
+},
+{
+"question": "Spoke (Past Tense)",
+"options": ["話しました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "話しました"
+},
+{
+"question": "Ran (Past Tense)",
+"options": ["走りました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "走りました"
+},
+{
+"question": "Swam (Past Tense)",
+"options": ["泳ぎました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "泳ぎました"
+},
+{
+"question": "Drove (Past Tense)",
+"options": ["運転しました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "運転しました"
+},
+{
+"question": "Cooked (Past Tense)",
+"options": ["料理しました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "料理しました"
+},
+{
+"question": "Waited (Past Tense)",
+"options": ["待ちました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "待ちました"
+},
+{
+"question": "Worked (Past Tense)",
+"options": ["働きました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "働きました"
+},
+{
+"question": "Called (Past Tense)",
+"options": ["電話しました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "電話しました"
+},
+{
+"question": "Met (Past Tense)",
+"options": ["会いました", "食べました", "読みました", "寝ました"],
+"correctAnswer": "会いました"
+}
+    ],
+
 "n5I01":[
 {"question": "What is the Japanese word for 'class'?", "options": ["じゅぎょう", "がっこう", "しごと", "だいがく"], "correctAnswer": "じゅぎょう"},
  {"question": "What is the Japanese word for 'friend'?", "options": ["ともだち", "えいが", "しょっぴんぐもーる", "りょこう"], "correctAnswer": "ともだち"},
