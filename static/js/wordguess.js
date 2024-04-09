@@ -942,6 +942,559 @@ let currentCategory = quizCode;
     // Add more questions for w04
   ],
 
+"voc01": [
+ {
+   "correctAnswer": "のります",
+   "options": [
+     "おります",
+     "かえります",
+     "のります",
+     "りまかす"
+   ],
+   "question": "what is 'ride, get on [a train]' in japanese?"
+ },
+ {
+   "correctAnswer": "おります",
+   "options": [
+     "おります",
+     "かえります",
+     "のります",
+     "だします"
+   ],
+   "question": "what is 'get off [a train]' in japanese?"
+ },
+ {
+   "correctAnswer": "かえります",
+   "options": [
+     "おります",
+     "かえります",
+     "はいります",
+     "そつぎょうします"
+   ],
+   "question": "what is 'change (train etc..)' in japanese?"
+ },
+ {
+   "correctAnswer": "シャワーをあびます",
+   "options": [
+     "いれます",
+     "シャワーをあびます",
+     "おします",
+     "のみます"
+   ],
+   "question": "what is 'take [a shower]' in japanese?"
+ },
+ {
+   "correctAnswer": "いれます",
+   "options": [
+     "だします",
+     "おろします",
+     "はいります",
+     "いれます"
+   ],
+   "question": "what is 'put in, insert' in japanese?"
+ },
+ {
+   "correctAnswer": "だします",
+   "options": [
+     "だします",
+     "おろします",
+     "そつぎょうします",
+     "でんわします"
+   ],
+   "question": "what is 'take out, hand in, send' in japanese?"
+ },
+ {
+   "correctAnswer": "おろします",
+   "options": [
+     "いれます",
+     "だします",
+     "おろします",
+     "はじめます"
+   ],
+   "question": "what is 'withdraw' in japanese?"
+ },
+ {
+   "correctAnswer": "はいります",
+   "options": [
+     "おします",
+     "はいります",
+     "そつぎょうします",
+     "りょこうします"
+   ],
+   "question": "what is 'enter [university]' in japanese?"
+ },
+ {
+   "correctAnswer": "そつぎょうします",
+   "options": [
+     "はいります",
+     "そつぎょうします",
+     "のみます",
+     "でんわします"
+   ],
+   "question": "what is 'graduate from [university]' in japanese?"
+ },
+ {
+   "correctAnswer": "おします",
+   "options": [
+     "おします",
+     "のみます",
+     "はじめます",
+     "からだです"
+   ],
+   "question": "what is 'push, press' in japanese?"
+ },
+ {
+   "correctAnswer": "のみます",
+   "options": [
+     "おします",
+     "のみます",
+     "りょこうします",
+     "めです"
+   ],
+   "question": "what is 'drink alcohol' in japanese?"
+ },
+ {
+   "correctAnswer": "はじめます",
+   "options": [
+     "だします",
+     "はじめます",
+     "さーびすします",
+     "じんじゃです"
+   ],
+   "question": "what is 'start, begin' in japanese?"
+ },
+ {
+   "correctAnswer": "りょこうします",
+   "options": [
+     "おします",
+     "のみます",
+     "りょこうします",
+     "かずです"
+   ],
+   "question": "what is 'tour, visit a place to study in' in japanese?"
+ },
+ {
+   "correctAnswer": "でんわします",
+   "options": [
+     "ながいです",
+     "でんわします",
+     "くらいです",
+     "おなかです"
+   ],
+   "question": "what is 'phone' in japanese?"
+ },
+ {
+   "correctAnswer": "ながいです",
+   "options": [
+     "ながいです",
+     "わかいです",
+     "みじかいです",
+     "ちんちんです"
+   ],
+   "question": "what is 'long' in japanese?"
+ },
+ {
+   "correctAnswer": "わかいです",
+   "options": [
+     "ながいです",
+     "わかいです",
+     "みじかいです",
+     "あしです"
+   ],
+   "question": "what is 'young' in japanese?"
+ },
+ {
+   "correctAnswer": "みじかいです",
+   "options": [
+     "ながいです",
+     "わかいです",
+     "みじかいです",
+     "じょぎんぐします"
+   ],
+   "question": "what is 'short' in japanese?"
+ },
+ {
+   "correctAnswer": "あかるいです",
+   "options": [
+     "あかるいです",
+     "くらいです",
+     "からだです",
+     "てらです"
+   ],
+   "question": "what is 'bright/light' in japanese?"
+ },
+ {
+   "correctAnswer": "くらいです",
+   "options": [
+     "あかるいです",
+     "くらいです",
+     "あたまです",
+     "どれらですか"
+   ],
+   "question": "what is 'dark' in japanese?"
+ },
+ {
+   "correctAnswer": "からだです",
+   "options": [
+     "からだです",
+     "かおです",
+     "みみです",
+     "まだまだですね"
+   ],
+   "question": "what is 'body, health' in japanese?"
+ },
+ {
+   "correctAnswer": "あたまです",
+   "options": [
+     "からだです",
+     "あたまです",
+     "はなです",
+     "ATMカードです"
+   ],
+   "question": "what is 'head, brain' in japanese?"
+ },
+ {
+   "correctAnswer": "かみです",
+   "options": [
+     "かおです",
+     "めです",
+     "かみです",
+     "きんがくです"
+   ],
+   "question": "what is 'hair' in japanese?"
+ },
+ {
+   "correctAnswer": "かおです",
+   "options": [
+     "かおです",
+     "くちです",
+     "おっぱいです",
+     "ぼたんです"
+   ],
+   "question": "what is 'face' in japanese?"
+ },
+ {
+   "correctAnswer": "めです",
+   "options": [
+     "みみです",
+     "はです",
+     "めです",
+     "まず"
+   ],
+   "question": "what is 'eye' in japanese?"
+ },
+ {
+   "correctAnswer": "みみです",
+   "options": [
+     "はなです",
+     "みみです",
+     "まんこです",
+     "つぎに"
+   ],
+   "question": "what is 'ear' in japanese?"
+ },
+ {
+   "correctAnswer": "はなです",
+   "options": [
+     "くちです",
+     "はなです",
+     "あしです",
+     "かくにんします"
+   ],
+   "question": "what is 'nose' in japanese?"
+ },
+ {
+   "correctAnswer": "くちです",
+   "options": [
+     "はです",
+     "くちです",
+     "たかさです",
+     "すごいですね"
+   ],
+   "question": "what is 'mouth' in japanese?"
+ },
+ {
+   "correctAnswer": "はです",
+   "options": [
+     "おっぱいです",
+     "はです",
+     "りょくちです",
+     "おろしていますか"
+   ],
+   "question": "what is 'tooth' in japanese?"
+ },
+ {
+   "correctAnswer": "おっぱいです",
+   "options": [
+     "おなかです",
+     "おっぱいです",
+     "じんじゃです",
+     "PINです"
+   ],
+   "question": "what is 'breast' in japanese?"
+ },
+ {
+   "correctAnswer": "おなかです",
+   "options": [
+     "ちんちんです",
+     "おなかです",
+     "かずです",
+     "どのようにです"
+   ],
+   "question": "what is 'stomach' in japanese?"
+ },
+ {
+   "correctAnswer": "ちんちんです",
+   "options": [
+     "まんこです",
+     "ちんちんです",
+     "どれらですか",
+     "まだまだですね"
+   ],
+   "question": "what is 'penis' in japanese?"
+ },
+ {
+   "correctAnswer": "まんこです",
+   "options": [
+     "あしです",
+     "まんこです",
+     "どれですか",
+     "おろしていますか"
+   ],
+   "question": "what is 'vagina' in japanese?"
+ },
+ {
+   "correctAnswer": "あしです",
+   "options": [
+     "たかさです",
+     "あしです",
+     "さーびすします",
+     "シャワーをあびます"
+   ],
+   "question": "what is 'leg, foot' in japanese?"
+ },
+ {
+   "correctAnswer": "たかさです",
+   "options": [
+     "たかさです",
+     "みどりです",
+     "てらです",
+     "まず"
+   ],
+   "question": "what is 'height' in japanese?"
+ },
+ {
+   "correctAnswer": "さーびすします",
+   "options": [
+     "じょぎんぐします",
+     "さーびすします",
+     "ATMカードです",
+     "かくにんします"
+   ],
+   "question": "what is 'service' in japanese?"
+ },
+ {
+   "correctAnswer": "じょぎんぐします",
+   "options": [
+     "シャワーをあびます",
+     "じょぎんぐします",
+     "ぼたんです",
+     "つぎに"
+   ],
+   "question": "what is 'jogging' in japanese?"
+ },
+ {
+   "correctAnswer": "シャワーをあびます",
+   "options": [
+     "ながいです",
+     "シャワーをあびます",
+     "からだです",
+     "まだまだですね"
+   ],
+   "question": "what is 'shower' in japanese?"
+ },
+ {
+   "correctAnswer": "みどりです",
+   "options": [
+     "みどりです",
+     "りょくちです",
+     "かずです",
+     "PINです"
+   ],
+   "question": "what is 'green' in japanese?"
+ },
+ {
+   "correctAnswer": "りょくちです",
+   "options": [
+     "みどりです",
+     "りょくちです",
+     "じんじゃです",
+     "きんがくです"
+   ],
+   "question": "what is 'greenery' in japanese?"
+ },
+ {
+   "correctAnswer": "てらです",
+   "options": [
+     "てらです",
+     "じんじゃです",
+     "どのようにです",
+     "すごいですね"
+   ],
+   "question": "what is 'Buddhist temple' in japanese?"
+ },
+ {
+   "correctAnswer": "じんじゃです",
+   "options": [
+     "てらです",
+     "じんじゃです",
+     "どれらですか",
+     "おろしていますか"
+   ],
+   "question": "what is 'Shinto shrine' in japanese?"
+ },
+ {
+   "correctAnswer": "かずです",
+   "options": [
+     "どのようにです",
+     "どれらですか",
+     "かずです",
+     "まず"
+   ],
+   "question": "what is 'number' in japanese?"
+ },
+ {
+   "correctAnswer": "どのようにです",
+   "options": [
+     "どのようにです",
+     "どれですか",
+     "すごいですね",
+     "ATMカードです"
+   ],
+   "question": "what is 'in what way, how' in japanese?"
+ },
+ {
+   "correctAnswer": "どれらですか",
+   "options": [
+     "どれらですか",
+     "どれですか",
+     "まだまだですね",
+     "PINです"
+   ],
+   "question": "what is 'which ~ (used for three or more)' in japanese?"
+ },
+ {
+   "correctAnswer": "どれですか",
+   "options": [
+     "どれらですか",
+     "どれですか",
+     "おろしていますか",
+     "きんがくです"
+   ],
+   "question": "what is 'which one (of three or more things)' in japanese?"
+ },
+ {
+   "correctAnswer": "すごいですね",
+   "options": [
+     "どのようにです",
+     "すごいですね",
+     "まだまだですね",
+     "かくにんします"
+   ],
+   "question": "what is 'That's amazing!' in japanese?"
+ },
+ {
+   "correctAnswer": "まだまだですね",
+   "options": [
+     "どれですか",
+     "すごいですね",
+     "まだまだですね",
+     "ぼたんです"
+   ],
+   "question": "what is '[No,] I still have long way to go' in japanese?"
+ },
+ {
+   "correctAnswer": "おろしていますか",
+   "options": [
+     "まだまだですね",
+     "おろしていますか",
+     "つぎに",
+     "PINです"
+   ],
+   "question": "what is 'Are you making a withdrawal?' in japanese?"
+ },
+ {
+   "correctAnswer": "まず",
+   "options": [
+     "まず",
+     "つぎに",
+     "きんがくです",
+     "ぼたんです"
+   ],
+   "question": "what is 'first of all' in japanese?"
+ },
+ {
+   "correctAnswer": "つぎに",
+   "options": [
+     "まず",
+     "つぎに",
+     "ATMカードです",
+     "かくにんします"
+   ],
+   "question": "what is 'next, as a next step' in japanese?"
+ },
+ {
+   "correctAnswer": "ATMカードです",
+   "options": [
+     "PINです",
+     "きんがくです",
+     "ATMカードです",
+     "ぼたんです"
+   ],
+   "question": "what is 'cash dispensing card' in japanese?"
+ },
+ {
+   "correctAnswer": "PINです",
+   "options": [
+     "きんがくです",
+     "ATMカードです",
+     "PINです",
+     "かくにんします"
+   ],
+   "question": "what is 'personal identification number, PIN' in japanese?"
+ },
+ {
+   "correctAnswer": "きんがくです",
+   "options": [
+     "ATMカードです",
+     "PINです",
+     "きんがくです",
+     "ぼたんです"
+   ],
+   "question": "what is 'amount of money' in japanese?"
+ },
+ {
+  "correctAnswer": "かくにんします",
+  "options": [
+    "PINです",
+    "きんがくです",
+    "ATMカードです",
+    "かくにんします"
+  ],
+  "question": "what is 'confirmation (confirm)' in japanese?"
+},
+{
+  "correctAnswer": "ぼたんです",
+  "options": [
+    "きんがくです",
+    "ATMカードです",
+    "PINです",
+    "ぼたんです"
+  ],
+  "question": "what is 'button' in japanese?"
+}
+    ],
+
     "num01":[
     {"question": "What is the following number: 二十", "correctAnswer": "20", "options": ["20", "30", "40", "50"]},
     {"question": "What is the following number: 三十", "correctAnswer": "30", "options": ["20", "30", "40", "50"]},

@@ -267,7 +267,8 @@ var wordCode = codeFromUrl || window.wordCode // Use code from URL, window.quizC
   { "correctAnswer": "ン", "question": "What is the following sound in katakana: n" },
   // ... Add more katakana questions as needed 
 ],
-    "kata12":[
+
+"kata12":[
 {"correctAnswer":"ネコガイマス","question":"How do you say 'I have a cat' in katakana?"},
 {"correctAnswer":"サクラノハナガ","question":"What is the following sound in katakana: sakura no hana ga"},
 {"correctAnswer":"オハヨー","question":"What is the following sound in katakana: ohayoo"},
@@ -348,6 +349,7 @@ var wordCode = codeFromUrl || window.wordCode // Use code from URL, window.quizC
 {"correctAnswer":"カレワモーヤメマシタ","question":"He has already quit. Katakana translation?"},
 {"correctAnswer":"ワタクシノチュウゴクリョコーワソレホドヨクアリマセン","question":"What is the following sound in katakana: watakushi no chuugokugoryokoo wa sorehodo yokuarimasen"},
     ],
+
 "kata22":[
 {"correctAnswer":"セーターガニガテデス","question":"The sweater doesn't fit me well. How to say this in katakana?"},
 {"correctAnswer":"カノオペレーターワショーヒンガキンジョデス","question":"What is the following sound in katakana: kano opereetaa wa shoohin ga kinjodesu"},
@@ -644,6 +646,229 @@ var wordCode = codeFromUrl || window.wordCode // Use code from URL, window.quizC
 {"question":"Write the kanji for 'poor'.","correctAnswer":"貧しい"},
 {"question":"Write the kanji for 'strong'.","correctAnswer":"強い"},
 {"question":"Write the kanji for 'weak'.","correctAnswer":"弱い"}
+    ],
+
+"voc01": [
+ {
+   "question": "ride, get on [a train]",
+   "correctAnswer": "のります"
+ },
+ {
+   "question": "get off [a train]", 
+   "correctAnswer": "おります"
+ },
+ {
+   "question": "change (train etc..)",
+   "correctAnswer": "かえります"
+ },
+ {
+   "question": "take [a shower]",
+   "correctAnswer": "シャワーをあびます"
+ },
+ {
+   "question": "put in, insert",
+   "correctAnswer": "いれます"
+ },
+ {
+   "question": "take out, hand in, send",
+   "correctAnswer": "だします"
+ },
+ {
+   "question": "withdraw",
+   "correctAnswer": "おろします"
+ },
+ {
+   "question": "enter [university]",
+   "correctAnswer": "はいります"
+ },
+ {
+   "question": "graduate from [university]",
+   "correctAnswer": "そつぎょうします"
+ },
+ {
+   "question": "push, press",
+   "correctAnswer": "おします"
+ },
+ {
+   "question": "drink alcohol",
+   "correctAnswer": "のみます"
+ },
+ {
+   "question": "start, begin",
+   "correctAnswer": "はじめます"
+ },
+ {
+   "question": "tour, visit a place to study in",
+   "correctAnswer": "りょこうします"
+ },
+ {
+   "question": "phone",
+   "correctAnswer": "でんわします"
+ },
+ {
+   "question": "long",
+   "correctAnswer": "ながいです"
+ },
+ {
+   "question": "young",
+   "correctAnswer": "わかいです"
+ },
+ {
+   "question": "short",
+   "correctAnswer": "みじかいです"
+ },
+ {
+   "question": "bright/light",
+   "correctAnswer": "あかるいです"
+ },
+ {
+   "question": "dark",
+   "correctAnswer": "くらいです"
+ },
+ {
+   "question": "body, health",
+   "correctAnswer": "からだです"
+ },
+ {
+   "question": "head, brain",
+   "correctAnswer": "あたまです"
+ },
+ {
+   "question": "hair",
+   "correctAnswer": "かみです"
+ },
+ {
+   "question": "face",
+   "correctAnswer": "かおです"
+ },
+ {
+   "question": "eye",
+   "correctAnswer": "めです"
+ },
+ {
+   "question": "ear",
+   "correctAnswer": "みみです"
+ },
+ {
+   "question": "nose",
+   "correctAnswer": "はなです"
+ },
+ {
+   "question": "mouth",
+   "correctAnswer": "くちです"
+ },
+ {
+   "question": "tooth",
+   "correctAnswer": "はです"
+ },
+ {
+   "question": "breast",
+   "correctAnswer": "おっぱいです"
+ },
+ {
+   "question": "stomach",
+   "correctAnswer": "おなかです"
+ },
+ {
+   "question": "penis",
+   "correctAnswer": "ちんちんです"
+ },
+ {
+   "question": "vagina",
+   "correctAnswer": "まんこです"
+ },
+ {
+   "question": "leg, foot",
+   "correctAnswer": "あしです"
+ },
+ {
+   "question": "height",
+   "correctAnswer": "たかさです"
+ },
+ {
+   "question": "service",
+   "correctAnswer": "さーびすします"
+ },
+ {
+   "question": "jogging",
+   "correctAnswer": "じょぎんぐします"
+ },
+ {
+   "question": "shower",
+   "correctAnswer": "シャワーをあびます"
+ },
+ {
+   "question": "green",
+   "correctAnswer": "みどりです"
+ },
+ {
+   "question": "greenery",
+   "correctAnswer": "りょくちです"
+ },
+ {
+   "question": "Buddhist temple",
+   "correctAnswer": "てらです"
+ },
+ {
+   "question": "Shinto shrine",
+   "correctAnswer": "じんじゃです"
+ },
+ {
+   "question": "number",
+   "correctAnswer": "かずです"
+ },
+ {
+   "question": "in what way, how",
+   "correctAnswer": "どのようにです"
+ },
+ {
+   "question": "which ~ (used for three or more)",
+   "correctAnswer": "どれらですか"
+ },
+ {
+   "question": "which one (of three or more things)",
+   "correctAnswer": "どれですか"
+ },
+ {
+   "question": "That's amazing!",
+   "correctAnswer": "すごいですね"
+ },
+ {
+   "question": "[No,] I still have long way to go",
+   "correctAnswer": "まだまだですね"
+ },
+ {
+   "question": "Are you making a withdrawal?",
+   "correctAnswer": "おろしていますか"
+ },
+ {
+   "question": "first of all",
+   "correctAnswer": "まず"
+ },
+ {
+   "question": "next, as a next step",
+   "correctAnswer": "つぎに"
+ },
+ {
+   "question": "cash dispensing card",
+   "correctAnswer": "ATMカードです"
+ },
+ {
+   "question": "personal identification number, PIN",
+   "correctAnswer": "PINです"
+ },
+ {
+   "question": "amount of money",
+   "correctAnswer": "きんがくです"
+ },
+ {
+   "question": "confirmation (confirm)",
+   "correctAnswer": "かくにんします"
+ },
+ {
+   "question": "button",
+   "correctAnswer": "ぼたんです"
+ }
     ],
 
 "num01":[
