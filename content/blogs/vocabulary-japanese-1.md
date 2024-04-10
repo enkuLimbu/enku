@@ -285,7 +285,6 @@ toc:
 | Osaka Castle, a famous castle in Osaka | おおさかじょう | Ōsakajō | 大阪城 |
 
 ## Lesson 6
-Here's the table with the translations you requested:
 
 | English | Hiragana | Pronunciation | Kanji |
 |---|---|---|---|
@@ -506,7 +505,6 @@ Here's the table with the translations you requested:
 | restaurant | レストラン | resutoran | レストラン |
 | life | じんせい | jinsei | 人生 |
 | work, business | しごと | shigoto | 仕事 |
-| गर्ने) |  |  |  |
 | what kind of~ | どんな~ | donna ~ | どんな~ |
 | very | とても | totemo | とても |
 | not so (used with negatives) | あまり~ない | amari ~ nai | あまり~ない |
@@ -518,8 +516,6 @@ Here's the table with the translations you requested:
 | It's time I was going. | そろそろしつれいします。 | Sorosoro shitsurei shimasu. | そろそろ失礼します。 |
 | Not at all. | いいえ、どういたしまして。 | Īe, dōitashimashite. | いいえ、どういたしまして。 |
 | Please come again. | またきてください。 | Mata kite kudasai. | また来てください。 |
-| ठ |  |  |  |
-| か。 |  |  |  |
 | Shanghai(上海) | シャンハイ | Shanhai | シャンハイ |
 | Pavilion) | きゅうてん | kyūten | 宮殿 |
 | Japan | にほん | Nihon | 日本 |

@@ -943,6 +943,3596 @@ let currentCategory = quizCode;
   ],
 
 "voc01": [
+  {
+    "correctAnswer": "わたし",    
+    "options": ["わたし", "あなた", "あのひと", "せんせい"], 
+    "question": "What is 'I' in Japanese?"
+  },
+  {
+    "correctAnswer": "あなた",    
+    "options": ["あなた", "わたし", "あのひと", "せんせい"], 
+    "question": "What is 'You' in Japanese?"
+  },
+  {
+    "correctAnswer": "あのひと",    
+    "options": ["あのひと", "あなた", "せんせい", "かいしゃいん"], 
+    "question": "What is 'That person, he, she' in Japanese?"
+  },
+  {
+    "correctAnswer": "さん",    
+    "options": ["さん", "ちゃん", "じん", "せんせい"], 
+    "question": "What is 'Mr, Ms, Mrs' in Japanese?"
+  },
+  {
+    "correctAnswer": "せんせい",    
+    "options": ["せんせい", "きょうし", "がくせい", "かいしゃいん"], 
+    "question": "What is 'teacher, instructor' in Japanese?"
+  },
+  {
+    "correctAnswer": "がくせい",    
+    "options": ["がくせい", "せんせい", "かいしゃいん", "さん"], 
+    "question": "What is 'student' in Japanese?"
+  },
+  {
+    "correctAnswer": "かいしゃいん",    
+    "options": ["かいしゃいん", "がくせい", "さん", "ぎんこういん"], 
+    "question": "What is 'company employee' in Japanese?"
+  },
+  {
+    "correctAnswer": "ぎんこういん",    
+    "options": ["ぎんこういん", "かいしゃいん", "さん", "せんせい"], 
+    "question": "What is 'bank employee' in Japanese?"
+  },
+  {
+    "correctAnswer": "いしゃ",    
+    "options": ["いしゃ", "けんきゅうしゃ", "だいがく", "かいしゃいん"], 
+    "question": "What is '[medical] doctor' in Japanese?"
+  },
+  {
+    "correctAnswer": "けんきゅうしゃ",    
+    "options": ["けんきゅうしゃ", "いしゃ", "だいがく", "かいしゃいん"], 
+    "question": "What is 'researcher, scholar' in Japanese?"
+  },
+  {
+    "correctAnswer": "だいがく",    
+    "options": ["だいがく", "けんきゅうしゃ", "びょういん", "かいしゃいん"], 
+    "question": "What is 'university' in Japanese?"
+  },
+  {
+    "correctAnswer": "びょういん",    
+    "options": ["びょういん", "だいがく", "かいしゃいん", "さん"], 
+    "question": "What is 'hospital' in Japanese?"
+  },
+  {
+    "correctAnswer": "だれ",    
+    "options": ["だれ", "どなた", "いくつ", "はい"], 
+    "question": "What is 'who (with its polite form)' in Japanese?"
+  },
+  {
+    "correctAnswer": "〜さい",    
+    "options": ["〜さい", "おいくつ", "はい", "いくつ"], 
+    "question": "What is '- years old, how old (with polite form)' in Japanese?"
+  },
+  {
+    "correctAnswer": "はい",    
+    "options": ["はい", "いいえ", "どなた", "おいくつ"], 
+    "question": "What is 'yes' in Japanese?"
+  },
+  {
+    "correctAnswer": "いいえ",    
+    "options": ["いいえ", "はい", "どなた", "おいくつ"], 
+    "question": "What is 'no' in Japanese?"
+  },
+  {
+    "correctAnswer": "はじめまして",    
+    "options": ["はじめまして", "よろしくおねがいします", "すみませんが", "おなまえは？"], 
+    "question": "What is 'How do you do?' in Japanese?"
+  },
+  {
+    "correctAnswer": "わたしは〜からきました",    
+    "options": ["わたしは〜からきました", "よろしくおねがいします", "すみませんが", "おなまえは？"], 
+    "question": "What is 'I am from ~ (country)' in Japanese?"
+  },
+  {
+    "correctAnswer": "よろしくおねがいします",    
+    "options": ["よろしくおねがいします", "すみませんが", "おなまえは？", "はじめまして"], 
+    "question": "What is 'Pleased to meet you' in Japanese?"
+  },
+  {
+    "correctAnswer": "すみませんが",    
+    "options": ["すみませんが", "おなまえは？", "よろしくおねがいします", "はじめまして"], 
+    "question": "What is 'Excuse me, but (used when asking someone for their personal information like address name)' in Japanese?"
+  },
+  {
+    "correctAnswer": "おなまえは？",    
+    "options": ["おなまえは？", "すみませんが", "よろしくおねがいします", "はじめまして"], 
+    "question": "What is 'May I have your name?' in Japanese?"
+  },
+  {
+    "correctAnswer": "こちらは〜さんです",    
+    "options": ["こちらは〜さんです", "おなまえは？", "よろしくおねがいします", "はじめまして"], 
+    "question": "What is 'This is Mr, Ms, Mrs' in Japanese?"
+  },
+  {
+    "correctAnswer": "これ",    
+    "options": ["これ", "それ", "あれ", "この ~"], 
+    "question": "What is 'this (thing here)' in Japanese?"
+  },
+  {
+    "correctAnswer": "それ",    
+    "options": ["それ", "これ", "あれ", "その ~"], 
+    "question": "What is 'that (thing near listener)' in Japanese?"
+  },
+  {
+    "correctAnswer": "あれ",    
+    "options": ["あれ", "これ", "それ", "あの ~"], 
+    "question": "What is 'that (thing over there)' in Japanese?"
+  },
+  {
+    "correctAnswer": "この ~",    
+    "options": ["この ~", "その ~", "あの ~", "これ"], 
+    "question": "What is 'this ~, this ~ (here)' in Japanese?"
+  },
+  {
+    "correctAnswer": "その ~",    
+    "options": ["その ~", "この ~", "あの ~", "それ"], 
+    "question": "What is 'that ~, that ~ (near the listener)' in Japanese?"
+  },
+  {
+    "correctAnswer": "あの ~",    
+    "options": ["あの ~", "この ~", "その ~", "あれ"], 
+    "question": "What is 'that ~, that ~ (over there)' in Japanese?"
+  },
+  {
+    "correctAnswer": "ほん",    
+    "options": ["ほん", "じしょ", "ざっし", "しんぶん"], 
+    "question": "What is 'book' in Japanese?"
+  },
+  {
+    "correctAnswer": "じしょ",    
+    "options": ["じしょ", "ほん", "ざっし", "しんぶん"], 
+    "question": "What is 'dictionary' in Japanese?"
+  },
+  {
+    "correctAnswer": "ざっし",    
+    "options": ["ざっし", "ほん", "じしょ", "しんぶん"], 
+    "question": "What is 'magazine' in Japanese?"
+  },
+  {
+    "correctAnswer": "しんぶん",    
+    "options": ["しんぶん", "ほん", "じしょ", "ざっし"], 
+    "question": "What is 'newspaper' in Japanese?"
+  },
+  {
+    "correctAnswer": "ノート",    
+    "options": ["ノート", "スケジュール", "めいし", "かばん"], 
+    "question": "What is 'notebook' in Japanese?"
+  },
+  {
+    "correctAnswer": "スケジュール",    
+    "options": ["スケジュール", "ノート", "めいし", "かばん"], 
+    "question": "What is 'personal organizer' in Japanese?"
+  },
+  {
+    "correctAnswer": "めいし",    
+    "options": ["めいし", "スケジュール", "ノート", "かばん"], 
+    "question": "What is 'business card' in Japanese?"
+  },
+  {
+    "correctAnswer": "かばん",    
+    "options": ["かばん", "ノート", "スケジュール", "めいし"], 
+    "question": "What is 'bag, briefcase' in Japanese?"
+  },
+  {
+    "correctAnswer": "えんぴつ",    
+    "options": ["えんぴつ", "ボールペン", "シャーペン", "かぎ"], 
+    "question": "What is 'pencil' in Japanese?"
+  },
+  {
+    "correctAnswer": "ボールペン",    
+    "options": ["ボールペン", "えんぴつ", "シャーペン", "かぎ"], 
+    "question": "What is 'ballpoint pen' in Japanese?"
+  },
+  {
+    "correctAnswer": "シャーペン",    
+    "options": ["シャーペン", "えんぴつ", "ボールペン", "かぎ"], 
+    "question": "What is 'mechanical pencil, propelling pencil' in Japanese?"
+  },
+  {
+    "correctAnswer": "かぎ",    
+    "options": ["かぎ", "とけい", "かさ", "いす"], 
+    "question": "What is 'key' in Japanese?"
+  },
+  {
+    "correctAnswer": "とけい",    
+    "options": ["とけい", "かぎ", "かさ", "いす"], 
+    "question": "What is 'watch, clock' in Japanese?"
+  },
+  {
+    "correctAnswer": "かさ",    
+    "options": ["かさ", "いす", "とけい", "かばん"], 
+    "question": "What is 'umbrella' in Japanese?"
+  },
+  {
+    "correctAnswer": "かばん",    
+    "options": ["かばん", "いす", "かさ", "つくえ"], 
+    "question": "What is 'bag, briefcase' in Japanese?"
+  },
+  {
+    "correctAnswer": "しーでぃー",    
+    "options": ["しーでぃー", "テレビ", "ラジオ", "カメラ"], 
+    "question": "What is 'CD, compact disc' in Japanese?"
+  },
+  {
+    "correctAnswer": "テレビ",    
+    "options": ["テレビ", "しーでぃー", "ラジオ", "カメラ"], 
+    "question": "What is 'television' in Japanese?"
+  },
+  {
+    "correctAnswer": "ラジオ",    
+    "options": ["ラジオ", "しーでぃー", "テレビ", "カメラ"], 
+    "question": "What is 'radio' in Japanese?"
+  },
+  {
+    "correctAnswer": "カメラ",    
+    "options": ["カメラ", "しーでぃー", "テレビ", "ラジオ"], 
+    "question": "What is 'camera' in Japanese?"
+  },
+  {
+    "correctAnswer": "コンピュータ",    
+    "options": ["コンピュータ", "しーでぃー", "テレビ", "ラジオ"], 
+    "question": "What is 'computer' in Japanese?"
+  },
+  {
+    "correctAnswer": "くるま",    
+    "options": ["くるま", "つくえ", "いす", "かばん"], 
+    "question": "What is 'car, vehicle' in Japanese?"
+  },
+  {
+    "correctAnswer": "つくえ",    
+    "options": ["つくえ", "くるま", "いす", "かばん"], 
+    "question": "What is 'desk' in Japanese?"
+  },
+  {
+    "correctAnswer": "いす",    
+    "options": ["いす", "つくえ", "くるま", "かばん"], 
+    "question": "What is 'chair' in Japanese?"
+  },
+  {
+    "correctAnswer": "チョコレート",    
+    "options": ["チョコレート", "コーヒー", "おみやげ", "えいご"], 
+    "question": "What is 'chocolate' in Japanese?"
+  },
+  {
+    "correctAnswer": "コーヒー",    
+    "options": ["コーヒー", "チョコレート", "おみやげ", "えいご"], 
+    "question": "What is 'coffee' in Japanese?"
+  },
+  {
+    "correctAnswer": "おみやげ",    
+    "options": ["おみやげ", "チョコレート", "コーヒー", "えいご"], 
+    "question": "What is 'souvenir, present' in Japanese?"
+  },
+  {
+    "correctAnswer": "えいご",    
+    "options": ["えいご", "にほんご", "〜ご", "なに"], 
+    "question": "What is 'the English language' in Japanese?"
+  },
+  {
+    "correctAnswer": "にほんご",    
+    "options": ["にほんご", "えいご", "〜ご", "なに"], 
+    "question": "What is 'the Japanese language' in Japanese?"
+  },
+  {
+    "correctAnswer": "〜ご",    
+    "options": ["〜ご", "えいご", "にほんご", "なに"], 
+    "question": "What is '~ language' in Japanese?"
+  },
+  {
+    "correctAnswer": "なに",    
+    "options": ["なに", "それで", "あの", "あれ！なに？"], 
+    "question": "What is 'what' in Japanese?"
+  },
+  {
+    "correctAnswer": "それで",    
+    "options": ["それで", "なに", "あの", "あれ！なに？"], 
+    "question": "What is 'so' in Japanese?"
+  },
+  {
+    "correctAnswer": "あの",    
+    "options": ["あの", "それで", "なに", "あれ！なに？"], 
+    "question": "What is 'Er (used to show hesitation)' in Japanese?"
+  },
+  {
+    "correctAnswer": "あれ！なに？",    
+    "options": ["あれ！なに？", "なに", "それで", "あの"], 
+    "question": "What is 'Oh! What? (used when hearing something unexpected)' in Japanese?"
+  },
+  {
+    "correctAnswer": "どうぞ",    
+    "options": ["どうぞ", "ありがとう[ございます]", "そうですか", "いいえ、違います"], 
+    "question": "What is 'Here you are. (used when offering someone something)' in Japanese?"
+  },
+  {
+    "correctAnswer": "ありがとう[ございます]",    
+    "options": ["ありがとう[ございます]", "どうぞ", "そうですか", "いいえ、違います"], 
+    "question": "What is 'Thank you [very much]' in Japanese?"
+  },
+  {
+    "correctAnswer": "そうですか",    
+    "options": ["そうですか", "ありがとう[ございます]", "どうぞ", "いいえ、違います"], 
+    "question": "What is 'I see' in Japanese?"
+  },
+  {
+    "correctAnswer": "いいえ、違います",    
+    "options": ["いいえ、違います", "ありがとう[ございます]", "そうですか", "どうぞ"], 
+    "question": "What is 'No, it isn't / You are wrong' in Japanese?"
+  },
+  {
+    "correctAnswer": "あっ！",    
+    "options": ["あっ！", "ありがとう[ございます]", "そうですか", "いいえ、違います"], 
+    "question": "What is 'Oh! (used when becoming aware of something)' in Japanese?"
+  },
+  {
+    "correctAnswer": "どうぞよろしくお願いいたします",    
+    "options": ["どうぞよろしくお願いいたします", "こちらこそよろしくお願いいたします", "ありがとう[ございます]", "いいえ、違います"], 
+    "question": "What is 'Thank you in advance for your kindness' in Japanese?"
+  },
+  {
+    "correctAnswer": "こちらこそよろしくお願いいたします",    
+    "options": ["こちらこそよろしくお願いいたします", "どうぞよろしくお願いいたします", "ありがとう[ございます]", "いいえ、違います"], 
+    "question": "What is 'Please to meet you, too (response to)' in Japanese?"
+  },
+  {
+    "correctAnswer": "ここ",
+    "options": ["ここ", "そこ", "あそこ", "どこ"],
+    "question": "What is 'here, this place' in Japanese?"
+  },
+  {
+    "correctAnswer": "そちら",
+    "options": ["こちら", "あちら", "ここ", "そちら"],
+    "question": "What is 'there, that place near the listener (polite equivalent)' in Japanese?"
+  },
+  {
+    "correctAnswer": "あそこ",
+    "options": ["あそこ", "ここ", "どこ", "そこ"],
+    "question": "What is 'that place over there' in Japanese?"
+  },
+  {
+    "correctAnswer": "どこ",
+    "options": ["そこ", "ここ", "あちら", "どこ"],
+    "question": "What is 'where, what place' in Japanese?"
+  },
+  {
+    "correctAnswer": "かいぎしつ",
+    "options": ["かいぎしつ", "じむしょ", "かいしゃ", "ここ"],
+    "question": "What is 'conference room, meeting room' in Japanese?"
+  },
+  {
+    "correctAnswer": "トイレ",
+    "options": ["トイレ", "かいだん", "へや", "ろうか"],
+    "question": "What is 'toilet, rest room' in Japanese?"
+  },
+  {
+    "correctAnswer": "くつ",
+    "options": ["くつ", "かいしゃ", "くに", "ネクタイ"],
+    "question": "What is 'shoes' in Japanese?"
+  },
+  {
+    "correctAnswer": "べつみせ",
+    "options": ["べつみせ", "ちか", "かいしゃ", "いえ"],
+    "question": "What is 'different store' in Japanese?"
+  },
+  {
+    "correctAnswer": "イタリア",
+    "options": ["フランス", "イタリア", "スイス", "ジャカルタ"],
+    "question": "What is 'Italy' in Japanese?"
+  },
+  {
+    "correctAnswer": "ネクタイ",
+    "options": ["ネクタイ", "くつ", "ワイン", "でんわ"],
+    "question": "What is 'tie, necktie' in Japanese?"
+  },
+  {
+    "correctAnswer": "なんば",
+    "options": ["なんば", "ちか", "あそこ", "どこ"],
+    "question": "What is 'name of a station in Osaka' in Japanese?"
+  },
+  {
+    "question": "What is 'get up, wake up' in Japanese?",
+    "options": ["おきる", "ねる", "はたらく", "よる"],
+    "correct_answer": "おきる"
+  },
+  {
+    "question": "What is 'sleep, go to bed' in Japanese?",
+    "options": ["おきる", "ねる", "はたらく", "よる"],
+    "correct_answer": "ねる"
+  },
+  {
+    "question": "What is 'work' in Japanese?",
+    "options": ["おきる", "ねる", "はたらく", "よる"],
+    "correct_answer": "はたらく"
+  },
+  {
+    "question": "What is 'take a rest, take a holiday' in Japanese?",
+    "options": ["おきる", "ねる", "はたらく", "よる"],
+    "correct_answer": "やすむ"
+  },
+  {
+    "question": "What is 'study' in Japanese?",
+    "options": ["おきる", "ねる", "はたらく", "よる"],
+    "correct_answer": "べんきょうする"
+  },
+  {
+    "question": "What is 'finish' in Japanese?",
+    "options": ["おきる", "ねる", "はたらく", "よる"],
+    "correct_answer": "おわる"
+  },
+  {
+    "question": "What is 'department store' in Japanese?",
+    "options": ["でぱーと", "さんく", "びじゅつかん", "いま"],
+    "correct_answer": "でぱーと"
+  },
+  {
+    "question": "What is 'sank' in Japanese?",
+    "options": ["でぱーと", "さんく", "びじゅつかん", "いま"],
+    "correct_answer": "さんく"
+  },
+  {
+    "question": "What is 'art museum, art gallery' in Japanese?",
+    "options": ["でぱーと", "さんく", "びじゅつかん", "いま"],
+    "correct_answer": "びじゅつかん"
+  },
+  {
+    "question": "What is 'now' in Japanese?",
+    "options": ["でぱーと", "さんく", "びじゅつかん", "いま"],
+    "correct_answer": "いま"
+  },
+  {
+    "question": "What is '- o'clock' in Japanese?",
+    "options": ["〜じ", "ゆうびんきょく", "としょかん", "ひる"],
+    "correct_answer": "〜じ"
+  },
+  {
+    "question": "What is 'post office' in Japanese?",
+    "options": ["〜じ", "ゆうびんきょく", "としょかん", "ひる"],
+    "correct_answer": "ゆうびんきょく"
+  },
+  {
+    "question": "What is 'library' in Japanese?",
+    "options": ["〜じ", "ゆうびんきょく", "としょかん", "ひる"],
+    "correct_answer": "としょかん"
+  },
+  {
+    "question": "What is '-minute' in Japanese?",
+    "options": ["〜ぷん", "ほーる", "かいぎ", "しけん"],
+    "correct_answer": "〜ぷん"
+  },
+  {
+    "question": "What is 'hall' in Japanese?",
+    "options": ["〜ぷん", "ほーる", "かいぎ", "しけん"],
+    "correct_answer": "ほーる"
+  },
+  {
+    "question": "What is 'examination, test' in Japanese?",
+    "options": ["〜ぷん", "ほーる", "かいぎ", "しけん"],
+    "correct_answer": "しけん"
+  },
+  {
+    "question": "What is 'what time' in Japanese?",
+    "options": ["なんじ", "ひるやすみ", "かいぎ", "しけん"],
+    "correct_answer": "なんじ"
+  },
+  {
+    "question": "What is 'what minute' in Japanese?",
+    "options": ["なんぷん", "ひるやすみ", "かいぎ", "しけん"],
+    "correct_answer": "なんぷん"
+  },
+  {
+    "question": "What is 'a.m., morning' in Japanese?",
+    "options": ["ごぜん", "ごご", "よる", "きょう"],
+    "correct_answer": "ごぜん"
+  },
+  {
+    "question": "What is 'p.m., afternoon' in Japanese?",
+    "options": ["ごぜん", "ごご", "よる", "きょう"],
+    "correct_answer": "ごご"
+  },
+  {
+    "question": "What is 'night, evening' in Japanese?",
+    "options": ["ごぜん", "ごご", "よる", "きょう"],
+    "correct_answer": "よる"
+  },
+  {
+    "question": "What is 'the day before yesterday' in Japanese?",
+    "options": ["おととい", "きのう", "きょう", "あした"],
+    "correct_answer": "おととい"
+  },
+  {
+    "question": "What is 'yesterday' in Japanese?",
+    "options": ["おととい", "きのう", "きょう", "あした"],
+    "correct_answer": "きのう"
+  },
+  {
+    "question": "What is 'today' in Japanese?",
+    "options": ["おととい", "きのう", "きょう", "あした"],
+    "correct_answer": "きょう"
+  },
+  {
+    "question": "What is 'tomorrow' in Japanese?",
+    "options": ["おととい", "きのう", "きょう", "あした"],
+    "correct_answer": "あした"
+  },
+  {
+    "question": "What is 'the day after tomorrow' in Japanese?",
+    "options": ["あさって", "あした", "きのう", "きょう"],
+    "correct_answer": "あさって"
+  },
+  {
+    "question": "What is 'this morning' in Japanese?",
+    "options": ["けさ", "こんばん", "こんや", "あさって"],
+    "correct_answer": "けさ"
+  },
+  {
+    "question": "What is 'this evening, tonight' in Japanese?",
+    "options": ["けさ", "こんばん", "こんや", "あさって"],
+    "correct_answer": "こんばん"
+  },
+  {
+    "question": "What is 'rest, a holiday, a day off' in Japanese?",
+    "options": ["やすみ", "ひるやすみ", "まいあさ", "しけん"],
+    "correct_answer": "やすみ"
+  },
+  {
+    "question": "What is 'lunchtime' in Japanese?",
+    "options": ["やすみ", "ひるやすみ", "まいあさ", "しけん"],
+    "correct_answer": "ひるやすみ"
+  },
+  {
+    "question": "What is 'morning' in Japanese?",
+    "options": ["あさ", "よる", "ひる", "こんや"],
+    "correct_answer": "あさ"
+  },
+  {
+    "question": "What is 'daytime, noon' in Japanese?",
+    "options": ["あさ", "よる", "ひる", "こんや"],
+    "correct_answer": "ひる"
+  },
+  {
+    "question": "What is 'examination, test' in Japanese?",
+    "options": ["しけん", "かいぎ", "えいが", "しゃしん"],
+    "correct_answer": "しけん"
+  },
+  {
+    "question": "What is 'meeting, conference' in Japanese?",
+    "options": ["しけん", "かいぎ", "えいが", "しゃしん"],
+    "correct_answer": "かいぎ"
+  },
+  {
+    "question": "What is 'film, movie' in Japanese?",
+    "options": ["しけん", "かいぎ", "えいが", "しゃしん"],
+    "correct_answer": "えいが"
+  },
+  {
+    "question": "What is 'every morning' in Japanese?",
+    "options": ["まいあさ", "まいばん", "まいにち", "けさ"],
+    "correct_answer": "まいあさ"
+  },
+  {
+    "question": "What is 'every night' in Japanese?",
+    "options": ["まいあさ", "まいばん", "まいにち", "けさ"],
+    "correct_answer": "まいばん"
+  },
+  {
+    "question": "What is 'every day' in Japanese?",
+    "options": ["まいあさ", "まいばん", "まいにち", "けさ"],
+    "correct_answer": "まいにち"
+  },
+  {
+    "question": "What is 'Monday' in Japanese?",
+    "options": ["げつようび", "かようび", "すいようび", "もくようび"],
+    "correct_answer": "げつようび"
+  },
+  {
+    "question": "What is 'Tuesday' in Japanese?",
+    "options": ["げつようび", "かようび", "すいようび", "もくようび"],
+    "correct_answer": "かようび"
+  },
+  {
+    "question": "What is 'Wednesday' in Japanese?",
+    "options": ["げつようび", "かようび", "すいようび", "もくようび"],
+    "correct_answer": "すいようび"
+  },
+  {
+    "question": "What is 'Thursday' in Japanese?",
+    "options": ["げつようび", "かようび", "すいようび", "もくようび"],
+    "correct_answer": "もくようび"
+  },
+  {
+    "question": "What is 'Friday' in Japanese?",
+    "options": ["げつようび", "かようび", "すいようび", "もくようび"],
+    "correct_answer": "きんようび"
+  },
+  {
+    "question": "What is 'Saturday' in Japanese?",
+    "options": ["げつようび", "かようび", "すいようび", "もくようび"],
+    "correct_answer": "どようび"
+  },
+  {
+    "question": "What is 'Sunday' in Japanese?",
+    "options": ["げつようび", "かようび", "すいようび", "もくようび"],
+    "correct_answer": "にちようび"
+  },
+  {
+    "question": "What is 'what day of the week' in Japanese?",
+    "options": ["なんようび", "ばんごう", "なんばん", "と"],
+    "correct_answer": "なんようび"
+  },
+  {
+    "question": "What is 'from~ up to until~' in Japanese?",
+    "options": ["から~まで", "と", "たいへんですね", "ばんごう"],
+    "correct_answer": "から~まで"
+  },
+  {
+    "question": "What is 'and' in Japanese?",
+    "options": ["から~まで", "と", "たいへんですね", "ばんごう"],
+    "correct_answer": "と"
+  },
+  {
+    "question": "What is 'That's tough, isn't it?' in Japanese?",
+    "options": ["から~まで", "と", "たいへんですね", "ばんごう"],
+    "correct_answer": "たいへんですね"
+  },
+  {
+    "question": "What is 'number' in Japanese?",
+    "options": ["から~まで", "と", "たいへんですね", "ばんごう"],
+    "correct_answer": "ばんごう"
+  },
+  {
+    "question": "What is 'what number' in Japanese?",
+    "options": ["なんばん", "なんようび", "なんぷん", "ばんごう"],
+    "correct_answer": "なんばん"
+  },
+  {
+    "question": "What is 'New York' in Japanese?",
+    "options": ["ニューヨーク", "ぺきん", "ロサンゼルス", "ロンドン"],
+    "correct_answer": "ニューヨーク"
+  },
+  {
+    "question": "What is 'Beijing (北京)' in Japanese?",
+    "options": ["ニューヨーク", "ぺきん", "ロサンゼルス", "ロンドン"],
+    "correct_answer": "ぺきん"
+  },
+  {
+    "question": "What is 'Los Angeles' in Japanese?",
+    "options": ["ニューヨーク", "ぺきん", "ロサンゼルス", "ロンドン"],
+    "correct_answer": "ロサンゼルス"
+  },
+  {
+    "question": "What is 'London' in Japanese?",
+    "options": ["ニューヨーク", "ぺきん", "ロサンゼルス", "ロンドン"],
+    "correct_answer": "ロンドン"
+  },
+  {
+    "question": "What is 'a fictitious Japanese restaurant' in Japanese?",
+    "options": ["まるまる", "ぼんくら", "もしゃもしゃ", "ぐるぐる"],
+    "correct_answer": "まるまる"
+  },
+  {
+    "question": "What is 'a fictitious bank' in Japanese?",
+    "options": ["まるまる", "ぼんくら", "もしゃもしゃ", "ぐるぐる"],
+    "correct_answer": "ぼんくら"
+  },
+  {
+    "question": "What is 'a fictitious library' in Japanese?",
+    "options": ["まるまる", "ぼんくら", "もしゃもしゃ", "ぐるぐる"],
+    "correct_answer": "もしゃもしゃ"
+  },
+  {
+    "question": "What is 'a fictitious art gallery' in Japanese?",
+    "options": ["まるまる", "ぼんくら", "もしゃもしゃ", "ぐるぐる"],
+    "correct_answer": "ぐるぐる"
+  },
+  {
+    "question": "What is 'go' in Japanese?",
+    "options": ["いく", "くる", "かえる", "かぞく"],
+    "correct_answer": "いく"
+  },
+  {
+    "question": "What is 'COME' in Japanese?",
+    "options": ["いく", "くる", "かえる", "かぞく"],
+    "correct_answer": "くる"
+  },
+  {
+    "question": "What is 'go home, return' in Japanese?",
+    "options": ["いく", "くる", "かえる", "かぞく"],
+    "correct_answer": "かえる"
+  },
+  {
+    "question": "What is 'school' in Japanese?",
+    "options": ["がっこう", "すーぱーまーけっと", "えき", "ひこうき"],
+    "correct_answer": "がっこう"
+  },
+  {
+    "question": "What is 'supermarket' in Japanese?",
+    "options": ["がっこう", "すーぱーまーけっと", "えき", "ひこうき"],
+    "correct_answer": "すーぱーまーけっと"
+  },
+  {
+    "question": "What is 'station' in Japanese?",
+    "options": ["がっこう", "すーぱーまーけっと", "えき", "ひこうき"],
+    "correct_answer": "えき"
+  },
+  {
+    "question": "What is 'aeroplane, airplane' in Japanese?",
+    "options": ["がっこう", "すーぱーまーけっと", "えき", "ひこうき"],
+    "correct_answer": "ひこうき"
+  },
+  {
+    "question": "What is 'ship' in Japanese?",
+    "options": ["ふね", "でんしゃ", "ちかてつ", "しんかんせん"],
+    "correct_answer": "ふね"
+  },
+  {
+    "question": "What is 'electric train' in Japanese?",
+    "options": ["ふね", "でんしゃ", "ちかてつ", "しんかんせん"],
+    "correct_answer": "でんしゃ"
+  },
+  {
+    "question": "What is 'underground, subway' in Japanese?",
+    "options": ["ふね", "でんしゃ", "ちかてつ", "しんかんせん"],
+    "correct_answer": "ちかてつ"
+  },
+  {
+    "question": "What is 'the Shinkansen, the bullet train' in Japanese?",
+    "options": ["ふね", "でんしゃ", "ちかてつ", "しんかんせん"],
+    "correct_answer": "しんかんせん"
+  },
+  {
+    "question": "What is 'bus' in Japanese?",
+    "options": ["バス", "じてんしゃ", "あるいて", "ひと"],
+    "correct_answer": "バス"
+  },
+  {
+    "question": "What is 'bicycle' in Japanese?",
+    "options": ["バス", "じてんしゃ", "あるいて", "ひと"],
+    "correct_answer": "じてんしゃ"
+  },
+  {
+    "question": "What is 'on foot' in Japanese?",
+    "options": ["バス", "じてんしゃ", "あるいて", "ひと"],
+    "correct_answer": "あるいて"
+  },
+  {
+    "question": "What is 'person, people' in Japanese?",
+    "options": ["ひと", "ともだち", "かれ", "かのじょ"],
+    "correct_answer": "ひと"
+  },
+  {
+    "question": "What is 'friend' in Japanese?",
+    "options": ["ひと", "ともだち", "かれ", "かのじょ"],
+    "correct_answer": "ともだち"
+  },
+  {
+    "question": "What is 'he, boyfriend, lover' in Japanese?",
+    "options": ["ひと", "ともだち", "かれ", "かのじょ"],
+    "correct_answer": "かれ"
+  },
+  {
+    "question": "What is 'she, girlfriend, lover' in Japanese?",
+    "options": ["ひと", "ともだち", "かれ", "かのじょ"],
+    "correct_answer": "かのじょ"
+  },
+  {
+    "question": "What is 'family' in Japanese?",
+    "options": ["かぞく", "ひとり", "せんしゅう", "こんしゅう"],
+    "correct_answer": "かぞく"
+  },
+  {
+    "question": "What is 'alone, by oneself' in Japanese?",
+    "options": ["かぞく", "ひとり", "せんしゅう", "こんしゅう"],
+    "correct_answer": "ひとり"
+  },
+  {
+    "question": "What is 'last week' in Japanese?",
+    "options": ["かぞく", "ひとり", "せんしゅう", "こんしゅう"],
+    "correct_answer": "せんしゅう"
+  },
+  {
+    "question": "What is 'this week' in Japanese?",
+    "options": ["かぞく", "ひとり", "せんしゅう", "こんしゅう"],
+    "correct_answer": "こんしゅう"
+  },
+  {
+    "question": "What is 'next week' in Japanese?",
+    "options": ["かぞく", "ひとり", "せんしゅう", "こんしゅう"],
+    "correct_answer": "らいしゅう"
+  },
+  {
+    "question": "What is 'last month' in Japanese?",
+    "options": ["せんげつ", "こんげつ", "らいげつ", "きょねん"],
+    "correct_answer": "せんげつ"
+  },
+  {
+    "question": "What is 'this month' in Japanese?",
+    "options": ["せんげつ", "こんげつ", "らいげつ", "きょねん"],
+    "correct_answer": "こんげつ"
+  },
+  {
+    "question": "What is 'next month' in Japanese?",
+    "options": ["せんげつ", "こんげつ", "らいげつ", "きょねん"],
+    "correct_answer": "らいげつ"
+  },
+  {
+    "question": "What is 'last year' in Japanese?",
+    "options": ["せんげつ", "こんげつ", "らいげつ", "きょねん"],
+    "correct_answer": "きょねん"
+  },
+  {
+    "question": "What is 'this year' in Japanese?",
+    "options": ["せんげつ", "こんげつ", "らいげつ", "きょねん"],
+    "correct_answer": "ことし"
+  },
+  {
+    "question": "What is 'next year' in Japanese?",
+    "options": ["せんげつ", "こんげつ", "らいげつ", "きょねん"],
+    "correct_answer": "らいねん"
+  },
+  {
+    "question": "What is '-th year' in Japanese?",
+    "options": ["せんげつ", "こんげつ", "らいげつ", "〜ねん"],
+    "correct_answer": "〜ねん"
+  },
+  {
+    "question": "What is 'what year' in Japanese?",
+    "options": ["なんねん", "〜ねん", "〜がつ", "なんがつ"],
+    "correct_answer": "なんねん"
+  },
+  {
+    "question": "What is 'th month of the year' in Japanese?",
+    "options": ["なんねん", "〜ねん", "〜がつ", "なんがつ"],
+    "correct_answer": "〜がつ"
+  },
+  {
+    "question": "What is 'what month' in Japanese?",
+    "options": ["なんねん", "〜ねん", "〜がつ", "なんがつ"],
+    "correct_answer": "なんがつ"
+  },
+  {
+    "question": "What is 'first day of the month' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "ついたち"
+  },
+  {
+    "question": "What is 'second, two days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "ふつか"
+  },
+  {
+    "question": "What is 'third, three days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "みっか"
+  },
+  {
+    "question": "What is 'fourth, four days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "よっか"
+  },
+  {
+    "question": "What is 'fifth, five days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "いつか"
+  },
+  {
+    "question": "What is 'sixth, six days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "むいか"
+  },
+  {
+    "question": "What is 'seventh, seven days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "なのか"
+  },
+  {
+    "question": "What is 'eighth, eight days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "ようか"
+  },
+  {
+    "question": "What is 'ninth, nine days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "ここのか"
+  },
+  {
+    "question": "What is 'tenth, ten days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "とおか"
+  },
+  {
+    "question": "What is 'fourteenth, fourteen days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "じゅうよっか"
+  },
+  {
+    "question": "What is 'twentieth, twenty days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "はつか"
+  },
+  {
+    "question": "What is 'twenty-fourth, twenty-four days' in Japanese?",
+    "options": ["ついたち", "ふつか", "みっか", "よっか"],
+    "correct_answer": "にじゅうよっか"
+  },
+  {
+    "question": "What is '-th day of the month, - day (s)' in Japanese?",
+    "options": ["〜にち", "〜がつ", "なんにち", "なんがつ"],
+    "correct_answer": "〜にち"
+  },
+  {
+    "question": "What is 'which day of the month' in Japanese?",
+    "options": ["〜にち", "〜がつ", "なんにち", "なんがつ"],
+    "correct_answer": "なんにち"
+  },
+  {
+    "question": "What is 'how many days' in Japanese?",
+    "options": ["〜にち", "〜がつ", "なんにち", "なんがつ"],
+    "correct_answer": "なんにち"
+  },
+  {
+    "question": "What is 'when' in Japanese?",
+    "options": ["いつ", "なんにち", "なんがつ", "いま"],
+    "correct_answer": "いつ"
+  },
+  {
+    "question": "What is 'birthday' in Japanese?",
+    "options": ["いつ", "なんにち", "たんじょうび", "いま"],
+    "correct_answer": "たんじょうび"
+  },
+  {
+    "question": "What is 'Yes, it is.' in Japanese?",
+    "options": ["いつ", "はい、そうです。", "たんじょうび", "いま"],
+    "correct_answer": "はい、そうです。"
+  },
+  {
+    "question": "What is 'Thank you very much.' in Japanese?",
+    "options": ["どうもありがとうございます。", "はい、そうです。", "たんじょうび", "いま"],
+    "correct_answer": "どうもありがとうございます。"
+  },
+  {
+    "question": "What is 'You're welcome./Don't mention it.' in Japanese?",
+    "options": ["どういたしまして。", "はい、そうです。", "たんじょうび", "いま"],
+    "correct_answer": "どういたしまして。"
+  },
+  {
+    "question": "What is 'platform, -th platform' in Japanese?",
+    "options": ["はんばん", "つぎ", "きんかん", "くるま"],
+    "correct_answer": "はんばん"
+  },
+  {
+    "question": "What is 'next' in Japanese?",
+    "options": ["はんばん", "つぎ", "きんかん", "くるま"],
+    "correct_answer": "つぎ"
+  },
+  {
+    "question": "What is 'rapid' in Japanese?",
+    "options": ["はんばん", "つぎ", "きんかん", "くるま"],
+    "correct_answer": "きんかん"
+  },
+  {
+    "question": "What is 'local (train)' in Japanese?",
+    "options": ["はんばん", "つぎ", "きんかん", "くるま"],
+    "correct_answer": "ふたば"
+  },
+  {
+    "question": "What is 'express' in Japanese?",
+    "options": ["はんばん", "つぎ", "きんかん", "くるま"],
+    "correct_answer": "きゅうこう"
+  },
+  {
+    "question": "What is 'name of a town near Osaka' in Japanese?",
+    "options": ["きし", "おおさかじょう", "きょと", "きょと"],
+    "correct_answer": "きし"
+  },
+  {
+    "question": "What is 'Osaka Castle, a famous castle in Osaka' in Japanese?",
+    "options": ["きし", "おおさかじょう", "きょと", "きょと"],
+    "correct_answer": "おおさかじょう"
+  },
+  {
+    "question": "What is 'eat' in Japanese?",
+    "options": ["のむ", "たべる", "すう", "よむ"],
+    "correct_answer": "たべる"
+  },
+  {
+    "question": "What is 'beer' in Japanese?",
+    "options": ["ぎゅうにゅう", "さけ", "ビール", "ジュース"],
+    "correct_answer": "ビール"
+  },
+  {
+    "question": "What is 'alcohol, Japanese rice wine' in Japanese?",
+    "options": ["みず", "さけ", "ぎゅうにゅう", "こうちゃ"],
+    "correct_answer": "さけ"
+  },
+  {
+    "question": "What is 'milk' in Japanese?",
+    "options": ["ジュース", "たまご", "ぎゅうにゅう", "パン"],
+    "correct_answer": "ぎゅうにゅう"
+  },
+  {
+    "question": "What is 'juice' in Japanese?",
+    "options": ["みず", "パン", "ジュース", "さけ"],
+    "correct_answer": "ジュース"
+  },
+  {
+    "question": "What is 'water' in Japanese?",
+    "options": ["ごはん", "くだもの", "みず", "やさい"],
+    "correct_answer": "みず"
+  },
+  {
+    "question": "What is 'fruit' in Japanese?",
+    "options": ["くだもの", "ひるごはん", "さかな", "ごはん"],
+    "correct_answer": "くだもの"
+  },
+  {
+    "question": "What is 'lunch' in Japanese?",
+    "options": ["くだもの", "ひるごはん", "さかな", "ごはん"],
+    "correct_answer": "ひるごはん"
+  },
+  {
+    "question": "What is 'do, play' in Japanese?",
+    "options": ["する", "かく", "かう", "よむ"],
+    "correct_answer": "する"
+  },
+  {
+    "question": "What is 'buy' in Japanese?",
+    "options": ["かく", "たべる", "かう", "よむ"],
+    "correct_answer": "かう"
+  },
+  {
+    "question": "What is 'read' in Japanese?",
+    "options": ["よむ", "のむ", "かく", "かう"],
+    "correct_answer": "よむ"
+  },
+  {
+    "question": "What is 'write' in Japanese?",
+    "options": ["よむ", "かく", "のむ", "かう"],
+    "correct_answer": "かく"
+  },
+  {
+    "question": "What is 'hear, listen' in Japanese?",
+    "options": ["かう", "きく", "たべる", "のむ"],
+    "correct_answer": "きく"
+  },
+  {
+    "question": "What is 'drink' in Japanese?",
+    "options": ["かく", "たべる", "よむ", "のむ"],
+    "correct_answer": "のむ"
+  },
+  {
+    "question": "What is 'smoke [a cigarette]' in Japanese?",
+    "options": ["たばこ", "さけ", "パン", "たまご"],
+    "correct_answer": "すう"
+  },
+  {
+    "question": "What is 'see, look at, watch' in Japanese?",
+    "options": ["ぎゅうにゅう", "みる", "くだもの", "こうちゃ"],
+    "correct_answer": "みる"
+  },
+  {
+    "question": "What is 'take [a photograph]' in Japanese?",
+    "options": ["てがみ", "しゃしん", "かく", "とる"],
+    "correct_answer": "とる"
+  },
+  {
+    "question": "What is 'meet [a friend]' in Japanese?",
+    "options": ["あう", "パン", "みず", "さけ"],
+    "correct_answer": "あう"
+  },
+  {
+    "question": "What is 'a meal, cooked rice' in Japanese?",
+    "options": ["たまご", "ごはん", "さかな", "やさい"],
+    "correct_answer": "ごはん"
+  },
+  {
+    "question": "What is 'breakfast' in Japanese?",
+    "options": ["あさごはん", "みず", "さけ", "くだもの"],
+    "correct_answer": "あさごはん"
+  },
+  {
+    "question": "What is 'supper' in Japanese?",
+    "options": ["くだもの", "あさごはん", "さけ", "ゆうはん"],
+    "correct_answer": "ゆうはん"
+  },
+  {
+    "question": "What is 'bread' in Japanese?",
+    "options": ["たまご", "パン", "ごはん", "にく"],
+    "correct_answer": "パン"
+  },
+  {
+    "question": "What is 'egg' in Japanese?",
+    "options": ["たまご", "パン", "ごはん", "にく"],
+    "correct_answer": "たまご"
+  },
+  {
+    "question": "What is 'meat' in Japanese?",
+    "options": ["にく", "パン", "ごはん", "さかな"],
+    "correct_answer": "にく"
+  },
+  {
+    "question": "What is 'fish' in Japanese?",
+    "options": ["にく", "パン", "ごはん", "さかな"],
+    "correct_answer": "さかな"
+  },
+  {
+    "question": "What is 'vegetable' in Japanese?",
+    "options": ["にく", "やさい", "ごはん", "さかな"],
+    "correct_answer": "やさい"
+  },
+  {
+    "question": "What is 'tea, green tea' in Japanese?",
+    "options": ["おちゃ", "こうちゃ", "パン", "たまご"],
+    "correct_answer": "おちゃ"
+  },
+  {
+    "question": "What is 'black tea' in Japanese?",
+    "options": ["おちゃ", "こうちゃ", "パン", "たまご"],
+    "correct_answer": "こうちゃ"
+  },
+  {
+    "question": "What is 'tobacco, cigarette' in Japanese?",
+    "options": ["たばこ", "こうちゃ", "おちゃ", "さけ"],
+    "correct_answer": "たばこ"
+  },
+  {
+    "question": "What is 'letter' in Japanese?",
+    "options": ["てがみ", "しゃしん", "かく", "とる"],
+    "correct_answer": "てがみ"
+  },
+  {
+    "question": "What is 'report' in Japanese?",
+    "options": ["しゃしん", "しゅくだい", "しょくほう", "ビデオ"],
+    "correct_answer": "しょくほう"
+  },
+  {
+    "question": "What is 'photograph' in Japanese?",
+    "options": ["しゅくだい", "しゃしん", "ビデオ", "みせ"],
+    "correct_answer": "しゃしん"
+  },
+  {
+    "question": "What is 'video (tape), video deck' in Japanese?",
+    "options": ["しゃしん", "ビデオ", "みせ", "にわ"],
+    "correct_answer": "ビデオ"
+  },
+  {
+    "question": "What is 'shop, store' in Japanese?",
+    "options": ["みせ", "にわ", "しゅくだい", "テニス"],
+    "correct_answer": "みせ"
+  },
+  {
+    "question": "What is 'garden' in Japanese?",
+    "options": ["みせ", "にわ", "しゅくだい", "テニス"],
+    "correct_answer": "にわ"
+  },
+  {
+    "question": "What is 'homework' in Japanese?",
+    "options": ["みせ", "にわ", "しゅくだい", "テニス"],
+    "correct_answer": "しゅくだい"
+  },
+  {
+    "question": "What is 'tennis' in Japanese?",
+    "options": ["みせ", "にわ", "しゅくだい", "テニス"],
+    "correct_answer": "テニス"
+  },
+  {
+    "question": "What is 'soccer, football' in Japanese?",
+    "options": ["みせ", "にわ", "しゅくだい", "サッカー"],
+    "correct_answer": "サッカー"
+  },
+  {
+    "question": "What is 'cherry-blossom viewing' in Japanese?",
+    "options": ["おはなみ", "しゅくだい", "れすとらん", "こうちゃ"],
+    "correct_answer": "おはなみ"
+  },
+  {
+    "question": "What is 'what together' in Japanese?",
+    "options": ["いっしょになに", "ちょっと", "いつも、たいてい、ときどき", "それから"],
+    "correct_answer": "いっしょになに"
+  },
+  {
+    "question": "What is 'a little while, a little bit' in Japanese?",
+    "options": ["いっしょになに", "ちょっと", "いつも、たいてい、ときどき", "それから"],
+    "correct_answer": "ちょっと"
+  },
+  {
+    "question": "What is 'always, usually sometimes' in Japanese?",
+    "options": ["いっしょになに", "ちょっと", "いつも、たいてい、ときどき", "それから"],
+    "correct_answer": "いつも、たいてい、ときどき"
+  },
+  {
+    "question": "What is 'after that, and then' in Japanese?",
+    "options": ["いっしょになに", "ちょっと", "いつも、たいてい、ときどき", "それから"],
+    "correct_answer": "それから"
+  },
+  {
+    "question": "What is 'That's good. I see' in Japanese?",
+    "options": ["そうですね", "はい、どうしました？", "またあした。", "いつ"],
+    "correct_answer": "そうですね"
+  },
+  {
+    "question": "What is 'Yes? (lit: What is it?)' in Japanese?",
+    "options": ["そうですね", "はい、どうしました？", "またあした。", "いつ"],
+    "correct_answer": "はい、どうしました？"
+  },
+  {
+    "question": "What is 'See you tomorrow).' in Japanese?",
+    "options": ["そうですね", "はい、どうしました？", "またあした。", "いつ"],
+    "correct_answer": "またあした。"
+  },
+  {
+    "question": "What is 'Mexico' in Japanese?",
+    "options": ["メキシコ", "レストラン", "すーぱーまーけっと", "メキシコ"],
+    "correct_answer": "メキシコ"
+  },
+  {
+    "question": "What is 'a fictitious department store' in Japanese?",
+    "options": ["メキシコ", "レストラン", "すーぱーまーけっと", "でぱーと"],
+    "correct_answer": "でぱーと"
+  },
+  {
+    "question": "What is 'a fictitious restaurant' in Japanese?",
+    "options": ["メキシコ", "レストラン", "すーぱーまーけっと", "でぱーと"],
+    "correct_answer": "レストラン"
+  },
+  {
+    "question": "What is 'a fictitious supermarket' in Japanese?",
+    "options": ["メキシコ", "レストラン", "すーぱーまーけっと", "でぱーと"],
+    "correct_answer": "すーぱーまーけっと"
+  },
+  {
+    "question": "What is 'cut, slice' in Japanese?",
+    "options": ["あげる", "きる", "もらう", "かす"],
+    "correct_answer": "きる"
+  },
+  {
+    "question": "What is 'send' in Japanese?",
+    "options": ["おくる", "もらう", "かす", "はし"],
+    "correct_answer": "おくる"
+  },
+  {
+    "question": "What is 'give' in Japanese?",
+    "options": ["あげる", "きる", "もらう", "かす"],
+    "correct_answer": "あげる"
+  },
+  {
+    "question": "What is 'receive' in Japanese?",
+    "options": ["おくる", "もらう", "かす", "はし"],
+    "correct_answer": "もらう"
+  },
+  {
+    "question": "What is 'lend' in Japanese?",
+    "options": ["あげる", "かす", "きる", "おくる"],
+    "correct_answer": "かす"
+  },
+  {
+    "question": "What is 'borrow' in Japanese?",
+    "options": ["おくる", "もらう", "かりる", "きる"],
+    "correct_answer": "かりる"
+  },
+  {
+    "question": "What is 'teach' in Japanese?",
+    "options": ["おしえる", "きる", "もらう", "かす"],
+    "correct_answer": "おしえる"
+  },
+  {
+    "question": "What is 'learn' in Japanese?",
+    "options": ["おくる", "まなぶ", "かりる", "かす"],
+    "correct_answer": "まなぶ"
+  },
+  {
+    "question": "What is 'make [a telephone call]' in Japanese?",
+    "options": ["でんわをする", "おしえる", "まなぶ", "かす"],
+    "correct_answer": "でんわをする"
+  },
+  {
+    "question": "What is 'hand, arm' in Japanese?",
+    "options": ["て", "はし", "さじ", "かす"],
+    "correct_answer": "て"
+  },
+  {
+    "question": "What is 'chopsticks' in Japanese?",
+    "options": ["て", "はし", "さじ", "かす"],
+    "correct_answer": "はし"
+  },
+  {
+    "question": "What is 'spoon' in Japanese?",
+    "options": ["て", "はし", "さじ", "かす"],
+    "correct_answer": "さじ"
+  },
+  {
+    "question": "What is 'knife' in Japanese?",
+    "options": ["ナイフ", "はさみ", "かみ", "かす"],
+    "correct_answer": "ナイフ"
+  },
+  {
+    "question": "What is 'fork' in Japanese?",
+    "options": ["ナイフ", "フォーク", "かみ", "かす"],
+    "correct_answer": "フォーク"
+  },
+  {
+    "question": "What is 'scissors' in Japanese?",
+    "options": ["ホチキス", "はさみ", "かみ", "かす"],
+    "correct_answer": "はさみ"
+  },
+  {
+    "question": "What is 'personal computer' in Japanese?",
+    "options": ["パソコン", "ホチキス", "かみ", "かす"],
+    "correct_answer": "パソコン"
+  },
+  {
+    "question": "What is 'mobile phone, cell phone' in Japanese?",
+    "options": ["パソコン", "かみ", "けいたいでんわ", "かす"],
+    "correct_answer": "けいたいでんわ"
+  },
+  {
+    "question": "What is 'e-mail' in Japanese?",
+    "options": ["パソコン", "かみ", "メール", "かす"],
+    "correct_answer": "メール"
+  },
+  {
+    "question": "What is 'punch' in Japanese?",
+    "options": ["パンチ", "ホチキス", "かみ", "かす"],
+    "correct_answer": "パンチ"
+  },
+  {
+    "question": "What is 'stapler' in Japanese?",
+    "options": ["パンチ", "ホチキス", "かみ", "かす"],
+    "correct_answer": "ホチキス"
+  },
+  {
+    "question": "What is 'tape' in Japanese?",
+    "options": ["テープ", "ホチキス", "かみ", "かす"],
+    "correct_answer": "テープ"
+  },
+  {
+    "question": "What is 'paper' in Japanese?",
+    "options": ["かみ", "ホチキス", "テープ", "かす"],
+    "correct_answer": "かみ"
+  },
+  {
+    "question": "What is 'shirt' in Japanese?",
+    "options": ["シャツ", "かみ", "テープ", "かす"],
+    "correct_answer": "シャツ"
+  },
+  {
+    "question": "What is 'money' in Japanese?",
+    "options": ["おかね", "かみ", "テープ", "かす"],
+    "correct_answer": "おかね"
+  },
+  {
+    "question": "What is 'Christmas' in Japanese?",
+    "options": ["おかね", "かみ", "クリスマス", "かす"],
+    "correct_answer": "クリスマス"
+  },
+  {
+    "question": "What is 'flower, blossom' in Japanese?",
+    "options": ["はな", "おかね", "クリスマス", "かす"],
+    "correct_answer": "はな"
+  },
+  {
+ "question": "What is 'ticket' in Japanese?",
+ "options": ["おかね", "クリスマス", "かす", "きっぷ"],
+ "correct_answer": "きっぷ"
+},
+{
+ "question": "What is 'luggage, baggage, parcel' in Japanese?",
+ "options": ["おかね", "クリスマス", "かす", "にもつ"],
+ "correct_answer": "にもつ"
+},
+{
+ "question": "What is 'New Year's greeting card' in Japanese?",
+ "options": ["おかね", "クリスマス", "かす", "ねんがじょう"],
+ "correct_answer": "ねんがじょう"
+},
+{
+ "question": "What is 'Sellotape, Scotch tape, clear adhesive' in Japanese?",
+ "options": ["おかね", "クリスマス", "かす", "セロハンテープ"],
+ "correct_answer": "セロハンテープ"
+},
+{
+ "question": "What is 'rubber, eraser' in Japanese?",
+ "options": ["おかね", "クリスマス", "かす", "けしゴム"],
+ "correct_answer": "けしゴム"
+},
+{
+ "question": "What is 'present, gift' in Japanese?",
+ "options": ["おかね", "クリスマス", "かす", "プレゼント"],
+ "correct_answer": "プレゼント"
+},
+{
+ "question": "What is '(my) father' in Japanese?",
+ "options": ["おとうさん", "はは", "おかあさん", "ちち"],
+ "correct_answer": "ちち"
+},
+{
+ "question": "What is '(my) mother' in Japanese?",
+ "options": ["ちち", "おとうさん", "おかあさん", "はは"],
+ "correct_answer": "はは"
+},
+{
+ "question": "What is '(someone else's) father (also used to address one's own father)' in Japanese?",
+ "options": ["ちち", "はは", "おかあさん", "おとうさん"],
+ "correct_answer": "おとうさん"
+},
+{
+ "question": "What is '(someone else's) mother (also used to address one's own mother)' in Japanese?",
+ "options": ["ちち", "おとうさん", "はは", "おかあさん"],
+ "correct_answer": "おかあさん"
+},
+{
+ "question": "What is '(already) post form' in Japanese?",
+ "options": ["また", "もう", "なんていい[~]！", "もうこうほう"],
+ "correct_answer": "もうこうほう"
+},
+{
+ "question": "What is '(not yet)' in Japanese?",
+ "options": ["もうこうほう", "もう", "なんていい[~]！", "また"],
+ "correct_answer": "また"
+},
+{
+ "question": "What is 'from now on, soon' in Japanese?",
+ "options": ["もうこうほう", "なんていい[~]！", "また", "もう"],
+ "correct_answer": "もう"
+},
+{
+ "question": "What is 'What a nice [~]!' in Japanese?",
+ "options": ["もうこうほう", "また", "いらっしゃいませ。", "なんていい[~]！"],
+ "correct_answer": "なんていい[~]！"
+},
+{
+ "question": "What is 'How nice of you to come. (lit. Welcome.)' in Japanese?",
+ "options": ["おいでください。", "おじゃまします。", "どうぞ", "いらっしゃいませ。"],
+ "correct_answer": "いらっしゃいませ。"
+},
+{
+ "question": "What is 'Do come in.' in Japanese?",
+ "options": ["いらっしゃいませ。", "おじゃまします。", "どうぞ", "おいでください。"],
+ "correct_answer": "おいでください。"
+},
+{
+ "question": "What is 'May I? (lit. I commit an incivility.)' in Japanese?",
+ "options": ["おいでください。", "いらっしゃいませ。", "どうぞ", "おじゃまします。"],
+ "correct_answer": "おじゃまします。"
+},
+{
+ "question": "What is 'Won't you have [~]?/Would you like to have [~]? (used when offering something)' in Japanese?",
+ "options": ["いただきます。", "おじゃまします。", "いらっしゃいませ。", "どうぞ"],
+ "correct_answer": "どうぞ"
+},
+{
+ "question": "What is 'Thank you./I accept. (said before starting to eat or drink)' in Japanese?",
+ "options": ["どうぞ", "おじゃまします。", "いらっしゃいませ。", "いただきます。"],
+ "correct_answer": "いただきます。"
+},
+{
+ "question": "What is 'That was delicious. (said after eating or drinking)' in Japanese?",
+ "options": ["どうぞ", "おじゃまします。", "いらっしゃいませ。", "ごちそうさまでした。"],
+ "correct_answer": "ごちそうさまでした。"
+},
+{
+ "question": "What is 'Spain' in Japanese?",
+ "options": ["おかね", "クリスマス", "かす", "Supein"],
+ "correct_answer": "Supein"
+},
+{
+ "question": "What is 'handsome' in Japanese?",
+ "options": ["しずか", "にぎやか", "ハンサム", "きれい"],
+ "correct_answer": "ハンサム"
+},
+{
+ "question": "What is 'beautiful, clean' in Japanese?",
+ "options": ["ハンサム", "しずか", "にぎやか", "きれい"],
+ "correct_answer": "きれい"
+},
+{
+ "question": "What is 'quiet' in Japanese?",
+ "options": ["ハンサム", "にぎやか", "きれい", "しずか"],
+ "correct_answer": "しずか"
+},
+{
+ "question": "What is 'lively' in Japanese?",
+ "options": ["ハンサム", "きれい", "しずか", "にぎやか"],
+ "correct_answer": "にぎやか"
+},
+{
+ "question": "What is 'famous' in Japanese?",
+ "options": ["じゆう", "べんり", "すてき", "ゆうめい"],
+ "correct_answer": "ゆうめい"
+},
+{
+ "question": "What is 'free (time)' in Japanese?",
+ "options": ["べんり", "すてき", "ゆうめい", "じゆう"],
+ "correct_answer": "じゆう"
+},
+{
+ "question": "What is 'convenient' in Japanese?",
+ "options": ["すてき", "ゆうめい", "じゆう", "べんり"],
+ "correct_answer": "べんり"
+},
+{
+ "question": "What is 'fine, nice, wonderful' in Japanese?",
+ "options": ["ゆうめい", "じゆう", "べんり", "すてき"],
+ "correct_answer": "すてき"
+},
+{
+ "question": "What is 'big, large' in Japanese?",
+ "options": ["ちいさい", "あたらしい", "いい", "おおきい"],
+ "correct_answer": "おおきい"
+},
+{
+ "question": "What is 'small, little' in Japanese?",
+ "options": ["おおきい", "あたらしい", "いい", "ちいさい"],
+ "correct_answer": "ちいさい"
+},
+{
+ "question": "What is 'new, fresh' in Japanese?",
+ "options": ["いい", "おおきい", "ちいさい", "あたらしい"],
+ "correct_answer": "あたらしい"
+},
+{
+ "question": "What is 'good' in Japanese?",
+ "options": ["あたらしい", "おおきい", "ちいさい", "いい"],
+ "correct_answer": "いい"
+},
+{
+ "question": "What is 'bad' in Japanese?",
+ "options": ["むずかしい", "やさしい", "ひくい", "わるい"],
+ "correct_answer": "わるい"
+},
+{
+ "question": "What is 'hot' in Japanese?",
+ "options": ["むずかしい", "やさしい", "ひくい", "あつい"],
+ "correct_answer": "あつい"
+},
+{
+ "question": "What is 'difficult' in Japanese?",
+ "options": ["やさしい", "ひくい", "あつい", "むずかしい"],
+ "correct_answer": "むずかしい"
+},
+{
+ "question": "What is 'easy' in Japanese?",
+ "options": ["ひくい", "あつい", "むずかしい", "やさしい"],
+ "correct_answer": "やさしい"
+},
+{
+ "question": "What is 'low' in Japanese?",
+ "options": ["たかい", "おもしろい", "いそがしい", "ひくい"],
+ "correct_answer": "ひくい"
+},
+{
+ "question": "What is 'expensive, tall, high' in Japanese?",
+ "options": ["おもしろい", "いそがしい", "ひくい", "たかい"],
+ "correct_answer": "たかい"
+},
+{
+ "question": "What is 'interesting' in Japanese?",
+ "options": ["たかい", "ひくい", "いそがしい", "おもしろい"],
+ "correct_answer": "おもしろい"
+},
+{
+ "question": "What is 'busy' in Japanese?",
+ "options": ["たかい", "ひくい", "おもしろい", "いそがしい"],
+ "correct_answer": "いそがしい"
+},
+{
+ "question": "What is 'white' in Japanese?",
+ "options": ["くろい", "あかい", "あおい", "しろい"],
+ "correct_answer": "しろい"
+},
+{
+ "question": "What is 'black' in Japanese?",
+ "options": ["しろい", "あかい", "あおい", "くろい"],
+ "correct_answer": "くろい"
+},
+{
+ "question": "What is 'red' in Japanese?",
+ "options": ["しろい", "くろい", "あおい", "あかい"],
+ "correct_answer": "あかい"
+},
+{
+ "question": "What is 'blue' in Japanese?",
+ "options": ["しろい", "くろい", "あかい", "あおい"],
+ "correct_answer": "あおい"
+},
+{
+ "question": "What is 'cherry (blossom)' in Japanese?",
+ "options": ["たべもの", "まち", "ていねい", "さくら"],
+ "correct_answer": "さくら"
+},
+{
+ "question": "What is 'food' in Japanese?",
+ "options": ["さくら", "まち", "ていねい", "たべもの"],
+ "correct_answer": "たべもの"
+},
+{
+ "question": "What is 'town, city' in Japanese?",
+ "options": ["さくら", "たべもの", "ていねい", "まち"],
+ "correct_answer": "まち"
+},
+{
+ "question": "What is 'helpful, kind, considerate (not used about one's own family members)' in Japanese?",
+ "options": ["げんき", "けんたい", "はんたい", "ていねい"],
+ "correct_answer": "ていねい"
+},
+{
+ "question": "What is 'healthy, energetic, cheerful' in Japanese?",
+ "options": ["ていねい", "けんたい", "はんたい", "げんき"],
+ "correct_answer": "げんき"
+},
+{
+ "question": "What is 'opposite' in Japanese?",
+ "options": ["げんき", "ていねい", "はんたい", "けんたい"],
+ "correct_answer": "はんたい"
+},
+{
+ "question": "What is 'word' in Japanese?",
+ "options": ["か", "シャンハイ", "きゅうてん", "ことば"],
+ "correct_answer": "ことば"
+},
+{
+ "question": "What is 'old (not used to describe a person's age)' in Japanese?",
+ "options": ["か", "シャンハイ", "きゅうてん", "ふるい"],
+ "correct_answer": "ふるい"
+},
+{
+ "question": "What is 'cold (referring to temperature)' in Japanese?",
+ "options": ["か", "シャンハイ", "きゅうてん", "さむい"],
+ "correct_answer": "さむい"
+},
+{
+ "question": "What is 'cold (referring to touch)' in Japanese?",
+ "options": ["か", "シャンハイ", "きゅうてん", "つめたい"],
+ "correct_answer": "つめたい"
+},
+{
+ "question": "What is 'inexpensive, cheap' in Japanese?",
+ "options": ["か", "シャンハイ", "きゅうてん", "やすい"],
+ "correct_answer": "やすい"
+},
+{
+ "question": "What is 'delicious, tasty' in Japanese?",
+ "options": ["か", "シャンハイ", "きゅうてん", "おいしい"],
+ "correct_answer": "おいしい"
+},
+{
+ "question": "What is 'enjoyable' in Japanese?",
+ "options": ["か", "シャンハイ", "きゅうてん", "たのしい"],
+ "correct_answer": "たのしい"
+},
+{
+ "question": "What is 'mountain' in Japanese?",
+ "options": ["ところ", "きゅうてん", "りょう", "やま"],
+ "correct_answer": "やま"
+},
+{
+ "question": "What is 'place' in Japanese?",
+ "options": ["やま", "きゅうてん", "りょう", "ところ"],
+ "correct_answer": "ところ"
+},
+{
+ "question": "What is 'dormitory (Hostel)' in Japanese?",
+ "options": ["ところ", "きゅうてん", "りょう", "やま"],
+ "correct_answer": "りょう"
+},
+{
+  "question": "What is 'restaurant' in Japanese?",
+  "options": ["ところ", "きゅうてん", "りょう", "レストラン"],
+  "correct_answer": "レストラン"
+},
+{
+  "question": "What is 'life' in Japanese?",
+  "options": ["ところ", "きゅうてん", "りょう", "じんせい"],
+  "correct_answer": "じんせい"
+},
+{
+  "question": "What is 'work, business' in Japanese?",
+  "options": ["ところ", "きゅうてん", "りょう", "しごと"],
+  "correct_answer": "しごと"
+},
+{
+  "question": "What is 'What kind of~' in Japanese?",
+  "options": ["とても", "あまり~ない", "そして", "どんな~"],
+  "correct_answer": "どんな~"
+},
+{
+  "question": "What is 'very' in Japanese?",
+  "options": ["どんな~", "あまり~ない", "そして", "とても"],
+  "correct_answer": "とても"
+},
+{
+  "question": "What is 'not so (used with negatives)' in Japanese?",
+  "options": ["どんな~", "とても", "そして", "あまり~ない"],
+  "correct_answer": "あまり~ない"
+},
+{
+  "question": "What is 'and (used to connect sentences) ~, but ~' in Japanese?",
+  "options": ["どんな~", "とても", "あまり~ない", "そして"],
+  "correct_answer": "そして"
+},
+{
+  "question": "What is 'How are you?' in Japanese?",
+  "options": ["ええと", "もういっぱい", "そろそろしつれいします。", "おげんきですか？"],
+  "correct_answer": "おげんきですか？"
+},
+{
+  "question": "What is 'Well let me see. (pausing)' in Japanese?",
+  "options": ["おげんきですか？", "もういっぱい", "そろそろしつれいします。", "ええと"],
+  "correct_answer": "ええと"
+},
+{
+  "question": "What is 'Won't you have another cup of [~]? No, thank you.' in Japanese?",
+  "options": ["おげんきですか？", "ええと", "そろそろしつれいします。", "もういっぱい"],
+  "correct_answer": "もういっぱい"
+},
+{
+  "question": "What is 'It's already ~[, isn't it?] in Japanese?",
+  "options": ["おげんきですか？", "ええと", "もういっぱい", "もう~ですね？"],
+  "correct_answer": "もう~ですね?"
+},
+{
+  "question": "What is 'It's time I was going.' in Japanese?",
+  "options": ["おげんきですか？", "ええと", "もういっぱい", "そろそろしつれいします。"],
+  "correct_answer": "そろそろしつれいします。"
+},
+{
+  "question": "What is 'Not at all.' in Japanese?",
+  "options": ["おげんきですか？", "ええと", "もういっぱい", "いいえ、どういたしまして。"],
+  "correct_answer": "いいえ、どういたしまして。"
+},
+{
+  "question": "What is 'Please come again.' in Japanese?",
+  "options": ["おげんきですか？", "ええと", "もういっぱい", "またきてください。"],
+  "correct_answer": "またきてください。"
+},
+{
+  "question": "What is 'Shanghai(上海)' in Japanese?",
+  "options": ["きゅうてん", "りょう", "シャンハイ", "Shanghai"],
+  "correct_answer": "シャンハイ"
+},
+{
+  "question": "What is 'Pavilion)' in Japanese?",
+  "options": ["Shanghai", "りょう", "きゅうてん", "シャンハイ"],
+  "correct_answer": "きゅうてん"
+},
+{
+  "question": "What is 'Japan' in Japanese?",
+  "options": ["シャンハイ", "きゅうてん", "りょう", "Nihon"],
+  "correct_answer": "Nihon"
+},
+{
+  "question": "What is 'Kinkakuji Temple (the Golden' in Japanese?",
+  "options": ["シャンハイ", "きゅうてん", "りょう", "きんかくじ"],
+  "correct_answer": "きんかくじ"
+},
+{
+  "question": "What is 'Nara Park' in Japanese?",
+  "options": ["シャンハイ", "きゅうてん", "りょう", "ならこうえん"],
+  "correct_answer": "ならこうえん"
+},
+{
+  "question": "What is 'Mt. Fuji, the highest mountain' in Japanese?",
+  "options": ["シャンハイ", "きゅうてん", "りょう", "ふじさん"],
+  "correct_answer": "ふじさん"
+},
+{
+  "question": "What is ''The Seven Samurai', a classic mov by Akira Kurosawa' in Japanese?",
+  "options": ["シャンハイ", "きゅうてん", "りょう", "しちにんのさむらい"],
+  "correct_answer": "しちにんのさむらい"
+},
+{
+  "question": "What is 'understand' in Japanese?",
+  "options": ["ある", "すき", "きらい", "わかる"],
+  "correct_answer": "わかる"
+},
+{
+  "question": "What is 'have (both Non-living things have & living things)' in Japanese?",
+  "options": ["わかる", "すき", "きらい", "ある"],
+  "correct_answer": "ある"
+},
+{
+  "question": "What is 'like' in Japanese?",
+  "options": ["わかる", "ある", "きらい", "すき"],
+  "correct_answer": "すき"
+},
+{
+  "question": "What is 'dislike' in Japanese?",
+  "options": ["わかる", "ある", "すき", "きらい"],
+  "correct_answer": "きらい"
+},
+{
+  "question": "What is 'good at' in Japanese?",
+  "options": ["へた", "のみもの", "じゅうに", "じょうず"],
+  "correct_answer": "じょうず"
+},
+{
+  "question": "What is 'poor at' in Japanese?",
+  "options": ["じょうず", "のみもの", "じゅうに", "へた"],
+  "correct_answer": "へた"
+},
+{
+  "question": "What is 'drinks' in Japanese?",
+  "options": ["じゅうに", "りょうり", "りょうりします", "のみもの"],
+  "correct_answer": "のみもの"
+},
+{
+  "question": "What is '12' in Japanese?",
+  "options": ["のみもの", "りょうり", "りょうりします", "じゅうに"],
+  "correct_answer": "じゅうに"
+},
+{
+  "question": "What is 'dish (cooked food), cooking' in Japanese?",
+  "options": ["のみもの", "じゅうに", "りょうりします", "りょうり"],
+  "correct_answer": "りょうり"
+},
+{
+  "question": "What is '(〜をします: cook)' in Japanese?",
+  "options": ["のみもの", "じゅうに", "りょうり", "りょうりします"],
+  "correct_answer": "りょうりします"
+},
+{
+  "question": "What is 'sport (〜をします: play sports)' in Japanese?",
+  "options": ["やきゅう", "ダンス", "りょこう", "スポーツ"],
+  "correct_answer": "スポーツ"
+},
+{
+  "question": "What is 'baseball (〜をします: play baseball)' in Japanese?",
+  "options": ["スポーツ", "ダンス", "りょこう", "やきゅう"],
+  "correct_answer": "やきゅう"
+},
+{
+  "question": "What is 'dance (〜をします: dance)' in Japanese?",
+  "options": ["りょこう", "スポーツ", "やきゅう", "ダンス"],
+  "correct_answer": "ダンス"
+},
+{
+  "question": "What is 'trip, tour (〜[を] します: travel, make a trip)' in Japanese?",
+  "options": ["ダンス", "やきゅう", "スポーツ", "りょこう"],
+  "correct_answer": "りょこう"
+},
+{
+  "question": "What is 'music' in Japanese?",
+  "options": ["うた", "きょうげき", "ジャズ", "おんがく"],
+  "correct_answer": "おんがく"
+},
+{
+  "question": "What is 'song' in Japanese?",
+  "options": ["おんがく", "きょうげき", "ジャズ", "うた"],
+  "correct_answer": "うた"
+},
+{
+  "question": "What is 'classical music' in Japanese?",
+  "options": ["おんがく", "うた", "ジャズ", "きょうげき"],
+  "correct_answer": "きょうげき"
+},
+{
+  "question": "What is 'jazz' in Japanese?",
+  "options": ["おんがく", "うた", "きょうげき", "ジャズ"],
+  "correct_answer": "ジャズ"
+},
+{
+  "question": "What is 'concert' in Japanese?",
+  "options": ["かぶき", "え", "もじ", "コンサート"],
+  "correct_answer": "コンサート"
+},
+{
+  "question": "What is 'karaoke' in Japanese?",
+  "options": ["かぶき", "え", "もじ", "カラオケ"],
+  "correct_answer": "カラオケ"
+},
+{
+  "question": "What is 'Kabuki (traditional Japanese musical drama)' in Japanese?",
+  "options": ["え", "もじ", "カラオケ", "かぶき"],
+  "correct_answer": "かぶき"
+},
+{
+  "question": "What is 'picture, drawing' in Japanese?",
+  "options": ["もじ", "かぶき", "かんじ", "え"],
+  "correct_answer": "え"
+},
+{
+  "question": "What is 'letter, character' in Japanese?",
+  "options": ["え", "かぶき", "かんじ", "もじ"],
+  "correct_answer": "もじ"
+},
+{
+  "question": "What is 'Chinese character' in Japanese?",
+  "options": ["え", "もじ", "かぶき", "かんじ"],
+  "correct_answer": "かんじ"
+},
+{
+  "question": "What is 'hiragana script' in Japanese?",
+  "options": ["かんじ", "え", "もじ", "ひらがな"],
+  "correct_answer": "ひらがな"
+},
+{
+  "question": "What is 'katakana script' in Japanese?",
+  "options": ["ひらがな", "え", "もじ", "カタカナ"],
+  "correct_answer": "カタカナ"
+},
+{
+  "question": "What is 'the Roman alphabet' in Japanese?",
+  "options": ["カタカナ", "ひらがな", "もじ", "アルファベット"],
+  "correct_answer": "アルファベット"
+},
+{
+  "question": "What is 'small change' in Japanese?",
+  "options": ["きっぷ", "じかん", "よう", "おつり"],
+  "correct_answer": "おつり"
+},
+{
+  "question": "What is 'ticket' in Japanese?",
+  "options": ["おつり", "じかん", "よう", "きっぷ"],
+  "correct_answer": "きっぷ"
+},
+{
+  "question": "What is 'time' in Japanese?",
+  "options": ["きっぷ", "おつり", "よう", "じかん"],
+  "correct_answer": "じかん"
+},
+{
+  "question": "What is 'something to do, errand' in Japanese?",
+  "options": ["やくそく", "アルバイト", "ごしゅじん", "よう"],
+  "correct_answer": "よう"
+},
+{
+  "question": "What is 'appointment, promise' in Japanese?",
+  "options": ["よう", "アルバイト", "ごしゅじん", "やくそく"],
+  "correct_answer": "やくそく"
+},
+{
+  "question": "What is '(〜 [を] します: promise)' in Japanese?",
+  "options": ["よう", "アルバイト", "ごしゅじん", "やくそくします"],
+  "correct_answer": "やくそくします"
+},
+{
+  "question": "What is 'side job (〜をします: work part-time)' in Japanese?",
+  "options": ["やくそく", "よう", "ごしゅじん", "アルバイト"],
+  "correct_answer": "アルバイト"
+},
+{
+  "question": "What is '(someone else's) husband' in Japanese?",
+  "options": ["しゅじん", "おくさん", "つま", "ごしゅじん"],
+  "correct_answer": "ごしゅじん"
+},
+{
+  "question": "What is '(my) husband' in Japanese?",
+  "options": ["ごしゅじん", "おくさん", "つま", "しゅじん"],
+  "correct_answer": "しゅじん"
+},
+{
+  "question": "What is '(someone else's) wife' in Japanese?",
+  "options": ["しゅじん", "ごしゅじん", "つま", "おくさん"],
+  "correct_answer": "おくさん"
+},
+{
+  "question": "What is '(my) wife' in Japanese?",
+  "options": ["ごしゅじん", "しゅじん", "おくさん", "つま"],
+  "correct_answer": "つま"
+},
+{
+  "question": "What is 'child' in Japanese?",
+  "options": ["だいたい", "たくさん", "おおい", "こども"],
+  "correct_answer": "こども"
+},
+{
+  "question": "What is 'mostly, roughly' in Japanese?",
+  "options": ["すこし", "たくさん", "おおい", "だいたい"],
+  "correct_answer": "だいたい"
+},
+{
+  "question": "What is 'well, much' in Japanese?",
+  "options": ["すこし", "だいたい", "たくさん", "おおい"],
+  "correct_answer": "たくさん"
+},
+{
+  "question": "What is 'many, much & quantity il use)' in Japanese?",
+  "options": ["すこし", "だいたい", "おおい", "たくさん"],
+  "correct_answer": "おおい"
+},
+{
+  "question": "What is 'a little, a few' in Japanese?",
+  "options": ["たくさん", "おおい", "だいたい", "すこし"],
+  "correct_answer": "すこし"
+},
+{
+  "question": "What is 'not at all (used with negatives)' in Japanese?",
+  "options": ["なぜなら ~", "なぜ", "ぜんぜん", "はやい"],
+  "correct_answer": "ぜんぜん"
+},
+{
+  "question": "What is 'early, quickly, fast' in Japanese?",
+  "options": ["ぜんぜん", "なぜなら ~", "なぜ", "はやい"],
+  "correct_answer": "はやい"
+},
+{
+  "question": "What is 'because ~' in Japanese?",
+  "options": ["ぜんぜん", "はやい", "なぜ", "なぜなら ~"],
+  "correct_answer": "なぜなら ~"
+},
+{
+  "question": "What is 'why' in Japanese?",
+  "options": ["はやい", "ぜんぜん", "なぜなら ~", "なぜ"],
+  "correct_answer": "なぜ"
+},
+{
+  "question": "What is 'います' in Japanese?",
+  "options": ["ざんねんですが", "あら", "かしてください", "います"],
+  "correct_answer": "います"
+},
+{
+  "question": "What is 'Please lend (it to me). Sure./Certainly.' in Japanese?",
+  "options": ["ざんねんですが", "あら", "います", "かしてください"],
+  "correct_answer": "かしてください"
+},
+{
+  "question": "What is 'I'm sorry [, but], unfortunately' in Japanese?",
+  "options": ["います", "かしてください", "あら", "ざんねんですが"],
+  "correct_answer": "ざんねんですが"
+},
+{
+  "question": "What is 'oh' in Japanese?",
+  "options": ["います", "かしてください", "ざんねんですが", "あら"],
+  "correct_answer": "あら"
+},
+{
+  "question": "What is 'Won't you join me (us)?' in Japanese?",
+  "options": ["だめですか？", "またこんどきいてください。", "ちょっと~はむずかしいです。", "いっしょにきませんか？"],
+  "correct_answer": "いっしょにきませんか？"
+},
+{
+  "question": "[~] is a bit difficult. (a euphemism used when declining an invitation)",
+  "options": ["いっしょにきませんか？", "だめですか？", "またこんどきいてください。", "ちょっと~はむずかしいです。"],
+  "correct_answer": "ちょっと~はむずかしいです。"
+},
+{
+  "question": "So you can't (come)?' in Japanese?",
+  "options": ["いっしょにきませんか？", "ちょっと~はむずかしいです。", "またこんどきいてください。", "だめですか？"],
+  "correct_answer": "だめですか？"
+},
+{
+  "question": "What is 'Please ask me again some other time. (used when refusing an invitation indirectly, considering someone's feelings)' in Japanese?",
+  "options": ["ちょっと~はむずかしいです。", "だめですか？", "いっしょにきませんか？", "またこんどきいてください。"],
+  "correct_answer": "またこんどきいてください。"
+},
+{
+  "question": "What is 'various' in Japanese?",
+  "options": ["女の子", "赤ちゃん", "男の子", "さまざま"],
+  "correct_answer": "さまざま"
+},
+{
+  "question": "What is 'boy' in Japanese?",
+  "options": ["さまざま", "女の子", "赤ちゃん", "男の子"],
+  "correct_answer": "男の子"
+},
+{
+  "question": "What is 'baby' in Japanese?",
+  "options": ["さまざま", "女の子", "赤ちゃん", "男の子"],
+  "correct_answer": "赤ちゃん"
+},
+{
+  "question": "What is 'girl' in Japanese?",
+  "options": ["赤ちゃん", "男の子", "さまざま", "女の子"],
+  "correct_answer": "女の子"
+},
+{
+  "question": "What is 'cat' in Japanese?",
+  "options": ["もの", "き", "ぞう", "ねこ"],
+  "correct_answer": "ねこ"
+},
+{
+  "question": "What is 'elephant' in Japanese?",
+  "options": ["ねこ", "き", "もの", "ぞう"],
+  "correct_answer": "ぞう"
+},
+{
+  "question": "What is 'tree, wood' in Japanese?",
+  "options": ["ねこ", "ぞう", "もの", "き"],
+  "correct_answer": "き"
+},
+{
+  "question": "What is 'thing' in Japanese?",
+  "options": ["ぞう", "き", "ねこ", "もの"],
+  "correct_answer": "もの"
+},
+{
+  "question": "What is 'battery' in Japanese?",
+  "options": ["テーブル", "スイッチ", "はこ", "でんち"],
+  "correct_answer": "でんち"
+},
+{
+  "question": "What is 'box' in Japanese?",
+  "options": ["スイッチ", "でんち", "テーブル", "はこ"],
+  "correct_answer": "はこ"
+},
+{
+  "question": "What is 'switch' in Japanese?",
+  "options": ["でんち", "はこ", "テーブル", "スイッチ"],
+  "correct_answer": "スイッチ"
+},
+{
+  "question": "What is 'table' in Japanese?",
+  "options": ["はこ", "スイッチ", "でんち", "テーブル"],
+  "correct_answer": "テーブル"
+},
+{
+  "question": "What is 'bed' in Japanese?",
+  "options": ["ドア", "まど", "たな", "ベッド"],
+  "correct_answer": "ベッド"
+},
+{
+  "question": "What is 'shelf' in Japanese?",
+  "options": ["ベッド", "まど", "ドア", "たな"],
+  "correct_answer": "たな"
+},
+{
+  "question": "What is 'window' in Japanese?",
+  "options": ["たな", "ベッド", "ドア", "まど"],
+  "correct_answer": "まど"
+},
+{
+  "question": "What is 'door' in Japanese?",
+  "options": ["まど", "たな", "ベッド", "ドア"],
+  "correct_answer": "ドア"
+},
+{
+  "question": "What is 'building' in Japanese?",
+  "options": ["ATM", "カフェ", "マシン", "たてもの"],
+  "correct_answer": "たてもの"
+},
+{
+  "question": "What is 'Machine)' in Japanese?",
+  "options": ["たてもの", "ATM", "カフェ", "マシン"],
+  "correct_answer": "マシン"
+},
+{
+  "question": "What is 'café, coffee shop' in Japanese?",
+  "options": ["たてもの", "マシン", "ATM", "カフェ"],
+  "correct_answer": "カフェ"
+},
+{
+  "question": "What is '~ shop, ~ store' in Japanese?",
+  "options": ["ATM", "たてもの", "〜てん", "〜店"],
+  "correct_answer": "〜店"
+},
+{
+  "question": "What is 'prefecture' in Japanese?",
+  "options": ["たてもの", "カフェ", "ATM", "けん"],
+  "correct_answer": "けん"
+},
+{
+  "question": "What is 'exist, be (referring to inanimate things)' in Japanese?",
+  "options": ["けん", "ATM", "いる", "ある"],
+  "correct_answer": "ある"
+},
+{
+  "question": "What is 'exist, be (referring to animate things)' in Japanese?",
+  "options": ["ATM", "けん", "ある", "いる"],
+  "correct_answer": "いる"
+},
+{
+  "question": "What is 'refrigerator' in Japanese?",
+  "options": ["コンビニ", "こうえん", "びんぼうぶつ", "れいぞうこ"],
+  "correct_answer": "れいぞうこ"
+},
+{
+  "question": "What is 'postbox, mailbox' in Japanese?",
+  "options": ["れいぞうこ", "こうえん", "コンビニ", "びんぼうぶつ"],
+  "correct_answer": "びんぼうぶつ"
+},
+{
+  "question": "What is 'convenience store' in Japanese?",
+  "options": ["びんぼうぶつ", "れいぞうこ", "こうえん", "コンビニ"],
+  "correct_answer": "コンビニ"
+},
+{
+  "question": "What is 'park' in Japanese?",
+  "options": ["れいぞうこ", "コンビニ", "びんぼうぶつ", "こうえん"],
+  "correct_answer": "こうえん"
+},
+{
+  "question": "What is 'cash machine, ATM (Automatic Teller' in Japanese?",
+  "options": ["コンビニ", "びんぼうぶつ", "こうえん", "ATM"],
+  "correct_answer": "ATM"
+},
+{
+  "question": "What is 'a fixed place to catch taxis, trains, etc.' in Japanese?",
+  "options": ["コンビニ", "ATM", "こうえん", "たくはいば"],
+  "correct_answer": "たくはいば"
+},
+{
+  "question": "What is 'on, above, over' in Japanese?",
+  "options": ["まえ", "うしろ", "した", "うえ"],
+  "correct_answer": "うえ"
+},
+{
+  "question": "What is 'under, below, beneath' in Japanese?",
+  "options": ["うえ", "うしろ", "まえ", "した"],
+  "correct_answer": "した"
+},
+{
+  "question": "What is 'front, before' in Japanese?",
+  "options": ["した", "うしろ", "うえ", "まえ"],
+  "correct_answer": "まえ"
+},
+{
+  "question": "What is 'back, behind' in Japanese?",
+  "options": ["まえ", "した", "うえ", "うしろ"],
+  "correct_answer": "うしろ"
+},
+{
+  "question": "What is 'right [side]' in Japanese?",
+  "options": ["そと", "なか", "ひだり", "みぎ"],
+  "correct_answer": "みぎ"
+},
+{
+  "question": "What is 'left [side]' in Japanese?",
+  "options": ["なか", "そと", "みぎ", "ひだり"],
+  "correct_answer": "ひだり"
+},
+{
+  "question": "What is 'in, inside' in Japanese?",
+  "options": ["ひだり", "みぎ", "そと", "なか"],
+  "correct_answer": "なか"
+},
+{
+  "question": "What is 'outside' in Japanese?",
+  "options": ["みぎ", "なか", "ひだり", "そと"],
+  "correct_answer": "そと"
+},
+{
+  "question": "What is 'next, next door' in Japanese?",
+  "options": ["また", "など", "あいだ", "となり"],
+  "correct_answer": "となり"
+},
+{
+  "question": "What is 'near, vicinity' in Japanese?",
+  "options": ["など", "あいだ", "となり", "ちかく"],
+  "correct_answer": "ちかく"
+},
+{
+  "question": "What is 'between, among' in Japanese?",
+  "options": ["となり", "ちかく", "など", "あいだ"],
+  "correct_answer": "あいだ"
+},
+{
+  "question": "What is '~, ~, and so on' in Japanese?",
+  "options": ["ちかく", "あいだ", "となり", "など"],
+  "correct_answer": "など"
+},
+{
+  "question": "What is 'Thank you.' in Japanese?",
+  "options": ["赤ちゃん", "さまざま", "男の子", "ありがとう。"],
+  "correct_answer": "ありがとう。"
+},
+{
+  "question": "What is 'corner, section' in Japanese?",
+  "options": ["あれ", "かま", "そこ", "かど"],
+  "correct_answer": "かど"
+},
+{
+  "question": "What is 'the bottom' in Japanese?",
+  "options": ["かま", "あれ", "かど", "そこ"],
+  "correct_answer": "そこ"
+},
+{
+  "question": "What is 'Tokyo Disneyland' in Japanese?",
+  "options": ["かま", "そこ", "かど", "東京ディズニーランド"],
+  "correct_answer": "東京ディズニーランド"
+},
+      {
+  "question": "What is 'have [a child]' in Japanese?",
+  "options": ["やすみます", "かかります", "います", "こどもがいます"],
+  "correct_answer": "こどもがいます"
+},
+{
+  "question": "What is 'stay, be [in Japan]' in Japanese?",
+  "options": ["やすみます", "こどもがいます", "かかります", "います"],
+  "correct_answer": "います"
+},
+{
+  "question": "What is 'take, cost (referring to time or money)' in Japanese?",
+  "options": ["やすみます", "います", "こどもがいます", "かかります"],
+  "correct_answer": "かかります"
+},
+{
+  "question": "What is 'take a day off [work]' in Japanese?",
+  "options": ["こどもがいます", "かかります", "います", "やすみます"],
+  "correct_answer": "やすみます"
+},
+{
+  "question": "What is 'one (used when counting things)' in Japanese?",
+  "options": ["よん", "さん", "に", "いち"],
+  "correct_answer": "いち"
+},
+{
+  "question": "What is 'two' in Japanese?",
+  "options": ["さん", "いち", "よん", "に"],
+  "correct_answer": "に"
+},
+{
+  "question": "What is 'three' in Japanese?",
+  "options": ["に", "いち", "よん", "さん"],
+  "correct_answer": "さん"
+},
+{
+  "question": "What is 'four' in Japanese?",
+  "options": ["さん", "いち", "に", "よん"],
+  "correct_answer": "よん"
+},
+{
+  "question": "What is 'five' in Japanese?",
+  "options": ["に", "いち", "ろく", "ご"],
+  "correct_answer": "ご"
+},
+{
+  "question": "What is 'six' in Japanese?",
+  "options": ["いち", "ご", "に", "ろく"],
+  "correct_answer": "ろく"
+},
+{
+  "question": "What is 'seven' in Japanese?",
+  "options": ["に", "いち", "はち", "しち"],
+  "correct_answer": "しち"
+},
+{
+  "question": "What is 'eight' in Japanese?",
+  "options": ["いち", "に", "きゅう", "はち"],
+  "correct_answer": "はち"
+},
+{
+  "question": "What is 'nine' in Japanese?",
+  "options": ["に", "いち", "じゅう", "きゅう"],
+  "correct_answer": "きゅう"
+},
+{
+  "question": "What is 'ten' in Japanese?",
+  "options": ["に", "いち", "じゅう", "さん"],
+  "correct_answer": "じゅう"
+},
+{
+  "question": "What is 'how many' in Japanese?",
+  "options": ["人", "ふたり", "ひとり", "なんこ"],
+  "correct_answer": "なんこ"
+},
+{
+  "question": "What is 'one person' in Japanese?",
+  "options": ["なんこ", "ふたり", "人", "ひとり"],
+  "correct_answer": "ひとり"
+},
+{
+  "question": "What is 'two people' in Japanese?",
+  "options": ["ひとり", "なんこ", "人", "ふたり"],
+  "correct_answer": "ふたり"
+},
+{
+  "question": "What is 'people' in Japanese?",
+  "options": ["なんこ", "ふたり", "ひとり", "人"],
+  "correct_answer": "人"
+},
+{
+  "question": "What is '(counter for machines, cars, etc.)' in Japanese?",
+  "options": ["まい", "かい", "回", "だい"],
+  "correct_answer": "だい"
+},
+{
+  "question": "What is '(counter for paper, stamps, etc.)' in Japanese?",
+  "options": ["だい", "かい", "回", "まい"],
+  "correct_answer": "まい"
+},
+{
+  "question": "What is 'times' in Japanese?",
+  "options": ["だい", "まい", "回", "かい"],
+  "correct_answer": "かい"
+},
+{
+  "question": "What is 'apple' in Japanese?",
+  "options": ["カレー", "サンドイッチ", "みかん", "りんご"],
+  "correct_answer": "りんご"
+},
+{
+  "question": "What is 'mandarin orange' in Japanese?",
+  "options": ["りんご", "サンドイッチ", "カレー", "みかん"],
+  "correct_answer": "みかん"
+},
+{
+  "question": "What is 'sandwich' in Japanese?",
+  "options": ["みかん", "りんご", "カレー", "サンドイッチ"],
+  "correct_answer": "サンドイッチ"
+},
+{
+  "question": "What is 'curry [with rice]' in Japanese?",
+  "options": ["りんご", "みかん", "サンドイッチ", "カレー"],
+  "correct_answer": "カレー"
+},
+{
+  "question": "What is 'ice cream' in Japanese?",
+  "options": ["みかん", "りんご", "サンドイッチ", "アイスクリーム"],
+  "correct_answer": "アイスクリーム"
+},
+{
+  "question": "What is 'postage stamp' in Japanese?",
+  "options": ["両親", "ふうとう", "はがき", "きって"],
+  "correct_answer": "きって"
+},
+{
+  "question": "What is 'postcard' in Japanese?",
+  "options": ["きって", "ふうとう", "両親", "はがき"],
+  "correct_answer": "はがき"
+},
+{
+  "question": "What is 'envelope' in Japanese?",
+  "options": ["はがき", "きって", "両親", "ふうとう"],
+  "correct_answer": "ふうとう"
+},
+{
+  "question": "What is 'parents' in Japanese?",
+  "options": ["きって", "はがき", "ふうとう", "りょうしん"],
+  "correct_answer": "りょうしん"
+},
+{
+  "question": "What is 'brothers and sisters' in Japanese?",
+  "options": ["ふうとう", "りょうしん", "はがき", "きょうだい"],
+  "correct_answer": "きょうだい"
+},
+{
+  "question": "What is '(my) elder brother' in Japanese?",
+  "options": ["いもうと", "おとうと", "あね", "あに"],
+  "correct_answer": "あに"
+},
+{
+  "question": "What is '(someone else's) elder brother' in Japanese?",
+  "options": ["いもうと", "おとうと", "あね", "あに"],
+  "correct_answer": "あに"
+},
+{
+  "question": "What is '(my) elder sister' in Japanese?",
+  "options": ["おとうと", "あに", "いもうと", "あね"],
+  "correct_answer": "あね"
+},
+{
+  "question": "What is '(someone else's) elder sister' in Japanese?",
+  "options": ["おとうと", "あに", "いもうと", "あね"],
+  "correct_answer": "あね"
+},
+{
+  "question": "What is '(my) younger brother' in Japanese?",
+  "options": ["あね", "あに", "いもうと", "おとうと"],
+  "correct_answer": "おとうと"
+},
+{
+  "question": "What is '(someone else's) younger brother' in Japanese?",
+  "options": ["あね", "あに", "いもうと", "おとうと"],
+  "correct_answer": "おとうと"
+},
+{
+  "question": "What is '(my) younger sister' in Japanese?",
+  "options": ["あに", "あね", "おとうと", "いもうと"],
+  "correct_answer": "いもうと"
+},
+{
+  "question": "What is '(someone else's) younger sister' in Japanese?",
+  "options": ["あに", "あね", "おとうと", "いもうと"],
+  "correct_answer": "いもうと"
+},
+{
+  "question": "What is 'foreign country' in Japanese?",
+  "options": ["時間", "クラス", "がくせい", "がいこく"],
+  "correct_answer": "がいこく"
+},
+{
+  "question": "What is 'foreign student' in Japanese?",
+  "options": ["時間", "クラス", "がいこく", "がくせい"],
+  "correct_answer": "がくせい"
+},
+{
+  "question": "What is 'class' in Japanese?",
+  "options": ["時間", "がいこく", "がくせい", "クラス"],
+  "correct_answer": "クラス"
+},
+{
+  "question": "What is 'hour (s)' in Japanese?",
+  "options": ["年", "かげつ", "しゅうかん", "じかん"],
+  "correct_answer": "じかん"
+},
+{
+  "question": "What is 'week(s)' in Japanese?",
+  "options": ["じかん", "かげつ", "年", "しゅうかん"],
+  "correct_answer": "しゅうかん"
+},
+{
+  "question": "What is '-month (s)' in Japanese?",
+  "options": ["しゅうかん", "じかん", "年", "かげつ"],
+  "correct_answer": "かげつ"
+},
+{
+  "question": "What is 'year (s)' in Japanese?",
+  "options": ["かげつ", "じかん", "しゅうかん", "ねん"],
+  "correct_answer": "ねん"
+},
+{
+  "question": "What is 'about ~' in Japanese?",
+  "options": ["みんな", "ぜんぶで", "どのくらい", "だいたい~"],
+  "correct_answer": "だいたい~"
+},
+{
+  "question": "What is 'how long' in Japanese?",
+  "options": ["ぜんぶで", "だいたい~", "みんな", "どのくらい"],
+  "correct_answer": "どのくらい"
+},
+{
+  "question": "What is 'in total' in Japanese?",
+  "options": ["だいたい~", "どのくらい", "みんな", "ぜんぶで"],
+  "correct_answer": "ぜんぶで"
+},
+{
+  "question": "What is 'all, everything, everyone' in Japanese?",
+  "options": ["だけ~", "どのくらい", "ぜんぶで", "みんな"],
+  "correct_answer": "みんな"
+},
+{
+  "question": "What is 'only~' in Japanese?",
+  "options": ["どのくらい", "ぜんぶで", "みんな", "だけ~"],
+  "correct_answer": "だけ~"
+},
+{
+  "question": "What is 'Certainly, (Sir/Madam).' in Japanese?",
+  "options": ["船便", "ひこうびん", "おねがいします", "どうぞ"],
+  "correct_answer": "どうぞ"
+},
+{
+  "question": "What is 'Nice weather, isn't it?' in Japanese?",
+  "options": ["船便", "ひこうびん", "おねがいします", "いいおてんきですね。"],
+  "correct_answer": "いいおてんきですね。"
+},
+{
+  "question": "What is 'Are you going out?' in Japanese?",
+  "options": ["いってらっしゃい。", "ちょっと~にいきます。", "ひこうびん", "でかけますか？"],
+  "correct_answer": "でかけますか？"
+},
+{
+  "question": "What is 'I'm just going to ~.' in Japanese?",
+  "options": ["いってきます。", "でかけますか？", "行ってらっしゃい。", "ちょっと~にいきます。"],
+  "correct_answer": "ちょっと~にいきます。"
+},
+{
+  "question": "What is 'See you later./So long. (lir. Go and come back.)' in Japanese?",
+  "options": ["いってらっしゃい。", "ちょっと~にいきます。", "でかけますか？", "いってきます。"],
+  "correct_answer": "いってきます。"
+},
+{
+  "question": "What is 'See you later./So long. (lit. I'm going and coming back.)' in Japanese?",
+  "options": ["ちょっと~にいきます。", "いってきます。", "でかけますか？", "いってらっしゃい。"],
+  "correct_answer": "いってらっしゃい。"
+},
+{
+  "question": "What is 'sea mail' in Japanese?",
+  "options": ["飛行便", "船便", "ひこうびん", "ふなびん"],
+  "correct_answer": "ふなびん"
+},
+{
+  "question": "What is 'airmail' in Japanese?",
+  "options": ["船便", "ふなびん", "飛行便", "ひこうびん"],
+  "correct_answer": "ひこうびん"
+},
+{
+  "question": "What is 'Please. (lit. ask for a favour)' in Japanese?",
+  "options": ["いいおてんきですね。", "でかけますか？", "ありがとう。", "おねがいします。"],
+  "correct_answer": "おねがいします。"
+},
+{
+  "question": "What is 'an old person' in Japanese?",
+  "options": ["ねこ", "じいさん", "こども", "ばあさん"],
+  "correct_answer": "じいさん"
+},
+{
+  "question": "What is 'an old woman' in Japanese?",
+  "options": ["こども", "じいさん", "ばあさん", "ねこ"],
+  "correct_answer": "ばあさん"
+},
+{
+  "question": "What is 'a child' in Japanese?",
+  "options": ["ばあさん", "じいさん", "こども", "ねこ"],
+  "correct_answer": "こども"
+},
+{
+  "question": "What is 'a cat' in Japanese?",
+  "options": ["じいさん", "こども", "ばあさん", "ねこ"],
+  "correct_answer": "ねこ"
+},
+{
+  "question": "What is 'water' in Japanese?",
+  "options": ["さけ", "お茶", "コーヒー", "みず"],
+  "correct_answer": "みず"
+},
+{
+  "question": "What is 'tea' in Japanese?",
+  "options": ["コーヒー", "みず", "お茶", "さけ"],
+  "correct_answer": "お茶"
+},
+{
+  "question": "What is 'coffee' in Japanese?",
+  "options": ["みず", "お茶", "さけ", "コーヒー"],
+  "correct_answer": "コーヒー"
+},
+{
+  "question": "What is 'sake' in Japanese?",
+  "options": ["お茶", "コーヒー", "みず", "さけ"],
+  "correct_answer": "さけ"
+},
+{
+  "question": "What is 'bread' in Japanese?",
+  "options": ["パン", "ご飯", "スープ", "おかし"],
+  "correct_answer": "パン"
+},
+{
+  "question": "What is 'rice' in Japanese?",
+  "options": ["スープ", "パン", "おかし", "ご飯"],
+  "correct_answer": "ご飯"
+},
+{
+  "question": "What is 'soup' in Japanese?",
+  "options": ["おかし", "ご飯", "パン", "スープ"],
+  "correct_answer": "スープ"
+},
+{
+  "question": "What is 'snack, candy' in Japanese?",
+  "options": ["ご飯", "スープ", "パン", "おかし"],
+  "correct_answer": "おかし"
+},
+{
+  "question": "What is 'meat' in Japanese?",
+  "options": ["にく", "さかな", "やさい", "くだもの"],
+  "correct_answer": "にく"
+},
+{
+  "question": "What is 'fish' in Japanese?",
+  "options": ["やさい", "にく", "くだもの", "さかな"],
+  "correct_answer": "さかな"
+},
+{
+  "question": "What is 'vegetable' in Japanese?",
+  "options": ["くだもの", "にく", "さかな", "やさい"],
+  "correct_answer": "やさい"
+},
+{
+  "question": "What is 'fruit' in Japanese?",
+  "options": ["さかな", "やさい", "にく", "くだもの"],
+  "correct_answer": "くだもの"
+},
+{
+  "question": "What is 'I don't know' in Japanese?",
+  "options": ["わかりません", "いいえ", "はい", "そうですね"],
+  "correct_answer": "わかりません"
+},
+{
+  "question": "What is 'No' in Japanese?",
+  "options": ["はい", "わかりません", "そうですね", "いいえ"],
+  "correct_answer": "いいえ"
+},
+{
+  "question": "What is 'Yes' in Japanese?",
+  "options": ["そうですね", "いいえ", "わかりません", "はい"],
+  "correct_answer": "はい"
+},
+{
+  "question": "What is 'I see' in Japanese?",
+  "options": ["いいえ", "わかりません", "はい", "そうですね"],
+  "correct_answer": "そうですね"
+},
+{
+  "question": "What is 'this/that' in Japanese?",
+  "options": ["あれ", "それ", "ここ", "こちら"],
+  "correct_answer": "それ"
+},
+{
+  "question": "What is 'that over there' in Japanese?",
+  "options": ["ここ", "こちら", "それ", "あれ"],
+  "correct_answer": "あれ"
+},
+{
+  "question": "What is 'here' in Japanese?",
+  "options": ["こちら", "あれ", "それ", "ここ"],
+  "correct_answer": "ここ"
+},
+{
+  "question": "What is 'this way' in Japanese?",
+  "options": ["それ", "ここ", "あれ", "こちら"],
+  "correct_answer": "こちら"
+},
+{
+  "question": "What is 'name' in Japanese?",
+  "options": ["なまえ", "じゅぎょう", "かぞく", "なんさい"],
+  "correct_answer": "なまえ"
+},
+{
+  "question": "What is 'lesson' in Japanese?",
+  "options": ["かぞく", "なんさい", "じゅぎょう", "なまえ"],
+  "correct_answer": "じゅぎょう"
+},
+{
+  "question": "What is 'family' in Japanese?",
+  "options": ["なんさい", "じゅぎょう", "なまえ", "かぞく"],
+  "correct_answer": "かぞく"
+},
+{
+  "question": "What is 'how old' in Japanese?",
+  "options": ["なまえ", "じゅぎょう", "かぞく", "なんさい"],
+  "correct_answer": "なんさい"
+},
+{
+  "question": "What is 'when' in Japanese?",
+  "options": ["どこ", "どんな", "いつ", "どうして"],
+  "correct_answer": "いつ"
+},
+{
+  "question": "What is 'where' in Japanese?",
+  "options": ["どうして", "いつ", "どんな", "どこ"],
+  "correct_answer": "どこ"
+},
+{
+  "question": "What is 'what kind of' in Japanese?",
+  "options": ["いつ", "どこ", "どうして", "どんな"],
+  "correct_answer": "どんな"
+},
+{
+  "question": "What is 'why' in Japanese?",
+  "options": ["どんな", "いつ", "どこ", "どうして"],
+  "correct_answer": "どうして"
+},
+{
+  "question": "What is 'to eat' in Japanese?",
+  "options": ["のむ", "かう", "みる", "たべる"],
+  "correct_answer": "たべる"
+},
+{
+  "question": "What is 'to drink' in Japanese?",
+  "options": ["かう", "みる", "たべる", "のむ"],
+  "correct_answer": "のむ"
+},
+{
+  "question": "What is 'to see, look at' in Japanese?",
+  "options": ["たべる", "のむ", "かう", "みる"],
+  "correct_answer": "みる"
+},
+{
+  "question": "What is 'to buy' in Japanese?",
+  "options": ["のむ", "みる", "たべる", "かう"],
+  "correct_answer": "かう"
+},
+{
+  "question": "What is 'to do/make' in Japanese?",
+  "options": ["する", "くる", "いく", "ある"],
+  "correct_answer": "する"
+},
+{
+  "question": "What is 'to come' in Japanese?",
+  "options": ["ある", "いく", "くる", "する"],
+  "correct_answer": "くる"
+},
+{
+  "question": "What is 'to go' in Japanese?",
+  "options": ["くる", "ある", "する", "いく"],
+  "correct_answer": "いく"
+},
+{
+  "question": "What is 'to exist, be present' in Japanese?",
+  "options": ["する", "いく", "ある", "くる"],
+  "correct_answer": "ある"
+},
+{
+  "question": "What is 'that/those' in Japanese?",
+  "options": ["これ", "それ", "あれ", "どれ"],
+  "correct_answer": "それ"
+},
+{
+  "question": "What is 'this' in Japanese?",
+  "options": ["あれ", "それ", "どれ", "これ"],
+  "correct_answer": "これ"
+},
+{
+  "question": "What is 'which' in Japanese?",
+  "options": ["それ", "これ", "どれ", "あれ"],
+  "correct_answer": "どれ"
+},
+{
+  "question": "What is 'those over there' in Japanese?",
+  "options": ["これ", "どれ", "あれ", "それ"],
+  "correct_answer": "あれ"
+},
+{
+  "question": "What is 'what' in Japanese?",
+  "options": ["どれ", "どこ", "どうして", "なに"],
+  "correct_answer": "なに"
+},
+{
+  "question": "What is 'to be [located]' in Japanese?",
+    "options": ["ある", "いる", "おる", "おる"],
+    "correct_answer": "いる"
+  },
+  {
+    "question": "What is 'to know (facts, information)' in Japanese?",
+    "options": ["しる", "わかる", "みえる", "おもう"],
+    "correct_answer": "しる"
+  },
+  {
+    "question": "What is 'to understand' in Japanese?",
+    "options": ["おもう", "みえる", "わかる", "しる"],
+    "correct_answer": "わかる"
+  },
+  {
+    "question": "What is 'to seem, to look (like)' in Japanese?",
+    "options": ["しる", "わかる", "おもう", "みえる"],
+    "correct_answer": "みえる"
+  },
+  {
+    "question": "What is 'to think, to consider' in Japanese?",
+    "options": ["わかる", "みえる", "しる", "おもう"],
+    "correct_answer": "おもう"
+  },
+  {
+    "question": "What is 'to be able to' in Japanese?",
+    "options": ["できる", "いる", "ある", "みる"],
+    "correct_answer": "できる"
+  },
+  {
+    "question": "What is 'to have, to hold' in Japanese?",
+    "options": ["ある", "いる", "みる", "できる"],
+    "correct_answer": "もつ"
+  },
+  {
+    "question": "What is 'to want, to desire' in Japanese?",
+    "options": ["いる", "ある", "みる", "ほしい"],
+    "correct_answer": "ほしい"
+  },
+  {
+    "question": "What is 'to look for, to search' in Japanese?",
+    "options": ["ある", "みる", "さがす", "ほしい"],
+    "correct_answer": "さがす"
+  },
+  {
+    "question": "What is 'to write' in Japanese?",
+    "options": ["かく", "よむ", "はなす", "きく"],
+    "correct_answer": "かく"
+  },
+  {
+    "question": "What is 'to read' in Japanese?",
+    "options": ["はなす", "きく", "かく", "よむ"],
+    "correct_answer": "よむ"
+  },
+  {
+    "question": "What is 'to speak, to talk' in Japanese?",
+    "options": ["きく", "かく", "はなす", "よむ"],
+    "correct_answer": "はなす"
+  },
+  {
+    "question": "What is 'to listen' in Japanese?",
+    "options": ["かく", "よむ", "はなす", "きく"],
+    "correct_answer": "きく"
+  },
+{
+"question": "What is 'easy, simple' in Japanese?",
+"options": ["かもく", "きたる", "かんたん", "こせん"],
+"correct_answer": "かんたん"
+},
+{
+"question": "What is 'near' in Japanese?",
+"options": ["とおい", "やせる", "ちかい", "かっこいい"],
+"correct_answer": "ちかい"
+},
+{
+"question": "What is 'far' in Japanese?",
+"options": ["やわらかい", "おおい", "とおい", "こまる"],
+"correct_answer": "とおい"
+},
+{
+"question": "What is 'fast, early' in Japanese?",
+"options": ["はやい", "いろいろ", "あまい", "かるい"],
+"correct_answer": "はやい"
+},
+{
+"question": "What is 'slow, late' in Japanese?",
+"options": ["ほしい", "くすい", "おそい", "あつい"],
+"correct_answer": "おそい"
+},
+{
+"question": "What is 'many [people], much' in Japanese?",
+"options": ["すくない", "きれい", "おおい", "あまい"],
+"correct_answer": "おおい"
+},
+{
+"question": "What is 'few [people], a little' in Japanese?",
+"options": ["すくない", "うるさい", "ひろい", "ゆっくり"],
+"correct_answer": "すくない"
+},
+{
+"question": "What is 'warm' in Japanese?",
+"options": ["あたたかい", "ながい", "つめたい", "かわいい"],
+"correct_answer": "あたたかい"
+},
+{
+"question": "What is 'cool' in Japanese?",
+"options": ["すずしい", "ひかる", "たかい", "うまい"],
+"correct_answer": "すずしい"
+},
+{
+"question": "What is 'sweet' in Japanese?",
+"options": ["あまい", "ひろい", "たかい", "おもい"],
+"correct_answer": "あまい"
+},
+{
+"question": "What is 'hot (taste), spicy' in Japanese?",
+"options": ["からい", "さむい", "やわらかい", "うすい"],
+"correct_answer": "からい"
+},
+{
+"question": "What is 'heavy' in Japanese?",
+"options": ["かるい", "あつい", "おもい", "たかい"],
+"correct_answer": "おもい"
+},
+{
+"question": "What is 'light' in Japanese?",
+"options": ["すくない", "つめたい", "あつい", "かるい"],
+"correct_answer": "かるい"
+},
+{
+"question": "What is 'prefer [coffee].' in Japanese?",
+"options": ["こうひをのむ", "りんごをたべる", "みずをのむ", "パンをたべる"],
+"correct_answer": "こうひをのむ"
+},
+{
+"question": "What is 'season' in Japanese?",
+"options": ["てんき", "きせつ", "まつり", "ほかん"],
+"correct_answer": "きせつ"
+},
+{
+"question": "What is 'spring' in Japanese?",
+"options": ["なつ", "ふゆ", "あき", "はる"],
+"correct_answer": "はる"
+},
+{
+"question": "What is 'summer' in Japanese?",
+"options": ["はる", "あき", "ふゆ", "なつ"],
+"correct_answer": "なつ"
+},
+{
+"question": "What is 'autumn, fall' in Japanese?",
+"options": ["はる", "なつ", "あき", "ふゆ"],
+"correct_answer": "あき"
+},
+{
+"question": "What is 'winter' in Japanese?",
+"options": ["なつ", "はる", "あき", "ふゆ"],
+"correct_answer": "ふゆ"
+},
+{
+"question": "What is 'weather' in Japanese?",
+"options": ["いけばな", "うみ", "てんき", "まつり"],
+"correct_answer": "てんき"
+},
+{
+"question": "What is 'rain, rainy' in Japanese?",
+"options": ["ゆき", "くもり", "あめ", "はなし"],
+"correct_answer": "あめ"
+},
+{
+"question": "What is 'snow, snowy' in Japanese?",
+"options": ["ゆき", "くもり", "つめたい", "ひかる"],
+"correct_answer": "ゆき"
+},
+{
+"question": "What is 'cloudy' in Japanese?",
+"options": ["くもり", "はれ", "あめ", "ゆき"],
+"correct_answer": "くもり"
+},
+{
+"question": "What is 'hotel' in Japanese?",
+"options": ["ホテル", "くうこう", "パーティー", "せかい"],
+"correct_answer": "ホテル"
+},
+{
+"question": "What is 'airport' in Japanese?",
+"options": ["せかい", "ホテル", "くうこう", "まつり"],
+"correct_answer": "くうこう"
+},
+{
+"question": "What is 'world' in Japanese?",
+"options": ["まつり", "パーティー", "くうこう", "せかい"],
+"correct_answer": "せかい"
+},
+{
+"question": "What is 'party' in Japanese?",
+"options": ["まつり", "うみ", "パーティー", "ホテル"],
+"correct_answer": "パーティー"
+},
+{
+"question": "What is 'sea, ocean' in Japanese?",
+"options": ["うみ", "まつり", "ゆき", "とり"],
+"correct_answer": "うみ"
+},
+{
+"question": "What is 'festival' in Japanese?",
+"options": ["ホテル", "くうこう", "せかい", "まつり"],
+"correct_answer": "まつり"
+},
+{
+"question": "What is '(~をします: give a party)' in Japanese?",
+"options": ["さしみ", "てんぷら", "パーティーをします", "ぶたにく"],
+"correct_answer": "パーティーをします"
+},
+{
+"question": "What is 'sashimi (sliced raw fish)' in Japanese?",
+"options": ["すし", "てんぷら", "さしみ", "ぎゅうにく"],
+"correct_answer": "さしみ"
+},
+{
+"question": "What is 'sushi (vinegared rice topped with raw fish)' in Japanese?",
+"options": ["さしみ", "てんぷら", "すし", "とりにく"],
+"correct_answer": "すし"
+},
+{
+"question": "What is 'tempura (seafood and vegetables deep fried in batter)' in Japanese?",
+"options": ["すし", "さしみ", "てんぷら", "ぶたにく"],
+"correct_answer": "てんぷら"
+},
+{
+"question": "What is 'pork' in Japanese?",
+"options": ["ぶたにく", "とりにく", "ぎゅうにく", "レモン"],
+"correct_answer": "ぶたにく"
+},
+{
+"question": "What is 'chicken' in Japanese?",
+"options": ["ぎゅうにく", "とりにく", "ぶたにく", "いけばな"],
+"correct_answer": "とりにく"
+},
+{
+"question": "What is 'beef' in Japanese?",
+"options": ["もみじ", "ぶたにく", "とりにく", "ぎゅうにく"],
+"correct_answer": "ぎゅうにく"
+},
+{
+"question": "What is 'lemon' in Japanese?",
+"options": ["もみじ", "いけばな", "レモン", "ぶたにく"],
+"correct_answer": "レモン"
+},
+{
+"question": "What is 'flower arrangement (~をします: practice flower arrangement)' in Japanese?",
+"options": ["いけばな", "もみじ", "とりにく", "パーティーをします"],
+"correct_answer": "いけばな"
+},
+{
+"question": "What is 'maple, red leaves of autumn' in Japanese?",
+"options": ["レモン", "いけばな", "もみじ", "ぶたにく"],
+"correct_answer": "もみじ"
+},
+{
+"question": "What is 'which one (of two things)' in Japanese?",
+"options": ["どちら", "どちらも", "いちばん", "はじめて"],
+"correct_answer": "どちら"
+},
+{
+"question": "What is 'both' in Japanese?",
+"options": ["ずっと", "はじめて", "どちらも", "おかえりなさい"],
+"correct_answer": "どちらも"
+},
+{
+"question": "What is 'the most' in Japanese?",
+"options": ["だれ", "ここ", "どこ", "いちばん"],
+"correct_answer": "いちばん"
+},
+{
+"question": "What is 'by far' in Japanese?",
+"options": ["ずっと", "たくさん", "はれ", "おかげさま"],
+"correct_answer": "ずっと"
+},
+{
+"question": "What is 'for the first time' in Japanese?",
+"options": ["はじめて", "やすい", "ただいま", "おかえりなさい"],
+"correct_answer": "はじめて"
+},
+{
+"question": "What is 'I'm home.' in Japanese?",
+"options": ["たくさん", "ただいま", "まだ", "はじめて"],
+"correct_answer": "ただいま"
+},
+{
+"question": "What is 'Welcome home.' in Japanese?",
+"options": ["はれ", "すぐ", "おかえりなさい", "つかれた"],
+"correct_answer": "おかえりなさい"
+},
+{
+"question": "What is 'Wow! Look at all those people!' in Japanese?",
+"options": ["ぎおんまつり", "ほんこん", "わあ！たくさんのひとがいる!", "シンガポール"],
+"correct_answer": "わあ！たくさんのひとがいる!"
+},
+{
+"question": "What is 'I'm tired' in Japanese?",
+"options": ["つかれた", "ただいま", "はじめて", "おかえりなさい"],
+"correct_answer": "つかれた"
+},
+{
+"question": "What is 'the Gion Festival (the most famous festival in Kyoto)' in Japanese?",
+"options": ["ゆっくり", "はやい", "しずか", "ぎおんまつり"],
+"correct_answer": "ぎおんまつり"
+},
+{
+"question": "What is 'Hong Kong' in Japanese?",
+"options": ["ほんこん", "シンガポール", "せかい", "てんき"],
+"correct_answer": "ほんこん"
+},
+{
+"question": "What is 'Singapore' in Japanese?",
+"options": ["ほんこん", "まつり", "シンガポール", "あめ"],
+"correct_answer": "シンガポール"
+},
+{
+  "question": "What is 'enjoy oneself, play swim' in Japanese?",
+  "options": ["およぐ", "むかえる", "つかれる", "かいものをする"],
+  "correct_answer": "およぐ"
+},
+{
+  "question": "What is 'go to meet, welcome' in Japanese?",
+  "options": ["つかれる", "しょくじをする", "むかえる", "さんぽをする"],
+  "correct_answer": "むかえる"
+},
+{
+  "question": "What is 'get tired (when expressing the condition of being tired, つかれました is use' in Japanese?",
+  "options": ["およぐ", "つかれる", "けっこんする", "ほしい"],
+  "correct_answer": "つかれる"
+},
+{
+  "question": "What is 'marry, get married' in Japanese?",
+  "options": ["かいものをする", "きびしい", "けっこんする", "ひろい"],
+  "correct_answer": "けっこんする"
+},
+{
+  "question": "What is 'do shopping' in Japanese?",
+  "options": ["しょくじをする", "すきをする", "さんぽをする", "かいものをする"],
+  "correct_answer": "かいものをする"
+},
+{
+  "question": "What is 'have a meal, dine' in Japanese?",
+  "options": ["きびしい", "しょくじをする", "ほしい", "せまい"],
+  "correct_answer": "しょくじをする"
+},
+{
+  "question": "What is 'take a walk \\[in a park\\]' in Japanese?",
+  "options": ["かわ", "さんぽをする", "つりをする", "スキーをする"],
+  "correct_answer": "さんぽをする"
+},
+{
+  "question": "What is 'hard, tough, severe, awful' in Japanese?",
+  "options": ["きびしい", "ひろい", "すくない", "かるい"],
+  "correct_answer": "きびしい"
+},
+{
+  "question": "What is 'want (something)' in Japanese?",
+  "options": ["ほしい", "あまい", "からい", "おもい"],
+  "correct_answer": "ほしい"
+},
+{
+  "question": "What is 'wide, spacious' in Japanese?",
+  "options": ["せまい", "ひろい", "すずしい", "かわ"],
+  "correct_answer": "ひろい"
+},
+{
+  "question": "What is 'narrow, small (room, etc.)' in Japanese?",
+  "options": ["たくさん", "せまい", "りゅうがくせい", "ひろい"],
+  "correct_answer": "せまい"
+},
+{
+  "question": "What is 'swimming pool' in Japanese?",
+  "options": ["プール", "こうひをのむ", "きせつ", "なつ"],
+  "correct_answer": "プール"
+},
+{
+  "question": "What is 'river' in Japanese?",
+  "options": ["かわ", "びじゅつ", "ゆき", "てんき"],
+  "correct_answer": "かわ"
+},
+{
+  "question": "What is 'fine arts' in Japanese?",
+  "options": ["びじゅつ", "しゅうまつ", "はる", "なにか"],
+  "correct_answer": "びじゅつ"
+},
+{
+  "question": "What is 'fishing (~をします: fish, angle)' in Japanese?",
+  "options": ["つりをする", "スキーをする", "のどがかわく", "そうしましょう。"],
+  "correct_answer": "つりをする"
+},
+{
+  "question": "What is 'skiing (~をします: ski)' in Japanese?",
+  "options": ["ほんこん", "シンガポール", "スキーをする", "ぎおんまつり"],
+  "correct_answer": "スキーをする"
+},
+{
+  "question": "What is 'weekend' in Japanese?",
+  "options": ["しゅうまつ", "しょがつ", "ごろ", "どこか"],
+  "correct_answer": "しゅうまつ"
+},
+{
+  "question": "What is 'New Year's Day' in Japanese?",
+  "options": ["しょがつ", "おなかがすく", "そうしましょう。", "ちょっと まってください。"],
+  "correct_answer": "しょがつ"
+},
+{
+  "question": "What is 'about ~ (time)' in Japanese?",
+  "options": ["ごろ", "なにか", "どこか", "のどがかわく"],
+  "correct_answer": "ごろ"
+},
+{
+  "question": "What is 'something' in Japanese?",
+  "options": ["しゅうまつ", "しょがつ", "なにか", "どこか"],
+  "correct_answer": "なにか"
+},
+{
+  "question": "What is 'somewhere, some place' in Japanese?",
+  "options": ["ごろ", "なにか", "どこか", "のどがかわく"],
+  "correct_answer": "どこか"
+},
+{
+  "question": "What is 'get thirsty (when expressing the condition of being thirsty, のどが かわきました is used)' in Japanese?",
+  "options": ["のどがかわく", "おなかがすく", "そうしましょう。", "ちょっと まってください。"],
+  "correct_answer": "のどがかわく"
+},
+{
+  "question": "What is 'get hungry (when expressing the condition of being hungry, おなかが すきました is used)' in Japanese?",
+  "options": ["するどい", "つかれる", "おなかがすく", "ほしい"],
+  "correct_answer": "おなかがすく"
+},
+{
+  "question": "What is 'Let's do that. (used when agreeing with someone's suggestion)' in Japanese?",
+  "options": ["そうしましょう。", "ございます", "まことしやか かいしゃ", "まことしやか てれびばんぐみ"],
+  "correct_answer": "そうしましょう。"
+},
+{
+  "question": "What is 'May I take your order?' in Japanese?",
+  "options": ["ちょっと まってください。", "あまい", "ぎゅうどん", "ごちゅうもんは おまかせくださいませんか？"],
+  "correct_answer": "ごちゅうもんは おまかせくださいませんか？"
+},
+{
+  "question": "What is 'set meal, table d'hôte' in Japanese?",
+  "options": ["ていしょく", "ぎゅうどん", "きょうしつ", "なんか"],
+  "correct_answer": "ていしょく"
+},
+{
+  "question": "What is 'bowl of rice topped with beef' in Japanese?",
+  "options": ["ぎゅうどん", "てんぷら", "つりをする", "スキーをする"],
+  "correct_answer": "ぎゅうどん"
+},
+{
+  "question": "What is 'Please wait \\[a moment\\].' in Japanese?",
+  "options": ["でございます", "まことしやか かいしゃ", "まことしやか てれびばんぐみ", "ちょっと まってください。"],
+  "correct_answer": "ちょっと まってください。"
+},
+{
+  "question": "What is '(polite equivalent of です) separately' in Japanese?",
+  "options": ["でございます", "まことしやか かいしゃ", "まことしやか てれびばんぐみ", "ちょっと まってください。"],
+  "correct_answer": "でございます"
+},
+{
+  "question": "What is 'a fictitious company' in Japanese?",
+  "options": ["でございます", "まことしやか かいしゃ", "まことしやか てれびばんぐみ", "ちょっと まってください。"],
+  "correct_answer": "まことしやか かいしゃ"
+},
+{
+  "question": "What is 'a fictitious TV programme' in Japanese?",
+  "options": ["でございます", "まことしやか かいしゃ", "まことしやか てれびばんぐみ", "ちょっと まってください。"],
+  "correct_answer": "まことしやか てれびばんぐみ"
+},
+ {
+  "question": "What is 'turn on' in Japanese?",
+  "options": ["ぐらい", "つける", "けす", "はなす"],
+  "correct_answer": "つける"
+},
+{
+  "question": "What is 'turn off' in Japanese?",
+  "options": ["しめる", "あける", "けす", "まつ"],
+  "correct_answer": "けす"
+},
+{
+  "question": "What is 'open' in Japanese?",
+  "options": ["あける", "しめる", "いそぐ", "とる"],
+  "correct_answer": "あける"
+},
+{
+  "question": "What is 'close, shut' in Japanese?",
+  "options": ["つける", "しめる", "もつ", "みせる"],
+  "correct_answer": "しめる"
+},
+{
+  "question": "What is 'hurry' in Japanese?",
+  "options": ["いそぐ", "まつ", "はいる", "まっすぐ"],
+  "correct_answer": "いそぐ"
+},
+{
+  "question": "What is 'wait' in Japanese?",
+  "options": ["もつ", "まつ", "はいる", "すぐに"],
+  "correct_answer": "まつ"
+},
+{
+  "question": "What is 'hold' in Japanese?",
+  "options": ["もつ", "たすける", "よぶ", "ゆっくり"],
+  "correct_answer": "もつ"
+},
+{
+  "question": "What is 'take, pass' in Japanese?",
+  "options": ["とる", "たすける", "はなす", "あとで"],
+  "correct_answer": "とる"
+},
+{
+  "question": "What is 'help (with a task)' in Japanese?",
+  "options": ["たすける", "つかう", "とめる", "え"],
+  "correct_answer": "たすける"
+},
+{
+  "question": "What is 'call' in Japanese?",
+  "options": ["よぶ", "はなす", "つかう", "もういちど"],
+  "correct_answer": "よぶ"
+},
+{
+  "question": "What is 'speak, talk' in Japanese?",
+  "options": ["しる", "つくる", "はなす", "すぐに"],
+  "correct_answer": "はなす"
+},
+{
+  "question": "What is 'use' in Japanese?",
+  "options": ["つかう", "とめる", "みせる", "あとで"],
+  "correct_answer": "つかう"
+},
+{
+  "question": "What is 'stop, park' in Japanese?",
+  "options": ["とめる", "みせる", "つげる", "もうすこし"],
+  "correct_answer": "とめる"
+},
+{
+  "question": "What is 'show' in Japanese?",
+  "options": ["つくる", "しる", "みせる", "そうだね"],
+  "correct_answer": "みせる"
+},
+{
+  "question": "What is 'tell \\[an address\\]' in Japanese?",
+  "options": ["つげる", "すわる", "たつ", "えっ"],
+  "correct_answer": "つげる"
+},
+{
+  "question": "What is 'sit down' in Japanese?",
+  "options": ["しる", "すわる", "たつ", "はいる"],
+  "correct_answer": "すわる"
+},
+{
+  "question": "What is 'stand up' in Japanese?",
+  "options": ["すわる", "たつ", "でる", "しんごうを みぎにまがってください。"],
+  "correct_answer": "たつ"
+},
+{
+  "question": "What is 'enter \\[a café\\]' in Japanese?",
+  "options": ["はいる", "でる", "あめがふる", "これで おねがいします。"],
+  "correct_answer": "はいる"
+},
+{
+  "question": "What is 'go out \\[of a café\\]' in Japanese?",
+  "options": ["はいる", "でる", "ひく", "おつり"],
+  "correct_answer": "でる"
+},
+{
+  "question": "What is 'rain' in Japanese?",
+  "options": ["あめがふる", "まことしやか まち", "つくる", "おぼえる"],
+  "correct_answer": "あめがふる"
+},
+{
+  "question": "What is 'copy' in Japanese?",
+  "options": ["ひく", "でんき", "えあこんでぃしょなー", "みなさん、 きょうは"],
+  "correct_answer": "ひく"
+},
+{
+  "question": "What is 'electricity, light' in Japanese?",
+  "options": ["パスポート", "なまえ", "でんき", "しお"],
+  "correct_answer": "でんき"
+},
+{
+  "question": "What is 'air conditioner' in Japanese?",
+  "options": ["じゅうしょ", "ちず", "えあこんでぃしょなー", "しつもん"],
+  "correct_answer": "えあこんでぃしょなー"
+},
+{
+  "question": "What is 'passport' in Japanese?",
+  "options": ["パスポート", "なまえ", "さとう", "こたえる"],
+  "correct_answer": "パスポート"
+},
+{
+  "question": "What is 'name' in Japanese?",
+  "options": ["じゅうしょ", "なまえ", "よみかた", "まっすぐ"],
+  "correct_answer": "なまえ"
+},
+{
+  "question": "What is 'address' in Japanese?",
+  "options": ["パスポート", "なまえ", "じゅうしょ", "ゆっくり"],
+  "correct_answer": "じゅうしょ"
+},
+{
+  "question": "What is 'map' in Japanese?",
+  "options": ["パスポート", "なまえ", "じゅうしょ", "ちず"],
+  "correct_answer": "ちず"
+},
+{
+  "question": "What is 'salt' in Japanese?",
+  "options": ["しお", "さとう", "しつもん", "もういちど"],
+  "correct_answer": "しお"
+},
+{
+  "question": "What is 'sugar' in Japanese?",
+  "options": ["じゅうしょ", "しお", "さとう", "あとで"],
+  "correct_answer": "さとう"
+},
+{
+  "question": "What is 'question, problem, trouble' in Japanese?",
+  "options": ["しつもん", "こたえる", "よみかた", "もうすこし"],
+  "correct_answer": "しつもん"
+},
+{
+  "question": "What is 'answer' in Japanese?",
+  "options": ["こたえる", "しつもん", "よみかた", "そうだね"],
+  "correct_answer": "こたえる"
+},
+{
+  "question": "What is 'how to read, way of reading how to, way of ~ing' in Japanese?",
+  "options": ["よみかた", "まっすぐ", "ゆっくり", "えっ"],
+  "correct_answer": "よみかた"
+},
+{
+  "question": "What is 'straight' in Japanese?",
+  "options": ["まっすぐ", "しんごうを みぎにまがってください。", "かこ", "これで おねがいします。"],
+  "correct_answer": "まっすぐ"
+},
+{
+  "question": "What is 'slowly, leisurely' in Japanese?",
+  "options": ["ゆっくり", "すぐに", "もういちど", "あとで"],
+  "correct_answer": "ゆっくり"
+},
+{
+  "question": "What is 'immediately' in Japanese?",
+  "options": ["すぐに", "ゆっくり", "もういちど", "もうすこし"],
+  "correct_answer": "すぐに"
+},
+{
+  "question": "What is 'again' in Japanese?",
+  "options": ["もういちど", "すぐに", "あとで", "そうだね"],
+  "correct_answer": "もういちど"
+},
+{
+  "question": "What is 'later' in Japanese?", 
+  "options": ["あとで", "ゆっくり", "すぐに", "もういちど"],
+  "correct_answer": "あとで"
+},
+{
+  "question": "What is 'a little more' in Japanese?",
+  "options": ["もうすこし", "すぐに", "あとで", "そうだね"],
+  "correct_answer": "もうすこし"
+},
+{
+  "question": "What is '~ more, another ~' in Japanese?",
+  "options": ["もう ~", "すぐに", "あとで", "そうだね"],
+  "correct_answer": "もう ~"
+},
+{
+  "question": "What is 'right (used when encouraging some course of action)' in Japanese?",
+  "options": ["そうだね", "え", "しんごうを みぎにまがってください。", "これで おねがいします。"],
+  "correct_answer": "そうだね"
+},
+{
+  "question": "What is 'Oh! Eh? (in surprise or wonder)' in Japanese?",
+  "options": ["えっ", "そうだね", "あとで", "もうすこし"],
+  "correct_answer": "えっ"
+},
+{
+  "question": "What is 'Turn right at the traffic lights.' in Japanese?",
+  "options": ["しるく", "あるいて", "しんごうを みぎにまがってください。", "ごめんなさい。"],
+  "correct_answer": "しんごうを みぎにまがってください。"
+},
+{
+  "question": "What is 'I'd like to pay with this.' in Japanese?",
+  "options": ["これで おねがいします。", "ごめんなさい。", "みなさん、 きょうは", "おつり"],
+  "correct_answer": "これで おねがいします。"
+},
+{
+  "question": "What is 'change' in Japanese?",
+  "options": ["おつり", "まことしやか まち", "ふく", "しあわせ"],
+  "correct_answer": "おつり"
+},
+{
+  "question": "What is 'a fictitious town' in Japanese?",
+  "options": ["まことしやか まち", "つくる", "しる", "けんきゅうをする"],
+  "correct_answer": "まことしやか まち"
+},
+{
+  "question": "What is 'make, produce sell' in Japanese?",
+  "options": ["つくる", "しる", "けんきゅうをする", "そうしょ"],
+  "correct_answer": "つくる"
+},
+{
+  "question": "What is 'get to know be going to live' in Japanese?",
+  "options": ["しる", "つくる", "けんきゅうをする", "じてん"],
+  "correct_answer": "しる"
+},
+{
+  "question": "What is 'do research' in Japanese?",
+  "options": ["つくる", "しる", "けんきゅうをする", "タイムテーブル"],
+  "correct_answer": "けんきゅうをする"
+},
+{
+  "question": "What is 'materials, data' in Japanese?",
+  "options": ["そうしょ", "じてん", "せいひん", "おぼえる"],
+  "correct_answer": "そうしょ"
+},
+{
+  "question": "What is 'catalogue' in Japanese?",
+  "options": ["そうしょ", "じてん", "タイムテーブル", "おります"],
+  "correct_answer": "じてん"
+},
+{
+  "question": "What is 'timetable' in Japanese?",
+  "options": ["そうしょ", "じてん", "タイムテーブル", "なんば"],
+  "correct_answer": "タイムテーブル"
+},
+{
+  "question": "What is 'clothes' in Japanese?",
+  "options": ["そうしょ", "ふく", "せいひん", "まことしやか テレビばんぐみ"],
+  "correct_answer": "ふく"
+},
+{
+  "question": "What is 'products' in Japanese?",
+  "options": ["そうしょ", "ふく", "せいひん", "ソフトウェア"],
+  "correct_answer": "せいひん"
+},
+{
+  "question": "What is 'software' in Japanese?",
+  "options": ["そうしょ", "ふく", "せいひん", "ソフトウェア"],
+  "correct_answer": "ソフトウェア"
+},
+{
+  "question": "What is 'electronic dictionary' in Japanese?",
+  "options": ["けいざい", "しやくしょ", "こうとうがっこう", "でんしじしょ"],
+  "correct_answer": "でんしじしょ"
+},
+{
+  "question": "What is 'economy' in Japanese?",
+  "options": ["けいざい", "しやくしょ", "こうとうがっこう", "どくしん"],
+  "correct_answer": "けいざい"
+},
+{
+  "question": "What is 'municipal office, city hall' in Japanese?",
+  "options": ["けいざい", "しやくしょ", "こうとうがっこう", "はいしゃ"],
+  "correct_answer": "しやくしょ"
+},
+{
+  "question": "What is 'senior high school' in Japanese?",
+  "options": ["けいざい", "しやくしょ", "こうとうがっこう", "ごめんなさい。"],
+  "correct_answer": "こうとうがっこう"
+},
+{
+  "question": "What is 'dentist, dentist's' in Japanese?",
+  "options": ["はいしゃ", "どくしん", "ごめんなさい。", "みなさん、 きょうは"],
+  "correct_answer": "はいしゃ"
+},
+{
+  "question": "What is 'single, unmarried' in Japanese?",
+  "options": ["はいしゃ", "どくしん", "ごめんなさい。", "おぼえる"],
+  "correct_answer": "どくしん"
+},
+{
+  "question": "What is 'I'm sorry.' in Japanese?",
+  "options": ["ごめんなさい。", "みなさん、 きょうは", "おります", "まことしやか テレビばんぐみ"],
+  "correct_answer": "ごめんなさい。"
+},
  {
    "correctAnswer": "のります",
    "options": [
