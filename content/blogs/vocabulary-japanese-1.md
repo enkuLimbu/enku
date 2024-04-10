@@ -916,9 +916,7 @@ toc:
 | That's amazing! | すごいですね | sugoidesune | 凄いですね |
 | [No,] I still have long way to go | まだまだですね | madamadadesune | まだまだですね |
 | Are you making a withdrawal? | おろしていますか | oroshiteimaska | 下ろしていますか |
-| first of all | まず | mazu
-
- | まず |
+| first of all | まず | mazu | まず |
 | next, as a next step | つぎに | tsugini | 次に |
 | cash dispensing card | ATMカードです | ATM kādudesu | ATMカードです |
 | personal identification number, PIN | PINです | PIN desu | PINです |
