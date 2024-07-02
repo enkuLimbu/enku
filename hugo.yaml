@@ -178,7 +178,7 @@ params:
       - job: "Receptionist"
         company: "Suva Consultancy"
         companyUrl: "https://www.facebook.com/SuvaCareer/"
-        date: "Nov 2023 - Dec 2023"
+        date: "Jan 2024 - Feb 2024"
         featuredLink:
           enable: true
           name: "Blogs about the experience"
@@ -196,27 +196,43 @@ params:
       - job: "Cashier"
         company: "Central Cafe"
         companyUrl: "https://www.google.com/search?q=central+cafe+newroad&rlz=1C1GCEA_enNP1059NP1060&oq=central+cafe+newroad&gs_lcrp=EgZjaHJvbWUyCwgAEEUYChg5GKABMgkIARAhGAoYoAEyCQgCECEYChigAdIBCDQzODRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#rlimm=6977463105882457710"
-        date: "Jan 2022 - Feb 2023"
+        date: "Feb 2023 - Jan 2024"
         featuredLink:
           enable: true
           name: "Blogs about the experience"
           url: "https://indulimbu.com.np/tags/cashier/"
         info:
           enable: true
-          content: Central Cafe is now closed due to demise of owner.
+          content: Central Cafe is now closed due to demise of it's owner.
         content: |
           Providing efficient payment processing and exceptional customer service in a busy dining environment.
 
           - **Customer Transactions Manager** responsible for processing payments and providing excellent service.
           - **Ensuring Smooth Financial Operations** at a bustling restaurant, enhancing the dining experience for patrons.
 
-      - job: "Waitress"
-        company: "Central Cafe"
-        companyUrl: "https://www.google.com/search?q=central+cafe+newroad&rlz=1C1GCEA_enNP1059NP1060&oq=central+cafe+newroad&gs_lcrp=EgZjaHJvbWUyCwgAEEUYChg5GKABMgkIARAhGAoYoAEyCQgCECEYChigAdIBCDQzODRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#rlimm=6977463105882457710"
-        date: "August 2021 - Jan 2022"
+      - job: "Supervisory"
+        company: "King Faisal University"
         info:
           enable: true
-          content: Central Cafe is now closed due to demise of owner.
+          content: King Faisal University is a university in Kingdom of Saudi Arabia
+        companyUrl: "https://www.kfu.edu.sa/en/Pages/AboutKKFU.aspx"
+        date: "Dec 2018 - Jan 2023"
+        featuredLink:
+          enable: true
+          name: "Blogs about the experience"
+          url: "https://indulimbu.com.np/tags/supervisor/"
+        content: |
+          - **Task Coordinator:** Coordinate and assign chores and responsibilities to colleagues, ensuring a fair distribution of tasks and that everyone is contributing to the smooth running of the operations.
+          - **Problem Solver:** Act as a mediator and problem solver in case of disputes or issues related to colleagues and responsibilities.
+          - **Time and Schedule Organizer:** Create and maintain a work balance, scheduling events, appointments, and coordinating staff members' schedules.
+
+      - job: "Waitress"
+        company: "The Everest Taste Restaurant"
+        companyUrl: "https://www.tastefromeverestny.com/"
+        date: "Dec 2014 - Nov 2018"
+        info:
+          enable: true
+          content: The Everest Taste Restaurant is really famous for its chinese and indian cuisines.
         featuredLink:
           enable: true
           name: "Blogs about the experience"
@@ -228,22 +244,6 @@ params:
           - Stayed composed during busy shifts and when dealing with difficult customers
           - Quickly re arranged tables for the next guests
           - Resolved customer issues and complaints
-
-      - job: "Supervisory"
-        company: "King Faisal University"
-        info:
-          enable: true
-          content: King Faisal University is a university in Kingdom of Saudi Arabia
-        companyUrl: "https://www.kfu.edu.sa/en/Pages/AboutKKFU.aspx"
-        date: "June 2017 - Feb 2021"
-        featuredLink:
-          enable: true
-          name: "Blogs about the experience"
-          url: "https://indulimbu.com.np/tags/supervisor/"
-        content: |
-          - **Task Coordinator:** Coordinate and assign chores and responsibilities to colleagues, ensuring a fair distribution of tasks and that everyone is contributing to the smooth running of the operations.
-          - **Problem Solver:** Act as a mediator and problem solver in case of disputes or issues related to colleagues and responsibilities.
-          - **Time and Schedule Organizer:** Create and maintain a work balance, scheduling events, appointments, and coordinating staff members' schedules.
 
   # Education
   education:
@@ -305,7 +305,7 @@ params:
 
       - title: "Web Development"
         school:
-          name: "Suhesh Kasti - Friend"
+          name: "Suhesh Kasti - A very close friend"
           url: "https://suhesh.com.np/"
         date: "2079 - ongoing"
         content: |-
